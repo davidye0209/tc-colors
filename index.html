@@ -1090,6 +1090,135 @@
 				opacity: 1;
 				transform: translateX(-50%) translateY(0);
 			}
+
+			/* ── MOBILE RESPONSIVE ADAPTATIONS ── */
+			@media (max-width: 900px) {
+				/* 1. Global Spacing & Layout */
+				body {
+					padding: 16px 16px 32px 16px;
+				}
+
+				header {
+					flex-direction: column;
+					align-items: stretch;
+					gap: 16px;
+					margin-bottom: 20px;
+				}
+
+				/* Stack logo sub-text elegantly */
+				header > div {
+					flex-direction: column;
+					align-items: flex-start !important;
+					gap: 6px !important;
+				}
+
+				.logo-divider {
+					display: none; /* Hide vertical line on stack */
+				}
+
+				.logo-sub {
+					font-size: 11px;
+					letter-spacing: 0.05em;
+				}
+
+				/* Make search input expand to full width */
+				.search-bar-container {
+					width: 100%;
+				}
+
+				.search-input {
+					width: 100% !important;
+				}
+
+				/* 2. Responsive Stage Container Layout */
+				.stage-container {
+					grid-template-columns: 1fr;
+					grid-template-areas: 
+						"hero"
+						"swatches"
+						"labs";
+					gap: 20px;
+				}
+
+				/* display: contents lets children participate directly in stage-container grid */
+				.details-sidebar {
+					display: contents;
+				}
+
+				.details-viewer-card {
+					grid-area: hero;
+				}
+
+				.swatches-grid-card {
+					grid-area: swatches;
+				}
+
+				.exploration-labs-card {
+					grid-area: labs;
+				}
+
+				/* Adjust swatches catalog height for comfortable browsing */
+				.swatches-grid {
+					max-height: 480px; /* Reduced to fit mobile screens perfectly */
+				}
+
+				/* 3. Hero Detail Card Styling */
+				.hero-banner {
+					grid-template-columns: 1fr;
+				}
+
+				.hero-name-col {
+					border-right: none;
+					border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+					flex-direction: row !important;
+					align-items: center;
+					justify-content: space-between;
+					padding: 20px 24px;
+				}
+
+				.hero-name {
+					font-size: 32px;
+				}
+
+				.hero-quote-col {
+					padding: 20px 24px;
+				}
+
+				.hero-quote-text {
+					font-size: 20px;
+					line-height: 1.5;
+				}
+
+				.hero-quote-source {
+					font-size: 15px;
+					padding-left: 0;
+					text-align: right;
+				}
+
+				/* 4. Solar Term Tab Override (Inline Styles Override) */
+				.season-header-row {
+					flex-direction: column !important;
+					gap: 20px !important;
+				}
+
+				.timeline-solar-term-info {
+					flex: 1 1 auto !important;
+					padding-left: 0 !important;
+				}
+
+				.season-slider-wrapper {
+					flex: 1 1 auto !important;
+					width: 100% !important;
+					margin-top: 0 !important;
+				}
+			}
+
+			@media (max-width: 480px) {
+				/* Super small screen optimizations */
+				.swatches-grid {
+					grid-template-columns: 1fr; /* Stack color cards in single column if extremely narrow */
+				}
+			}
 		</style>
 	</head>
 	<body>
