@@ -21,3 +21,9 @@ Six pre-built palettes all made of colors from the book.
 - Misty - Author's pick.
 
 ### Preview
+
+![](https://github.com/davidye0209/tc-colors/blob/main/Preview/screenshot-1.png)
+
+![](https://github.com/davidye0209/tc-colors/blob/main/Preview/screenshot-2.png)
+
+![](https://github.com/davidye0209/tc-colors/blob/main/Preview/screenshot-3.png)
