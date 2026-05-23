@@ -1,0 +1,23 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Agent & CLI Caches
+.antigravitycli/
+
+# Python Scratch Scripts
+scratch/
+__pycache__/
+*.pyc
+
+# Vercel Cache
+.vercel/
