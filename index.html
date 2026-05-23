@@ -1,1937 +1,2414 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中国传统色 11阶光谱与五维探索器 | Traditional Chinese Colors Arena</title>
-    
-    <!-- Fonts: LXGW WenKai TC for classic calligraphy, ZCOOL XiaoWei for quote, DM Mono for hex numbers, Outfit for UI, Inter for body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700;900&family=Outfit:wght@400;500;600;700&family=LXGW+WenKai+TC&family=ZCOOL+XiaoWei&family=Noto+Sans+SC:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Load Global CORS-proof Database Script -->
-    <script src="colors_db.js"></script>
-    
-    <style>
-        /* Modern Premium CSS System - Redesigned Editorial Aesthetic */
-        :root {
-            /* Active Theme Colors - Default Warm Red (朱赤) */
-            --theme-primary: #9E2A22;
-            --theme-primary-rgb: 158, 42, 34;
-            --theme-light-bg: rgba(158, 42, 34, 0.05);
-            --theme-border: rgba(158, 42, 34, 0.2);
-            
-            /* Global Base */
-            --bg: #F7F2EA; /* Soft warm paper white */
-            --bg2: #EFE8DC;
-            --ink: #1A1410; /* Editorial off-black */
-            --ink-soft: #5C4A3A;
-            --ink-muted: #9C8878;
-            --grain-opacity: 0.035;
-            --card-radius: 14px;
-            --panel-radius: 20px;
-            
-            --bg-app: var(--bg);
-            --text-main: var(--ink);
-            --text-muted: var(--ink-soft);
-            --border-color: #E2DFD8;
-            --white: #FFFFFF;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Noto Sans SC', sans-serif;
-            background-color: var(--bg-app);
-            color: var(--text-main);
-            min-height: 100vh;
-            overflow-x: hidden;
-            padding: 24px 32px;
-            position: relative;
-        }
-
-        /* Paper grain overlay */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 1000;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-            opacity: var(--grain-opacity);
-        }
-
-        /* ── TOP NAV ── */
-        /* ── TOP NAV ── */
-        header {
-            max-width: 1400px;
-            margin: 0 auto 16px auto;
-            padding: 18px 0 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            border-bottom: none;
-        }
-
-        .search-bar-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        .search-input {
-            width: 240px;
-            padding: 7px 36px 7px 14px;
-            border-radius: 999px;
-            border: 1px solid var(--border-color);
-            background: rgba(255,255,255,0.45);
-            font-family: 'Noto Sans SC', sans-serif;
-            font-size: 12px;
-            color: var(--ink);
-            outline: none;
-            transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
-            backdrop-filter: blur(4px);
-        }
-
-        .search-input:focus {
-            background: #fff;
-            border-color: var(--theme-primary);
-            box-shadow: 0 4px 12px color-mix(in srgb, var(--theme-primary) 12%, transparent);
-            width: 270px; /* Snappy, premium elastic focus expansion! */
-        }
-
-        .search-icon {
-            position: absolute;
-            right: 12px;
-            color: var(--ink-soft);
-            opacity: 0.65;
-            cursor: pointer;
-            font-size: 12px;
-            user-select: none;
-            transition: opacity 0.2s;
-        }
-
-        .search-icon:hover {
-            opacity: 1;
-        }
-
-        .logo {
-            font-family: 'LXGW WenKai TC', serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--ink);
-            letter-spacing: 0.05em;
-        }
-        .logo span { color: var(--theme-primary); }
-
-        .logo-divider {
-            width: 1px; height: 22px;
-            background: var(--ink-muted);
-            opacity: 0.4;
-        }
-
-        .logo-sub {
-            font-size: 12px;
-            color: var(--ink-muted);
-            letter-spacing: 0.12em;
-            font-weight: 300;
-        }
-
-        /* 11 Hues Interactive Dock Bar */
-        .hues-dock-container {
-            max-width: 1400px;
-            margin: 0 auto 24px auto;
-            background: transparent;
-            border: none;
-            border-radius: 0;
-            padding: 0;
-            box-shadow: none;
-            backdrop-filter: none;
-            position: relative;
-            z-index: 100;
-        }
-
-        .hues-dock-row {
-            display: flex;
-            flex-wrap: nowrap;
-            gap: 8px;
-            overflow-x: auto;
-            width: 100%;
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE/Edge */
-        }
-
-        .hues-dock-row::-webkit-scrollbar {
-            display: none; /* Safari and Chrome */
-        }
-
-        .hue-dock-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            padding: 6px 14px 6px 10px;
-            border-radius: 999px;
-            font-size: 13px;
-            font-weight: 400;
-            cursor: pointer;
-            border: 1.5px solid transparent;
-            background: rgba(255,255,255,0.5);
-            color: var(--ink-soft);
-            transition: all 0.2s ease;
-            backdrop-filter: blur(4px);
-            user-select: none;
-            flex-shrink: 0;
-        }
-
-        .hue-dock-pill:hover {
-            background: rgba(255,255,255,0.85);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .hue-pill-indicator {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: var(--pill-color, #9E2A22);
-            flex-shrink: 0;
-            transition: background 0.2s;
-            border: none;
-        }
-
-        .hue-pill-count {
-            font-size: 11px;
-            opacity: 0.7;
-            font-family: 'DM Mono', monospace;
-            background: transparent !important;
-            padding: 0 !important;
-            color: inherit !important;
-        }
-
-        /* Active styling */
-        .hue-dock-pill.active {
-            background: var(--pill-color, #9E2A22);
-            color: #fff;
-            border-color: transparent;
-            box-shadow: 0 4px 14px color-mix(in srgb, var(--pill-color, #9E2A22) 40%, transparent);
-            font-weight: 500;
-        }
-
-        .hue-dock-pill.active .hue-pill-indicator {
-            background: rgba(255,255,255,0.8) !important;
-        }
-
-        /* Exploration Stage Layout */
-        .stage-container {
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            gap: 24px;
-            max-width: 1400px;
-            margin: 0 auto;
-            align-items: start;
-        }
-
-        /* Swatches Grid Box */
-        .swatches-grid-card {
-            background-color: transparent;
-            border: none;
-            border-radius: 0;
-            padding: 0;
-            box-shadow: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-
-        .swatches-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            max-height: 800px;
-            overflow-y: auto;
-            padding: 0 8px 0 0;
-            box-sizing: border-box;
-        }
-
-        /* Scrollbar styling */
-        .swatches-grid::-webkit-scrollbar {
-            width: 6px;
-        }
-        .swatches-grid::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .swatches-grid::-webkit-scrollbar-thumb {
-            background-color: #dedbd5;
-            border-radius: 3px;
-        }
-
-        /* Swatch card layout - Elastic Transform zoom on hover */
-        .swatch-card {
-            background-color: #DED7C9;
-            border-radius: var(--card-radius);
-            overflow: hidden;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), 
-                        box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1), 
-                        border-color 0.35s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            position: relative;
-            will-change: transform;
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            padding: 0;
-        }
-
-        .swatch-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(26, 20, 16, 0.24), 
-                        0 4px 12px rgba(26, 20, 16, 0.1);
-        }
-
-        .swatch-card:active {
-            transform: scale(0.97) translateY(-2px);
-            transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-
-        .swatch-card.active {
-            transform: translateY(-2px);
-            background-color: #DED7C9;
-        }
-
-
-
-        .swatch-header-swatch {
-            height: 90px;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            border-radius: 0;
-            border: none;
-            display: block;
-        }
-
-        /* Hex overlay on card hover */
-        .swatch-header-swatch::after {
-            content: attr(data-hex);
-            position: absolute;
-            inset: 0;
-            display: block;
-            line-height: 90px;
-            text-align: center;
-            font-family: 'DM Mono', monospace;
-            font-size: 11px;
-            color: var(--hover-text-color, #ffffff);
-            background: transparent !important;
-            opacity: 0;
-            transition: opacity 0.2s;
-            letter-spacing: 0.08em;
-        }
-
-        .swatch-card:hover .swatch-header-swatch::after {
-            opacity: 1;
-        }
-
-        .swatch-body-info {
-            padding: 10px 12px 11px;
-            background-color: transparent;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .swatch-name-zh {
-            font-family: 'LXGW WenKai TC', serif;
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--ink);
-            letter-spacing: 0.05em;
-            display: block;
-        }
-
-        .swatch-hex-badge {
-            font-family: 'DM Mono', monospace;
-            font-size: 10.5px;
-            color: var(--ink-muted);
-            letter-spacing: 0.06em;
-            margin-top: 2px;
-            display: block;
-        }
-
-        /* Detailed Color Swatch Viewer & 5 Exploration Labs (Right Stage Sidebar) */
-        .details-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            min-width: 0;
-            overflow: hidden;
-        }
-
-        /* Active Swatch Viewer - Redesigned as Detail Hero Banner */
-        .details-viewer-card {
-            border-radius: var(--panel-radius) !important;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.07) !important;
-            padding: 0 !important;
-            border: none !important;
-            background-color: var(--theme-primary);
-            transition: background-color 0.3s ease;
-        }
-
-        .hero-banner {
-            min-height: 140px;
-            position: relative;
-            display: grid;
-            grid-template-columns: auto 1fr;
-            align-items: center;
-            gap: 0;
-            overflow: hidden;
-            width: 100%;
-            background: transparent !important;
-        }
-
-        .hero-banner::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: transparent !important;
-            pointer-events: none;
-        }
-
-        .hero-name-col {
-            padding: 24px 28px;
-            position: relative;
-            z-index: 1;
-            border-right: 1px solid rgba(255,255,255,0.22);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 6px;
-            min-width: 130px;
-            background: transparent;
-        }
-
-        .hero-name {
-            font-family: 'LXGW WenKai TC', serif;
-            font-size: 40px;
-            font-weight: 400;
-            color: #fff;
-            text-shadow: 0 2px 16px rgba(0,0,0,0.3);
-            letter-spacing: 0.12em;
-            line-height: 1.1;
-        }
-
-        .hero-hex-inline {
-            font-family: 'DM Mono', monospace;
-            font-size: 11px;
-            color: rgba(255,255,255,0.65);
-            letter-spacing: 0.1em;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-
-        .hero-hex-inline:hover {
-            color: rgba(255,255,255,0.9);
-        }
-
-        .hero-hex-inline-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: rgba(255,255,255,0.5);
-            display: inline-block;
-        }
-
-        .hero-quote-col {
-            padding: 20px 24px;
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 8px;
-            background: transparent;
-        }
-
-        .hero-quote-text {
-            font-family: 'LXGW WenKai TC', serif;
-            font-size: 26px;
-            line-height: 1.6;
-            color: rgba(255,255,255,0.92);
-            text-shadow: 0 1px 6px rgba(0,0,0,0.2);
-            letter-spacing: 0.08em;
-            font-style: normal;
-        }
-
-        .hero-quote-source {
-            font-family: 'LXGW WenKai TC', serif;
-            font-size: 20px;
-            color: rgba(255,255,255,0.7);
-            letter-spacing: 0.08em;
-            padding-left: 4em;
-            margin-top: 4px;
-        }
-
-        .exploration-labs-card {
-            background-color: #DED7C9;
-            border-radius: var(--panel-radius);
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-            padding: 0;
-            border: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            min-width: 0;
-            font-family: 'Noto Sans TC', sans-serif !important;
-        }
-
-        .labs-tabs-nav {
-            display: flex;
-            border-bottom: 1.5px solid var(--bg2);
-            padding: 0 4px;
-            overflow-x: auto;
-            scrollbar-width: none;
-            gap: 0;
-        }
-
-        .labs-tabs-nav::-webkit-scrollbar {
-            display: none;
-        }
-
-        .labs-tab-btn {
-            padding: 14px 16px 13px;
-            font-size: 14px;
-            color: var(--ink-muted);
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            white-space: nowrap;
-            border-bottom: 2.5px solid transparent;
-            margin-bottom: -1.5px;
-            transition: all 0.18s;
-            font-weight: 500;
-            letter-spacing: 0.03em;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .labs-tab-btn:hover {
-            color: var(--ink);
-        }
-
-        .labs-tab-btn.active {
-            color: var(--ink) !important;
-            border-bottom-color: var(--theme-primary);
-            font-weight: 700;
-            background: transparent;
-        }
-
-        .labs-tab-panel {
-            display: none;
-            padding: 24px 28px 28px;
-            min-width: 0;
-            width: 100%;
-            max-width: 100%;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-
-        .labs-tab-panel.active {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            min-width: 0;
-            width: 100%;
-            max-width: 100%;
-            overflow: hidden;
-        }
-
-        .exploration-method-header {
-            display: grid;
-            grid-template-columns: 120px 1fr;
-            gap: 20px;
-            align-items: start;
-            border-bottom: 1.5px solid var(--bg2);
-            padding-bottom: 12px;
-        }
-
-        /* Fourth Tab custom header grid layout */
-        .exploration-method-header.season-header-grid {
-            grid-template-columns: 1.2fr 1fr;
-            align-items: center;
-        }
-
-        .exploration-method-title {
-            font-family: 'Noto Sans TC', sans-serif !important;
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--ink) !important;
-            letter-spacing: 0.5px;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        .exploration-method-desc {
-            font-family: 'Noto Sans TC', sans-serif !important;
-            font-size: 13.5px;
-            color: var(--ink-soft) !important;
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        .harmony-accord-title {
-            margin-bottom: 8px;
-            display: inline-block;
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--ink) !important;
-            letter-spacing: 0.5px;
-            font-family: 'Noto Sans TC', sans-serif !important;
-        }
-
-        /* Specific color cards font overrides */
-        .strip-label,
-        .clash-card-lbl,
-        .timeline-well-lbl,
-        .dilution-tile-lbl {
-            font-family: 'LXGW WenKai TC', serif !important;
-        }
-
-        /* Harmony Accords & Palette Layouts (Similar, Opposite, Split-Complementary) */
-        .harmony-accord-box {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            min-width: 0;
-            width: 100%;
-            max-width: 100%;
-            overflow: hidden;
-            box-sizing: border-box;
-        }
-
-        /* Accordion Color Strip - Redesigned Tall Aspect Ratio Flush Strips */
-        .color-strip {
-            display: flex;
-            border-radius: 16px;
-            overflow: hidden;
-            height: 136px;
-            border: 1px solid rgba(26, 20, 16, 0.12); /* Elegant dynamic ink border */
-            box-shadow: none;
-            background-color: transparent;
-            position: relative;
-            box-sizing: border-box;
-            width: 100%;
-        }
-
-        .strip-swatch {
-            flex: 1;
-            position: relative;
-            cursor: pointer;
-            transition: flex 0.35s cubic-bezier(0.25, 1, 0.5, 1);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            box-sizing: border-box;
-        }
-
-        .strip-swatch:hover {
-            flex: 1.8;
-            z-index: 10;
-        }
-
-        .strip-label {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 16px 4px 10px 4px;
-            box-sizing: border-box;
-            pointer-events: none; /* Let clicks pass to the swatch */
-            user-select: none;
-        }
-
-        .strip-name {
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            font-family: 'LXGW WenKai TC', serif !important;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.25em; /* Spacious letter-spacing exactly like screenshot! */
-            line-height: 1.2;
-            margin-top: 6px;
-        }
-
-        .strip-hex {
-            font-family: 'DM Mono', monospace !important;
-            font-size: 10px;
-            font-weight: 500;
-            opacity: 0.85;
-            margin-top: auto;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-
-        /* 3x2 Symmetrical Grid for Consolidative Palettes */
-        .palette-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            width: 100%;
-        }
-
-        @media (max-width: 1100px) {
-            .palette-grid {
-                grid-template-columns: 1fr;
-                gap: 18px;
-            }
-        }
-
-        /* Palette Row Details */
-        .palette-row {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            width: 100%;
-        }
-
-        .palette-row-header {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-bottom: 2px;
-        }
-
-        .palette-subtitle {
-            font-family: 'Barlow', sans-serif !important;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--ink-muted);
-            margin-left: 8px;
-        }
-
-        .palette-desc {
-            font-family: 'Noto Sans SC', sans-serif !important;
-            font-size: 11.5px;
-            font-weight: 400;
-            color: var(--ink-soft);
-            line-height: 1.4;
-            opacity: 0.85;
-        }
-
-        /* Contrast Clash Dual Card (Opposite) */
-        .contrast-clash-box {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        .clash-card {
-            border-radius: var(--card-radius);
-            padding: 14px;
-            border: 1.5px solid transparent;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            background-color: transparent;
-        }
-
-        .clash-card:hover {
-            transform: translateY(-2px);
-        }
-
-        .clash-swatch {
-            height: 48px;
-            border-radius: 8px;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .clash-card-lbl {
-            font-family: 'LXGW WenKai TC', serif;
-            font-size: 14px;
-            font-weight: 700;
-            text-align: center;
-        }
-
-        .contrast-legibility-preview {
-            border-radius: var(--card-radius);
-            padding: 16px 20px;
-            text-align: center;
-            font-family: 'LXGW WenKai TC', serif;
-            border: 3px double var(--theme-primary) !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 72px;
-            box-shadow: none !important;
-            letter-spacing: 0.05em;
-            background-color: transparent !important;
-            transition: border-color 0.3s ease;
-            box-sizing: border-box;
-        }
-
-        /* Dilution Wash (Slider + swatches overlay) */
-        .slider-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.3);
-            padding: 16px;
-            border-radius: var(--card-radius);
-            border: 1px solid var(--border-color);
-        }
-
-        .slider-header {
-            display: flex;
-            justify-content: space-between;
-            font-family: 'Outfit', sans-serif;
-            font-size: 13.5px;
-            font-weight: 700;
-            color: var(--ink) !important;
-            text-transform: uppercase;
-        }
-
-        .range-slider {
-            width: 100%;
-            height: 6px;
-            border-radius: 3px;
-            outline: none;
-            -webkit-appearance: none;
-            background: var(--bg2);
-            accent-color: var(--theme-primary);
-        }
-
-        .dilution-preview-box {
-            height: 80px;
-            border-radius: var(--card-radius);
-            border: 1px solid var(--border-color);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-image: 
-                linear-gradient(45deg, #e8e4de 25%, transparent 25%), 
-                linear-gradient(-45deg, #e8e4de 25%, transparent 25%), 
-                linear-gradient(45deg, transparent 75%, #e8e4de 75%), 
-                linear-gradient(-45deg, transparent 75%, #e8e4de 75%);
-            background-size: 12px 12px;
-            background-position: 0 0, 0 6px, 6px -6px, -6px 0px;
-        }
-
-        .dilution-preview-fill {
-            position: absolute;
-            inset: 0;
-            transition: background-color 0.15s ease, opacity 0.15s ease;
-        }
-
-        .dilution-preview-lbl {
-            z-index: 10;
-            font-family: 'LXGW WenKai TC', serif;
-            font-size: 20px;
-            font-weight: 900;
-            letter-spacing: 1px;
-            text-shadow: 0 1px 4px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.9);
-        }
-
-        /* Monochromatic dilution milestones */
-        .dilution-milestones-row {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            gap: 8px;
-            padding-bottom: 8px;
-            scrollbar-width: auto;
-            -ms-overflow-style: auto;
-            width: 100%;
-            max-width: 100%;
-        }
-        .dilution-milestones-row::-webkit-scrollbar {
-            height: 6px;
-            display: block;
-        }
-        .dilution-milestones-row::-webkit-scrollbar-thumb {
-            background-color: var(--border-color);
-            border-radius: 3px;
-        }
-
-        .dilution-milestone-tile {
-            background-color: transparent;
-            border: 1px solid var(--border-color);
-            border-radius: var(--card-radius);
-            padding: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            flex: 0 0 85px;
-        }
-
-        .dilution-milestone-tile:hover {
-            transform: translateY(-2px);
-            border-color: var(--theme-primary);
-        }
-
-        .dilution-tile-swatch {
-            width: 100%;
-            height: 36px;
-            border-radius: 6px;
-            border: 1px solid rgba(0,0,0,0.04);
-        }
-
-        .dilution-tile-lbl {
-            font-family: 'LXGW WenKai TC', serif;
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--ink) !important;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 100%;
-            text-align: center;
-        }
-
-        .dilution-tile-pct {
-            font-family: 'DM Mono', sans-serif;
-            font-size: 10px;
-            font-weight: 700;
-            color: var(--ink) !important;
-        }
-
-        /* Timeline Solar Terms Box */
-        .timeline-solar-term-info {
-            background-color: transparent;
-            border-radius: 0;
-            padding: 8px 12px;
-            border-left: 3px solid var(--theme-primary);
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .timeline-term-title {
-            font-family: 'Noto Sans TC', sans-serif !important;
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--ink) !important;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        #timelineTermSeason {
-            font-size: 12px;
-            font-family: 'LXGW WenKai TC', serif !important;
-            font-weight: normal;
-            background-color: var(--border-color);
-            color: var(--ink-muted);
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-left: 8px;
-            display: inline-block;
-        }
-
-        .timeline-term-desc {
-            font-family: 'Noto Sans TC', sans-serif !important;
-            font-size: 13.5px;
-            color: var(--ink-soft) !important;
-            line-height: 1.5;
-            margin: 4px 0 0 0;
-        }
-
-        /* Timeline slider with seasonal spectrum gradient */
-        #termTimelineSlider {
-            background: linear-gradient(to right, #73975C 0%, #B83A32 33%, #C99032 66%, #3B5B66 100%) !important;
-            height: 8px;
-            border-radius: 4px;
-            cursor: pointer;
-            -webkit-appearance: none;
-            appearance: none;
-            width: 100%;
-        }
-
-        .timeline-swatches-grid {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            gap: 8px;
-            padding-bottom: 8px;
-            scrollbar-width: auto;
-            -ms-overflow-style: auto;
-            width: 100%;
-            max-width: 100%;
-        }
-        .timeline-swatches-grid::-webkit-scrollbar {
-            height: 6px;
-            display: block;
-        }
-        .timeline-swatches-grid::-webkit-scrollbar-thumb {
-            background-color: var(--border-color);
-            border-radius: 3px;
-        }
-
-        .timeline-well {
-            flex: 0 0 85px;
-            aspect-ratio: 1.3;
-            border-radius: var(--card-radius);
-            border: 1px solid rgba(0,0,0,0.05);
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: flex-end;
-            padding: 4px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .timeline-well:hover {
-            transform: scale(1.06);
-            z-index: 10;
-        }
-
-        .timeline-well-lbl {
-            font-family: 'LXGW WenKai TC', serif;
-            font-size: 10px;
-            font-weight: 700;
-            background-color: transparent;
-            padding: 2px 4px;
-            border-radius: 4px;
-            width: 100%;
-            text-align: center;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            box-shadow: none;
-        }
-
-        /* Dynamic Tooltips */
-        .well-tooltip {
-            position: absolute;
-            background-color: var(--ink);
-            color: #FFFFFF;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 11px;
-            font-family: 'Barlow', sans-serif;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.1s ease;
-            z-index: 1000000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            border: 1px solid rgba(255,255,255,0.1);
-            line-height: 1.4;
-        }
-
-        /* Copy toast */
-        .toast {
-            position: fixed;
-            bottom: 28px;
-            left: 50%;
-            transform: translateX(-50%) translateY(12px);
-            background: var(--ink);
-            color: #fff;
-            padding: 9px 18px;
-            border-radius: 999px;
-            font-size: 13px;
-            font-family: 'DM Mono', monospace;
-            letter-spacing: 0.06em;
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.25s ease;
-            z-index: 9999;
-        }
-        .toast.show {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Header Section -->
-    <header>
-        <div style="display: flex; align-items: center; gap: 12px;">
-            <div class="logo">华<span>彩</span></div>
-            <div class="logo-divider"></div>
-            <div class="logo-sub">中国传统色谱 · CHINESE TRADITIONAL COLORS</div>
-        </div>
-        
-        <!-- Premium Fuzzy Search Input on Top Right -->
-        <div class="search-bar-container">
-            <input type="text" class="search-input" id="searchInput" placeholder="搜索传统色 (名称/色号)..." oninput="handleSearch()">
-            <span class="search-icon" id="searchIcon">🔍</span>
-        </div>
-    </header>
-
-    <!-- 11 Hues Dynamic Dock Pill Bar -->
-    <div class="hues-dock-container" style="margin-bottom: 24px;">
-        <div class="hues-dock-row" id="huesDockRow">
-            <!-- Dynamic pills generated by JS -->
-        </div>
-    </div>
-
-    <!-- Active Stage -->
-    <div class="stage-container">
-        <!-- Swatches Catalog Card -->
-        <div class="swatches-grid-card">
-            <div class="swatches-grid" id="swatchesGrid">
-                <!-- Dynamic swatches list -->
-            </div>
-        </div>
-
-        <!-- Dynamic Sidebar Details & 5 Exploration Labs (Tabbed) -->
-        <div class="details-sidebar">
-            <!-- Active Swatch Viewer -->
-            <div class="details-viewer-card" id="detailHero">
-                <div class="hero-banner" id="heroBanner">
-                    <div class="hero-name-col">
-                        <div class="hero-name" id="viewerNameZh">黄白游</div>
-                        <div class="hero-hex-inline" id="viewerHexCodeContainer">
-                            <span class="hero-hex-inline-dot" id="viewerSwatch"></span>
-                            <span id="viewerHexCode">#FFF799</span>
-                        </div>
-                    </div>
-                    <div class="hero-quote-col">
-                        <div class="hero-quote-text" id="viewerPoetry">欲识金银气，多从黄白游；一生痴绝处，无梦到徽州。</div>
-                        <div class="hero-quote-source" id="viewerCitation">— 汤显祖 《有友人怜予乏劝 为黄山白岳之游》</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Redesigned Exploration Labs (Consolidated 2-Tab Layout) -->
-            <div class="exploration-labs-card">
-                <div class="labs-tabs-nav">
-                    <button class="labs-tab-btn active" id="lab-tab-palettes" onclick="switchLabTab('palettes')">🎨 意境配盘</button>
-                    <button class="labs-tab-btn" id="lab-tab-season" onclick="switchLabTab('season')">⏳ 节气流光</button>
-                </div>
-
-                <!-- Tab Panel 1: Dynamic Harmonious Palettes -->
-                <div class="labs-tab-panel active" id="panel-lab-palettes">
-                    <div class="harmony-accord-box">
-                        <div class="palette-grid">
-                            
-                            <!-- Palette Row 1: Classy Analogous -->
-                            <div class="palette-row">
-                                <div class="palette-row-header">
-                                    <span class="harmony-accord-title">雅致相依 <span class="palette-subtitle">Classy Analogous</span></span>
-                                    <span class="palette-desc">以邻近色相与柔和明度，铺叙温润和谐之美。</span>
-                                </div>
-                                <div class="color-strip" id="paletteClassy">
-                                    <!-- Generated dynamically -->
-                                </div>
-                            </div>
-
-                            <!-- Palette Row 2: Spot Accent -->
-                            <div class="palette-row">
-                                <div class="palette-row-header">
-                                    <span class="harmony-accord-title">水墨留白 <span class="palette-subtitle">Spot Accent</span></span>
-                                    <span class="palette-desc">极简之境，以莹白、葭灰衬托主色，静谧生动。</span>
-                                </div>
-                                <div class="color-strip" id="paletteSpot">
-                                    <!-- Generated dynamically -->
-                                </div>
-                            </div>
-
-                            <!-- Palette Row 3: Five Elements -->
-                            <div class="palette-row">
-                                <div class="palette-row-header">
-                                    <span class="harmony-accord-title">五行相生 <span class="palette-subtitle">Five Elements Balance</span></span>
-                                    <span class="palette-desc">金木水火土五性调和，于时令气候中探求平衡。</span>
-                                </div>
-                                <div class="color-strip" id="paletteFiveElements">
-                                    <!-- Generated dynamically -->
-                                </div>
-                            </div>
-
-                            <!-- Palette Row 4: Complementary Contrast -->
-                            <div class="palette-row">
-                                <div class="palette-row-header">
-                                    <span class="harmony-accord-title">双色对立 <span class="palette-subtitle">Complementary Contrast</span></span>
-                                    <span class="palette-desc">主色与互补色调和，相反相成，高张夺目。</span>
-                                </div>
-                                <div class="color-strip" id="paletteComplementary">
-                                    <!-- Generated dynamically -->
-                                </div>
-                            </div>
-
-                            <!-- Palette Row 5: Ink Dilution -->
-                            <div class="palette-row">
-                                <div class="palette-row-header">
-                                    <span class="harmony-accord-title">水墨化境 <span class="palette-subtitle">Ink Dilution Gradient</span></span>
-                                    <span class="palette-desc">浓淡干湿，墨分五彩，追寻宣纸上的水痕渗漫。</span>
-                                </div>
-                                <div class="color-strip" id="paletteDilution">
-                                    <!-- Generated dynamically -->
-                                </div>
-                            </div>
-
-                            <!-- Palette Row 6: Misty Rain Dream -->
-                            <div class="palette-row">
-                                <div class="palette-row-header">
-                                    <span class="harmony-accord-title">烟雨梦尘 <span class="palette-subtitle">Misty Rain Dream</span></span>
-                                    <span class="palette-desc">山色空蒙，雨覆轻尘，探寻天缥与欧碧的温润朦胧。</span>
-                                </div>
-                                <div class="color-strip" id="paletteScholar">
-                                    <!-- Generated dynamically -->
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab Panel 2: Solar Term Flow -->
-                <div class="labs-tab-panel" id="panel-lab-season">
-                    <div class="season-header-row" style="display: flex; flex-direction: row; align-items: flex-start; gap: 48px; width: 100%; margin-bottom: 24px;">
-                        <!-- Active timeline term card description -->
-                        <div class="timeline-solar-term-info" style="flex: 1; padding: 4px 0; margin-top: 0;">
-                            <span class="timeline-term-title" id="timelineTermName">立春 <span style="font-size:12px; font-family:'LXGW WenKai TC', serif !important;" id="timelineTermSeason">春</span></span>
-                            <p class="timeline-term-desc" id="timelineTermDesc">时令之首，万物萌发，春风拂绿。</p>
-                        </div>
-
-                        <!-- Chronological Solar Terms Slider Container (Moved closer, with seasons labels) -->
-                        <div class="season-slider-wrapper" style="flex: 0 0 280px; display: flex; flex-direction: column; gap: 8px; margin-top: 6px;">
-                            <span id="termSliderValIndicator" style="display: none;">立春</span>
-                            <input type="range" class="range-slider" min="0" max="23" value="0" id="termTimelineSlider" oninput="handleTimelineChange()" style="margin: 0; width: 100%; box-shadow: none;">
-                            <!-- Four Seasons Labels along the bar -->
-                            <div class="season-labels-row" style="display: flex; justify-content: space-between; padding: 0 6px; font-family: 'LXGW WenKai TC', serif !important; font-size: 12px; color: var(--ink-soft); opacity: 0.85; user-select: none;">
-                                <span>春</span>
-                                <span>夏</span>
-                                <span>秋</span>
-                                <span>冬</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 16 colors of the active Solar Term grid list -->
-                    <div class="harmony-accord-box">
-                        <span class="harmony-accord-title" id="timelineGridTitle">立春分册 收录色彩 (16色)</span>
-                        <div class="timeline-swatches-grid" id="timelineSwatchesGrid">
-                            <!-- Generated dynamically -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Hidden inputs kept for JS stability and backwards-compatibility -->
-                <div style="display: none;">
-                    <span id="dilutionValIndicator">100% 饱和浓度</span>
-                    <input type="range" min="5" max="100" value="100" id="dilutionSlider" oninput="handleDilutionChange()">
-                    <div id="dilutionPreviewFill"></div>
-                    <span id="dilutionPreviewText"></span>
-                </div>
-            </div>
-
-            <!-- Scientific Spectrum Analytics Removed -->
-        </div>
-    </div>
-
-    <!-- Tooltip -->
-    <div class="well-tooltip" id="wellTooltip"></div>
-
-    <!-- Toast Notification -->
-    <div class="toast" id="toast">复制成功</div>
-
-    <script>
-        // Primary state variables
-        const colorsDb = window.colorsDatabase || [];
-        let activeHueFilter = 'red_warm';
-        let activeViewerColor = colorsDb[0];
-        let activeLabTab = 'palettes';
-
-        // Advanced 11 Hues Branding & Theme Color mappings
-        const hueFamilies = {
-            'red_warm': {
-                nameZh: '朱赤',
-                desc: 'Warm Red / Scarlet',
-                accentHex: '#D94F5E',
-                accentRgb: '217, 79, 94',
-                lightBg: 'rgba(217, 79, 94, 0.05)',
-                border: 'rgba(217, 79, 94, 0.2)',
-                summary: '【朱赤系 - 暖红特区】主要包含古代的朱砂、朱红、绯红等色泽，光谱聚焦于暖色极点（0°-9° 及 351°-360°），由于波长极长，视觉张力充沛，是中国传统礼制、喜庆与正统审美的绝对核心。'
-            },
-            'red_cool': {
-                nameZh: '深绛',
-                desc: 'Cool Red / Crimson',
-                accentHex: '#A43A48',
-                accentRgb: '164, 58, 72',
-                lightBg: 'rgba(164, 58, 72, 0.05)',
-                border: 'rgba(164, 58, 72, 0.2)',
-                summary: '【深绛系 - 冷红特区】包含胭脂、绛红、深茜等冷调红色，光谱聚焦于 9° 至 18° 及 342° 至 351° 区间。由于色相略微朝紫色方向偏移，呈现出高贵、内敛、冷艳的宫廷丝绸染色美学。'
-            },
-            'orange': {
-                nameZh: '橙橘',
-                desc: 'Vibrant Orange',
-                accentHex: '#E27E37',
-                accentRgb: '226, 126, 55',
-                lightBg: 'rgba(226, 126, 55, 0.05)',
-                border: 'rgba(226, 126, 55, 0.2)',
-                summary: '【橙橘系 - 活力明橙】光谱位于 18° 至 46° 且明度较高（L >= 48%）的亮暖色调。包含经典的杏子、琥珀、橘黄等，色彩明朗亮丽，充满丰收与阳光的温度。'
-            },
-            'brown': {
-                nameZh: '褐赭',
-                desc: 'Brown & Earth',
-                accentHex: '#8B5A3E',
-                accentRgb: '139, 90, 62',
-                lightBg: 'rgba(139, 90, 62, 0.05)',
-                border: 'rgba(139, 90, 62, 0.2)',
-                summary: '【褐赭系 - 沉稳土褐】光谱同样位于 18° 至 46° 区间，但被严格限定在低明度（L < 48%）范畴。包含流黄、栗壳、赭石等，沉稳沉静，是古代矿物色与大自然土壤植物皮壳的深度结晶。'
-            },
-            'yellow': {
-                nameZh: '黄',
-                desc: 'Yellow',
-                accentHex: '#D0A010',
-                accentRgb: '208, 160, 16',
-                lightBg: 'rgba(208, 160, 16, 0.05)',
-                border: 'rgba(208, 160, 16, 0.2)',
-                summary: '【黄系 - 尊贵御黄】光谱聚集于明黄、松花与细叶区间（46°-75°）。黄色在传统中表征泥土与正中之位，也是明清御用龙袍的专属正色，尊贵稳定，光芒万丈。'
-            },
-            'green': {
-                nameZh: '绿',
-                desc: 'Green',
-                accentHex: '#358C59',
-                accentRgb: '53, 140, 89',
-                lightBg: 'rgba(53, 140, 89, 0.05)',
-                border: 'rgba(53, 140, 89, 0.2)',
-                summary: '【绿系 - 翡翠林木】光谱处于 75° 至 165° 范围，代表繁茂 the 森林、春季草木的新生与翡翠绿玉。色彩清新、自然，饱和度饱满，生机勃勃。'
-            },
-            'cyan': {
-                nameZh: '青翠',
-                desc: 'Cyan & Teal',
-                accentHex: '#1C7A8C',
-                accentRgb: '28, 122, 140',
-                lightBg: 'rgba(28, 122, 140, 0.05)',
-                border: 'rgba(28, 122, 140, 0.2)',
-                summary: '【青翠系 - 绿翠苍筤】光谱位于 165° 至 205° 之间，横跨青绿、湖蓝与翠水。代表中国古典审美中最具写意感的「青」色，烟雨朦胧，苍筤缥缈。'
-            },
-            'blue': {
-                nameZh: '蓝黛',
-                desc: 'Blue & Indigo',
-                accentHex: '#23448E',
-                accentRgb: '35, 68, 142',
-                lightBg: 'rgba(35, 68, 142, 0.05)',
-                border: 'rgba(35, 68, 142, 0.2)',
-                summary: '【蓝黛系 - 靛蓝深青】光谱聚集于 205° 至 255° 的纯蓝与深靛区间。包含天然石青、青黛、靛蓝等，表征夜空的广袤无垠、深海的幽邃以及矿石的坚贞。'
-            },
-            'purple': {
-                nameZh: '紫',
-                desc: 'Purple',
-                accentHex: '#834895',
-                accentRgb: '131, 72, 149',
-                lightBg: 'rgba(131, 72, 149, 0.05)',
-                border: 'rgba(131, 72, 149, 0.2)',
-                summary: '【紫系 - 祥瑞紫苑】光谱聚焦于 255° 至 300° 区间。紫色在古籍中表征「紫气东来」的祥瑞，虽然由于染料（紫草）珍稀，色彩数量极少（9色），但却拥有无可匹敌的高贵质感。'
-            },
-            'pink': {
-                nameZh: '粉绛',
-                desc: 'Pink',
-                accentHex: '#DC6B82',
-                accentRgb: '220, 107, 130',
-                lightBg: 'rgba(220, 107, 130, 0.05)',
-                border: 'rgba(220, 107, 130, 0.2)',
-                summary: '【粉绛系 - 娇柔桃夭】光谱处于 300° 至 342° 的粉红区间。包含桃花、杨妃、长春等娇美色彩，散发出春天百花争艳的柔美、娇嫩与勃发生机。'
-            },
-            'neutral': {
-                nameZh: '灰白',
-                desc: 'Neutral',
-                accentHex: '#6D6E70',
-                accentRgb: '109, 110, 112',
-                lightBg: 'rgba(109, 110, 112, 0.05)',
-                border: 'rgba(109, 110, 112, 0.2)',
-                summary: '【灰白系 - 极简素雅】包含所有低饱和度（S < 13%）或极暗（L < 15%）、极亮（L > 88%）的白、灰、素色与煤黑。纯净、内敛，是传统水墨留白的基准底色。'
-            }
-        };
-
-        const CHRONO_TERMS = [
-            { name: '立春', py: 'Lichun', season: '春季', desc: '时令之首，阳气萌生，林木始动，春风拂绿。' },
-            { name: '雨水', py: 'Yushui', season: '春季', desc: '冰雪消融，细雨随风，草木萌动，万物复苏。' },
-            { name: '惊蛰', py: 'Jingzhe', season: '春季', desc: '春雷始鸣，蛰虫惊醒，红花渐开，桃李竞芳。' },
-            { name: '春分', py: 'Chunfen', season: '春季', desc: '昼夜均等，微风徐徐，草长莺飞，白鹭翻飞。' },
-            { name: '清明', py: 'Qingming', season: '春季', desc: '万物洁齐，天清地明，采茶踏青，烟雨柳绿。' },
-            { name: '谷雨', py: 'Guyu', season: '春季', desc: '雨生百谷, 暮春将尽, 牡丹吐蕊, 绿荫渐浓。' },
-            { name: '立夏', py: 'Lixia', season: '夏季', desc: '夏之伊始，白昼渐长，万物繁茂，新蝉初鸣。' },
-            { name: '小满', py: 'Xiaoman', season: '夏季', desc: '江河渐满，麦粒始满，绿树成荫，荷池初动。' },
-            { name: '芒种', py: 'Mangzhong', season: '夏季', desc: '麦浪翻滚，稻秧始播，蝉鸣声声，夏花灿烂。' },
-            { name: '夏至', py: 'Xiazhi', season: '夏季', desc: '日影极短，夏夜极凉，稻香蛙鸣，满池朱莲。' },
-            { name: '小暑', py: 'Xiaoshu', season: '夏季', desc: '温风始至，伏蝉喧嚣，雷雨阵阵，幽荷溢香。' },
-            { name: '大暑', py: 'Dashu', season: '夏季', desc: '热浪极盛，萤火夜飞，大雨时行，万物繁茂。' },
-            { name: '立秋', py: 'Liqiu', season: '秋季', desc: '凉风习习, 金黄遍野, 梧桐落叶, 晨露初凝。' },
-            { name: '处暑', py: 'Chushu', season: '秋季', desc: '秋意初来, 暑气渐消, 天高云淡, 稻谷飘香。' },
-            { name: '白露', py: 'Bailu', season: '秋季', desc: '阴气始重, 凝而成露, 雁南飞去, 金秋凝霜。' },
-            { name: '秋分', py: 'Qiufen', season: '秋季', desc: '昼夜均分, 秋风萧瑟, 桂花飘香, 韶粉铺地。' },
-            { name: '寒露', py: 'Hanlu', season: '秋季', desc: '露水渐寒, 凝结将冰, 枫红遍野, 菊蕊飘香。' },
-            { name: '霜降', py: 'Shuangjiang', season: '秋季', desc: '气肃而凝, 露结为霜, 万物凋零, 傲骨红柿。' },
-            { name: '立冬', py: 'Lidong', season: '冬季', desc: '冬之伊始, 朔风怒号, 水始成冰, 万物归藏。' },
-            { name: '小雪', py: 'Xiaoxue', season: '冬季', desc: '天降初雪, 寒气渐重, 松柏长青, 腊梅含苞。' },
-            { name: '大雪', py: 'Daxue', season: '冬季', desc: '积雪铺地, 寒风呼啸, 江河封冻, 炉火焙茶。' },
-            { name: '冬至', py: 'Dongzhi', season: '冬季', desc: '日影极长, 冬夜极深, 阴极阳生, 腊鼓声声。' },
-            { name: '小寒', py: 'Xiaohan', season: '冬季', desc: '寒积至深, 冰冻三尺, 梅花绽蕊, 水仙初吐。' },
-            { name: '大寒', py: 'Dahan', season: '冬季', desc: '岁暮大寒, 积雪不融, 冰雕玉琢, 静候春归。' }
-        ];
-
-        // Initialize Page
-        window.onload = () => {
-            renderHuesDock();
-            switchHue('red_warm');
-            
-            // Switch tabs to first default 'palettes'
-            switchLabTab('palettes');
-            
-            handleDilutionChange();
-            handleTimelineChange();
-
-            // Bind click to copy hex code
-            const hexContainer = document.getElementById('viewerHexCodeContainer');
-            if (hexContainer) {
-                hexContainer.onclick = () => {
-                    if (activeViewerColor) copyText(activeViewerColor.hex);
-                };
-            }
-        };
-
-        // Helper: Convert hex color to comma-separated RGB values
-        function hexToRgb(hex) {
-            const bigint = parseInt(hex.slice(1), 16);
-            const r = (bigint >> 16) & 255;
-            const g = (bigint >> 8) & 255;
-            const b = bigint & 255;
-            return `${r}, ${g}, ${b}`;
-        }
-
-        // Render top 11 hues pill dock dynamically
-        function renderHuesDock() {
-            const row = document.getElementById('huesDockRow');
-            row.innerHTML = '';
-
-            const counts = {};
-            colorsDb.forEach(c => {
-                counts[c.hue] = (counts[c.hue] || 0) + 1;
-            });
-
-            Object.keys(hueFamilies).forEach(hueKey => {
-                const family = hueFamilies[hueKey];
-                const pill = document.createElement('div');
-                pill.className = `hue-dock-pill ${hueKey === activeHueFilter ? 'active' : ''}`;
-                pill.id = `hue-pill-${hueKey}`;
-                pill.onclick = () => switchHue(hueKey);
-
-                // Style the 11 groups directly in the tab
-                pill.style.setProperty('--pill-color', family.accentHex);
-
-                pill.innerHTML = `
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>中国传统色 | Traditional Chinese Colors</title>
+
+		<!-- Fonts: LXGW WenKai TC for classic calligraphy, ZCOOL XiaoWei for quote, DM Mono for hex numbers, Outfit for UI, Inter for body -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700;900&family=Outfit:wght@400;500;600;700&family=LXGW+WenKai+TC&family=ZCOOL+XiaoWei&family=Noto+Sans+SC:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Load Global CORS-proof Database Script -->
+		<script src="colors_db.js"></script>
+
+		<style>
+			/* Modern Premium CSS System - Redesigned Editorial Aesthetic */
+			:root {
+				/* Active Theme Colors - Default Warm Red (朱赤) */
+				--theme-primary: #9e2a22;
+				--theme-primary-rgb: 158, 42, 34;
+				--theme-light-bg: rgba(158, 42, 34, 0.05);
+				--theme-border: rgba(158, 42, 34, 0.2);
+
+				/* Global Base */
+				--bg: #f7f2ea; /* Soft warm paper white */
+				--bg2: #efe8dc;
+				--ink: #1a1410; /* Editorial off-black */
+				--ink-soft: #5c4a3a;
+				--ink-muted: #9c8878;
+				--grain-opacity: 0.035;
+				--card-radius: 14px;
+				--panel-radius: 20px;
+
+				--bg-app: var(--bg);
+				--text-main: var(--ink);
+				--text-muted: var(--ink-soft);
+				--border-color: #e2dfd8;
+				--white: #ffffff;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: "Noto Sans SC", sans-serif;
+				background-color: var(--bg-app);
+				color: var(--text-main);
+				min-height: 100vh;
+				overflow-x: hidden;
+				padding: 24px 32px;
+				position: relative;
+			}
+
+			/* Paper grain overlay */
+			body::before {
+				content: "";
+				position: fixed;
+				inset: 0;
+				pointer-events: none;
+				z-index: 1000;
+				background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+				opacity: var(--grain-opacity);
+			}
+
+			/* ── TOP NAV ── */
+			/* ── TOP NAV ── */
+			header {
+				max-width: 1400px;
+				margin: 0 auto 16px auto;
+				padding: 18px 0 0;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 12px;
+				border-bottom: none;
+			}
+
+			.search-bar-container {
+				position: relative;
+				display: flex;
+				align-items: center;
+			}
+
+			.search-input {
+				width: 240px;
+				padding: 7px 36px 7px 14px;
+				border-radius: 999px;
+				border: 1px solid var(--border-color);
+				background: rgba(255, 255, 255, 0.45);
+				font-family: "Noto Sans SC", sans-serif;
+				font-size: 12px;
+				color: var(--ink);
+				outline: none;
+				transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+				backdrop-filter: blur(4px);
+			}
+
+			.search-input:focus {
+				background: #fff;
+				border-color: var(--theme-primary);
+				box-shadow: 0 4px 12px
+					color-mix(in srgb, var(--theme-primary) 12%, transparent);
+				width: 270px; /* Snappy, premium elastic focus expansion! */
+			}
+
+			.search-icon {
+				position: absolute;
+				right: 12px;
+				color: var(--ink-soft);
+				opacity: 0.65;
+				cursor: pointer;
+				font-size: 12px;
+				user-select: none;
+				transition: opacity 0.2s;
+			}
+
+			.search-icon:hover {
+				opacity: 1;
+			}
+
+			.logo {
+				font-family: "LXGW WenKai TC", serif;
+				font-size: 22px;
+				font-weight: 700;
+				color: var(--ink);
+				letter-spacing: 0.05em;
+			}
+			.logo span {
+				color: var(--theme-primary);
+			}
+
+			.logo-divider {
+				width: 1px;
+				height: 22px;
+				background: var(--ink-muted);
+				opacity: 0.4;
+			}
+
+			.logo-sub {
+				font-size: 12px;
+				color: var(--ink-muted);
+				letter-spacing: 0.12em;
+				font-weight: 300;
+			}
+
+			/* 11 Hues Interactive Dock Bar */
+			.hues-dock-container {
+				max-width: 1400px;
+				margin: 0 auto 24px auto;
+				background: transparent;
+				border: none;
+				border-radius: 0;
+				padding: 0;
+				box-shadow: none;
+				backdrop-filter: none;
+				position: relative;
+				z-index: 100;
+			}
+
+			.hues-dock-row {
+				display: flex;
+				flex-wrap: nowrap;
+				gap: 8px;
+				overflow-x: auto;
+				width: 100%;
+				scrollbar-width: none; /* Firefox */
+				-ms-overflow-style: none; /* IE/Edge */
+			}
+
+			.hues-dock-row::-webkit-scrollbar {
+				display: none; /* Safari and Chrome */
+			}
+
+			.hue-dock-pill {
+				display: inline-flex;
+				align-items: center;
+				gap: 7px;
+				padding: 6px 14px 6px 10px;
+				border-radius: 999px;
+				font-size: 13px;
+				font-weight: 400;
+				cursor: pointer;
+				border: 1.5px solid transparent;
+				background: rgba(255, 255, 255, 0.5);
+				color: var(--ink-soft);
+				transition: all 0.2s ease;
+				backdrop-filter: blur(4px);
+				user-select: none;
+				flex-shrink: 0;
+			}
+
+			.hue-dock-pill:hover {
+				background: rgba(255, 255, 255, 0.85);
+				transform: translateY(-1px);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+			}
+
+			.hue-pill-indicator {
+				width: 9px;
+				height: 9px;
+				border-radius: 50%;
+				background: var(--pill-color, #9e2a22);
+				flex-shrink: 0;
+				transition: background 0.2s;
+				border: none;
+			}
+
+			.hue-pill-count {
+				font-size: 11px;
+				opacity: 0.7;
+				font-family: "DM Mono", monospace;
+				background: transparent !important;
+				padding: 0 !important;
+				color: inherit !important;
+			}
+
+			/* Active styling */
+			.hue-dock-pill.active {
+				background: var(--pill-color, #9e2a22);
+				color: #fff;
+				border-color: transparent;
+				box-shadow: 0 4px 14px
+					color-mix(
+						in srgb,
+						var(--pill-color, #9e2a22) 40%,
+						transparent
+					);
+				font-weight: 500;
+			}
+
+			.hue-dock-pill.active .hue-pill-indicator {
+				background: rgba(255, 255, 255, 0.8) !important;
+			}
+
+			/* Exploration Stage Layout */
+			.stage-container {
+				display: grid;
+				grid-template-columns: 350px 1fr;
+				gap: 24px;
+				max-width: 1400px;
+				margin: 0 auto;
+				align-items: start;
+			}
+
+			/* Swatches Grid Box */
+			.swatches-grid-card {
+				background-color: transparent;
+				border: none;
+				border-radius: 0;
+				padding: 0;
+				box-shadow: none;
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+			}
+
+			.swatches-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 12px;
+				max-height: 800px;
+				overflow-y: auto;
+				padding: 0 8px 0 0;
+				box-sizing: border-box;
+			}
+
+			/* Scrollbar styling */
+			.swatches-grid::-webkit-scrollbar {
+				width: 6px;
+			}
+			.swatches-grid::-webkit-scrollbar-track {
+				background: transparent;
+			}
+			.swatches-grid::-webkit-scrollbar-thumb {
+				background-color: #dedbd5;
+				border-radius: 3px;
+			}
+
+			/* Swatch card layout - Elastic Transform zoom on hover */
+			.swatch-card {
+				background-color: #ded7c9;
+				border-radius: var(--card-radius);
+				overflow: hidden;
+				cursor: pointer;
+				border: 2px solid transparent;
+				transition:
+					transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+					box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+					border-color 0.35s ease;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+				position: relative;
+				will-change: transform;
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+				padding: 0;
+			}
+
+			.swatch-card:hover {
+				transform: translateY(-4px);
+				box-shadow:
+					0 12px 32px rgba(26, 20, 16, 0.24),
+					0 4px 12px rgba(26, 20, 16, 0.1);
+			}
+
+			.swatch-card:active {
+				transform: scale(0.97) translateY(-2px);
+				transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+			}
+
+			.swatch-card.active {
+				transform: translateY(-2px);
+				background-color: #ded7c9;
+			}
+
+			.swatch-header-swatch {
+				height: 90px;
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				border-radius: 0;
+				border: none;
+				display: block;
+			}
+
+			/* Hex overlay on card hover */
+			.swatch-header-swatch::after {
+				content: attr(data-hex);
+				position: absolute;
+				inset: 0;
+				display: block;
+				line-height: 90px;
+				text-align: center;
+				font-family: "DM Mono", monospace;
+				font-size: 11px;
+				color: var(--hover-text-color, #ffffff);
+				background: transparent !important;
+				opacity: 0;
+				transition: opacity 0.2s;
+				letter-spacing: 0.08em;
+			}
+
+			.swatch-card:hover .swatch-header-swatch::after {
+				opacity: 1;
+			}
+
+			.swatch-body-info {
+				padding: 10px 12px 11px;
+				background-color: transparent;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+
+			.swatch-name-zh {
+				font-family: "LXGW WenKai TC", serif;
+				font-size: 15px;
+				font-weight: 600;
+				color: var(--ink);
+				letter-spacing: 0.05em;
+				display: block;
+			}
+
+			.swatch-hex-badge {
+				font-family: "DM Mono", monospace;
+				font-size: 10.5px;
+				color: var(--ink-muted);
+				letter-spacing: 0.06em;
+				margin-top: 2px;
+				display: block;
+			}
+
+			/* Detailed Color Swatch Viewer & 5 Exploration Labs (Right Stage Sidebar) */
+			.details-sidebar {
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+				min-width: 0;
+				overflow: hidden;
+			}
+
+			/* Active Swatch Viewer - Redesigned as Detail Hero Banner */
+			.details-viewer-card {
+				border-radius: var(--panel-radius) !important;
+				overflow: hidden;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07) !important;
+				padding: 0 !important;
+				border: none !important;
+				background-color: var(--theme-primary);
+				transition: background-color 0.3s ease;
+			}
+
+			.hero-banner {
+				min-height: 140px;
+				position: relative;
+				display: grid;
+				grid-template-columns: auto 1fr;
+				align-items: center;
+				gap: 0;
+				overflow: hidden;
+				width: 100%;
+				background: transparent !important;
+			}
+
+			.hero-banner::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: transparent !important;
+				pointer-events: none;
+			}
+
+			.hero-name-col {
+				padding: 24px 28px;
+				position: relative;
+				z-index: 1;
+				border-right: 1px solid rgba(255, 255, 255, 0.22);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 6px;
+				min-width: 130px;
+				background: transparent;
+			}
+
+			.hero-name {
+				font-family: "LXGW WenKai TC", serif;
+				font-size: 40px;
+				font-weight: 400;
+				color: #fff;
+				text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+				letter-spacing: 0.12em;
+				line-height: 1.1;
+			}
+
+			.hero-hex-inline {
+				font-family: "DM Mono", monospace;
+				font-size: 11px;
+				color: rgba(255, 255, 255, 0.65);
+				letter-spacing: 0.1em;
+				display: flex;
+				align-items: center;
+				gap: 6px;
+				cursor: pointer;
+				transition: color 0.2s;
+			}
+
+			.hero-hex-inline:hover {
+				color: rgba(255, 255, 255, 0.9);
+			}
+
+			.hero-hex-inline-dot {
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: rgba(255, 255, 255, 0.5);
+				display: inline-block;
+			}
+
+			.hero-quote-col {
+				padding: 20px 24px;
+				position: relative;
+				z-index: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 8px;
+				background: transparent;
+			}
+
+			.hero-quote-text {
+				font-family: "LXGW WenKai TC", serif;
+				font-size: 26px;
+				line-height: 1.6;
+				color: rgba(255, 255, 255, 0.92);
+				text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+				letter-spacing: 0.08em;
+				font-style: normal;
+			}
+
+			.hero-quote-source {
+				font-family: "LXGW WenKai TC", serif;
+				font-size: 20px;
+				color: rgba(255, 255, 255, 0.7);
+				letter-spacing: 0.08em;
+				padding-left: 4em;
+				margin-top: 4px;
+			}
+
+			.exploration-labs-card {
+				background-color: #ded7c9;
+				border-radius: var(--panel-radius);
+				overflow: hidden;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+				padding: 0;
+				border: none;
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+				min-width: 0;
+				font-family: "Noto Sans TC", sans-serif !important;
+			}
+
+			.labs-tabs-nav {
+				display: flex;
+				border-bottom: 1.5px solid var(--bg2);
+				padding: 0 4px;
+				overflow-x: auto;
+				scrollbar-width: none;
+				gap: 0;
+			}
+
+			.labs-tabs-nav::-webkit-scrollbar {
+				display: none;
+			}
+
+			.labs-tab-btn {
+				padding: 14px 16px 13px;
+				font-size: 14px;
+				color: var(--ink-muted);
+				background: transparent;
+				border: none;
+				cursor: pointer;
+				white-space: nowrap;
+				border-bottom: 2.5px solid transparent;
+				margin-bottom: -1.5px;
+				transition: all 0.18s;
+				font-weight: 500;
+				letter-spacing: 0.03em;
+				display: flex;
+				align-items: center;
+				gap: 5px;
+			}
+
+			.labs-tab-btn:hover {
+				color: var(--ink);
+			}
+
+			.labs-tab-btn.active {
+				color: var(--ink) !important;
+				border-bottom-color: var(--theme-primary);
+				font-weight: 700;
+				background: transparent;
+			}
+
+			.labs-tab-panel {
+				display: none;
+				padding: 24px 28px 28px;
+				min-width: 0;
+				width: 100%;
+				max-width: 100%;
+				overflow: hidden;
+				box-sizing: border-box;
+			}
+
+			.labs-tab-panel.active {
+				display: flex;
+				flex-direction: column;
+				gap: 18px;
+				min-width: 0;
+				width: 100%;
+				max-width: 100%;
+				overflow: hidden;
+			}
+
+			.exploration-method-header {
+				display: grid;
+				grid-template-columns: 120px 1fr;
+				gap: 20px;
+				align-items: start;
+				border-bottom: 1.5px solid var(--bg2);
+				padding-bottom: 12px;
+			}
+
+			/* Fourth Tab custom header grid layout */
+			.exploration-method-header.season-header-grid {
+				grid-template-columns: 1.2fr 1fr;
+				align-items: center;
+			}
+
+			.exploration-method-title {
+				font-family: "Noto Sans TC", sans-serif !important;
+				font-size: 18px;
+				font-weight: 700;
+				color: var(--ink) !important;
+				letter-spacing: 0.5px;
+				margin: 0;
+				line-height: 1.4;
+			}
+
+			.exploration-method-desc {
+				font-family: "Noto Sans TC", sans-serif !important;
+				font-size: 13.5px;
+				color: var(--ink-soft) !important;
+				line-height: 1.5;
+				margin: 0;
+			}
+
+			.harmony-accord-title {
+				margin-bottom: 8px;
+				display: inline-block;
+				font-size: 13px;
+				font-weight: 700;
+				color: var(--ink) !important;
+				letter-spacing: 0.5px;
+				font-family: "Noto Sans TC", sans-serif !important;
+			}
+
+			/* Specific color cards font overrides */
+			.strip-label,
+			.clash-card-lbl,
+			.timeline-well-lbl,
+			.dilution-tile-lbl {
+				font-family: "LXGW WenKai TC", serif !important;
+			}
+
+			/* Harmony Accords & Palette Layouts (Similar, Opposite, Split-Complementary) */
+			.harmony-accord-box {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+				min-width: 0;
+				width: 100%;
+				max-width: 100%;
+				overflow: hidden;
+				box-sizing: border-box;
+			}
+
+			/* Accordion Color Strip - Redesigned Tall Aspect Ratio Flush Strips */
+			.color-strip {
+				display: flex;
+				border-radius: 16px;
+				overflow: hidden;
+				height: 136px;
+				border: 1px solid rgba(26, 20, 16, 0.12); /* Elegant dynamic ink border */
+				box-shadow: none;
+				background-color: transparent;
+				position: relative;
+				box-sizing: border-box;
+				width: 100%;
+			}
+
+			.strip-swatch {
+				flex: 1;
+				position: relative;
+				cursor: pointer;
+				transition: flex 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				box-sizing: border-box;
+			}
+
+			.strip-swatch:hover {
+				flex: 1.8;
+				z-index: 10;
+			}
+
+			.strip-label {
+				position: absolute;
+				inset: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 16px 4px 10px 4px;
+				box-sizing: border-box;
+				pointer-events: none; /* Let clicks pass to the swatch */
+				user-select: none;
+			}
+
+			.strip-name {
+				writing-mode: vertical-rl;
+				text-orientation: upright;
+				font-family: "LXGW WenKai TC", serif !important;
+				font-size: 14px;
+				font-weight: 600;
+				letter-spacing: 0.25em; /* Spacious letter-spacing exactly like screenshot! */
+				line-height: 1.2;
+				margin-top: 6px;
+			}
+
+			.strip-hex {
+				font-family: "DM Mono", monospace !important;
+				font-size: 10px;
+				font-weight: 500;
+				opacity: 0.85;
+				margin-top: auto;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+			}
+
+			/* 3x2 Symmetrical Grid for Consolidative Palettes */
+			.palette-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 24px;
+				width: 100%;
+			}
+
+			@media (max-width: 1100px) {
+				.palette-grid {
+					grid-template-columns: 1fr;
+					gap: 18px;
+				}
+			}
+
+			/* Palette Row Details */
+			.palette-row {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+				width: 100%;
+			}
+
+			.palette-row-header {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+				margin-bottom: 2px;
+			}
+
+			.palette-subtitle {
+				font-family: "Barlow", sans-serif !important;
+				font-size: 11px;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				color: var(--ink-muted);
+				margin-left: 8px;
+			}
+
+			.palette-desc {
+				font-family: "Noto Sans SC", sans-serif !important;
+				font-size: 11.5px;
+				font-weight: 400;
+				color: var(--ink-soft);
+				line-height: 1.4;
+				opacity: 0.85;
+			}
+
+			/* Contrast Clash Dual Card (Opposite) */
+			.contrast-clash-box {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 12px;
+			}
+
+			.clash-card {
+				border-radius: var(--card-radius);
+				padding: 14px;
+				border: 1.5px solid transparent;
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+				cursor: pointer;
+				transition: all 0.2s ease;
+				background-color: transparent;
+			}
+
+			.clash-card:hover {
+				transform: translateY(-2px);
+			}
+
+			.clash-swatch {
+				height: 48px;
+				border-radius: 8px;
+				border: 1px solid rgba(0, 0, 0, 0.05);
+			}
+
+			.clash-card-lbl {
+				font-family: "LXGW WenKai TC", serif;
+				font-size: 14px;
+				font-weight: 700;
+				text-align: center;
+			}
+
+			.contrast-legibility-preview {
+				border-radius: var(--card-radius);
+				padding: 16px 20px;
+				text-align: center;
+				font-family: "LXGW WenKai TC", serif;
+				border: 3px double var(--theme-primary) !important;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 72px;
+				box-shadow: none !important;
+				letter-spacing: 0.05em;
+				background-color: transparent !important;
+				transition: border-color 0.3s ease;
+				box-sizing: border-box;
+			}
+
+			/* Dilution Wash (Slider + swatches overlay) */
+			.slider-wrapper {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				background: rgba(255, 255, 255, 0.3);
+				padding: 16px;
+				border-radius: var(--card-radius);
+				border: 1px solid var(--border-color);
+			}
+
+			.slider-header {
+				display: flex;
+				justify-content: space-between;
+				font-family: "Outfit", sans-serif;
+				font-size: 13.5px;
+				font-weight: 700;
+				color: var(--ink) !important;
+				text-transform: uppercase;
+			}
+
+			.range-slider {
+				width: 100%;
+				height: 6px;
+				border-radius: 3px;
+				outline: none;
+				-webkit-appearance: none;
+				background: var(--bg2);
+				accent-color: var(--theme-primary);
+			}
+
+			.dilution-preview-box {
+				height: 80px;
+				border-radius: var(--card-radius);
+				border: 1px solid var(--border-color);
+				position: relative;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-image:
+					linear-gradient(45deg, #e8e4de 25%, transparent 25%),
+					linear-gradient(-45deg, #e8e4de 25%, transparent 25%),
+					linear-gradient(45deg, transparent 75%, #e8e4de 75%),
+					linear-gradient(-45deg, transparent 75%, #e8e4de 75%);
+				background-size: 12px 12px;
+				background-position:
+					0 0,
+					0 6px,
+					6px -6px,
+					-6px 0px;
+			}
+
+			.dilution-preview-fill {
+				position: absolute;
+				inset: 0;
+				transition:
+					background-color 0.15s ease,
+					opacity 0.15s ease;
+			}
+
+			.dilution-preview-lbl {
+				z-index: 10;
+				font-family: "LXGW WenKai TC", serif;
+				font-size: 20px;
+				font-weight: 900;
+				letter-spacing: 1px;
+				text-shadow:
+					0 1px 4px rgba(255, 255, 255, 0.8),
+					0 0 10px rgba(255, 255, 255, 0.9);
+			}
+
+			/* Monochromatic dilution milestones */
+			.dilution-milestones-row {
+				display: flex;
+				flex-wrap: nowrap;
+				overflow-x: auto;
+				gap: 8px;
+				padding-bottom: 8px;
+				scrollbar-width: auto;
+				-ms-overflow-style: auto;
+				width: 100%;
+				max-width: 100%;
+			}
+			.dilution-milestones-row::-webkit-scrollbar {
+				height: 6px;
+				display: block;
+			}
+			.dilution-milestones-row::-webkit-scrollbar-thumb {
+				background-color: var(--border-color);
+				border-radius: 3px;
+			}
+
+			.dilution-milestone-tile {
+				background-color: transparent;
+				border: 1px solid var(--border-color);
+				border-radius: var(--card-radius);
+				padding: 8px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 6px;
+				cursor: pointer;
+				transition: all 0.2s ease;
+				flex: 0 0 85px;
+			}
+
+			.dilution-milestone-tile:hover {
+				transform: translateY(-2px);
+				border-color: var(--theme-primary);
+			}
+
+			.dilution-tile-swatch {
+				width: 100%;
+				height: 36px;
+				border-radius: 6px;
+				border: 1px solid rgba(0, 0, 0, 0.04);
+			}
+
+			.dilution-tile-lbl {
+				font-family: "LXGW WenKai TC", serif;
+				font-size: 12px;
+				font-weight: 700;
+				color: var(--ink) !important;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				width: 100%;
+				text-align: center;
+			}
+
+			.dilution-tile-pct {
+				font-family: "DM Mono", sans-serif;
+				font-size: 10px;
+				font-weight: 700;
+				color: var(--ink) !important;
+			}
+
+			/* Timeline Solar Terms Box */
+			.timeline-solar-term-info {
+				background-color: transparent;
+				border-radius: 0;
+				padding: 8px 12px;
+				border-left: 3px solid var(--theme-primary);
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+			}
+
+			.timeline-term-title {
+				font-family: "Noto Sans TC", sans-serif !important;
+				font-size: 20px;
+				font-weight: 700;
+				color: var(--ink) !important;
+				display: flex;
+				align-items: center;
+				gap: 12px;
+			}
+
+			#timelineTermSeason {
+				font-size: 12px;
+				font-family: "LXGW WenKai TC", serif !important;
+				font-weight: normal;
+				background-color: var(--border-color);
+				color: var(--ink-muted);
+				padding: 2px 8px;
+				border-radius: 4px;
+				margin-left: 8px;
+				display: inline-block;
+			}
+
+			.timeline-term-desc {
+				font-family: "Noto Sans TC", sans-serif !important;
+				font-size: 13.5px;
+				color: var(--ink-soft) !important;
+				line-height: 1.5;
+				margin: 4px 0 0 0;
+			}
+
+			/* Timeline slider with seasonal spectrum gradient */
+			#termTimelineSlider {
+				background: linear-gradient(
+					to right,
+					#73975c 0%,
+					#b83a32 33%,
+					#c99032 66%,
+					#3b5b66 100%
+				) !important;
+				height: 8px;
+				border-radius: 4px;
+				cursor: pointer;
+				-webkit-appearance: none;
+				appearance: none;
+				width: 100%;
+			}
+
+			.timeline-swatches-grid {
+				display: flex;
+				flex-wrap: nowrap;
+				overflow-x: auto;
+				gap: 8px;
+				padding-bottom: 8px;
+				scrollbar-width: auto;
+				-ms-overflow-style: auto;
+				width: 100%;
+				max-width: 100%;
+			}
+			.timeline-swatches-grid::-webkit-scrollbar {
+				height: 6px;
+				display: block;
+			}
+			.timeline-swatches-grid::-webkit-scrollbar-thumb {
+				background-color: var(--border-color);
+				border-radius: 3px;
+			}
+
+			.timeline-well {
+				flex: 0 0 85px;
+				aspect-ratio: 1.3;
+				border-radius: var(--card-radius);
+				border: 1px solid rgba(0, 0, 0, 0.05);
+				cursor: pointer;
+				transition: all 0.2s ease;
+				display: flex;
+				align-items: flex-end;
+				padding: 4px;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.timeline-well:hover {
+				transform: scale(1.06);
+				z-index: 10;
+			}
+
+			.timeline-well-lbl {
+				font-family: "LXGW WenKai TC", serif;
+				font-size: 10px;
+				font-weight: 700;
+				background-color: transparent;
+				padding: 2px 4px;
+				border-radius: 4px;
+				width: 100%;
+				text-align: center;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				box-shadow: none;
+			}
+
+			/* Dynamic Tooltips */
+			.well-tooltip {
+				position: absolute;
+				background-color: var(--ink);
+				color: #ffffff;
+				padding: 8px 12px;
+				border-radius: 6px;
+				font-size: 11px;
+				font-family: "Barlow", sans-serif;
+				pointer-events: none;
+				opacity: 0;
+				transition: opacity 0.1s ease;
+				z-index: 1000000;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				line-height: 1.4;
+			}
+
+			/* Copy toast */
+			.toast {
+				position: fixed;
+				bottom: 28px;
+				left: 50%;
+				transform: translateX(-50%) translateY(12px);
+				background: var(--ink);
+				color: #fff;
+				padding: 9px 18px;
+				border-radius: 999px;
+				font-size: 13px;
+				font-family: "DM Mono", monospace;
+				letter-spacing: 0.06em;
+				opacity: 0;
+				pointer-events: none;
+				transition: all 0.25s ease;
+				z-index: 9999;
+			}
+			.toast.show {
+				opacity: 1;
+				transform: translateX(-50%) translateY(0);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Header Section -->
+		<header>
+			<div style="display: flex; align-items: center; gap: 12px">
+				<div class="logo">华<span>彩</span></div>
+				<div class="logo-divider"></div>
+				<div class="logo-sub">
+					中国传统色谱 · CHINESE TRADITIONAL COLORS
+				</div>
+			</div>
+
+			<!-- Premium Fuzzy Search Input on Top Right -->
+			<div class="search-bar-container">
+				<input
+					type="text"
+					class="search-input"
+					id="searchInput"
+					placeholder="搜索传统色 (名称/色号)..."
+					oninput="handleSearch()"
+				/>
+				<span class="search-icon" id="searchIcon">🔍</span>
+			</div>
+		</header>
+
+		<!-- 11 Hues Dynamic Dock Pill Bar -->
+		<div class="hues-dock-container" style="margin-bottom: 24px">
+			<div class="hues-dock-row" id="huesDockRow">
+				<!-- Dynamic pills generated by JS -->
+			</div>
+		</div>
+
+		<!-- Active Stage -->
+		<div class="stage-container">
+			<!-- Swatches Catalog Card -->
+			<div class="swatches-grid-card">
+				<div class="swatches-grid" id="swatchesGrid">
+					<!-- Dynamic swatches list -->
+				</div>
+			</div>
+
+			<!-- Dynamic Sidebar Details & 5 Exploration Labs (Tabbed) -->
+			<div class="details-sidebar">
+				<!-- Active Swatch Viewer -->
+				<div class="details-viewer-card" id="detailHero">
+					<div class="hero-banner" id="heroBanner">
+						<div class="hero-name-col">
+							<div class="hero-name" id="viewerNameZh">
+								黄白游
+							</div>
+							<div
+								class="hero-hex-inline"
+								id="viewerHexCodeContainer"
+							>
+								<span
+									class="hero-hex-inline-dot"
+									id="viewerSwatch"
+								></span>
+								<span id="viewerHexCode">#FFF799</span>
+							</div>
+						</div>
+						<div class="hero-quote-col">
+							<div class="hero-quote-text" id="viewerPoetry">
+								欲识金银气，多从黄白游；一生痴绝处，无梦到徽州。
+							</div>
+							<div class="hero-quote-source" id="viewerCitation">
+								— 汤显祖 《有友人怜予乏劝 为黄山白岳之游》
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Redesigned Exploration Labs (Consolidated 2-Tab Layout) -->
+				<div class="exploration-labs-card">
+					<div class="labs-tabs-nav">
+						<button
+							class="labs-tab-btn active"
+							id="lab-tab-palettes"
+							onclick="switchLabTab('palettes')"
+						>
+							意境配盘
+						</button>
+						<button
+							class="labs-tab-btn"
+							id="lab-tab-season"
+							onclick="switchLabTab('season')"
+						>
+							节气流光
+						</button>
+					</div>
+
+					<!-- Tab Panel 1: Dynamic Harmonious Palettes -->
+					<div class="labs-tab-panel active" id="panel-lab-palettes">
+						<div class="harmony-accord-box">
+							<div class="palette-grid">
+								<!-- Palette Row 1: Classy Analogous -->
+								<div class="palette-row">
+									<div class="palette-row-header">
+										<span class="harmony-accord-title"
+											>相依
+											<span class="palette-subtitle"
+												>Classy Analogous</span
+											></span
+										>
+										<span class="palette-desc"
+											>以邻近色相与柔和明度，铺叙温润和谐之美。</span
+										>
+									</div>
+									<div class="color-strip" id="paletteClassy">
+										<!-- Generated dynamically -->
+									</div>
+								</div>
+
+								<!-- Palette Row 2: Spot Accent -->
+								<div class="palette-row">
+									<div class="palette-row-header">
+										<span class="harmony-accord-title"
+											>留白
+											<span class="palette-subtitle"
+												>Spot Accent</span
+											></span
+										>
+										<span class="palette-desc"
+											>极简之境，以莹白、葭灰衬托主色，静谧生动。</span
+										>
+									</div>
+									<div class="color-strip" id="paletteSpot">
+										<!-- Generated dynamically -->
+									</div>
+								</div>
+
+								<!-- Palette Row 3: Five Elements -->
+								<div class="palette-row">
+									<div class="palette-row-header">
+										<span class="harmony-accord-title"
+											>相生
+											<span class="palette-subtitle"
+												>Five Elements Balance</span
+											></span
+										>
+										<span class="palette-desc"
+											>金木水火土五性调和，于时令气候中探求平衡。</span
+										>
+									</div>
+									<div
+										class="color-strip"
+										id="paletteFiveElements"
+									>
+										<!-- Generated dynamically -->
+									</div>
+								</div>
+
+								<!-- Palette Row 4: Complementary Contrast -->
+								<div class="palette-row">
+									<div class="palette-row-header">
+										<span class="harmony-accord-title"
+											>交错
+											<span class="palette-subtitle"
+												>Complementary Contrast</span
+											></span
+										>
+										<span class="palette-desc"
+											>主色与互补色调和，相反相成，高张夺目。</span
+										>
+									</div>
+									<div
+										class="color-strip"
+										id="paletteComplementary"
+									>
+										<!-- Generated dynamically -->
+									</div>
+								</div>
+
+								<!-- Palette Row 5: Ink Dilution -->
+								<div class="palette-row">
+									<div class="palette-row-header">
+										<span class="harmony-accord-title"
+											>淡墨
+											<span class="palette-subtitle"
+												>Ink Dilution Gradient</span
+											></span
+										>
+										<span class="palette-desc"
+											>浓淡干湿，墨分五彩，追寻宣纸上的水痕渗漫。</span
+										>
+									</div>
+									<div
+										class="color-strip"
+										id="paletteDilution"
+									>
+										<!-- Generated dynamically -->
+									</div>
+								</div>
+
+								<!-- Palette Row 6: Misty Rain -->
+								<div class="palette-row">
+									<div class="palette-row-header">
+										<span class="harmony-accord-title"
+											>烟雨
+											<span class="palette-subtitle"
+												>Misty Rain</span
+											></span
+										>
+										<span class="palette-desc"
+											>山色空蒙，雨覆轻尘，探寻天缥与欧碧的温润朦胧。</span
+										>
+									</div>
+									<div
+										class="color-strip"
+										id="paletteScholar"
+									>
+										<!-- Generated dynamically -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Tab Panel 2: Solar Term Flow -->
+					<div class="labs-tab-panel" id="panel-lab-season">
+						<div
+							class="season-header-row"
+							style="
+								display: flex;
+								flex-direction: row;
+								align-items: flex-start;
+								gap: 48px;
+								width: 100%;
+								margin-bottom: 24px;
+							"
+						>
+							<!-- Active timeline term card description -->
+							<div
+								class="timeline-solar-term-info"
+								style="flex: 1; padding: 4px 0; margin-top: 0"
+							>
+								<span
+									class="timeline-term-title"
+									id="timelineTermName"
+									>立春
+									<span
+										style="
+											font-size: 12px;
+											font-family:
+												&quot;LXGW WenKai TC&quot;,
+												serif !important;
+										"
+										id="timelineTermSeason"
+										>春</span
+									></span
+								>
+								<p
+									class="timeline-term-desc"
+									id="timelineTermDesc"
+								>
+									时令之首，万物萌发，春风拂绿。
+								</p>
+							</div>
+
+							<!-- Chronological Solar Terms Slider Container (Moved closer, with seasons labels) -->
+							<div
+								class="season-slider-wrapper"
+								style="
+									flex: 0 0 280px;
+									display: flex;
+									flex-direction: column;
+									gap: 8px;
+									margin-top: 6px;
+								"
+							>
+								<span
+									id="termSliderValIndicator"
+									style="display: none"
+									>立春</span
+								>
+								<input
+									type="range"
+									class="range-slider"
+									min="0"
+									max="23"
+									value="0"
+									id="termTimelineSlider"
+									oninput="handleTimelineChange()"
+									style="
+										margin: 0;
+										width: 100%;
+										box-shadow: none;
+									"
+								/>
+								<!-- Four Seasons Labels along the bar -->
+								<div
+									class="season-labels-row"
+									style="
+										display: flex;
+										justify-content: space-between;
+										padding: 0 6px;
+										font-family:
+											&quot;LXGW WenKai TC&quot;, serif !important;
+										font-size: 12px;
+										color: var(--ink-soft);
+										opacity: 0.85;
+										user-select: none;
+									"
+								>
+									<span>春</span>
+									<span>夏</span>
+									<span>秋</span>
+									<span>冬</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- 16 colors of the active Solar Term grid list -->
+						<div class="harmony-accord-box">
+							<span
+								class="harmony-accord-title"
+								id="timelineGridTitle"
+								>立春分册 收录色彩 (16色)</span
+							>
+							<div
+								class="timeline-swatches-grid"
+								id="timelineSwatchesGrid"
+							>
+								<!-- Generated dynamically -->
+							</div>
+						</div>
+					</div>
+
+					<!-- Hidden inputs kept for JS stability and backwards-compatibility -->
+					<div style="display: none">
+						<span id="dilutionValIndicator">100% 饱和浓度</span>
+						<input
+							type="range"
+							min="5"
+							max="100"
+							value="100"
+							id="dilutionSlider"
+							oninput="handleDilutionChange()"
+						/>
+						<div id="dilutionPreviewFill"></div>
+						<span id="dilutionPreviewText"></span>
+					</div>
+				</div>
+
+				<!-- Scientific Spectrum Analytics Removed -->
+			</div>
+		</div>
+
+		<!-- Tooltip -->
+		<div class="well-tooltip" id="wellTooltip"></div>
+
+		<!-- Toast Notification -->
+		<div class="toast" id="toast">复制成功</div>
+
+		<script>
+			// Primary state variables
+			const colorsDb = window.colorsDatabase || [];
+			let activeHueFilter = "red_warm";
+			let activeViewerColor = colorsDb[0];
+			let activeLabTab = "palettes";
+
+			// Advanced 11 Hues Branding & Theme Color mappings
+			const hueFamilies = {
+				red_warm: {
+					nameZh: "朱赤",
+					desc: "Warm Red / Scarlet",
+					accentHex: "#D94F5E",
+					accentRgb: "217, 79, 94",
+					lightBg: "rgba(217, 79, 94, 0.05)",
+					border: "rgba(217, 79, 94, 0.2)",
+					summary:
+						"【朱赤系 - 暖红特区】主要包含古代的朱砂、朱红、绯红等色泽，光谱聚焦于暖色极点（0°-9° 及 351°-360°），由于波长极长，视觉张力充沛，是中国传统礼制、喜庆与正统审美的绝对核心。",
+				},
+				red_cool: {
+					nameZh: "深绛",
+					desc: "Cool Red / Crimson",
+					accentHex: "#A43A48",
+					accentRgb: "164, 58, 72",
+					lightBg: "rgba(164, 58, 72, 0.05)",
+					border: "rgba(164, 58, 72, 0.2)",
+					summary:
+						"【深绛系 - 冷红特区】包含胭脂、绛红、深茜等冷调红色，光谱聚焦于 9° 至 18° 及 342° 至 351° 区间。由于色相略微朝紫色方向偏移，呈现出高贵、内敛、冷艳的宫廷丝绸染色美学。",
+				},
+				orange: {
+					nameZh: "橙橘",
+					desc: "Vibrant Orange",
+					accentHex: "#E27E37",
+					accentRgb: "226, 126, 55",
+					lightBg: "rgba(226, 126, 55, 0.05)",
+					border: "rgba(226, 126, 55, 0.2)",
+					summary:
+						"【橙橘系 - 活力明橙】光谱位于 18° 至 46° 且明度较高（L >= 48%）的亮暖色调。包含经典的杏子、琥珀、橘黄等，色彩明朗亮丽，充满丰收与阳光的温度。",
+				},
+				brown: {
+					nameZh: "褐赭",
+					desc: "Brown & Earth",
+					accentHex: "#8B5A3E",
+					accentRgb: "139, 90, 62",
+					lightBg: "rgba(139, 90, 62, 0.05)",
+					border: "rgba(139, 90, 62, 0.2)",
+					summary:
+						"【褐赭系 - 沉稳土褐】光谱同样位于 18° 至 46° 区间，但被严格限定在低明度（L < 48%）范畴。包含流黄、栗壳、赭石等，沉稳沉静，是古代矿物色与大自然土壤植物皮壳的深度结晶。",
+				},
+				yellow: {
+					nameZh: "黄",
+					desc: "Yellow",
+					accentHex: "#D0A010",
+					accentRgb: "208, 160, 16",
+					lightBg: "rgba(208, 160, 16, 0.05)",
+					border: "rgba(208, 160, 16, 0.2)",
+					summary:
+						"【黄系 - 尊贵御黄】光谱聚集于明黄、松花与细叶区间（46°-75°）。黄色在传统中表征泥土与正中之位，也是明清御用龙袍的专属正色，尊贵稳定，光芒万丈。",
+				},
+				green: {
+					nameZh: "绿",
+					desc: "Green",
+					accentHex: "#358C59",
+					accentRgb: "53, 140, 89",
+					lightBg: "rgba(53, 140, 89, 0.05)",
+					border: "rgba(53, 140, 89, 0.2)",
+					summary:
+						"【绿系 - 翡翠林木】光谱处于 75° 至 165° 范围，代表繁茂 the 森林、春季草木的新生与翡翠绿玉。色彩清新、自然，饱和度饱满，生机勃勃。",
+				},
+				cyan: {
+					nameZh: "青翠",
+					desc: "Cyan & Teal",
+					accentHex: "#1C7A8C",
+					accentRgb: "28, 122, 140",
+					lightBg: "rgba(28, 122, 140, 0.05)",
+					border: "rgba(28, 122, 140, 0.2)",
+					summary:
+						"【青翠系 - 绿翠苍筤】光谱位于 165° 至 205° 之间，横跨青绿、湖蓝与翠水。代表中国古典审美中最具写意感的「青」色，烟雨朦胧，苍筤缥缈。",
+				},
+				blue: {
+					nameZh: "蓝黛",
+					desc: "Blue & Indigo",
+					accentHex: "#23448E",
+					accentRgb: "35, 68, 142",
+					lightBg: "rgba(35, 68, 142, 0.05)",
+					border: "rgba(35, 68, 142, 0.2)",
+					summary:
+						"【蓝黛系 - 靛蓝深青】光谱聚集于 205° 至 255° 的纯蓝与深靛区间。包含天然石青、青黛、靛蓝等，表征夜空的广袤无垠、深海的幽邃以及矿石的坚贞。",
+				},
+				purple: {
+					nameZh: "紫",
+					desc: "Purple",
+					accentHex: "#834895",
+					accentRgb: "131, 72, 149",
+					lightBg: "rgba(131, 72, 149, 0.05)",
+					border: "rgba(131, 72, 149, 0.2)",
+					summary:
+						"【紫系 - 祥瑞紫苑】光谱聚焦于 255° 至 300° 区间。紫色在古籍中表征「紫气东来」的祥瑞，虽然由于染料（紫草）珍稀，色彩数量极少（9色），但却拥有无可匹敌的高贵质感。",
+				},
+				pink: {
+					nameZh: "粉绛",
+					desc: "Pink",
+					accentHex: "#DC6B82",
+					accentRgb: "220, 107, 130",
+					lightBg: "rgba(220, 107, 130, 0.05)",
+					border: "rgba(220, 107, 130, 0.2)",
+					summary:
+						"【粉绛系 - 娇柔桃夭】光谱处于 300° 至 342° 的粉红区间。包含桃花、杨妃、长春等娇美色彩，散发出春天百花争艳的柔美、娇嫩与勃发生机。",
+				},
+				neutral: {
+					nameZh: "灰白",
+					desc: "Neutral",
+					accentHex: "#6D6E70",
+					accentRgb: "109, 110, 112",
+					lightBg: "rgba(109, 110, 112, 0.05)",
+					border: "rgba(109, 110, 112, 0.2)",
+					summary:
+						"【灰白系 - 极简素雅】包含所有低饱和度（S < 13%）或极暗（L < 15%）、极亮（L > 88%）的白、灰、素色与煤黑。纯净、内敛，是传统水墨留白的基准底色。",
+				},
+			};
+
+			const CHRONO_TERMS = [
+				{
+					name: "立春",
+					py: "Lichun",
+					season: "春季",
+					desc: "时令之首，阳气萌生，林木始动，春风拂绿。",
+				},
+				{
+					name: "雨水",
+					py: "Yushui",
+					season: "春季",
+					desc: "冰雪消融，细雨随风，草木萌动，万物复苏。",
+				},
+				{
+					name: "惊蛰",
+					py: "Jingzhe",
+					season: "春季",
+					desc: "春雷始鸣，蛰虫惊醒，红花渐开，桃李竞芳。",
+				},
+				{
+					name: "春分",
+					py: "Chunfen",
+					season: "春季",
+					desc: "昼夜均等，微风徐徐，草长莺飞，白鹭翻飞。",
+				},
+				{
+					name: "清明",
+					py: "Qingming",
+					season: "春季",
+					desc: "万物洁齐，天清地明，采茶踏青，烟雨柳绿。",
+				},
+				{
+					name: "谷雨",
+					py: "Guyu",
+					season: "春季",
+					desc: "雨生百谷, 暮春将尽, 牡丹吐蕊, 绿荫渐浓。",
+				},
+				{
+					name: "立夏",
+					py: "Lixia",
+					season: "夏季",
+					desc: "夏之伊始，白昼渐长，万物繁茂，新蝉初鸣。",
+				},
+				{
+					name: "小满",
+					py: "Xiaoman",
+					season: "夏季",
+					desc: "江河渐满，麦粒始满，绿树成荫，荷池初动。",
+				},
+				{
+					name: "芒种",
+					py: "Mangzhong",
+					season: "夏季",
+					desc: "麦浪翻滚，稻秧始播，蝉鸣声声，夏花灿烂。",
+				},
+				{
+					name: "夏至",
+					py: "Xiazhi",
+					season: "夏季",
+					desc: "日影极短，夏夜极凉，稻香蛙鸣，满池朱莲。",
+				},
+				{
+					name: "小暑",
+					py: "Xiaoshu",
+					season: "夏季",
+					desc: "温风始至，伏蝉喧嚣，雷雨阵阵，幽荷溢香。",
+				},
+				{
+					name: "大暑",
+					py: "Dashu",
+					season: "夏季",
+					desc: "热浪极盛，萤火夜飞，大雨时行，万物繁茂。",
+				},
+				{
+					name: "立秋",
+					py: "Liqiu",
+					season: "秋季",
+					desc: "凉风习习, 金黄遍野, 梧桐落叶, 晨露初凝。",
+				},
+				{
+					name: "处暑",
+					py: "Chushu",
+					season: "秋季",
+					desc: "秋意初来, 暑气渐消, 天高云淡, 稻谷飘香。",
+				},
+				{
+					name: "白露",
+					py: "Bailu",
+					season: "秋季",
+					desc: "阴气始重, 凝而成露, 雁南飞去, 金秋凝霜。",
+				},
+				{
+					name: "秋分",
+					py: "Qiufen",
+					season: "秋季",
+					desc: "昼夜均分, 秋风萧瑟, 桂花飘香, 韶粉铺地。",
+				},
+				{
+					name: "寒露",
+					py: "Hanlu",
+					season: "秋季",
+					desc: "露水渐寒, 凝结将冰, 枫红遍野, 菊蕊飘香。",
+				},
+				{
+					name: "霜降",
+					py: "Shuangjiang",
+					season: "秋季",
+					desc: "气肃而凝, 露结为霜, 万物凋零, 傲骨红柿。",
+				},
+				{
+					name: "立冬",
+					py: "Lidong",
+					season: "冬季",
+					desc: "冬之伊始, 朔风怒号, 水始成冰, 万物归藏。",
+				},
+				{
+					name: "小雪",
+					py: "Xiaoxue",
+					season: "冬季",
+					desc: "天降初雪, 寒气渐重, 松柏长青, 腊梅含苞。",
+				},
+				{
+					name: "大雪",
+					py: "Daxue",
+					season: "冬季",
+					desc: "积雪铺地, 寒风呼啸, 江河封冻, 炉火焙茶。",
+				},
+				{
+					name: "冬至",
+					py: "Dongzhi",
+					season: "冬季",
+					desc: "日影极长, 冬夜极深, 阴极阳生, 腊鼓声声。",
+				},
+				{
+					name: "小寒",
+					py: "Xiaohan",
+					season: "冬季",
+					desc: "寒积至深, 冰冻三尺, 梅花绽蕊, 水仙初吐。",
+				},
+				{
+					name: "大寒",
+					py: "Dahan",
+					season: "冬季",
+					desc: "岁暮大寒, 积雪不融, 冰雕玉琢, 静候春归。",
+				},
+			];
+
+			// Initialize Page
+			window.onload = () => {
+				renderHuesDock();
+				switchHue("red_warm");
+
+				// Switch tabs to first default 'palettes'
+				switchLabTab("palettes");
+
+				handleDilutionChange();
+				handleTimelineChange();
+
+				// Bind click to copy hex code
+				const hexContainer = document.getElementById(
+					"viewerHexCodeContainer",
+				);
+				if (hexContainer) {
+					hexContainer.onclick = () => {
+						if (activeViewerColor) copyText(activeViewerColor.hex);
+					};
+				}
+			};
+
+			// Helper: Convert hex color to comma-separated RGB values
+			function hexToRgb(hex) {
+				const bigint = parseInt(hex.slice(1), 16);
+				const r = (bigint >> 16) & 255;
+				const g = (bigint >> 8) & 255;
+				const b = bigint & 255;
+				return `${r}, ${g}, ${b}`;
+			}
+
+			// Render top 11 hues pill dock dynamically
+			function renderHuesDock() {
+				const row = document.getElementById("huesDockRow");
+				row.innerHTML = "";
+
+				const counts = {};
+				colorsDb.forEach((c) => {
+					counts[c.hue] = (counts[c.hue] || 0) + 1;
+				});
+
+				Object.keys(hueFamilies).forEach((hueKey) => {
+					const family = hueFamilies[hueKey];
+					const pill = document.createElement("div");
+					pill.className = `hue-dock-pill ${hueKey === activeHueFilter ? "active" : ""}`;
+					pill.id = `hue-pill-${hueKey}`;
+					pill.onclick = () => switchHue(hueKey);
+
+					// Style the 11 groups directly in the tab
+					pill.style.setProperty("--pill-color", family.accentHex);
+
+					pill.innerHTML = `
                     <span class="hue-pill-indicator"></span>
                     <span>${family.nameZh}</span>
                     <span class="hue-pill-count">${counts[hueKey] || 0}</span>
                 `;
-                row.appendChild(pill);
-            });
-        }
+					row.appendChild(pill);
+				});
+			}
 
-        // Switch active Hue family
-        function switchHue(hueKey, selectColor = null) {
-            activeHueFilter = hueKey;
+			// Switch active Hue family
+			function switchHue(hueKey, selectColor = null) {
+				activeHueFilter = hueKey;
 
-            // Re-render the dock capsules to update border thickness, shadow, and opacity dynamically
-            renderHuesDock();
+				// Re-render the dock capsules to update border thickness, shadow, and opacity dynamically
+				renderHuesDock();
 
-            const theme = hueFamilies[hueKey];
-            document.documentElement.style.setProperty('--theme-primary', theme.accentHex);
-            document.documentElement.style.setProperty('--theme-primary-rgb', theme.accentRgb);
-            document.documentElement.style.setProperty('--theme-light-bg', theme.lightBg);
-            document.documentElement.style.setProperty('--theme-border', theme.border);
+				const theme = hueFamilies[hueKey];
+				document.documentElement.style.setProperty(
+					"--theme-primary",
+					theme.accentHex,
+				);
+				document.documentElement.style.setProperty(
+					"--theme-primary-rgb",
+					theme.accentRgb,
+				);
+				document.documentElement.style.setProperty(
+					"--theme-light-bg",
+					theme.lightBg,
+				);
+				document.documentElement.style.setProperty(
+					"--theme-border",
+					theme.border,
+				);
 
-            const filtered = colorsDb.filter(c => c.hue === hueKey);
+				const filtered = colorsDb.filter((c) => c.hue === hueKey);
 
-            renderGrid(filtered);
+				renderGrid(filtered);
 
-            if (filtered.length > 0) {
-                const target = selectColor || filtered[0];
-                selectViewerColor(target);
-            }
+				if (filtered.length > 0) {
+					const target = selectColor || filtered[0];
+					selectViewerColor(target);
+				}
 
-            calculateAnalytics(filtered, theme.summary);
-        }
+				calculateAnalytics(filtered, theme.summary);
+			}
 
-        // Draw Swatches Grid
-        function renderGrid(colorsList) {
-            const grid = document.getElementById('swatchesGrid');
-            grid.innerHTML = '';
+			// Draw Swatches Grid
+			function renderGrid(colorsList) {
+				const grid = document.getElementById("swatchesGrid");
+				grid.innerHTML = "";
 
-            colorsList.forEach(c => {
-                const card = document.createElement('div');
-                card.className = `swatch-card ${activeViewerColor && activeViewerColor.hex === c.hex ? 'active' : ''}`;
-                card.id = `swatch-card-${c.hex.replace('#','')}`;
-                card.style.setProperty('--card-color', c.hex);
-                card.style.setProperty('--hover-text-color', c.fontColor);
-                card.onclick = () => {
-                    selectViewerColor(c);
-                };
+				colorsList.forEach((c) => {
+					const card = document.createElement("div");
+					card.className = `swatch-card ${activeViewerColor && activeViewerColor.hex === c.hex ? "active" : ""}`;
+					card.id = `swatch-card-${c.hex.replace("#", "")}`;
+					card.style.setProperty("--card-color", c.hex);
+					card.style.setProperty("--hover-text-color", c.fontColor);
+					card.onclick = () => {
+						selectViewerColor(c);
+					};
 
-                card.innerHTML = `
+					card.innerHTML = `
                     <div class="swatch-header-swatch" style="background-color: ${c.hex};" data-hex="${c.hex}"></div>
                     <div class="swatch-body-info">
                         <span class="swatch-name-zh">${c.nameHans}</span>
                     </div>
                 `;
-                grid.appendChild(card);
-            });
-        }
+					grid.appendChild(card);
+				});
+			}
 
-        // Active details viewer loader
-        function selectViewerColor(c) {
-            activeViewerColor = c;
+			// Active details viewer loader
+			function selectViewerColor(c) {
+				activeViewerColor = c;
 
-            // Automatically switch active catalog spectrum group if selected color belongs to a different family
-            if (c.hue && c.hue !== activeHueFilter) {
-                switchHue(c.hue, c);
-                return; // switchHue will call selectViewerColor(c) which finishes execution
-            }
+				// Automatically switch active catalog spectrum group if selected color belongs to a different family
+				if (c.hue && c.hue !== activeHueFilter) {
+					switchHue(c.hue, c);
+					return; // switchHue will call selectViewerColor(c) which finishes execution
+				}
 
-            document.querySelectorAll('.swatch-card').forEach(card => card.classList.remove('active'));
-            const activeCard = document.getElementById(`swatch-card-${c.hex.replace('#','')}`);
-            if (activeCard) activeCard.classList.add('active');
+				document
+					.querySelectorAll(".swatch-card")
+					.forEach((card) => card.classList.remove("active"));
+				const activeCard = document.getElementById(
+					`swatch-card-${c.hex.replace("#", "")}`,
+				);
+				if (activeCard) activeCard.classList.add("active");
 
-            document.getElementById('detailHero').style.backgroundColor = c.hex;
-            
-            document.getElementById('viewerNameZh').innerText = c.nameHans;
-            document.getElementById('viewerHexCode').innerText = c.hex;
-            document.getElementById('viewerPoetry').innerText = c.sentenceHans;
-            document.getElementById('viewerCitation').innerText = `— ${c.authorHans} 《${c.sentenceFromHans}》`;
+				document.getElementById("detailHero").style.backgroundColor =
+					c.hex;
 
-            // Dynamically adjust text and element contrast inside the hero banner
-            const textElements = [
-                document.getElementById('viewerNameZh'),
-                document.getElementById('viewerHexCode'),
-                document.getElementById('viewerPoetry'),
-                document.getElementById('viewerCitation')
-            ];
-            textElements.forEach(el => {
-                if (el) {
-                    if (el.id === 'viewerCitation') {
-                        el.style.color = c.fontColor === '#FFFFFF' ? 'rgba(255,255,255,0.55)' : 'rgba(26,20,16,0.65)';
-                    } else if (el.id === 'viewerHexCode') {
-                        el.style.color = c.fontColor === '#FFFFFF' ? 'rgba(255,255,255,0.65)' : 'rgba(26,20,16,0.75)';
-                    } else {
-                        el.style.color = c.fontColor;
-                    }
-                }
-            });
+				document.getElementById("viewerNameZh").innerText = c.nameHans;
+				document.getElementById("viewerHexCode").innerText = c.hex;
+				document.getElementById("viewerPoetry").innerText =
+					c.sentenceHans;
+				document.getElementById("viewerCitation").innerText =
+					`— ${c.authorHans} 《${c.sentenceFromHans}》`;
 
-            const nameCol = document.querySelector('.hero-name-col');
-            if (nameCol) {
-                nameCol.style.borderColor = c.fontColor === '#FFFFFF' ? 'rgba(255,255,255,0.22)' : 'rgba(26,20,16,0.15)';
-            }
+				// Dynamically adjust text and element contrast inside the hero banner
+				const textElements = [
+					document.getElementById("viewerNameZh"),
+					document.getElementById("viewerHexCode"),
+					document.getElementById("viewerPoetry"),
+					document.getElementById("viewerCitation"),
+				];
+				textElements.forEach((el) => {
+					if (el) {
+						if (el.id === "viewerCitation") {
+							el.style.color =
+								c.fontColor === "#FFFFFF"
+									? "rgba(255,255,255,0.55)"
+									: "rgba(26,20,16,0.65)";
+						} else if (el.id === "viewerHexCode") {
+							el.style.color =
+								c.fontColor === "#FFFFFF"
+									? "rgba(255,255,255,0.65)"
+									: "rgba(26,20,16,0.75)";
+						} else {
+							el.style.color = c.fontColor;
+						}
+					}
+				});
 
-            const hexDot = document.querySelector('.hero-hex-inline-dot');
-            if (hexDot) {
-                hexDot.style.backgroundColor = c.fontColor === '#FFFFFF' ? 'rgba(255,255,255,0.5)' : 'rgba(26,20,16,0.4)';
-            }
+				const nameCol = document.querySelector(".hero-name-col");
+				if (nameCol) {
+					nameCol.style.borderColor =
+						c.fontColor === "#FFFFFF"
+							? "rgba(255,255,255,0.22)"
+							: "rgba(26,20,16,0.15)";
+				}
 
-            // Style standard active border
-            document.getElementById('viewerSwatch').style.background = c.hex;
+				const hexDot = document.querySelector(".hero-hex-inline-dot");
+				if (hexDot) {
+					hexDot.style.backgroundColor =
+						c.fontColor === "#FFFFFF"
+							? "rgba(255,255,255,0.5)"
+							: "rgba(26,20,16,0.4)";
+				}
 
-            // Set dynamic primary accents
-            document.documentElement.style.setProperty('--theme-primary', c.hex);
-            document.documentElement.style.setProperty('--theme-primary-rgb', hexToRgb(c.hex));
+				// Style standard active border
+				document.getElementById("viewerSwatch").style.background =
+					c.hex;
 
-            calculateExplorationLabs();
-        }
+				// Set dynamic primary accents
+				document.documentElement.style.setProperty(
+					"--theme-primary",
+					c.hex,
+				);
+				document.documentElement.style.setProperty(
+					"--theme-primary-rgb",
+					hexToRgb(c.hex),
+				);
 
-        // Switch Active Exploration Tab (1 of 5 dedicated tabs!)
-        function switchLabTab(tabId) {
-            activeLabTab = tabId;
-            document.querySelectorAll('.labs-tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.labs-tab-panel').forEach(panel => panel.classList.remove('active'));
+				calculateExplorationLabs();
+			}
 
-            document.getElementById(`lab-tab-${tabId}`).classList.add('active');
-            document.getElementById(`panel-lab-${tabId}`).classList.add('active');
-        }
+			// Switch Active Exploration Tab (1 of 5 dedicated tabs!)
+			function switchLabTab(tabId) {
+				activeLabTab = tabId;
+				document
+					.querySelectorAll(".labs-tab-btn")
+					.forEach((btn) => btn.classList.remove("active"));
+				document
+					.querySelectorAll(".labs-tab-panel")
+					.forEach((panel) => panel.classList.remove("active"));
 
-        // 2-Tab Exploration methods calculation hub (Redesigned with Tall Aspect Ratio Flush Strips)
-        function calculateExplorationLabs() {
-            if (!activeViewerColor) return;
-            const c = activeViewerColor;
+				document
+					.getElementById(`lab-tab-${tabId}`)
+					.classList.add("active");
+				document
+					.getElementById(`panel-lab-${tabId}`)
+					.classList.add("active");
+			}
 
-            // Helper to render swatches into a strip container
-            const renderStrip = (containerId, colorList) => {
-                const container = document.getElementById(containerId);
-                if (!container) return;
-                container.innerHTML = '';
-                
-                colorList.forEach(node => {
-                    if (!node) return;
-                    const swatch = document.createElement('div');
-                    swatch.className = 'strip-swatch';
-                    swatch.style.backgroundColor = node.hex;
-                    swatch.title = `${node.nameHans} ${node.hex}`;
-                    swatch.onclick = () => {
-                        copyText(node.hex);
-                    };
-                    
-                    // Calligraphy layout: vertical name, horizontal hex
-                    swatch.innerHTML = `
-                        <div class="strip-label" style="color:${node.fontColor || '#2F2F2F'}">
+			// 2-Tab Exploration methods calculation hub (Redesigned with Tall Aspect Ratio Flush Strips)
+			function calculateExplorationLabs() {
+				if (!activeViewerColor) return;
+				const c = activeViewerColor;
+
+				// Helper to render swatches into a strip container
+				const renderStrip = (containerId, colorList) => {
+					const container = document.getElementById(containerId);
+					if (!container) return;
+					container.innerHTML = "";
+
+					colorList.forEach((node) => {
+						if (!node) return;
+						const swatch = document.createElement("div");
+						swatch.className = "strip-swatch";
+						swatch.style.backgroundColor = node.hex;
+						swatch.title = `${node.nameHans} ${node.hex}`;
+						swatch.onclick = () => {
+							copyText(node.hex);
+						};
+
+						// Calligraphy layout: vertical name, horizontal hex
+						swatch.innerHTML = `
+                        <div class="strip-label" style="color:${node.fontColor || "#2F2F2F"}">
                             <span class="strip-name">${node.nameHans}</span>
                             <span class="strip-hex">${node.hex}</span>
                         </div>
                     `;
-                    container.appendChild(swatch);
-                });
-            };
+						container.appendChild(swatch);
+					});
+				};
 
-            // 1. 雅致相依 (Classy Analogous)
-            // Combine shades & neighbors, sorted to create a smooth seasonal HSL gradient
-            const classyShades = c.recommendedShades ? c.recommendedShades.map(hex => colorsDb.find(oth => oth.hex === hex)).filter(Boolean) : [];
-            const classyNeighbors = c.recommendedNeighbors ? c.recommendedNeighbors.map(hex => colorsDb.find(oth => oth.hex === hex)).filter(Boolean) : [];
-            
-            let classyList = [
-                classyShades[1] || classyShades[0],
-                classyNeighbors[0],
-                c,
-                classyNeighbors[1] || classyNeighbors[0],
-                classyShades[2] || classyShades[0]
-            ].filter(Boolean);
-            classyList = [...new Set(classyList)].slice(0, 5);
-            while (classyList.length < 5 && classyShades.length > classyList.length) {
-                const nextShade = classyShades.find(s => !classyList.includes(s));
-                if (nextShade) classyList.push(nextShade);
-                else break;
-            }
-            renderStrip('paletteClassy', classyList);
+				// 1. 雅致相依 (Classy Analogous)
+				// Combine shades & neighbors, sorted to create a smooth seasonal HSL gradient
+				const classyShades = c.recommendedShades
+					? c.recommendedShades
+							.map((hex) =>
+								colorsDb.find((oth) => oth.hex === hex),
+							)
+							.filter(Boolean)
+					: [];
+				const classyNeighbors = c.recommendedNeighbors
+					? c.recommendedNeighbors
+							.map((hex) =>
+								colorsDb.find((oth) => oth.hex === hex),
+							)
+							.filter(Boolean)
+					: [];
 
-            // 2. 水墨留白 (Spot Accent)
-            // Selected color as a vibrant accent flanked by classic, light & dark traditional neutrals
-            const jiaoYu = colorsDb.find(oth => oth.nameHans === '皦玉') || { nameHans: '皦玉', hex: '#EBEEE8', fontColor: '#2F2F2F' };
-            const jiLiang = colorsDb.find(oth => oth.nameHans === '吉量') || { nameHans: '吉量', hex: '#EBEDDF', fontColor: '#2F2F2F' };
-            const jiaHui = colorsDb.find(oth => oth.nameHans === '葭灰') || { nameHans: '葭灰', hex: '#BEB1AA', fontColor: '#2F2F2F' };
-            const ganDie = colorsDb.find(oth => oth.nameHans === '绀蝶') || { nameHans: '绀蝶', hex: '#2C2F3B', fontColor: '#FFFFFF' };
-            
-            const spotList = [jiaoYu, jiLiang, c, jiaHui, ganDie];
-            renderStrip('paletteSpot', spotList);
+				let classyList = [
+					classyShades[1] || classyShades[0],
+					classyNeighbors[0],
+					c,
+					classyNeighbors[1] || classyNeighbors[0],
+					classyShades[2] || classyShades[0],
+				].filter(Boolean);
+				classyList = [...new Set(classyList)].slice(0, 5);
+				while (
+					classyList.length < 5 &&
+					classyShades.length > classyList.length
+				) {
+					const nextShade = classyShades.find(
+						(s) => !classyList.includes(s),
+					);
+					if (nextShade) classyList.push(nextShade);
+					else break;
+				}
+				renderStrip("paletteClassy", classyList);
 
-            // 3. 五行相生 (Five Elements Balance)
-            // Query Wood, Fire, Earth, Metal, Water and sort candidate elements to align with active seasonal temperature
-            const elements = ['wood', 'fire', 'earth', 'metal', 'water'];
-            const activeTermName = c.categoryHans;
-            
-            const getTermDistance = (t1, t2) => {
-                const idx1 = CHRONO_TERMS.findIndex(t => t.name === t1);
-                const idx2 = CHRONO_TERMS.findIndex(t => t.name === t2);
-                if (idx1 === -1 || idx2 === -1) return 12;
-                let dist = Math.abs(idx1 - idx2);
-                return dist > 12 ? 24 - dist : dist;
-            };
+				// 2. 水墨留白 (Spot Accent)
+				// Selected color as a vibrant accent flanked by classic, light & dark traditional neutrals
+				const jiaoYu = colorsDb.find(
+					(oth) => oth.nameHans === "皦玉",
+				) || { nameHans: "皦玉", hex: "#EBEEE8", fontColor: "#2F2F2F" };
+				const jiLiang = colorsDb.find(
+					(oth) => oth.nameHans === "吉量",
+				) || { nameHans: "吉量", hex: "#EBEDDF", fontColor: "#2F2F2F" };
+				const jiaHui = colorsDb.find(
+					(oth) => oth.nameHans === "葭灰",
+				) || { nameHans: "葭灰", hex: "#BEB1AA", fontColor: "#2F2F2F" };
+				const ganDie = colorsDb.find(
+					(oth) => oth.nameHans === "绀蝶",
+				) || { nameHans: "绀蝶", hex: "#2C2F3B", fontColor: "#FFFFFF" };
 
-            const fiveList = elements.map(elem => {
-                if (elem === c.fiveElements) return c;
-                const candidates = colorsDb.filter(oth => oth.fiveElements === elem);
-                if (candidates.length === 0) return null;
-                let best = candidates[0];
-                let minDist = 999999;
-                candidates.forEach(cand => {
-                    const termDist = getTermDistance(cand.categoryHans, activeTermName);
-                    const lDist = Math.abs(cand.hsl.l - c.hsl.l);
-                    const score = termDist * 50 + lDist;
-                    if (score < minDist) {
-                        minDist = score;
-                        best = cand;
-                    }
-                });
-                return best;
-            }).filter(Boolean);
-            renderStrip('paletteFiveElements', fiveList);
+				const spotList = [jiaoYu, jiLiang, c, jiaHui, ganDie];
+				renderStrip("paletteSpot", spotList);
 
-            // 4. 双色对立 (Complementary Contrast)
-            // Complements are pre-encoded in c.recommendedComplements
-            const compHexes = c.recommendedComplements || [];
-            const compNodes = compHexes.map(hex => colorsDb.find(oth => oth.hex === hex)).filter(Boolean);
-            let compList = [c, ...compNodes].slice(0, 5);
-            if (compList.length < 5) {
-                const compColor = compNodes[0] || c;
-                compList = [];
-                const steps = 5;
-                for (let i = 0; i < steps; i++) {
-                    const ratio = i / (steps - 1);
-                    const interpL = Math.round(c.hsl.l + (compColor.hsl.l - c.hsl.l) * ratio);
-                    const interpS = Math.round(c.hsl.s + (compColor.hsl.s - c.hsl.s) * ratio);
-                    let interpH = c.hsl.h + ratio * (compColor.hsl.h - c.hsl.h);
-                    if (Math.abs(compColor.hsl.h - c.hsl.h) > 180) {
-                        if (compColor.hsl.h > c.hsl.h) {
-                            interpH = (c.hsl.h + 360 + ratio * (compColor.hsl.h - (c.hsl.h + 360))) % 360;
-                        } else {
-                            interpH = (c.hsl.h + ratio * (compColor.hsl.h + 360 - c.hsl.h)) % 360;
-                        }
-                    }
-                    const targetHsl = { h: interpH, s: interpS, l: interpL };
-                    let closest = colorsDb[0];
-                    let minDist = 999999;
-                    colorsDb.forEach(oth => {
-                        let dh = Math.abs(oth.hsl.h - targetHsl.h);
-                        if (dh > 180) dh = 360 - dh;
-                        const ds = oth.hsl.s - targetHsl.s;
-                        const dl = oth.hsl.l - targetHsl.l;
-                        const dist = Math.sqrt(dh*dh + ds*ds*0.5 + dl*dl*0.5);
-                        if (dist < minDist) {
-                            minDist = dist;
-                            closest = oth;
-                        }
-                    });
-                    compList.push(closest);
-                }
-            }
-            renderStrip('paletteComplementary', compList);
+				// 3. 五行相生 (Five Elements Balance)
+				// Query Wood, Fire, Earth, Metal, Water and sort candidate elements to align with active seasonal temperature
+				const elements = ["wood", "fire", "earth", "metal", "water"];
+				const activeTermName = c.categoryHans;
 
-            // 5. 水墨化境 (Ink Dilution Gradient)
-            // Dilute active color in 5 steps (12%, 35%, 58%, 80%, 100%) and query closest historic colors
-            const currentHsl = c.hsl;
-            const fractions = [0.12, 0.35, 0.58, 0.80, 1.00];
-            const getHslDistance = (hsl1, hsl2) => {
-                let dh = Math.abs(hsl1.h - hsl2.h);
-                if (dh > 180) dh = 360 - dh;
-                const ds = (hsl1.s - hsl2.s) * 0.5;
-                const dl = (hsl1.l - hsl2.l) * 0.5;
-                return Math.sqrt(dh*dh + ds*ds + dl*dl);
-            };
+				const getTermDistance = (t1, t2) => {
+					const idx1 = CHRONO_TERMS.findIndex((t) => t.name === t1);
+					const idx2 = CHRONO_TERMS.findIndex((t) => t.name === t2);
+					if (idx1 === -1 || idx2 === -1) return 12;
+					let dist = Math.abs(idx1 - idx2);
+					return dist > 12 ? 24 - dist : dist;
+				};
 
-            const dilutionList = fractions.map(op => {
-                const targetL = Math.round(currentHsl.l + (100 - currentHsl.l) * (1 - op));
-                const targetS = Math.round(currentHsl.s * op);
-                const targetHsl = { h: currentHsl.h, s: targetS, l: targetL };
+				const fiveList = elements
+					.map((elem) => {
+						if (elem === c.fiveElements) return c;
+						const candidates = colorsDb.filter(
+							(oth) => oth.fiveElements === elem,
+						);
+						if (candidates.length === 0) return null;
+						let best = candidates[0];
+						let minDist = 999999;
+						candidates.forEach((cand) => {
+							const termDist = getTermDistance(
+								cand.categoryHans,
+								activeTermName,
+							);
+							const lDist = Math.abs(cand.hsl.l - c.hsl.l);
+							const score = termDist * 50 + lDist;
+							if (score < minDist) {
+								minDist = score;
+								best = cand;
+							}
+						});
+						return best;
+					})
+					.filter(Boolean);
+				renderStrip("paletteFiveElements", fiveList);
 
-                let closest = colorsDb[0];
-                let minDist = 999999;
-                colorsDb.forEach(oth => {
-                    const dist = getHslDistance(targetHsl, oth.hsl);
-                    if (dist < minDist) {
-                        minDist = dist;
-                        closest = oth;
-                    }
-                });
-                return closest;
-            }).filter(Boolean);
-            renderStrip('paletteDilution', dilutionList);
+				// 4. 双色对立 (Complementary Contrast)
+				// Complements are pre-encoded in c.recommendedComplements
+				const compHexes = c.recommendedComplements || [];
+				const compNodes = compHexes
+					.map((hex) => colorsDb.find((oth) => oth.hex === hex))
+					.filter(Boolean);
+				let compList = [c, ...compNodes].slice(0, 5);
+				if (compList.length < 5) {
+					const compColor = compNodes[0] || c;
+					compList = [];
+					const steps = 5;
+					for (let i = 0; i < steps; i++) {
+						const ratio = i / (steps - 1);
+						const interpL = Math.round(
+							c.hsl.l + (compColor.hsl.l - c.hsl.l) * ratio,
+						);
+						const interpS = Math.round(
+							c.hsl.s + (compColor.hsl.s - c.hsl.s) * ratio,
+						);
+						let interpH =
+							c.hsl.h + ratio * (compColor.hsl.h - c.hsl.h);
+						if (Math.abs(compColor.hsl.h - c.hsl.h) > 180) {
+							if (compColor.hsl.h > c.hsl.h) {
+								interpH =
+									(c.hsl.h +
+										360 +
+										ratio *
+											(compColor.hsl.h -
+												(c.hsl.h + 360))) %
+									360;
+							} else {
+								interpH =
+									(c.hsl.h +
+										ratio *
+											(compColor.hsl.h + 360 - c.hsl.h)) %
+									360;
+							}
+						}
+						const targetHsl = {
+							h: interpH,
+							s: interpS,
+							l: interpL,
+						};
+						let closest = colorsDb[0];
+						let minDist = 999999;
+						colorsDb.forEach((oth) => {
+							let dh = Math.abs(oth.hsl.h - targetHsl.h);
+							if (dh > 180) dh = 360 - dh;
+							const ds = oth.hsl.s - targetHsl.s;
+							const dl = oth.hsl.l - targetHsl.l;
+							const dist = Math.sqrt(
+								dh * dh + ds * ds * 0.5 + dl * dl * 0.5,
+							);
+							if (dist < minDist) {
+								minDist = dist;
+								closest = oth;
+							}
+						});
+						compList.push(closest);
+					}
+				}
+				renderStrip("paletteComplementary", compList);
 
-            // 6. 烟雨梦尘 (Misty Rain Dream - Option 2 / David's Pick)
-            // Desaturated, HSL-balanced traditional pigments flanking the active color c
-            const tianPiao = colorsDb.find(oth => oth.nameHans === '天缥') || { nameHans: '天缥', hex: '#D5EBE1', fontColor: '#2F2F2F' };
-            const ouBi = colorsDb.find(oth => oth.nameHans === '欧碧') || { nameHans: '欧碧', hex: '#C0D695', fontColor: '#2F2F2F' };
-            const ziPu = colorsDb.find(oth => oth.nameHans === '紫蒲') || { nameHans: '紫蒲', hex: '#A6559D', fontColor: '#FFFFFF' };
-            const jiaHui2 = colorsDb.find(oth => oth.nameHans === '葭灰') || { nameHans: '葭灰', hex: '#BEB1AA', fontColor: '#2F2F2F' };
-            
-            const scholarList = [tianPiao, ouBi, ziPu, c, jiaHui2];
-            renderStrip('paletteScholar', scholarList);
+				// 5. 水墨化境 (Ink Dilution Gradient)
+				// Dilute active color in 5 steps (12%, 35%, 58%, 80%, 100%) and query closest historic colors
+				const currentHsl = c.hsl;
+				const fractions = [0.12, 0.35, 0.58, 0.8, 1.0];
+				const getHslDistance = (hsl1, hsl2) => {
+					let dh = Math.abs(hsl1.h - hsl2.h);
+					if (dh > 180) dh = 360 - dh;
+					const ds = (hsl1.s - hsl2.s) * 0.5;
+					const dl = (hsl1.l - hsl2.l) * 0.5;
+					return Math.sqrt(dh * dh + ds * ds + dl * dl);
+				};
 
-            // Timeline remains seasonal and synced
-            updateTimelineForActiveColor(c);
-        }
+				const dilutionList = fractions
+					.map((op) => {
+						const targetL = Math.round(
+							currentHsl.l + (100 - currentHsl.l) * (1 - op),
+						);
+						const targetS = Math.round(currentHsl.s * op);
+						const targetHsl = {
+							h: currentHsl.h,
+							s: targetS,
+							l: targetL,
+						};
 
-        // Snap and sync timeline display to the active color's solar term
-        function updateTimelineForActiveColor(c) {
-            const termIndex = CHRONO_TERMS.findIndex(term => term.name === c.categoryHans);
-            if (termIndex !== -1) {
-                const slider = document.getElementById('termTimelineSlider');
-                slider.value = termIndex;
-                
-                const term = CHRONO_TERMS[termIndex];
-                document.getElementById('termSliderValIndicator').innerText = term.name;
-                document.getElementById('timelineTermName').innerHTML = `${term.name} <span style="font-size:12px; font-family:'LXGW WenKai TC', serif !important;" id="timelineTermSeason">${term.season[0]}</span>`;
-                document.getElementById('timelineTermDesc').innerText = term.desc;
-                document.getElementById('timelineGridTitle').innerText = `${term.name}分册 收录色彩 (16色)`;
+						let closest = colorsDb[0];
+						let minDist = 999999;
+						colorsDb.forEach((oth) => {
+							const dist = getHslDistance(targetHsl, oth.hsl);
+							if (dist < minDist) {
+								minDist = dist;
+								closest = oth;
+							}
+						});
+						return closest;
+					})
+					.filter(Boolean);
+				renderStrip("paletteDilution", dilutionList);
 
-                const termColors = colorsDb.filter(oth => oth.categoryHans === term.name);
-                const grid = document.getElementById('timelineSwatchesGrid');
-                grid.innerHTML = '';
+				// 6. 烟雨梦尘 (Misty Rain Dream - Option 2 / David's Pick)
+				// Desaturated, HSL-balanced traditional pigments flanking the active color c
+				const tianPiao = colorsDb.find(
+					(oth) => oth.nameHans === "天缥",
+				) || { nameHans: "天缥", hex: "#D5EBE1", fontColor: "#2F2F2F" };
+				const ouBi = colorsDb.find(
+					(oth) => oth.nameHans === "欧碧",
+				) || { nameHans: "欧碧", hex: "#C0D695", fontColor: "#2F2F2F" };
+				const ziPu = colorsDb.find(
+					(oth) => oth.nameHans === "紫蒲",
+				) || { nameHans: "紫蒲", hex: "#A6559D", fontColor: "#FFFFFF" };
+				const jiaHui2 = colorsDb.find(
+					(oth) => oth.nameHans === "葭灰",
+				) || { nameHans: "葭灰", hex: "#BEB1AA", fontColor: "#2F2F2F" };
 
-                termColors.forEach(tc => {
-                    const well = document.createElement('div');
-                    well.className = `timeline-well ${tc.hex === c.hex ? 'active' : ''}`;
-                    well.style.backgroundColor = tc.hex;
-                    well.onclick = () => {
-                        selectViewerColor(tc);
-                    };
-                    
-                    let content = `<span class="timeline-well-lbl" style="color:${tc.fontColor}">${tc.nameHans}</span>`;
-                    if (tc.hex === c.hex) {
-                        content = `<span class="timeline-well-lbl" style="color:${tc.fontColor}; font-weight:700;">★ ${tc.nameHans}</span>`;
-                        well.style.outline = `3px solid var(--theme-primary)`;
-                        well.style.outlineOffset = `2px`;
-                    }
-                    well.innerHTML = content;
-                    grid.appendChild(well);
-                });
-            }
-        }
+				const scholarList = [tianPiao, ouBi, ziPu, c, jiaHui2];
+				renderStrip("paletteScholar", scholarList);
 
-        function minColorByHueDist(targetHue, skipHex) {
-            let closest = colorsDb[0];
-            let minDist = 999999;
-            
-            const getHueDistance = (h1, h2) => {
-                let dh = Math.abs(h1 - h2);
-                return dh > 180 ? 360 - dh : dh;
-            };
+				// Timeline remains seasonal and synced
+				updateTimelineForActiveColor(c);
+			}
 
-            colorsDb.forEach(oth => {
-                if (oth.hex === skipHex) return;
-                const dist = getHueDistance(targetHue, oth.hsl.h);
-                if (dist < minDist) {
-                    minDist = dist;
-                    closest = oth;
-                }
-            });
-            return closest;
-        }
+			// Snap and sync timeline display to the active color's solar term
+			function updateTimelineForActiveColor(c) {
+				const termIndex = CHRONO_TERMS.findIndex(
+					(term) => term.name === c.categoryHans,
+				);
+				if (termIndex !== -1) {
+					const slider =
+						document.getElementById("termTimelineSlider");
+					slider.value = termIndex;
 
-        function handleDilutionChange() {
-            // Fully integrated and calculated inside calculateExplorationLabs()
-        }
+					const term = CHRONO_TERMS[termIndex];
+					document.getElementById(
+						"termSliderValIndicator",
+					).innerText = term.name;
+					document.getElementById("timelineTermName").innerHTML =
+						`${term.name} <span style="font-size:12px; font-family:'LXGW WenKai TC', serif !important;" id="timelineTermSeason">${term.season[0]}</span>`;
+					document.getElementById("timelineTermDesc").innerText =
+						term.desc;
+					document.getElementById("timelineGridTitle").innerText =
+						`${term.name}分册 收录色彩 (16色)`;
 
-        // --- Method D: Solar Term Flow (Chronological Timeline Slider) ---
-        function handleTimelineChange() {
-            const index = document.getElementById('termTimelineSlider').value;
-            const term = CHRONO_TERMS[index];
-            const c = activeViewerColor;
+					const termColors = colorsDb.filter(
+						(oth) => oth.categoryHans === term.name,
+					);
+					const grid = document.getElementById(
+						"timelineSwatchesGrid",
+					);
+					grid.innerHTML = "";
 
-            document.getElementById('termSliderValIndicator').innerText = term.name;
-            document.getElementById('timelineTermName').innerHTML = `${term.name} <span style="font-size:12px; font-family:'LXGW WenKai TC', serif !important;" id="timelineTermSeason">${term.season[0]}</span>`;
-            document.getElementById('timelineTermDesc').innerText = term.desc;
-            document.getElementById('timelineGridTitle').innerText = `${term.name}分册 收录色彩 (16色)`;
+					termColors.forEach((tc) => {
+						const well = document.createElement("div");
+						well.className = `timeline-well ${tc.hex === c.hex ? "active" : ""}`;
+						well.style.backgroundColor = tc.hex;
+						well.onclick = () => {
+							selectViewerColor(tc);
+						};
 
-            const termColors = colorsDb.filter(oth => oth.categoryHans === term.name);
-            const grid = document.getElementById('timelineSwatchesGrid');
-            grid.innerHTML = '';
+						let content = `<span class="timeline-well-lbl" style="color:${tc.fontColor}">${tc.nameHans}</span>`;
+						if (tc.hex === c.hex) {
+							content = `<span class="timeline-well-lbl" style="color:${tc.fontColor}; font-weight:700;">★ ${tc.nameHans}</span>`;
+							well.style.outline = `3px solid var(--theme-primary)`;
+							well.style.outlineOffset = `2px`;
+						}
+						well.innerHTML = content;
+						grid.appendChild(well);
+					});
+				}
+			}
 
-            termColors.forEach(tc => {
-                const well = document.createElement('div');
-                well.className = `timeline-well ${c && tc.hex === c.hex ? 'active' : ''}`;
-                well.style.backgroundColor = tc.hex;
-                well.onclick = () => selectViewerColor(tc);
-                
-                let content = `<span class="timeline-well-lbl" style="color:${tc.fontColor}">${tc.nameHans}</span>`;
-                if (c && tc.hex === c.hex) {
-                    content = `<span class="timeline-well-lbl" style="color:${tc.fontColor}; font-weight:700;">★ ${tc.nameHans}</span>`;
-                    well.style.outline = `3px solid var(--theme-primary)`;
-                    well.style.outlineOffset = `2px`;
-                }
-                well.innerHTML = content;
-                grid.appendChild(well);
-            });
-        }
+			function minColorByHueDist(targetHue, skipHex) {
+				let closest = colorsDb[0];
+				let minDist = 999999;
 
-        // Calculate Spectrum Analytics Dashboard - Removed
-        function calculateAnalytics(colorsList, summaryText) {
-            // Safe no-op as analytics panel is removed
-        }
+				const getHueDistance = (h1, h2) => {
+					let dh = Math.abs(h1 - h2);
+					return dh > 180 ? 360 - dh : dh;
+				};
 
-        function animateCounter(id, targetVal, suffix) {
-            const el = document.getElementById(id);
-            let current = 0;
-            const duration = 300; // ms
-            const stepTime = 15; // ms
-            const stepVal = Math.ceil(targetVal / (duration / stepTime)) || 1;
+				colorsDb.forEach((oth) => {
+					if (oth.hex === skipHex) return;
+					const dist = getHueDistance(targetHue, oth.hsl.h);
+					if (dist < minDist) {
+						minDist = dist;
+						closest = oth;
+					}
+				});
+				return closest;
+			}
 
-            const timer = setInterval(() => {
-                current += stepVal;
-                if (current >= targetVal) {
-                    current = targetVal;
-                    clearInterval(timer);
-                }
-                el.innerText = `${current}${suffix}`;
-            }, stepTime);
-        }
+			function handleDilutionChange() {
+				// Fully integrated and calculated inside calculateExplorationLabs()
+			}
 
-        // Tooltip
-        function showTooltip(e, msg) {
-            const tooltip = document.getElementById('wellTooltip');
-            tooltip.innerHTML = msg;
-            tooltip.style.opacity = '1';
-            tooltip.style.left = `${e.pageX + 12}px`;
-            tooltip.style.top = `${e.pageY + 12}px`;
-        }
+			// --- Method D: Solar Term Flow (Chronological Timeline Slider) ---
+			function handleTimelineChange() {
+				const index =
+					document.getElementById("termTimelineSlider").value;
+				const term = CHRONO_TERMS[index];
+				const c = activeViewerColor;
 
-        function hideTooltip() {
-            document.getElementById('wellTooltip').style.opacity = '0';
-        }
+				document.getElementById("termSliderValIndicator").innerText =
+					term.name;
+				document.getElementById("timelineTermName").innerHTML =
+					`${term.name} <span style="font-size:12px; font-family:'LXGW WenKai TC', serif !important;" id="timelineTermSeason">${term.season[0]}</span>`;
+				document.getElementById("timelineTermDesc").innerText =
+					term.desc;
+				document.getElementById("timelineGridTitle").innerText =
+					`${term.name}分册 收录色彩 (16色)`;
 
-        // Fuzzy search function by name or hex
-        function handleSearch() {
-            const query = document.getElementById('searchInput').value.trim().toLowerCase();
-            const searchIcon = document.getElementById('searchIcon');
-            
-            if (!query) {
-                searchIcon.innerText = "🔍";
-                searchIcon.onclick = null;
-                // Restore normal dock state
-                const activeDock = document.querySelector('.hue-dock-pill.active');
-                if (activeDock) {
-                    const hueKey = activeDock.getAttribute('onclick').match(/'([^']+)'/)[1];
-                    const filtered = colorsDb.filter(c => c.hue === hueKey);
-                    renderGrid(filtered);
-                } else {
-                    switchHue('red_warm');
-                }
-                return;
-            }
+				const termColors = colorsDb.filter(
+					(oth) => oth.categoryHans === term.name,
+				);
+				const grid = document.getElementById("timelineSwatchesGrid");
+				grid.innerHTML = "";
 
-            // Change icon to clear icon
-            searchIcon.innerText = "✕";
-            searchIcon.onclick = () => {
-                document.getElementById('searchInput').value = '';
-                handleSearch();
-            };
+				termColors.forEach((tc) => {
+					const well = document.createElement("div");
+					well.className = `timeline-well ${c && tc.hex === c.hex ? "active" : ""}`;
+					well.style.backgroundColor = tc.hex;
+					well.onclick = () => selectViewerColor(tc);
 
-            // Fuzzy filter colors database
-            const matches = colorsDb.filter(c => {
-                const nameHans = (c.nameHans || '').toLowerCase();
-                const nameHant = (c.nameHant || '').toLowerCase();
-                const namePy = (c.namePy || '').toLowerCase();
-                const hex = (c.hex || '').toLowerCase();
-                
-                return nameHans.includes(query) || 
-                       nameHant.includes(query) || 
-                       namePy.includes(query) || 
-                       hex.includes(query);
-            });
+					let content = `<span class="timeline-well-lbl" style="color:${tc.fontColor}">${tc.nameHans}</span>`;
+					if (c && tc.hex === c.hex) {
+						content = `<span class="timeline-well-lbl" style="color:${tc.fontColor}; font-weight:700;">★ ${tc.nameHans}</span>`;
+						well.style.outline = `3px solid var(--theme-primary)`;
+						well.style.outlineOffset = `2px`;
+					}
+					well.innerHTML = content;
+					grid.appendChild(well);
+				});
+			}
 
-            // De-activate all hue docks temporarily to signal Search State
-            document.querySelectorAll('.hue-dock-pill').forEach(pill => pill.classList.remove('active'));
-            
-            // Render matches in the main catalog grid
-            renderGrid(matches);
-        }
+			// Calculate Spectrum Analytics Dashboard - Removed
+			function calculateAnalytics(colorsList, summaryText) {
+				// Safe no-op as analytics panel is removed
+			}
 
-        // Toast
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            toast.innerText = msg;
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 2000);
-        }
+			function animateCounter(id, targetVal, suffix) {
+				const el = document.getElementById(id);
+				let current = 0;
+				const duration = 300; // ms
+				const stepTime = 15; // ms
+				const stepVal =
+					Math.ceil(targetVal / (duration / stepTime)) || 1;
 
-        function copyText(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                showToast(`已复制色号: ${text}`);
-            });
-        }
-    </script>
-</body>
+				const timer = setInterval(() => {
+					current += stepVal;
+					if (current >= targetVal) {
+						current = targetVal;
+						clearInterval(timer);
+					}
+					el.innerText = `${current}${suffix}`;
+				}, stepTime);
+			}
+
+			// Tooltip
+			function showTooltip(e, msg) {
+				const tooltip = document.getElementById("wellTooltip");
+				tooltip.innerHTML = msg;
+				tooltip.style.opacity = "1";
+				tooltip.style.left = `${e.pageX + 12}px`;
+				tooltip.style.top = `${e.pageY + 12}px`;
+			}
+
+			function hideTooltip() {
+				document.getElementById("wellTooltip").style.opacity = "0";
+			}
+
+			// Fuzzy search function by name or hex
+			function handleSearch() {
+				const query = document
+					.getElementById("searchInput")
+					.value.trim()
+					.toLowerCase();
+				const searchIcon = document.getElementById("searchIcon");
+
+				if (!query) {
+					searchIcon.innerText = "🔍";
+					searchIcon.onclick = null;
+					// Restore normal dock state
+					const activeDock = document.querySelector(
+						".hue-dock-pill.active",
+					);
+					if (activeDock) {
+						const hueKey = activeDock
+							.getAttribute("onclick")
+							.match(/'([^']+)'/)[1];
+						const filtered = colorsDb.filter(
+							(c) => c.hue === hueKey,
+						);
+						renderGrid(filtered);
+					} else {
+						switchHue("red_warm");
+					}
+					return;
+				}
+
+				// Change icon to clear icon
+				searchIcon.innerText = "✕";
+				searchIcon.onclick = () => {
+					document.getElementById("searchInput").value = "";
+					handleSearch();
+				};
+
+				// Fuzzy filter colors database
+				const matches = colorsDb.filter((c) => {
+					const nameHans = (c.nameHans || "").toLowerCase();
+					const nameHant = (c.nameHant || "").toLowerCase();
+					const namePy = (c.namePy || "").toLowerCase();
+					const hex = (c.hex || "").toLowerCase();
+
+					return (
+						nameHans.includes(query) ||
+						nameHant.includes(query) ||
+						namePy.includes(query) ||
+						hex.includes(query)
+					);
+				});
+
+				// De-activate all hue docks temporarily to signal Search State
+				document
+					.querySelectorAll(".hue-dock-pill")
+					.forEach((pill) => pill.classList.remove("active"));
+
+				// Render matches in the main catalog grid
+				renderGrid(matches);
+			}
+
+			// Toast
+			function showToast(msg) {
+				const toast = document.getElementById("toast");
+				toast.innerText = msg;
+				toast.classList.add("show");
+				setTimeout(() => toast.classList.remove("show"), 2000);
+			}
+
+			function copyText(text) {
+				navigator.clipboard.writeText(text).then(() => {
+					showToast(`已复制色号: ${text}`);
+				});
+			}
+		</script>
+	</body>
 </html>
