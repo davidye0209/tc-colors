@@ -1,0 +1,17685 @@
+/**
+ * Chinese Traditional Colors Database with Precomputed HSL Recommendations
+ * Total: 384 colors grouped by 24 Solar Terms
+ */
+
+export const hueFamilies = {
+  "red_warm": "朱赤系 (Warm Red)",
+  "red_cool": "深绛系 (Cool Red)",
+  "orange": "橙橘系 (Vibrant Orange)",
+  "brown": "褐赭系 (Brown & Earth)",
+  "yellow": "黄系 (Yellow)",
+  "green": "绿系 (Green)",
+  "cyan": "青翠系 (Cyan & Teal)",
+  "blue": "蓝黛系 (Blue & Indigo)",
+  "purple": "紫系 (Purple)",
+  "pink": "粉绛系 (Pink)",
+  "neutral": "灰白系 (Neutral)"
+};
+
+export const colorsDatabase = [
+  {
+    "nameHans": "黄白游",
+    "nameHant": "黃白游",
+    "namePy": "HUANG BAI YOU",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#FFF799",
+    "rgb": {
+      "r": 255,
+      "g": 247,
+      "b": 153
+    },
+    "hsl": {
+      "h": 55,
+      "s": 100,
+      "l": 80
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "欲识金银气，多从黄白游；一生痴绝处，无梦到徽州。",
+    "sentenceHant": "欲識金銀氣，多從黃白遊；一生癡絕處，無夢到徽州。",
+    "authorHans": "汤显祖",
+    "authorHant": "湯顯祖",
+    "sentenceFromHans": "有友人怜予乏劝 为黄山白岳之游",
+    "sentenceFromHant": "有友人憐予乏勸 為黃山白嶽之遊",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#FFEE6F",
+      "#FFFBC7",
+      "#F7EEAD",
+      "#FEDC5E"
+    ],
+    "recommendedNeighbors": [
+      "#E5A84B",
+      "#DA9233",
+      "#C67915",
+      "#DDB078"
+    ],
+    "recommendedComplements": [
+      "#757CBB",
+      "#454659",
+      "#45465E",
+      "#A4ABD6"
+    ]
+  },
+  {
+    "nameHans": "松花",
+    "nameHant": "松花",
+    "namePy": "SONG HUA",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#FFEE6F",
+    "rgb": {
+      "r": 255,
+      "g": 238,
+      "b": 111
+    },
+    "hsl": {
+      "h": 53,
+      "s": 100,
+      "l": 72
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "轻如松花落金粉，浓似苔锦含碧滋。",
+    "sentenceHant": "輕如松花落金粉，濃似苔錦含碧滋。",
+    "authorHans": "李白",
+    "authorHant": "李白",
+    "sentenceFromHans": "酬殷明佐见赠五云裘歌",
+    "sentenceFromHant": "酬殷明佐見贈五雲裘歌",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#FFF799",
+      "#FEDC5E",
+      "#FFFBC7",
+      "#F7EEAD"
+    ],
+    "recommendedNeighbors": [
+      "#C67915",
+      "#DA9233",
+      "#DDB078",
+      "#E18A3B"
+    ],
+    "recommendedComplements": [
+      "#A4ABD6",
+      "#757CBB",
+      "#454659",
+      "#45465E"
+    ]
+  },
+  {
+    "nameHans": "缃叶",
+    "nameHant": "緗葉",
+    "namePy": "XIANG YE",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#ECD452",
+    "rgb": {
+      "r": 236,
+      "g": 212,
+      "b": 82
+    },
+    "hsl": {
+      "h": 51,
+      "s": 80,
+      "l": 62
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "鱼戏排缃叶，龟浮见绿池。",
+    "sentenceHant": "魚戲排緗葉，龜浮見綠池。",
+    "authorHans": "李峤",
+    "authorHant": "李嶠",
+    "sentenceFromHans": "荷",
+    "sentenceFromHant": "荷",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#ECE093",
+      "#D6BC46",
+      "#E1D279",
+      "#F2C867"
+    ],
+    "recommendedNeighbors": [
+      "#B7D332",
+      "#9EBC19",
+      "#E18A3B",
+      "#D08635"
+    ],
+    "recommendedComplements": [
+      "#A4ABD6",
+      "#2C2F3B",
+      "#757CBB",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "苍黄",
+    "nameHant": "蒼黃",
+    "namePy": "CANG HUANG",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#B6A014",
+    "rgb": {
+      "r": 182,
+      "g": 160,
+      "b": 20
+    },
+    "hsl": {
+      "h": 52,
+      "s": 80,
+      "l": 40
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "土花漠碧云茫茫，黄河欲尽天苍黄。",
+    "sentenceHant": "土花漠碧雲茫茫，黃河欲盡天蒼黃。",
+    "authorHans": "李商隐",
+    "authorHant": "李商隱",
+    "sentenceFromHans": "李夫人歌",
+    "sentenceFromHant": "李夫人歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#ECD452",
+      "#D6BC46",
+      "#D3A237",
+      "#D6C560"
+    ],
+    "recommendedNeighbors": [
+      "#9EBC19",
+      "#D08635",
+      "#E18A3B",
+      "#D9883D"
+    ],
+    "recommendedComplements": [
+      "#A4ABD6",
+      "#757CBB",
+      "#2C2F3B",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "天缥",
+    "nameHant": "天縹",
+    "namePy": "TIAN PIAO",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#D5EBE1",
+    "rgb": {
+      "r": 213,
+      "g": 235,
+      "b": 225
+    },
+    "hsl": {
+      "h": 153,
+      "s": 35,
+      "l": 88
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "篷窗窥天缥，江水真安流；雪霁艳朱炎，相思登北楼。",
+    "sentenceHant": "篷窗窺天縹，江水真安流；雪霽艷朱炎，相思登北樓。",
+    "authorHans": "吴敬梓",
+    "authorHant": "吳敬梓",
+    "sentenceFromHans": "腊月将之宣城留别蘧门",
+    "sentenceFromHant": "臘月將之宣城留別蘧門",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#B1D5C8",
+      "#99BCAC",
+      "#A6BAB1",
+      "#80A492"
+    ],
+    "recommendedNeighbors": [
+      "#88BFB8",
+      "#5DA39D",
+      "#3D8E86",
+      "#B2B6B6"
+    ],
+    "recommendedComplements": [
+      "#B83570",
+      "#5C4F55",
+      "#814662",
+      "#602641"
+    ]
+  },
+  {
+    "nameHans": "沧浪",
+    "nameHant": "滄浪",
+    "namePy": "CANG LANG",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#B1D5C8",
+    "rgb": {
+      "r": 177,
+      "g": 213,
+      "b": 200
+    },
+    "hsl": {
+      "h": 158,
+      "s": 30,
+      "l": 76
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "水色沧浪，波涛浩汗。",
+    "sentenceHant": "水色滄浪，波濤浩汗。",
+    "authorHans": "玄奘",
+    "authorHant": "玄奘",
+    "sentenceFromHans": "大唐西域记",
+    "sentenceFromHant": "大唐西域記",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#99BCAC",
+      "#D5EBE1",
+      "#A6BAB1",
+      "#80A492"
+    ],
+    "recommendedNeighbors": [
+      "#B2B6B6",
+      "#A4C9CC",
+      "#509296",
+      "#6CA8AF"
+    ],
+    "recommendedComplements": [
+      "#CB5C83",
+      "#928187",
+      "#903754",
+      "#DE82A7"
+    ]
+  },
+  {
+    "nameHans": "苍筤",
+    "nameHant": "蒼筤",
+    "namePy": "CANG LANG",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#99BCAC",
+    "rgb": {
+      "r": 153,
+      "g": 188,
+      "b": 172
+    },
+    "hsl": {
+      "h": 153,
+      "s": 21,
+      "l": 67
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "石家炫炫珊瑚胜，不及苍莨一尺青。",
+    "sentenceHant": "石家炫炫珊瑚勝，不及蒼莨一尺青。",
+    "authorHans": "王应斗",
+    "authorHant": "王應鬥",
+    "sentenceFromHans": "题邹氏盆景四绝",
+    "sentenceFromHant": "題鄒氏盆景四絕",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#A6BAB1",
+      "#80A492",
+      "#B1D5C8",
+      "#819D8E"
+    ],
+    "recommendedNeighbors": [
+      "#88BFB8",
+      "#5DA39D",
+      "#3D8E86",
+      "#B2B6B6"
+    ],
+    "recommendedComplements": [
+      "#B83570",
+      "#5C4F55",
+      "#814662",
+      "#602641"
+    ]
+  },
+  {
+    "nameHans": "缥碧",
+    "nameHant": "縹碧",
+    "namePy": "PIAO BI",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#80A492",
+    "rgb": {
+      "r": 128,
+      "g": 164,
+      "b": 146
+    },
+    "hsl": {
+      "h": 150,
+      "s": 17,
+      "l": 57
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "缥色玉擎柔，醅浮盏面清。",
+    "sentenceHant": "縹色玉擎柔，醅浮盞面清。",
+    "authorHans": "李煜",
+    "authorHant": "李煜",
+    "sentenceFromHans": "子夜歌",
+    "sentenceFromHant": "子夜歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#819D8E",
+      "#99BCAC",
+      "#A6BAB1",
+      "#6B7D73"
+    ],
+    "recommendedNeighbors": [
+      "#88BFB8",
+      "#5DA39D",
+      "#3D8E86",
+      "#698E6A"
+    ],
+    "recommendedComplements": [
+      "#CC73A0",
+      "#B95A89",
+      "#A76283",
+      "#5C4F55"
+    ]
+  },
+  {
+    "nameHans": "流黄",
+    "nameHant": "流黃",
+    "namePy": "LIU HUANG",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#8B7042",
+    "rgb": {
+      "r": 139,
+      "g": 112,
+      "b": 66
+    },
+    "hsl": {
+      "h": 38,
+      "s": 36,
+      "l": 40
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "惭幽闺之琴瑟，晦高台之流黄。",
+    "sentenceHant": "慙幽閨之琴瑟，晦高臺之流黃。",
+    "authorHans": "江淹",
+    "authorHant": "江淹",
+    "sentenceFromHans": "别赋",
+    "sentenceFromHant": "別賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#81663B",
+      "#896D47",
+      "#94784F",
+      "#7C623F"
+    ],
+    "recommendedNeighbors": [
+      "#938F4C",
+      "#A46244",
+      "#955A42",
+      "#92905D"
+    ],
+    "recommendedComplements": [
+      "#2E59A7",
+      "#19325F",
+      "#6B798E",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "栗壳",
+    "nameHant": "栗殼",
+    "namePy": "LI KE",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#775039",
+    "rgb": {
+      "r": 119,
+      "g": 80,
+      "b": 57
+    },
+    "hsl": {
+      "h": 22,
+      "s": 35,
+      "l": 35
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "栗壳黄腴猿哺子，松巢碧冷鹤温雏；道人炼罢芙蓉鼎，紫玉箫横凤绕梧。",
+    "sentenceHant": "慄殼黃腴猿哺子，松巢碧冷鶴溫雛；道人鍊罷芙蓉鼎，紫玉簫橫鳳繞梧。",
+    "authorHans": "陶安",
+    "authorHant": "陶安",
+    "sentenceFromHans": "葆和观",
+    "sentenceFromHant": "葆和觀",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#694B3C",
+      "#804C2E",
+      "#7C5B3E",
+      "#945635"
+    ],
+    "recommendedNeighbors": [
+      "#AA8534",
+      "#B3934B",
+      "#BFA670",
+      "#95302E"
+    ],
+    "recommendedComplements": [
+      "#547689",
+      "#D4E5EF",
+      "#106898",
+      "#4994C4"
+    ]
+  },
+  {
+    "nameHans": "龙战",
+    "nameHant": "龍戰",
+    "namePy": "LONG ZHAN",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#5F4321",
+    "rgb": {
+      "r": 95,
+      "g": 67,
+      "b": 33
+    },
+    "hsl": {
+      "h": 33,
+      "s": 48,
+      "l": 25
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "登舟既虎啸，激水方龙战。",
+    "sentenceHant": "登舟既虎嘯，激水方龍戰。",
+    "authorHans": "李白",
+    "authorHant": "李白",
+    "sentenceFromHans": "观饮飞斩蛟龙图赞",
+    "sentenceFromHant": "觀飲飛斬蛟龍圖贊",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#644D31",
+      "#81663B",
+      "#7C623F",
+      "#7C461E"
+    ],
+    "recommendedNeighbors": [
+      "#72453A",
+      "#B15A43",
+      "#662B1F",
+      "#8F3D2C"
+    ],
+    "recommendedComplements": [
+      "#1E2732",
+      "#354E6B",
+      "#88ABDA",
+      "#A3BBDB"
+    ]
+  },
+  {
+    "nameHans": "青骊",
+    "nameHant": "青驪",
+    "namePy": "QING LI",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#422517",
+    "rgb": {
+      "r": 66,
+      "g": 37,
+      "b": 23
+    },
+    "hsl": {
+      "h": 20,
+      "s": 48,
+      "l": 17
+    },
+    "hue": "brown",
+    "fiveElements": "water",
+    "sentenceHans": "长安侠客矜年少，青骊缓步章台道。",
+    "sentenceHant": "長安俠客矜年少，青驪緩步章臺道。",
+    "authorHans": "卢楠",
+    "authorHant": "盧楠",
+    "sentenceFromHans": "少年行二首",
+    "sentenceFromHant": "少年行二首",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#5B3222",
+      "#68361A",
+      "#81492C",
+      "#804C2E"
+    ],
+    "recommendedNeighbors": [
+      "#95302E",
+      "#6D5C3D",
+      "#822327",
+      "#662B2F"
+    ],
+    "recommendedComplements": [
+      "#7F9FAF",
+      "#BDCBD2",
+      "#106898",
+      "#4182A4"
+    ]
+  },
+  {
+    "nameHans": "海天霞",
+    "nameHant": "海天霞",
+    "namePy": "HAI TIAN XIA",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#F3A694",
+    "rgb": {
+      "r": 243,
+      "g": 166,
+      "b": 148
+    },
+    "hsl": {
+      "h": 11,
+      "s": 80,
+      "l": 77
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "漫花棚锦绣窠，海霞色上轻罗；斗鸡打马消长昼烂，春光戏里过。",
+    "sentenceHant": "漫花棚錦繡窠，海霞色上輕羅；鬥雞打馬消長晝爛，春光戲裡過。",
+    "authorHans": "史梦兰",
+    "authorHant": "史夢蘭",
+    "sentenceFromHans": "宫词",
+    "sentenceFromHant": "宮詞",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#F8C6B5",
+      "#EE7959",
+      "#F29A76",
+      "#E67762"
+    ],
+    "recommendedNeighbors": [
+      "#F091A0",
+      "#DD6B7B",
+      "#DB9C5E",
+      "#F6BEC8"
+    ],
+    "recommendedComplements": [
+      "#32788A",
+      "#006D87",
+      "#87C0CA",
+      "#284852"
+    ]
+  },
+  {
+    "nameHans": "缙云",
+    "nameHant": "縉雲",
+    "namePy": "JIN YUN",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#EE7959",
+    "rgb": {
+      "r": 238,
+      "g": 121,
+      "b": 89
+    },
+    "hsl": {
+      "h": 13,
+      "s": 81,
+      "l": 64
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "蒸栗绢绀缙红繎，青绮绫谷靡润鲜。",
+    "sentenceHant": "蒸慄絹紺縉紅繎，青綺綾谷靡潤鮮。",
+    "authorHans": "史游",
+    "authorHant": "史遊",
+    "sentenceFromHans": "急就篇",
+    "sentenceFromHant": "急就篇",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#ED6D46",
+      "#EF845D",
+      "#ED6D3D",
+      "#E67762"
+    ],
+    "recommendedNeighbors": [
+      "#DA9233",
+      "#DDB078",
+      "#F091A0",
+      "#DD6B7B"
+    ],
+    "recommendedComplements": [
+      "#284852",
+      "#32788A",
+      "#006D87",
+      "#B2BFC3"
+    ]
+  },
+  {
+    "nameHans": "𫄸黄",
+    "nameHant": "纁黃",
+    "namePy": "XUN HUANG",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#BA5140",
+    "rgb": {
+      "r": 186,
+      "g": 81,
+      "b": 64
+    },
+    "hsl": {
+      "h": 8,
+      "s": 49,
+      "l": 49
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "一曲𫄸黄瓜蔓水，数峰苍翠华阴山。",
+    "sentenceHant": "一曲纁黃瓜蔓水，數峯蒼翠華陰山。",
+    "authorHans": "张问陶",
+    "authorHant": "張問陶",
+    "sentenceFromHans": "潼关",
+    "sentenceFromHant": "潼關",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BA5B49",
+      "#A64036",
+      "#CB523E",
+      "#B15A43"
+    ],
+    "recommendedNeighbors": [
+      "#BD8253",
+      "#9F6027",
+      "#DC6B82",
+      "#7C5B3E"
+    ],
+    "recommendedComplements": [
+      "#13393E",
+      "#87C0CA",
+      "#5AA4AE",
+      "#6CA8AF"
+    ]
+  },
+  {
+    "nameHans": "珊瑚赫",
+    "nameHant": "珊瑚赫",
+    "namePy": "SHAN HU HE",
+    "categoryHans": "立春",
+    "categoryHant": "立春",
+    "term": "lichun",
+    "hex": "#C12C1F",
+    "rgb": {
+      "r": 193,
+      "g": 44,
+      "b": 31
+    },
+    "hsl": {
+      "h": 5,
+      "s": 72,
+      "l": 44
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "四弦才罢醉蛮奴，酃醁余香在翠炉。夜半醒来红蜡短，一枝寒泪作珊瑚。",
+    "sentenceHant": "四弦才罷醉蠻奴，酃醁餘香在翠爐。夜半醒來紅蠟短，一枝寒淚作珊瑚。",
+    "authorHans": "皮日休",
+    "authorHant": "皮日休",
+    "sentenceFromHans": "春夕酒醒",
+    "sentenceFromHant": "春夕酒醒",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#D12920",
+      "#B93A26",
+      "#9E2A22",
+      "#D24735"
+    ],
+    "recommendedNeighbors": [
+      "#BC6E37",
+      "#7C461E",
+      "#9F6027",
+      "#E18A3B"
+    ],
+    "recommendedComplements": [
+      "#108B96",
+      "#A4C9CC",
+      "#6CA8AF",
+      "#13393E"
+    ]
+  },
+  {
+    "nameHans": "盈盈",
+    "nameHant": "盈盈",
+    "namePy": "YING YING",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#F9D3E3",
+    "rgb": {
+      "r": 249,
+      "g": 211,
+      "b": 227
+    },
+    "hsl": {
+      "h": 335,
+      "s": 76,
+      "l": 90
+    },
+    "hue": "neutral",
+    "fiveElements": "fire",
+    "sentenceHans": "蛾儿雪柳黄金缕。笑语盈盈暗香去。",
+    "sentenceHant": "蛾兒雪柳黃金縷。笑語盈盈暗香去。",
+    "authorHans": "辛弃疾",
+    "authorHant": "辛棄疾",
+    "sentenceFromHans": "青玉案·元夕",
+    "sentenceFromHant": "青玉案·元夕",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#ECB0C1",
+      "#DE82A7",
+      "#F6BEC8",
+      "#EFC4CE"
+    ],
+    "recommendedNeighbors": [
+      "#CE93BF",
+      "#DAA9A9",
+      "#E60012",
+      "#CD7372"
+    ],
+    "recommendedComplements": [
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1",
+      "#B1D5C8"
+    ]
+  },
+  {
+    "nameHans": "水红",
+    "nameHant": "水紅",
+    "namePy": "SHUI HONG",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#ECB0C1",
+    "rgb": {
+      "r": 236,
+      "g": 176,
+      "b": 193
+    },
+    "hsl": {
+      "h": 343,
+      "s": 61,
+      "l": 81
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "栴木应前绿树新。水红衫子藕丝裙。",
+    "sentenceHant": "栴木應前綠樹新。水紅衫子藕絲裙。",
+    "authorHans": "曾廉",
+    "authorHant": "曾廉",
+    "sentenceFromHans": "浣溪纱·前题",
+    "sentenceFromHant": "浣溪紗·前題",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#EFC4CE",
+      "#E3ADB9",
+      "#DD7694",
+      "#DE82A7"
+    ],
+    "recommendedNeighbors": [
+      "#F0CFE3",
+      "#E4B8D5",
+      "#D12920",
+      "#D24735"
+    ],
+    "recommendedComplements": [
+      "#B1D5C8",
+      "#88BFB8",
+      "#D5EBE1",
+      "#99BCAC"
+    ]
+  },
+  {
+    "nameHans": "苏梅",
+    "nameHant": "蘇梅",
+    "namePy": "SU MEI",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#DD7694",
+    "rgb": {
+      "r": 221,
+      "g": 118,
+      "b": 148
+    },
+    "hsl": {
+      "h": 343,
+      "s": 60,
+      "l": 66
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "偶作小红桃杏色，闲雅，尚余孤瘦雪霜姿。",
+    "sentenceHant": "偶作小紅桃杏色，閒雅，尚餘孤瘦雪霜姿。",
+    "authorHans": "苏轼",
+    "authorHant": "蘇軾",
+    "sentenceFromHans": "定风波·红梅",
+    "sentenceFromHant": "定風波·紅梅",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#DC6B82",
+      "#CB5C83",
+      "#DE82A7",
+      "#ECB0C1"
+    ],
+    "recommendedNeighbors": [
+      "#F0CFE3",
+      "#D12920",
+      "#D24735",
+      "#A64036"
+    ],
+    "recommendedComplements": [
+      "#B1D5C8",
+      "#88BFB8",
+      "#D5EBE1",
+      "#99BCAC"
+    ]
+  },
+  {
+    "nameHans": "紫茎屏风",
+    "nameHant": "紫莖屏風",
+    "namePy": "ZI JING PING FENG",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#A76283",
+    "rgb": {
+      "r": 167,
+      "g": 98,
+      "b": 131
+    },
+    "hsl": {
+      "h": 331,
+      "s": 28,
+      "l": 52
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "净淘红粒罯香饭，薄切紫鳞烹水葵。雨滴篷声青雀舫，浪摇花影白莲池。",
+    "sentenceHant": "淨淘紅粒罯香飯，薄切紫鱗烹水葵。雨滴篷聲青雀舫，浪搖花影白蓮池。",
+    "authorHans": "白居易",
+    "authorHant": "白居易",
+    "sentenceFromHans": "池上小宴问程秀才",
+    "sentenceFromHant": "池上小宴問程秀才",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#995D7F",
+      "#B95A89",
+      "#814662",
+      "#9D858F"
+    ],
+    "recommendedNeighbors": [
+      "#6B5458",
+      "#CE8892",
+      "#C35C6A",
+      "#C25160"
+    ],
+    "recommendedComplements": [
+      "#80A492",
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1"
+    ]
+  },
+  {
+    "nameHans": "黄河琉璃",
+    "nameHant": "黃河琉璃",
+    "namePy": "HUANG HE LIU LI",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#E5A84B",
+    "rgb": {
+      "r": 229,
+      "g": 168,
+      "b": 75
+    },
+    "hsl": {
+      "h": 36,
+      "s": 75,
+      "l": 60
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "放眼三十里，日耀黄琉璃。",
+    "sentenceHant": "放眼三十裏，日耀黃琉璃。",
+    "authorHans": "纪坤",
+    "authorHant": "紀坤",
+    "sentenceFromHans": "渡黄河作",
+    "sentenceFromHant": "渡黃河作",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#DB9B34",
+      "#DA9233",
+      "#E18A3B",
+      "#D3A237"
+    ],
+    "recommendedNeighbors": [
+      "#F29A76",
+      "#ED6D3D",
+      "#EF845D",
+      "#ED6D46"
+    ],
+    "recommendedComplements": [
+      "#6B798E",
+      "#6F94CD",
+      "#8BA3C7",
+      "#151D29"
+    ]
+  },
+  {
+    "nameHans": "库金",
+    "nameHant": "庫金",
+    "namePy": "KU JIN",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#E18A3B",
+    "rgb": {
+      "r": 225,
+      "g": 138,
+      "b": 59
+    },
+    "hsl": {
+      "h": 29,
+      "s": 73,
+      "l": 56
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "金箔微开扫玉床，离宫瞰水竹风凉。",
+    "sentenceHant": "金箔微開掃玉牀，離宮瞰水竹風涼。",
+    "authorHans": "张浚",
+    "authorHant": "張浚",
+    "sentenceFromHans": "效唐人宫词",
+    "sentenceFromHant": "效唐人宮詞",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#D9883D",
+      "#DA9233",
+      "#DB9C5E",
+      "#D08635"
+    ],
+    "recommendedNeighbors": [
+      "#E67762",
+      "#E94829",
+      "#D6BC46",
+      "#CB523E"
+    ],
+    "recommendedComplements": [
+      "#6E9BC5",
+      "#576470",
+      "#3271AE",
+      "#AED0EE"
+    ]
+  },
+  {
+    "nameHans": "缊韨",
+    "nameHant": "緼韍",
+    "namePy": "YUN FU",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#984F31",
+    "rgb": {
+      "r": 152,
+      "g": 79,
+      "b": 49
+    },
+    "hsl": {
+      "h": 17,
+      "s": 51,
+      "l": 39
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "韨之言亦蔽也。缊，赤黄之间色，所谓韎也。",
+    "sentenceHant": "韍之言亦蔽也。縕，赤黃之間色，所謂韎也。",
+    "authorHans": "郑玄",
+    "authorHant": "鄭玄",
+    "sentenceFromHans": "礼记·玉藻·注",
+    "sentenceFromHant": "禮記·玉藻·注",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#81492C",
+      "#945635",
+      "#954024",
+      "#804C2E"
+    ],
+    "recommendedNeighbors": [
+      "#822327",
+      "#A72126",
+      "#BE9457",
+      "#81663B"
+    ],
+    "recommendedComplements": [
+      "#98B6C2",
+      "#D4DDE1",
+      "#A2D2E2",
+      "#284852"
+    ]
+  },
+  {
+    "nameHans": "紫瓯",
+    "nameHant": "紫甌",
+    "namePy": "ZI OU",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#7C461E",
+    "rgb": {
+      "r": 124,
+      "g": 70,
+      "b": 30
+    },
+    "hsl": {
+      "h": 26,
+      "s": 61,
+      "l": 30
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "喜共紫瓯吟且酌，羡君潇洒有余清。",
+    "sentenceHant": "喜共紫甌吟且酌，羨君瀟灑有餘清。",
+    "authorHans": "欧阳修",
+    "authorHant": "歐陽修",
+    "sentenceFromHans": "和梅公仪尝茶",
+    "sentenceFromHant": "和梅公儀嘗茶",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#68361A",
+      "#9F6027",
+      "#9F5221",
+      "#804C2E"
+    ],
+    "recommendedNeighbors": [
+      "#B13B2E",
+      "#D24735",
+      "#4C1E1A",
+      "#9E2A22"
+    ],
+    "recommendedComplements": [
+      "#9AA7B1",
+      "#EAEEF1",
+      "#12507B",
+      "#06436F"
+    ]
+  },
+  {
+    "nameHans": "葭灰",
+    "nameHant": "葭灰",
+    "namePy": "JIA HUI",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#BEB1AA",
+    "rgb": {
+      "r": 190,
+      "g": 177,
+      "b": 170
+    },
+    "hsl": {
+      "h": 21,
+      "s": 13,
+      "l": 71
+    },
+    "hue": "orange",
+    "fiveElements": "metal",
+    "sentenceHans": "玉管葭灰细细吹，流莺上下燕参差。",
+    "sentenceHant": "玉管葭灰細細吹，流鶯上下燕參差。",
+    "authorHans": "李商隐",
+    "authorHant": "李商隱",
+    "sentenceFromHans": "池边",
+    "sentenceFromHant": "池邊",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BEA89D",
+      "#A8A19C",
+      "#D3CBC5",
+      "#BD9683"
+    ],
+    "recommendedNeighbors": [
+      "#BDB2B2",
+      "#A88787",
+      "#C4B798",
+      "#B27777"
+    ],
+    "recommendedComplements": [
+      "#106898",
+      "#4182A4",
+      "#7F9FAF",
+      "#547689"
+    ]
+  },
+  {
+    "nameHans": "黄埃",
+    "nameHant": "黃埃",
+    "namePy": "HUANG AI",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#B49273",
+    "rgb": {
+      "r": 180,
+      "g": 146,
+      "b": 115
+    },
+    "hsl": {
+      "h": 29,
+      "s": 30,
+      "l": 58
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "新丰绿树起黄埃，数骑渔阳探使回。",
+    "sentenceHant": "新豐綠樹起黃埃，數騎漁陽探使回。",
+    "authorHans": "杜牧",
+    "authorHant": "杜牧",
+    "sentenceFromHans": "过华清宫绝句三首",
+    "sentenceFromHant": "過華清宮絕句三首",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B49B7F",
+      "#BEA78B",
+      "#9E8368",
+      "#99806C"
+    ],
+    "recommendedNeighbors": [
+      "#A99F70",
+      "#C0AD5E",
+      "#AA9649",
+      "#BA5B49"
+    ],
+    "recommendedComplements": [
+      "#6E9BC5",
+      "#576470",
+      "#3271AE",
+      "#AED0EE"
+    ]
+  },
+  {
+    "nameHans": "老僧衣",
+    "nameHant": "老僧衣",
+    "namePy": "LAO SENG YI",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#A46244",
+    "rgb": {
+      "r": 164,
+      "g": 98,
+      "b": 68
+    },
+    "hsl": {
+      "h": 19,
+      "s": 41,
+      "l": 45
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "远公旧在渊明社，释氏应拈隐逸花。",
+    "sentenceHant": "遠公舊在淵明社，釋氏應拈隱逸花。",
+    "authorHans": "孙传庭",
+    "authorHant": "孫傳庭",
+    "sentenceFromHans": "又菊四咏·老僧衣",
+    "sentenceFromHant": "又菊四詠·老僧衣",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#955A42",
+      "#945635",
+      "#984F31",
+      "#B15A43"
+    ],
+    "recommendedNeighbors": [
+      "#8B7042",
+      "#A85858",
+      "#AA8E59",
+      "#C35C5D"
+    ],
+    "recommendedComplements": [
+      "#7F9FAF",
+      "#D4DDE1",
+      "#BDCBD2",
+      "#106898"
+    ]
+  },
+  {
+    "nameHans": "玄天",
+    "nameHant": "玄天",
+    "namePy": "XUAN TIAN",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#6B5458",
+    "rgb": {
+      "r": 107,
+      "g": 84,
+      "b": 88
+    },
+    "hsl": {
+      "h": 350,
+      "s": 12,
+      "l": 37
+    },
+    "hue": "neutral",
+    "fiveElements": "fire",
+    "sentenceHans": "牝土之气，御于玄天。",
+    "sentenceHant": "牝土之氣，禦於玄天。",
+    "authorHans": "刘安",
+    "authorHant": "劉安",
+    "sentenceFromHans": "淮南子·地形训",
+    "sentenceFromHant": "淮南子·地形訓",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#76555D",
+      "#7C4449",
+      "#81474C",
+      "#9E696D"
+    ],
+    "recommendedNeighbors": [
+      "#A76283",
+      "#72453A",
+      "#995D7F",
+      "#B26D5D"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "欧碧",
+    "nameHant": "歐碧",
+    "namePy": "OU BI",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#C0D695",
+    "rgb": {
+      "r": 192,
+      "g": 214,
+      "b": 149
+    },
+    "hsl": {
+      "h": 80,
+      "s": 44,
+      "l": 71
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "碧花止一品，名曰欧碧。其花浅碧而开最晚，独出欧氏，故以姓著。",
+    "sentenceHant": "碧花止一品，名曰歐碧。其花淺碧而開最晚，獨出歐氏，故以姓著。",
+    "authorHans": "陆游",
+    "authorHant": "陸遊",
+    "sentenceFromHans": "天彭牡丹谱",
+    "sentenceFromHant": "天彭牡丹譜",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#C0D09D",
+      "#A9BE7B",
+      "#A8B78C",
+      "#A8BF8F"
+    ],
+    "recommendedNeighbors": [
+      "#BFC096",
+      "#ECEBC2",
+      "#E0DFC6",
+      "#E0E0D0"
+    ],
+    "recommendedComplements": [
+      "#343041",
+      "#9B8EA9",
+      "#535164",
+      "#422256"
+    ]
+  },
+  {
+    "nameHans": "春辰",
+    "nameHant": "春辰",
+    "namePy": "CHUN CHEN",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#A9BE7B",
+    "rgb": {
+      "r": 169,
+      "g": 190,
+      "b": 123
+    },
+    "hsl": {
+      "h": 79,
+      "s": 34,
+      "l": 61
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "虚心定乎昏中，龙星正乎春辰。",
+    "sentenceHant": "虛心定乎昏中，龍星正乎春辰。",
+    "authorHans": "傅玄",
+    "authorHant": "傅玄",
+    "sentenceFromHans": "阳春赋",
+    "sentenceFromHant": "陽春賦",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#C0D09D",
+      "#A8B78C",
+      "#C0D695",
+      "#A8B092"
+    ],
+    "recommendedNeighbors": [
+      "#A9A773",
+      "#9D9D82",
+      "#BECAB7",
+      "#919177"
+    ],
+    "recommendedComplements": [
+      "#343041",
+      "#9B8EA9",
+      "#535164",
+      "#615EA8"
+    ]
+  },
+  {
+    "nameHans": "碧山",
+    "nameHant": "碧山",
+    "namePy": "BI SHAN",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#779649",
+    "rgb": {
+      "r": 119,
+      "g": 150,
+      "b": 73
+    },
+    "hsl": {
+      "h": 84,
+      "s": 35,
+      "l": 44
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "碧山影里小红旗。侬是江南踏浪儿。",
+    "sentenceHant": "碧山影裡小紅旗。儂是江南踏浪兒。",
+    "authorHans": "苏轼",
+    "authorHant": "蘇軾",
+    "sentenceFromHans": "瑞鹧鸪·观潮",
+    "sentenceFromHant": "瑞鷓鴣·觀潮",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#6C8650",
+      "#A9BE7B",
+      "#A8B78C",
+      "#90A07D"
+    ],
+    "recommendedNeighbors": [
+      "#446A37",
+      "#5D8351",
+      "#68945C",
+      "#4F6F46"
+    ],
+    "recommendedComplements": [
+      "#9B8EA9",
+      "#343041",
+      "#422256",
+      "#BBA1CB"
+    ]
+  },
+  {
+    "nameHans": "青青",
+    "nameHant": "青青",
+    "namePy": "QING QING",
+    "categoryHans": "雨水",
+    "categoryHant": "雨水",
+    "term": "yushui",
+    "hex": "#4F6F46",
+    "rgb": {
+      "r": 79,
+      "g": 111,
+      "b": 70
+    },
+    "hsl": {
+      "h": 107,
+      "s": 23,
+      "l": 35
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "青青子衿，悠悠我心。",
+    "sentenceHant": "青青子衿，悠悠我心。",
+    "authorHans": "诗经",
+    "authorHant": "詩經",
+    "sentenceFromHans": "郑风·子衿",
+    "sentenceFromHant": "鄭風·子衿",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#4E6548",
+      "#5D8351",
+      "#446A37",
+      "#68945C"
+    ],
+    "recommendedNeighbors": [
+      "#79836C",
+      "#90A07D",
+      "#779649",
+      "#45493D"
+    ],
+    "recommendedComplements": [
+      "#DCC7E1",
+      "#663D74",
+      "#6A5B6D",
+      "#D3CCD6"
+    ]
+  },
+  {
+    "nameHans": "赤缇",
+    "nameHant": "赤緹",
+    "namePy": "CHI TI",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#BA5B49",
+    "rgb": {
+      "r": 186,
+      "g": 91,
+      "b": 73
+    },
+    "hsl": {
+      "h": 10,
+      "s": 45,
+      "l": 51
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "丹与赤不同者，丹者如丹砂，与赤异，其分甚微。",
+    "sentenceHant": "丹與赤不同者，丹者如丹砂，與赤異，其分甚微。",
+    "authorHans": "许慎",
+    "authorHant": "許慎",
+    "sentenceFromHans": "说文解字",
+    "sentenceFromHant": "說文解字",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BA5140",
+      "#B15A43",
+      "#B26D5D",
+      "#CB523E"
+    ],
+    "recommendedNeighbors": [
+      "#906C4A",
+      "#CE8892",
+      "#B49273",
+      "#D9883D"
+    ],
+    "recommendedComplements": [
+      "#87C0CA",
+      "#32788A",
+      "#006D87",
+      "#13393E"
+    ]
+  },
+  {
+    "nameHans": "朱草",
+    "nameHant": "朱草",
+    "namePy": "ZHU CAO",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#A64036",
+    "rgb": {
+      "r": 166,
+      "g": 64,
+      "b": 54
+    },
+    "hsl": {
+      "h": 5,
+      "s": 51,
+      "l": 43
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "又和以朱草，一服之能乘虚而行云。朱草状似小枣，栽长三四尺，枝叶皆赤，茎如珊瑚。",
+    "sentenceHant": "又和以朱草，一服之能乘虛而行雲。朱草狀似小棗，栽長三四尺，枝葉皆赤，莖如珊瑚。",
+    "authorHans": "葛洪",
+    "authorHant": "葛洪",
+    "sentenceFromHans": "抱朴子·金丹",
+    "sentenceFromHant": "抱樸子·金丹",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B13B2E",
+      "#BA5140",
+      "#95302E",
+      "#8F3D2C"
+    ],
+    "recommendedNeighbors": [
+      "#BC6E37",
+      "#7C461E",
+      "#BD8253",
+      "#9F6027"
+    ],
+    "recommendedComplements": [
+      "#108B96",
+      "#A4C9CC",
+      "#6CA8AF",
+      "#13393E"
+    ]
+  },
+  {
+    "nameHans": "𬘬茷",
+    "nameHant": "綪茷",
+    "namePy": "QIAN FA",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#9E2A22",
+    "rgb": {
+      "r": 158,
+      "g": 42,
+      "b": 34
+    },
+    "hsl": {
+      "h": 4,
+      "s": 65,
+      "l": 38
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "知𬘬茷是大赤，大赤即今之红旗，取染赤之草为名也。",
+    "sentenceHant": "知綪茷是大赤，大赤即今之紅旗，取染赤之草為名也。",
+    "authorHans": "杜预",
+    "authorHant": "杜預",
+    "sentenceFromHans": "左传·注",
+    "sentenceFromHant": "左傳·注",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B13B2E",
+      "#C12C1F",
+      "#B93A26",
+      "#A72126"
+    ],
+    "recommendedNeighbors": [
+      "#9F5221",
+      "#BC6E37",
+      "#7C461E",
+      "#9F6027"
+    ],
+    "recommendedComplements": [
+      "#108B96",
+      "#A4C9CC",
+      "#509296",
+      "#007175"
+    ]
+  },
+  {
+    "nameHans": "顺圣",
+    "nameHant": "順聖",
+    "namePy": "SHUN SHENG",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#7C191E",
+    "rgb": {
+      "r": 124,
+      "g": 25,
+      "b": 30
+    },
+    "hsl": {
+      "h": 357,
+      "s": 66,
+      "l": 29
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "杨妃醉醒晕犹在，顺圣名高价尽低。",
+    "sentenceHant": "楊妃醉醒暈猶在，順聖名高價盡低。",
+    "authorHans": "王鏊",
+    "authorHant": "王鏊",
+    "sentenceFromHans": "重阳后五日延陵奉菊为寿 五色皆具而紫菊特奇因赋号",
+    "sentenceFromHant": "重陽後五日延陵奉菊為壽 五色皆具而紫菊特奇因賦號",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#8F1D22",
+      "#631216",
+      "#822327",
+      "#A72126"
+    ],
+    "recommendedNeighbors": [
+      "#984F31",
+      "#5B3222",
+      "#A73766",
+      "#81492C"
+    ],
+    "recommendedComplements": [
+      "#206864",
+      "#226B68",
+      "#5DA39D",
+      "#B2B6B6"
+    ]
+  },
+  {
+    "nameHans": "桃夭",
+    "nameHant": "桃夭",
+    "namePy": "TAO YAO",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#F6BEC8",
+    "rgb": {
+      "r": 246,
+      "g": 190,
+      "b": 200
+    },
+    "hsl": {
+      "h": 349,
+      "s": 76,
+      "l": 85
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "桃之夭夭，灼灼其华。之子于归，宜其室家。",
+    "sentenceHant": "桃之夭夭，灼灼其華。之子於歸，宜其室家。",
+    "authorHans": "诗经",
+    "authorHant": "詩經",
+    "sentenceFromHans": "周南·桃夭",
+    "sentenceFromHant": "周南·桃夭",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#F091A0",
+      "#ECB0C1",
+      "#EFC4CE",
+      "#DC6B82"
+    ],
+    "recommendedNeighbors": [
+      "#F3A694",
+      "#E67762",
+      "#E94829",
+      "#F8C6B5"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "杨妃",
+    "nameHant": "楊妃",
+    "namePy": "YANG FEI",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#F091A0",
+    "rgb": {
+      "r": 240,
+      "g": 145,
+      "b": 160
+    },
+    "hsl": {
+      "h": 351,
+      "s": 76,
+      "l": 75
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "杨妃醉醒晕犹在，顺圣名高价尽低。",
+    "sentenceHant": "楊妃醉醒暈猶在，順聖名高價盡低。",
+    "authorHans": "王鏊",
+    "authorHant": "王鏊",
+    "sentenceFromHans": "重阳后五日延陵奉菊为寿 五色皆具而紫菊特奇因赋号",
+    "sentenceFromHant": "重陽後五日延陵奉菊為壽 五色皆具而紫菊特奇因賦號",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#F6BEC8",
+      "#DD6B7B",
+      "#DC6B82",
+      "#ECB0C1"
+    ],
+    "recommendedNeighbors": [
+      "#E67762",
+      "#F3A694",
+      "#E94829",
+      "#EE7959"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "长春",
+    "nameHant": "長春",
+    "namePy": "CHANG CHUN",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#DC6B82",
+    "rgb": {
+      "r": 220,
+      "g": 107,
+      "b": 130
+    },
+    "hsl": {
+      "h": 348,
+      "s": 62,
+      "l": 64
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "顷刻开花公莫爱，四时俱好是长春。",
+    "sentenceHant": "頃刻開花公莫愛，四時俱好是長春。",
+    "authorHans": "王安中",
+    "authorHant": "王安中",
+    "sentenceFromHans": "长春花口号",
+    "sentenceFromHant": "長春花口號",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#DD6B7B",
+      "#DD7694",
+      "#E2A2AC",
+      "#F091A0"
+    ],
+    "recommendedNeighbors": [
+      "#D24735",
+      "#CB523E",
+      "#BA5140",
+      "#B93A26"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "牙绯",
+    "nameHant": "牙緋",
+    "namePy": "YA FEI",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#C35C5D",
+    "rgb": {
+      "r": 195,
+      "g": 92,
+      "b": 93
+    },
+    "hsl": {
+      "h": 359,
+      "s": 46,
+      "l": 56
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "潘花底，陶柳外，细民肥。万家喜色，融端气拥牙绯。",
+    "sentenceHant": "潘花底，陶柳外，細民肥。萬家喜色，融端氣擁牙緋。",
+    "authorHans": "王炎",
+    "authorHant": "王炎",
+    "sentenceFromHans": "水调歌头·留宰生日",
+    "sentenceFromHant": "水調歌頭·留宰生日",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#CD7372",
+      "#C35C6A",
+      "#C25160",
+      "#B04552"
+    ],
+    "recommendedNeighbors": [
+      "#BC836B",
+      "#CB5C83",
+      "#903754",
+      "#A46244"
+    ],
+    "recommendedComplements": [
+      "#B2B6B6",
+      "#226B68",
+      "#206864",
+      "#007175"
+    ]
+  },
+  {
+    "nameHans": "黄栗留",
+    "nameHant": "黃栗留",
+    "namePy": "HUANG LI LIU",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#FEDC5E",
+    "rgb": {
+      "r": 254,
+      "g": 220,
+      "b": 94
+    },
+    "hsl": {
+      "h": 47,
+      "s": 99,
+      "l": 68
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "山下飞鸣黄栗留，溪边饮啄白符鸠。",
+    "sentenceHant": "山下飛鳴黃慄留，溪邊飲啄白符鳩。",
+    "authorHans": "王安石",
+    "authorHant": "王安石",
+    "sentenceFromHans": "怀舒州山水呈昌叔",
+    "sentenceFromHant": "懷舒州山水呈昌叔",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#FFEE6F",
+      "#FAC03D",
+      "#F2C867",
+      "#FFF799"
+    ],
+    "recommendedNeighbors": [
+      "#E3EB98",
+      "#F5B087",
+      "#F0C2A2",
+      "#C3D94E"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#5976BA",
+      "#A4ABD6",
+      "#1A2847"
+    ]
+  },
+  {
+    "nameHans": "栀子",
+    "nameHant": "梔子",
+    "namePy": "ZHI ZI",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#FAC03D",
+    "rgb": {
+      "r": 250,
+      "g": 192,
+      "b": 61
+    },
+    "hsl": {
+      "h": 42,
+      "s": 95,
+      "l": 61
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "栀子花比众木，人间诚未多",
+    "sentenceHant": "梔子花比眾木，人間誠未多",
+    "authorHans": "杜甫",
+    "authorHant": "杜甫",
+    "sentenceFromHans": "江头五咏·栀子",
+    "sentenceFromHant": "江頭五詠·梔子",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#FEDC5E",
+      "#F2C867",
+      "#E5A84B",
+      "#ECD452"
+    ],
+    "recommendedNeighbors": [
+      "#F5B087",
+      "#F18F60",
+      "#CC5D20",
+      "#CC5D20"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#12264F",
+      "#2E59A7"
+    ]
+  },
+  {
+    "nameHans": "黄不老",
+    "nameHant": "黃不老",
+    "namePy": "HUANG BU LAO",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#DB9B34",
+    "rgb": {
+      "r": 219,
+      "g": 155,
+      "b": 52
+    },
+    "hsl": {
+      "h": 37,
+      "s": 70,
+      "l": 53
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "黄檗郁成林，当奈苦心多。",
+    "sentenceHant": "黃檗鬱成林，當奈苦心多。",
+    "authorHans": "子夜",
+    "authorHant": "子夜",
+    "sentenceFromHans": "子夜歌",
+    "sentenceFromHant": "子夜歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#DA9233",
+      "#E5A84B",
+      "#D3A237",
+      "#BE8A2F"
+    ],
+    "recommendedNeighbors": [
+      "#EA5514",
+      "#ED6D3D",
+      "#EF845D",
+      "#F29A76"
+    ],
+    "recommendedComplements": [
+      "#6B798E",
+      "#6F94CD",
+      "#8BA3C7",
+      "#151D29"
+    ]
+  },
+  {
+    "nameHans": "柘黄",
+    "nameHant": "柘黃",
+    "namePy": "ZHE HUANG",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#C67915",
+    "rgb": {
+      "r": 198,
+      "g": 121,
+      "b": 21
+    },
+    "hsl": {
+      "h": 34,
+      "s": 81,
+      "l": 43
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "中原日月用胡历，幽州老酋著柘黄。",
+    "sentenceHant": "中原日月用胡歷，幽州老酋著柘黃。",
+    "authorHans": "陆游",
+    "authorHant": "陸遊",
+    "sentenceFromHans": "秋兴",
+    "sentenceFromHant": "秋興",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#DA9233",
+      "#DB9B34",
+      "#E18A3B",
+      "#E5A84B"
+    ],
+    "recommendedNeighbors": [
+      "#ED6D46",
+      "#954024",
+      "#D23918",
+      "#EE7959"
+    ],
+    "recommendedComplements": [
+      "#88ABDA",
+      "#A3BBDB",
+      "#1E2732",
+      "#3C4654"
+    ]
+  },
+  {
+    "nameHans": "青鸾",
+    "nameHant": "青鸞",
+    "namePy": "QING LUAN",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#9AA7B1",
+    "rgb": {
+      "r": 154,
+      "g": 167,
+      "b": 177
+    },
+    "hsl": {
+      "h": 206,
+      "s": 13,
+      "l": 65
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "青鸾杳， 碧天云海音绝。",
+    "sentenceHant": "青鸞杳， 碧天雲海音絕。",
+    "authorHans": "纳兰性德",
+    "authorHant": "納蘭性德",
+    "sentenceFromHans": "月上海棠·中元塞外",
+    "sentenceFromHant": "月上海棠·中元塞外",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7D929F",
+      "#7F9FAF",
+      "#66889E",
+      "#BDCBD2"
+    ],
+    "recommendedNeighbors": [
+      "#6CA8AF",
+      "#A4C9CC",
+      "#5AA4AE",
+      "#509296"
+    ],
+    "recommendedComplements": [
+      "#7C461E",
+      "#D3CBC5",
+      "#BD8253",
+      "#A8A19C"
+    ]
+  },
+  {
+    "nameHans": "菘蓝",
+    "nameHant": "菘藍",
+    "namePy": "SONG LAN",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#6B798E",
+    "rgb": {
+      "r": 107,
+      "g": 121,
+      "b": 142
+    },
+    "hsl": {
+      "h": 216,
+      "s": 14,
+      "l": 49
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "凡蓝五种，皆可为淀；茶蓝即菘蓝，插根活。",
+    "sentenceHant": "凡藍五種，皆可為澱；茶藍即菘藍，插根活。",
+    "authorHans": "宋应星",
+    "authorHant": "宋應星",
+    "sentenceFromHans": "天工开物",
+    "sentenceFromHant": "天工開物",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#576470",
+      "#3C4654",
+      "#66889E",
+      "#9AA7B1"
+    ],
+    "recommendedNeighbors": [
+      "#98B6C2",
+      "#454659",
+      "#45465E",
+      "#B2BFC3"
+    ],
+    "recommendedComplements": [
+      "#E5A84B",
+      "#BFA782",
+      "#94784F",
+      "#BE9457"
+    ]
+  },
+  {
+    "nameHans": "青黛",
+    "nameHant": "青黛",
+    "namePy": "QING DAI",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#45465E",
+    "rgb": {
+      "r": 69,
+      "g": 70,
+      "b": 94
+    },
+    "hsl": {
+      "h": 238,
+      "s": 15,
+      "l": 32
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "小头鞋履窄衣裳，青黛点眉眉细长。",
+    "sentenceHant": "小頭鞵履窄衣裳，青黛點眉眉細長。",
+    "authorHans": "白居易",
+    "authorHant": "白居易",
+    "sentenceFromHans": "上阳白发人",
+    "sentenceFromHant": "上陽白髮人",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#454659",
+      "#535164",
+      "#2C2F3B",
+      "#4A4B9D"
+    ],
+    "recommendedNeighbors": [
+      "#3C4654",
+      "#6B798E",
+      "#151D29",
+      "#1E2732"
+    ],
+    "recommendedComplements": [
+      "#A9A886",
+      "#92905D",
+      "#A9A773",
+      "#E0DFC6"
+    ]
+  },
+  {
+    "nameHans": "绀蝶",
+    "nameHant": "紺蝶",
+    "namePy": "GAN DIE",
+    "categoryHans": "惊蛰",
+    "categoryHant": "驚蟄",
+    "term": "jingzhe",
+    "hex": "#2C2F3B",
+    "rgb": {
+      "r": 44,
+      "g": 47,
+      "b": 59
+    },
+    "hsl": {
+      "h": 228,
+      "s": 15,
+      "l": 20
+    },
+    "hue": "blue",
+    "fiveElements": "water",
+    "sentenceHans": "逐伴飘来新绀蝶，成群分出小秧鱼。",
+    "sentenceHant": "逐伴飄來新紺蝶，成羣分出小秧魚。",
+    "authorHans": "弘历",
+    "authorHant": "弘曆",
+    "sentenceFromHans": "池上居",
+    "sentenceFromHant": "池上居",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#454659",
+      "#45465E",
+      "#3C4654",
+      "#151D29"
+    ],
+    "recommendedNeighbors": [
+      "#576470",
+      "#343041",
+      "#66889E",
+      "#547689"
+    ],
+    "recommendedComplements": [
+      "#7F754C",
+      "#C0AD5E",
+      "#AA9649",
+      "#FEDC5E"
+    ]
+  },
+  {
+    "nameHans": "皦玉",
+    "nameHant": "皦玉",
+    "namePy": "JIAO YU",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#EBEEE8",
+    "rgb": {
+      "r": 235,
+      "g": 238,
+      "b": 232
+    },
+    "hsl": {
+      "h": 90,
+      "s": 15,
+      "l": 92
+    },
+    "hue": "neutral",
+    "fiveElements": "metal",
+    "sentenceHans": "皦玉粲以曜目，荣日华以舒光。",
+    "sentenceHant": "皦玉粲以曜目，榮日華以舒光。",
+    "authorHans": "刘桢",
+    "authorHant": "劉楨",
+    "sentenceFromHans": "遂志赋",
+    "sentenceFromHant": "遂志賦",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#C9CFC1",
+      "#B3BDA9",
+      "#BECAB7",
+      "#BEC2BC"
+    ],
+    "recommendedNeighbors": [
+      "#EBEDDF",
+      "#BED2BB",
+      "#9BB496",
+      "#D5E3D4"
+    ],
+    "recommendedComplements": [
+      "#9B8EA9",
+      "#422256",
+      "#BBA1CB",
+      "#D3CCD6"
+    ]
+  },
+  {
+    "nameHans": "吉量",
+    "nameHant": "吉量",
+    "namePy": "JI LIANG",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#EBEDDF",
+    "rgb": {
+      "r": 235,
+      "g": 237,
+      "b": 223
+    },
+    "hsl": {
+      "h": 69,
+      "s": 28,
+      "l": 90
+    },
+    "hue": "neutral",
+    "fiveElements": "metal",
+    "sentenceHans": "有文马，缟身朱鬣，目若黄金，名曰吉量，乘之寿千岁。",
+    "sentenceHant": "有文馬，縞身朱鬣，目若黃金，名曰吉量，乘之壽千歲。",
+    "authorHans": "不详",
+    "authorHant": "不詳",
+    "sentenceFromHans": "山海经·海内北经",
+    "sentenceFromHant": "山海經·海內北經",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E0E0D0",
+      "#E0DFC6",
+      "#BFC1A9",
+      "#C0D09D"
+    ],
+    "recommendedNeighbors": [
+      "#EEEAD9",
+      "#EBEEE8",
+      "#BFB99C",
+      "#EAE4D1"
+    ],
+    "recommendedComplements": [
+      "#535164",
+      "#343041",
+      "#615EA8",
+      "#4A4B9D"
+    ]
+  },
+  {
+    "nameHans": "韶粉",
+    "nameHant": "韶粉",
+    "namePy": "SHAO FEN",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#E0E0D0",
+    "rgb": {
+      "r": 224,
+      "g": 224,
+      "b": 208
+    },
+    "hsl": {
+      "h": 60,
+      "s": 21,
+      "l": 85
+    },
+    "hue": "yellow",
+    "fiveElements": "metal",
+    "sentenceHans": "石髓多年化韶粉，冰华无意属东风。",
+    "sentenceHant": "石髓多年化韶粉，冰華無意屬東風。",
+    "authorHans": "陈樵",
+    "authorHant": "陳樵",
+    "sentenceFromHans": "玉雪亭",
+    "sentenceFromHant": "玉雪亭",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E0DFC6",
+      "#C7C6B6",
+      "#BFC1A9",
+      "#BFC096"
+    ],
+    "recommendedNeighbors": [
+      "#C0D09D",
+      "#D8D1C5",
+      "#A9BE7B",
+      "#A8B78C"
+    ],
+    "recommendedComplements": [
+      "#4A4B9D",
+      "#45465E",
+      "#615EA8",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "霜地",
+    "nameHant": "霜地",
+    "namePy": "SHUANG DI",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#C7C6B6",
+    "rgb": {
+      "r": 199,
+      "g": 198,
+      "b": 182
+    },
+    "hsl": {
+      "h": 56,
+      "s": 13,
+      "l": 75
+    },
+    "hue": "yellow",
+    "fiveElements": "metal",
+    "sentenceHans": "浓霜满地作微雪，落叶投空似飞鸟。",
+    "sentenceHant": "濃霜滿地作微雪，落葉投空似飛鳥。",
+    "authorHans": "苏辙",
+    "authorHant": "蘇轍",
+    "sentenceFromHans": "新霜",
+    "sentenceFromHant": "新霜",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E0E0D0",
+      "#BFB99C",
+      "#CAC5A0",
+      "#A9A886"
+    ],
+    "recommendedNeighbors": [
+      "#C6BEB1",
+      "#BEC2B3",
+      "#AC9F8A",
+      "#A8B092"
+    ],
+    "recommendedComplements": [
+      "#454659",
+      "#45465E",
+      "#757CBB",
+      "#4A4B9D"
+    ]
+  },
+  {
+    "nameHans": "夏籥",
+    "nameHant": "夏籥",
+    "namePy": "XIA YUE",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#D2AF9D",
+    "rgb": {
+      "r": 210,
+      "g": 175,
+      "b": 157
+    },
+    "hsl": {
+      "h": 20,
+      "s": 37,
+      "l": 72
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "《象武》，武舞也；《夏籥》，文 舞也。",
+    "sentenceHant": "《象武》，武舞也；《夏籥》，文 舞也。",
+    "authorHans": "郑玄",
+    "authorHant": "鄭玄",
+    "sentenceFromHans": "仲尼燕居·注",
+    "sentenceFromHant": "仲尼燕居·注",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#DDC5B8",
+      "#BD9683",
+      "#BC836B",
+      "#BEA89D"
+    ],
+    "recommendedNeighbors": [
+      "#DAA9A9",
+      "#CD7372",
+      "#B27777",
+      "#AA8E59"
+    ],
+    "recommendedComplements": [
+      "#7F9FAF",
+      "#BDCBD2",
+      "#106898",
+      "#4182A4"
+    ]
+  },
+  {
+    "nameHans": "紫磨金",
+    "nameHant": "紫磨金",
+    "namePy": "ZI MO JIN",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#BC836B",
+    "rgb": {
+      "r": 188,
+      "g": 131,
+      "b": 107
+    },
+    "hsl": {
+      "h": 18,
+      "s": 38,
+      "l": 58
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "金之优者，名曰紫磨，犹人之有圣也。",
+    "sentenceHant": "金之優者，名曰紫磨，猶人之有聖也。",
+    "authorHans": "孔融",
+    "authorHant": "孔融",
+    "sentenceFromHans": "圣人优劣论",
+    "sentenceFromHant": "聖人優劣論",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BD9683",
+      "#A46244",
+      "#D2AF9D",
+      "#B26D5D"
+    ],
+    "recommendedNeighbors": [
+      "#C6A268",
+      "#C35C5D",
+      "#A58A5F",
+      "#9E8358"
+    ],
+    "recommendedComplements": [
+      "#D4DDE1",
+      "#98B6C2",
+      "#7F9FAF",
+      "#BDCBD2"
+    ]
+  },
+  {
+    "nameHans": "檀色",
+    "nameHant": "檀色",
+    "namePy": "TAN SE",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#B26D5D",
+    "rgb": {
+      "r": 178,
+      "g": 109,
+      "b": 93
+    },
+    "hsl": {
+      "h": 11,
+      "s": 36,
+      "l": 53
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "浅匀檀色妒胭脂，绿刺也生姿。",
+    "sentenceHant": "淺勻檀色妒胭脂，綠刺也生姿。",
+    "authorHans": "一丛花",
+    "authorHant": "一叢花",
+    "sentenceFromHans": "高士奇",
+    "sentenceFromHant": "高士奇",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BA5B49",
+      "#B15A43",
+      "#9A6655",
+      "#BA5140"
+    ],
+    "recommendedNeighbors": [
+      "#C35C6A",
+      "#C25160",
+      "#9E8368",
+      "#CE8892"
+    ],
+    "recommendedComplements": [
+      "#32788A",
+      "#006D87",
+      "#87C0CA",
+      "#284852"
+    ]
+  },
+  {
+    "nameHans": "赭罗",
+    "nameHant": "赭羅",
+    "namePy": "ZHE LUO",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#9A6655",
+    "rgb": {
+      "r": 154,
+      "g": 102,
+      "b": 85
+    },
+    "hsl": {
+      "h": 15,
+      "s": 29,
+      "l": 47
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "月瓣团栾剪赭罗，长条排蕊缀鸣珂。",
+    "sentenceHant": "月瓣團欒剪赭羅，長條排蕊綴鳴珂。",
+    "authorHans": "唐彦谦",
+    "authorHant": "唐彥謙",
+    "sentenceFromHans": "秋葵",
+    "sentenceFromHant": "秋葵",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#8F6D5F",
+      "#955A42",
+      "#B26D5D",
+      "#A46244"
+    ],
+    "recommendedNeighbors": [
+      "#7C623F",
+      "#B4884D",
+      "#A35F65",
+      "#896D47"
+    ],
+    "recommendedComplements": [
+      "#A2D2E2",
+      "#284852",
+      "#B2BFC3",
+      "#98B6C2"
+    ]
+  },
+  {
+    "nameHans": "黄丹",
+    "nameHant": "黃丹",
+    "namePy": "HUANG DAN",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#EA5514",
+    "rgb": {
+      "r": 234,
+      "g": 85,
+      "b": 20
+    },
+    "hsl": {
+      "h": 18,
+      "s": 84,
+      "l": 50
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "黄丹胡粉密陀僧，此是嘉州造化能。",
+    "sentenceHant": "黃丹胡粉密陀僧，此是嘉州造化能。",
+    "authorHans": "陈楠",
+    "authorHant": "陳楠",
+    "sentenceFromHans": "金丹诗诀",
+    "sentenceFromHant": "金丹詩訣",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#ED6D3D",
+      "#ED6D46",
+      "#CC5D20",
+      "#CC5D20"
+    ],
+    "recommendedNeighbors": [
+      "#DB9B34",
+      "#C8161D",
+      "#AB1D22",
+      "#A72126"
+    ],
+    "recommendedComplements": [
+      "#D4DDE1",
+      "#98B6C2",
+      "#7F9FAF",
+      "#BDCBD2"
+    ]
+  },
+  {
+    "nameHans": "洛神珠",
+    "nameHant": "洛神珠",
+    "namePy": "LUO SHEN ZHU",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#D23918",
+    "rgb": {
+      "r": 210,
+      "g": 57,
+      "b": 24
+    },
+    "hsl": {
+      "h": 11,
+      "s": 79,
+      "l": 46
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "醋浆，其实如撮口袋，中有珠子，熟则红，关中谓之洛。",
+    "sentenceHant": "醋漿，其實如撮口袋，中有珠子，熟則紅，關中謂之洛。",
+    "authorHans": "郑樵",
+    "authorHant": "鄭樵",
+    "sentenceFromHans": "通志二十略·草类",
+    "sentenceFromHant": "通志二十略·草類",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#E94829",
+      "#C12C1F",
+      "#B93A26",
+      "#EA5514"
+    ],
+    "recommendedNeighbors": [
+      "#B81A35",
+      "#D08635",
+      "#DB9C5E",
+      "#DD6B7B"
+    ],
+    "recommendedComplements": [
+      "#32788A",
+      "#006D87",
+      "#87C0CA",
+      "#284852"
+    ]
+  },
+  {
+    "nameHans": "丹雘",
+    "nameHant": "丹雘",
+    "namePy": "DAN WO",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#C8161D",
+    "rgb": {
+      "r": 200,
+      "g": 22,
+      "b": 29
+    },
+    "hsl": {
+      "h": 358,
+      "s": 80,
+      "l": 44
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "邓林采楩楠，越裳贡丹雘。",
+    "sentenceHant": "鄧林採楩楠，越裳貢丹雘。",
+    "authorHans": "纪映钟",
+    "authorHant": "紀映鐘",
+    "sentenceFromHans": "金陵故宫",
+    "sentenceFromHant": "金陵故宮",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#AB1D22",
+      "#D12920",
+      "#A72126",
+      "#C12C1F"
+    ],
+    "recommendedNeighbors": [
+      "#EA5514",
+      "#CC5D20",
+      "#CC5D20",
+      "#CC5D20"
+    ],
+    "recommendedComplements": [
+      "#226B68",
+      "#206864",
+      "#B2B6B6",
+      "#5DA39D"
+    ]
+  },
+  {
+    "nameHans": "水华朱",
+    "nameHant": "水華朱",
+    "namePy": "SHUI HUA ZHU",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#A72126",
+    "rgb": {
+      "r": 167,
+      "g": 33,
+      "b": 38
+    },
+    "hsl": {
+      "h": 358,
+      "s": 67,
+      "l": 39
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "升炼银朱，用石亭脂二斤，新锅内熔化，次下水银一斤，炒作青砂，头炒不见星。",
+    "sentenceHant": "升煉銀硃，用石亭脂二斤，新鍋內熔化，次下水銀一斤，炒作青砂，頭炒不見星。",
+    "authorHans": "胡演",
+    "authorHant": "胡演",
+    "sentenceFromHans": "升丹炼药秘诀",
+    "sentenceFromHant": "升丹煉藥祕訣",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#AB1D22",
+      "#8F1D22",
+      "#7C191E",
+      "#822327"
+    ],
+    "recommendedNeighbors": [
+      "#984F31",
+      "#EA5514",
+      "#CB5C83",
+      "#5B3222"
+    ],
+    "recommendedComplements": [
+      "#226B68",
+      "#206864",
+      "#B2B6B6",
+      "#5DA39D"
+    ]
+  },
+  {
+    "nameHans": "青冥",
+    "nameHant": "青冥",
+    "namePy": "QING MING",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#3271AE",
+    "rgb": {
+      "r": 50,
+      "g": 113,
+      "b": 174
+    },
+    "hsl": {
+      "h": 210,
+      "s": 55,
+      "l": 44
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "青冥浩荡不见底，日月照耀金银台；霓为衣兮风为马，云之君兮纷纷而来下。",
+    "sentenceHant": "青冥浩蕩不見底，日月照耀金銀臺；霓為衣兮風為馬，雲之君兮紛紛而來下。",
+    "authorHans": "李白",
+    "authorHant": "李白",
+    "sentenceFromHans": "梦游天姥吟留别",
+    "sentenceFromHant": "夢遊天姥吟留別",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#4994C4",
+      "#2E59A7",
+      "#6E9BC5",
+      "#4182A4"
+    ],
+    "recommendedNeighbors": [
+      "#87C0CA",
+      "#5AA4AE",
+      "#13393E",
+      "#757CBB"
+    ],
+    "recommendedComplements": [
+      "#DDBB99",
+      "#DB9C5E",
+      "#9E8368",
+      "#E18A3B"
+    ]
+  },
+  {
+    "nameHans": "青雘",
+    "nameHant": "青雘",
+    "namePy": "QING WO",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#007175",
+    "rgb": {
+      "r": 0,
+      "g": 113,
+      "b": 117
+    },
+    "hsl": {
+      "h": 182,
+      "s": 100,
+      "l": 23
+    },
+    "hue": "cyan",
+    "fiveElements": "water",
+    "sentenceHans": "绿碧紫英，青雘丹粟。",
+    "sentenceHant": "綠碧紫英，青雘丹粟。",
+    "authorHans": "张衡",
+    "authorHant": "張衡",
+    "sentenceFromHans": "南都赋",
+    "sentenceFromHant": "南都賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#006D87",
+      "#108B96",
+      "#206864",
+      "#13393E"
+    ],
+    "recommendedNeighbors": [
+      "#106898",
+      "#06436F",
+      "#003D74",
+      "#003460"
+    ],
+    "recommendedComplements": [
+      "#95302E",
+      "#D12920",
+      "#CD7372",
+      "#9E2A22"
+    ]
+  },
+  {
+    "nameHans": "青緺",
+    "nameHant": "青緺",
+    "namePy": "QING GUA",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#284852",
+    "rgb": {
+      "r": 40,
+      "g": 72,
+      "b": 82
+    },
+    "hsl": {
+      "h": 194,
+      "s": 34,
+      "l": 24
+    },
+    "hue": "cyan",
+    "fiveElements": "water",
+    "sentenceHans": "官拜少常休，青緺换鹿裘。",
+    "sentenceHant": "官拜少常休，青緺換鹿裘。",
+    "authorHans": "黄滔",
+    "authorHant": "黃滔",
+    "sentenceFromHans": "寄少常卢同年。",
+    "sentenceFromHant": "寄少常盧同年。",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#32788A",
+      "#13393E",
+      "#547689",
+      "#4182A4"
+    ],
+    "recommendedNeighbors": [
+      "#1E2732",
+      "#3D8E86",
+      "#3C4654",
+      "#151D29"
+    ],
+    "recommendedComplements": [
+      "#ED6D46",
+      "#DA9E8C",
+      "#EE7959",
+      "#9A6655"
+    ]
+  },
+  {
+    "nameHans": "骐𬴊",
+    "nameHant": "騏驎",
+    "namePy": "QI LIN",
+    "categoryHans": "春分",
+    "categoryHant": "春分",
+    "term": "chunfen",
+    "hex": "#12264F",
+    "rgb": {
+      "r": 18,
+      "g": 38,
+      "b": 79
+    },
+    "hsl": {
+      "h": 220,
+      "s": 63,
+      "l": 19
+    },
+    "hue": "blue",
+    "fiveElements": "water",
+    "sentenceHans": "骐𬴊踏云天马狞，牛山撼碎珊瑚声。",
+    "sentenceHant": "騏驎踏雲天馬獰，牛山撼碎珊瑚聲。",
+    "authorHans": "李商隐",
+    "authorHant": "李商隱",
+    "sentenceFromHans": "无愁果有愁曲北齐歌",
+    "sentenceFromHant": "無愁果有愁曲北齊歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#19325F",
+      "#1A2847",
+      "#2E59A7",
+      "#151D29"
+    ],
+    "recommendedNeighbors": [
+      "#106898",
+      "#4182A4",
+      "#4A4B9D",
+      "#284852"
+    ],
+    "recommendedComplements": [
+      "#D3A237",
+      "#BFA670",
+      "#AA8E59",
+      "#AA8534"
+    ]
+  },
+  {
+    "nameHans": "紫蒲",
+    "nameHant": "紫蒲",
+    "namePy": "ZI PU",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#A6559D",
+    "rgb": {
+      "r": 166,
+      "g": 85,
+      "b": 157
+    },
+    "hsl": {
+      "h": 307,
+      "s": 32,
+      "l": 49
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "紫蒲低水槛，红叶半江船。",
+    "sentenceHant": "紫蒲低水檻，紅葉半江船。",
+    "authorHans": "许浑",
+    "authorHant": "許渾",
+    "sentenceFromHans": "夜归丁卯桥村舍",
+    "sentenceFromHant": "夜歸丁卯橋村舍",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BA79B1",
+      "#7E527F",
+      "#CE93BF",
+      "#91828F"
+    ],
+    "recommendedNeighbors": [
+      "#995D7F",
+      "#663D74",
+      "#B95A89",
+      "#A76283"
+    ],
+    "recommendedComplements": [
+      "#698E6A",
+      "#778A77",
+      "#81A380",
+      "#D5E3D4"
+    ]
+  },
+  {
+    "nameHans": "赪紫",
+    "nameHant": "赬紫",
+    "namePy": "CHENG ZI",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#8A1874",
+    "rgb": {
+      "r": 138,
+      "g": 24,
+      "b": 116
+    },
+    "hsl": {
+      "h": 312,
+      "s": 70,
+      "l": 32
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "芬菲芳事毕，木芍药晚出；于中姚魏更倾城，扫退目前頳紫色。",
+    "sentenceHant": "芬菲芳事畢，木芍藥晚出；於中姚魏更傾城，掃退目前頳紫色。",
+    "authorHans": "卫宗武",
+    "authorHant": "衛宗武",
+    "sentenceFromHans": "莺花吟为良友作",
+    "sentenceFromHant": "鶯花吟為良友作",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#420B2F",
+      "#6C216D",
+      "#A6559D",
+      "#BA79B1"
+    ],
+    "recommendedNeighbors": [
+      "#B83570",
+      "#602641",
+      "#A73766",
+      "#B0436F"
+    ],
+    "recommendedComplements": [
+      "#2A6E3F",
+      "#698E6A",
+      "#86908A",
+      "#778A77"
+    ]
+  },
+  {
+    "nameHans": "齐紫",
+    "nameHant": "齊紫",
+    "namePy": "QI ZI",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#6C216D",
+    "rgb": {
+      "r": 108,
+      "g": 33,
+      "b": 109
+    },
+    "hsl": {
+      "h": 299,
+      "s": 54,
+      "l": 28
+    },
+    "hue": "purple",
+    "fiveElements": "water",
+    "sentenceHans": "齐王好衣紫，齐人皆好也。",
+    "sentenceHant": "齊王好衣紫，齊人皆好也。",
+    "authorHans": "李贺",
+    "authorHant": "李賀",
+    "sentenceFromHans": "韩非子·外储说左上",
+    "sentenceFromHant": "韓非子·外儲說左上",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#8A1874",
+      "#A6559D",
+      "#7E527F",
+      "#7D5284"
+    ],
+    "recommendedNeighbors": [
+      "#422256",
+      "#420B2F",
+      "#995D7F",
+      "#BBA1CB"
+    ],
+    "recommendedComplements": [
+      "#81A380",
+      "#778A77",
+      "#698E6A",
+      "#D5E3D4"
+    ]
+  },
+  {
+    "nameHans": "凝夜紫",
+    "nameHant": "凝夜紫",
+    "namePy": "NING YE ZI",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#422256",
+    "rgb": {
+      "r": 66,
+      "g": 34,
+      "b": 86
+    },
+    "hsl": {
+      "h": 277,
+      "s": 43,
+      "l": 24
+    },
+    "hue": "purple",
+    "fiveElements": "water",
+    "sentenceHans": "角声满天秋色里，塞上燕脂凝夜紫。",
+    "sentenceHant": "角聲滿天秋色裡，塞上燕脂凝夜紫。",
+    "authorHans": "韩非子",
+    "authorHant": "韓非子",
+    "sentenceFromHans": "雁门太守行",
+    "sentenceFromHant": "雁門太守行",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#663D74",
+      "#7D5284",
+      "#A67EB7",
+      "#6A5B6D"
+    ],
+    "recommendedNeighbors": [
+      "#6C216D",
+      "#7E527F",
+      "#343041",
+      "#A6559D"
+    ],
+    "recommendedComplements": [
+      "#6A8D52",
+      "#BECAB7",
+      "#BEC2BC",
+      "#686A67"
+    ]
+  },
+  {
+    "nameHans": "冻缥",
+    "nameHant": "凍縹",
+    "namePy": "DONG PIAO",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#BEC2B3",
+    "rgb": {
+      "r": 190,
+      "g": 194,
+      "b": 179
+    },
+    "hsl": {
+      "h": 76,
+      "s": 11,
+      "l": 73
+    },
+    "hue": "neutral",
+    "fiveElements": "metal",
+    "sentenceHans": "乃有春清缥酒，康狄所营，应化则变，感气而成。",
+    "sentenceHant": "乃有春清縹酒，康狄所營，應化則變，感氣而成。",
+    "authorHans": "曹植",
+    "authorHant": "曹植",
+    "sentenceFromHans": "七启",
+    "sentenceFromHant": "七啟",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#A8B092",
+      "#A7AAA1",
+      "#A8B78C",
+      "#C9CFC1"
+    ],
+    "recommendedNeighbors": [
+      "#C7C6B6",
+      "#BECAB7",
+      "#BEC2BC",
+      "#D5D1AE"
+    ],
+    "recommendedComplements": [
+      "#343041",
+      "#535164",
+      "#9B8EA9",
+      "#615EA8"
+    ]
+  },
+  {
+    "nameHans": "春碧",
+    "nameHant": "春碧",
+    "namePy": "CHUN BI",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#9D9D82",
+    "rgb": {
+      "r": 157,
+      "g": 157,
+      "b": 130
+    },
+    "hsl": {
+      "h": 60,
+      "s": 12,
+      "l": 56
+    },
+    "hue": "neutral",
+    "fiveElements": "earth",
+    "sentenceHans": "朱雀航南绕香陌，谢郎东墅连春碧。",
+    "sentenceHant": "朱雀航南繞香陌，謝郎東墅連春碧。",
+    "authorHans": "温庭筠",
+    "authorHant": "溫庭筠",
+    "sentenceFromHans": "谢公墅歌",
+    "sentenceFromHant": "謝公墅歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#919177",
+      "#A9A886",
+      "#A9A773",
+      "#92905D"
+    ],
+    "recommendedNeighbors": [
+      "#A7AAA1",
+      "#7A7B78",
+      "#9E8C6B",
+      "#A8B78C"
+    ],
+    "recommendedComplements": [
+      "#4A4B9D",
+      "#45465E",
+      "#615EA8",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "执大象",
+    "nameHant": "執大象",
+    "namePy": "ZHI DA XIANG",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#919177",
+    "rgb": {
+      "r": 145,
+      "g": 145,
+      "b": 119
+    },
+    "hsl": {
+      "h": 60,
+      "s": 11,
+      "l": 52
+    },
+    "hue": "neutral",
+    "fiveElements": "earth",
+    "sentenceHans": "执大象，天下往。往而不害，安平太。",
+    "sentenceHant": "執大象，天下往。往而不害，安平太。",
+    "authorHans": "老子",
+    "authorHant": "老子",
+    "sentenceFromHans": "道德经",
+    "sentenceFromHant": "道德經",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9D9D82",
+      "#A9A886",
+      "#92905D",
+      "#A9A773"
+    ],
+    "recommendedNeighbors": [
+      "#7A7B78",
+      "#A7AAA1",
+      "#9E8C6B",
+      "#A8B78C"
+    ],
+    "recommendedComplements": [
+      "#4A4B9D",
+      "#45465E",
+      "#615EA8",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "苔古",
+    "nameHant": "苔古",
+    "namePy": "TAI GU",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#79836C",
+    "rgb": {
+      "r": 121,
+      "g": 131,
+      "b": 108
+    },
+    "hsl": {
+      "h": 86,
+      "s": 10,
+      "l": 47
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "园荒一径新，苔古半阶斜。",
+    "sentenceHant": "園荒一徑新，苔古半階斜。",
+    "authorHans": "李世民",
+    "authorHant": "李世民",
+    "sentenceFromHans": "过旧宅二首",
+    "sentenceFromHant": "過舊宅二首",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#90A07D",
+      "#7A7B78",
+      "#6C8650",
+      "#555F4D"
+    ],
+    "recommendedNeighbors": [
+      "#5D8351",
+      "#68945C",
+      "#868C4E",
+      "#4F6F46"
+    ],
+    "recommendedComplements": [
+      "#9B8EA9",
+      "#422256",
+      "#BBA1CB",
+      "#343041"
+    ]
+  },
+  {
+    "nameHans": "香炉紫烟",
+    "nameHant": "香爐紫煙",
+    "namePy": "XIANG LU ZI YAN",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#D3CCD6",
+    "rgb": {
+      "r": 211,
+      "g": 204,
+      "b": 214
+    },
+    "hsl": {
+      "h": 282,
+      "s": 11,
+      "l": 82
+    },
+    "hue": "neutral",
+    "fiveElements": "metal",
+    "sentenceHans": "日照香炉生紫烟，遥看瀑布挂前川。",
+    "sentenceHant": "日照香爐生紫煙，遙看瀑布掛前川。",
+    "authorHans": "李白",
+    "authorHant": "李白",
+    "sentenceFromHans": "望庐山瀑布",
+    "sentenceFromHant": "望廬山瀑布",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#DCC7E1",
+      "#BBA1CB",
+      "#A67EB7",
+      "#9B8EA9"
+    ],
+    "recommendedNeighbors": [
+      "#9C8D9B",
+      "#91828F",
+      "#BA79B1",
+      "#A6559D"
+    ],
+    "recommendedComplements": [
+      "#CAD7C5",
+      "#BEC2BC",
+      "#686A67",
+      "#788A6F"
+    ]
+  },
+  {
+    "nameHans": "紫菂",
+    "nameHant": "紫菂",
+    "namePy": "ZI DI",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#9B8EA9",
+    "rgb": {
+      "r": 155,
+      "g": 142,
+      "b": 169
+    },
+    "hsl": {
+      "h": 269,
+      "s": 14,
+      "l": 61
+    },
+    "hue": "purple",
+    "fiveElements": "water",
+    "sentenceHans": "浪静鲜鳞跃，风恬紫菂妍。",
+    "sentenceHant": "浪靜鮮鱗躍，風恬紫菂妍。",
+    "authorHans": "玄烨",
+    "authorHant": "玄燁",
+    "sentenceFromHans": "玉泉春晓",
+    "sentenceFromHant": "玉泉春曉",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BBA1CB",
+      "#A67EB7",
+      "#D3CCD6",
+      "#663D74"
+    ],
+    "recommendedNeighbors": [
+      "#DCC7E1",
+      "#6A5B6D",
+      "#7D5284",
+      "#535164"
+    ],
+    "recommendedComplements": [
+      "#A8BF8F",
+      "#6C8650",
+      "#EBEEE8",
+      "#B3BDA9"
+    ]
+  },
+  {
+    "nameHans": "拂紫绵",
+    "nameHant": "拂紫綿",
+    "namePy": "FU ZI MIAN",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#7E527F",
+    "rgb": {
+      "r": 126,
+      "g": 82,
+      "b": 127
+    },
+    "hsl": {
+      "h": 299,
+      "s": 22,
+      "l": 41
+    },
+    "hue": "purple",
+    "fiveElements": "water",
+    "sentenceHans": "浅画香膏拂紫线。牡丹花重翠云偏。",
+    "sentenceHant": "淺畫香膏拂紫線。牡丹花重翠雲偏。",
+    "authorHans": "陈克",
+    "authorHant": "陳克",
+    "sentenceFromHans": "浣溪沙",
+    "sentenceFromHant": "浣溪沙",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7D5284",
+      "#A6559D",
+      "#6A5B6D",
+      "#9C8D9B"
+    ],
+    "recommendedNeighbors": [
+      "#422256",
+      "#BBA1CB",
+      "#995D7F",
+      "#E4B8D5"
+    ],
+    "recommendedComplements": [
+      "#81A380",
+      "#778A77",
+      "#698E6A",
+      "#D5E3D4"
+    ]
+  },
+  {
+    "nameHans": "三公子",
+    "nameHant": "三公子",
+    "namePy": "SAN GONG ZI",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#663D74",
+    "rgb": {
+      "r": 102,
+      "g": 61,
+      "b": 116
+    },
+    "hsl": {
+      "h": 285,
+      "s": 31,
+      "l": 35
+    },
+    "hue": "purple",
+    "fiveElements": "water",
+    "sentenceHans": "牙官少有三公子，首领多饶五品绯。",
+    "sentenceHant": "牙官少有三公子，首領多饒五品緋。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "王昭君变文",
+    "sentenceFromHant": "王昭君變文",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7D5284",
+      "#422256",
+      "#6A5B6D",
+      "#A67EB7"
+    ],
+    "recommendedNeighbors": [
+      "#A6559D",
+      "#9C8D9B",
+      "#BA79B1",
+      "#594C57"
+    ],
+    "recommendedComplements": [
+      "#446A37",
+      "#5D8351",
+      "#4F6F46",
+      "#68945C"
+    ]
+  },
+  {
+    "nameHans": "琅玕紫",
+    "nameHant": "琅玕紫",
+    "namePy": "LANG GAN ZI",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#CB5C83",
+    "rgb": {
+      "r": 203,
+      "g": 92,
+      "b": 131
+    },
+    "hsl": {
+      "h": 339,
+      "s": 52,
+      "l": 58
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "玉转湿丝牵晓水，热粉生香琅玕紫。",
+    "sentenceHant": "玉轉濕絲牽曉水，熱粉生香琅玕紫。",
+    "authorHans": "李贺",
+    "authorHant": "李賀",
+    "sentenceFromHans": "夜饮朝眠曲",
+    "sentenceFromHant": "夜飲朝眠曲",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B0436F",
+      "#DD7694",
+      "#DE82A7",
+      "#A73766"
+    ],
+    "recommendedNeighbors": [
+      "#C35C5D",
+      "#CD7372",
+      "#E4B8D5",
+      "#A72126"
+    ],
+    "recommendedComplements": [
+      "#B1D5C8",
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1"
+    ]
+  },
+  {
+    "nameHans": "红踯躅",
+    "nameHant": "紅躑躅",
+    "namePy": "HONG ZHI ZHU",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#B83570",
+    "rgb": {
+      "r": 184,
+      "g": 53,
+      "b": 112
+    },
+    "hsl": {
+      "h": 333,
+      "s": 55,
+      "l": 46
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "晚叶尚开红踯躅，秋芳初结白芙蓉。",
+    "sentenceHant": "晚葉尚開紅躑躅，秋芳初結白芙蓉。",
+    "authorHans": "白居易",
+    "authorHant": "白居易",
+    "sentenceFromHans": "题元八溪居",
+    "sentenceFromHant": "題元八溪居",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A73766",
+      "#B0436F",
+      "#CB5C83",
+      "#B95A89"
+    ],
+    "recommendedNeighbors": [
+      "#C25160",
+      "#C35C6A",
+      "#B04552",
+      "#DD6B7B"
+    ],
+    "recommendedComplements": [
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1",
+      "#80A492"
+    ]
+  },
+  {
+    "nameHans": "魏红",
+    "nameHant": "魏紅",
+    "namePy": "WEI HONG",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#A73766",
+    "rgb": {
+      "r": 167,
+      "g": 55,
+      "b": 102
+    },
+    "hsl": {
+      "h": 335,
+      "s": 50,
+      "l": 44
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "当时绝品可数者，魏红窈窕姚黄妃。",
+    "sentenceHant": "當時絕品可數者，魏紅窈窕姚黃妃。",
+    "authorHans": "欧阳修",
+    "authorHant": "歐陽修",
+    "sentenceFromHans": "洛阳牡丹图",
+    "sentenceFromHant": "洛陽牡丹圖",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B83570",
+      "#B0436F",
+      "#903754",
+      "#CB5C83"
+    ],
+    "recommendedNeighbors": [
+      "#9E4E56",
+      "#81474C",
+      "#7C4449",
+      "#662B2F"
+    ],
+    "recommendedComplements": [
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1",
+      "#B1D5C8"
+    ]
+  },
+  {
+    "nameHans": "魏紫",
+    "nameHant": "魏紫",
+    "namePy": "WEI ZI",
+    "categoryHans": "清明",
+    "categoryHant": "清明",
+    "term": "qingming",
+    "hex": "#903754",
+    "rgb": {
+      "r": 144,
+      "g": 55,
+      "b": 84
+    },
+    "hsl": {
+      "h": 340,
+      "s": 45,
+      "l": 39
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "人谓牡丹花王，今姚黄真可为王，而魏花乃后也。",
+    "sentenceHant": "人謂牡丹花王，今姚黃真可為王，而魏花乃後也。",
+    "authorHans": "欧阳修",
+    "authorHant": "歐陽修",
+    "sentenceFromHans": "洛阳牡丹记",
+    "sentenceFromHant": "洛陽牡丹記",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B0436F",
+      "#A73766",
+      "#B83570",
+      "#CB5C83"
+    ],
+    "recommendedNeighbors": [
+      "#C35C5D",
+      "#95302E",
+      "#A85858",
+      "#B27777"
+    ],
+    "recommendedComplements": [
+      "#B1D5C8",
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1"
+    ]
+  },
+  {
+    "nameHans": "昌荣",
+    "nameHant": "昌榮",
+    "namePy": "CHANG RONG",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#DCC7E1",
+    "rgb": {
+      "r": 220,
+      "g": 199,
+      "b": 225
+    },
+    "hsl": {
+      "h": 288,
+      "s": 30,
+      "l": 83
+    },
+    "hue": "purple",
+    "fiveElements": "water",
+    "sentenceHans": "能致紫草，卖与染家，得钱以遗孤寡，历世而然，奉祠者万计。",
+    "sentenceHant": "能致紫草，賣與染家，得錢以遺孤寡，歷世而然，奉祠者萬計。",
+    "authorHans": "刘向",
+    "authorHant": "劉向",
+    "sentenceFromHans": "列仙传",
+    "sentenceFromHant": "列仙傳",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D3CCD6",
+      "#BBA1CB",
+      "#A67EB7",
+      "#7D5284"
+    ],
+    "recommendedNeighbors": [
+      "#BA79B1",
+      "#9B8EA9",
+      "#A6559D",
+      "#91828F"
+    ],
+    "recommendedComplements": [
+      "#4E6548",
+      "#4F6F46",
+      "#68945C",
+      "#3F503B"
+    ]
+  },
+  {
+    "nameHans": "紫薄汗",
+    "nameHant": "紫薄汗",
+    "namePy": "ZI BAO HAN",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#BBA1CB",
+    "rgb": {
+      "r": 187,
+      "g": 161,
+      "b": 203
+    },
+    "hsl": {
+      "h": 277,
+      "s": 29,
+      "l": 71
+    },
+    "hue": "purple",
+    "fiveElements": "metal",
+    "sentenceHans": "胡瓶落膊紫薄汗，碎叶城西秋月团；明敕星驰封宝剑，辞君一夜取楼兰。",
+    "sentenceHant": "胡瓶落膊紫薄汗，碎葉城西秋月團；明敕星馳封寶劍，辭君一夜取樓蘭。",
+    "authorHans": "王昌龄",
+    "authorHant": "王昌齡",
+    "sentenceFromHans": "从军行七首",
+    "sentenceFromHant": "從軍行七首",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A67EB7",
+      "#D3CCD6",
+      "#9B8EA9",
+      "#DCC7E1"
+    ],
+    "recommendedNeighbors": [
+      "#7E527F",
+      "#9C8D9B",
+      "#BA79B1",
+      "#A6559D"
+    ],
+    "recommendedComplements": [
+      "#6A8D52",
+      "#BECAB7",
+      "#BEC2BC",
+      "#686A67"
+    ]
+  },
+  {
+    "nameHans": "茈藐",
+    "nameHant": "茈藐",
+    "namePy": "CI MIAO",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#A67EB7",
+    "rgb": {
+      "r": 166,
+      "g": 126,
+      "b": 183
+    },
+    "hsl": {
+      "h": 282,
+      "s": 28,
+      "l": 61
+    },
+    "hue": "purple",
+    "fiveElements": "water",
+    "sentenceHans": "北五十里，曰劳山，多茈草。",
+    "sentenceHant": "北五十裏，曰勞山，多茈草。",
+    "authorHans": "不详",
+    "authorHant": "不詳",
+    "sentenceFromHans": "山海经·西山经",
+    "sentenceFromHant": "山海經·西山經",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BBA1CB",
+      "#DCC7E1",
+      "#663D74",
+      "#D3CCD6"
+    ],
+    "recommendedNeighbors": [
+      "#9C8D9B",
+      "#A6559D",
+      "#BA79B1",
+      "#91828F"
+    ],
+    "recommendedComplements": [
+      "#CAD7C5",
+      "#BEC2BC",
+      "#686A67",
+      "#788A6F"
+    ]
+  },
+  {
+    "nameHans": "紫紶",
+    "nameHant": "紫紶",
+    "namePy": "ZI QU",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#7D5284",
+    "rgb": {
+      "r": 125,
+      "g": 82,
+      "b": 132
+    },
+    "hsl": {
+      "h": 292,
+      "s": 23,
+      "l": 42
+    },
+    "hue": "purple",
+    "fiveElements": "water",
+    "sentenceHans": "东海则有紫紶鱼盐焉，然而中国得而衣食之。",
+    "sentenceHant": "東海則有紫紶魚鹽焉，然而中國得而衣食之。",
+    "authorHans": "荀子",
+    "authorHant": "荀子",
+    "sentenceFromHans": "荀子·王制篇",
+    "sentenceFromHant": "荀子·王制篇",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7E527F",
+      "#6A5B6D",
+      "#663D74",
+      "#A67EB7"
+    ],
+    "recommendedNeighbors": [
+      "#9B8EA9",
+      "#CE93BF",
+      "#8A1874",
+      "#995D7F"
+    ],
+    "recommendedComplements": [
+      "#BED2BB",
+      "#4C8045",
+      "#4F794A",
+      "#9BB496"
+    ]
+  },
+  {
+    "nameHans": "苍葭",
+    "nameHant": "蒼葭",
+    "namePy": "CANG JIA",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#A8BF8F",
+    "rgb": {
+      "r": 168,
+      "g": 191,
+      "b": 143
+    },
+    "hsl": {
+      "h": 89,
+      "s": 27,
+      "l": 65
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "其浅湿则生苍葭蒋蒲，藿芧青苹，草叶莲藕，茱华菱根。",
+    "sentenceHant": "其淺濕則生蒼葭蔣蒲，藿芧青蘋，草葉蓮藕，茱華菱根。",
+    "authorHans": "扬雄",
+    "authorHant": "揚雄",
+    "sentenceFromHans": "蜀都赋",
+    "sentenceFromHant": "蜀都賦",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#90A07D",
+      "#B3BDA9",
+      "#A8B78C",
+      "#C9CFC1"
+    ],
+    "recommendedNeighbors": [
+      "#9BB496",
+      "#EBEDDF",
+      "#BED2BB",
+      "#BFC1A9"
+    ],
+    "recommendedComplements": [
+      "#9B8EA9",
+      "#422256",
+      "#BBA1CB",
+      "#D3CCD6"
+    ]
+  },
+  {
+    "nameHans": "庭芜绿",
+    "nameHant": "庭蕪綠",
+    "namePy": "TING WU LV",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#68945C",
+    "rgb": {
+      "r": 104,
+      "g": 148,
+      "b": 92
+    },
+    "hsl": {
+      "h": 107,
+      "s": 23,
+      "l": 47
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "是时三月半，花落庭芜绿；舍上晨鸠鸣，窗间春睡足。",
+    "sentenceHant": "是時三月半，花落庭蕪綠；舍上晨鳩鳴，窗間春睡足。",
+    "authorHans": "白居易",
+    "authorHant": "白居易",
+    "sentenceFromHans": "春日闲居三首",
+    "sentenceFromHant": "春日閒居三首",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#5D8351",
+      "#4F6F46",
+      "#5D7259",
+      "#4E6548"
+    ],
+    "recommendedNeighbors": [
+      "#90A07D",
+      "#79836C",
+      "#779649",
+      "#C9CFC1"
+    ],
+    "recommendedComplements": [
+      "#DCC7E1",
+      "#663D74",
+      "#6A5B6D",
+      "#D3CCD6"
+    ]
+  },
+  {
+    "nameHans": "翠微",
+    "nameHant": "翠微",
+    "namePy": "CUI WEI",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#4C8045",
+    "rgb": {
+      "r": 76,
+      "g": 128,
+      "b": 69
+    },
+    "hsl": {
+      "h": 113,
+      "s": 30,
+      "l": 39
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "澹然空水对斜晖，曲岛苍茫接翠微。",
+    "sentenceHant": "澹然空水對斜暉，曲島蒼茫接翠微。",
+    "authorHans": "温庭筠",
+    "authorHant": "溫庭筠",
+    "sentenceFromHans": "利州南渡",
+    "sentenceFromHant": "利州南渡",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#4F794A",
+      "#4F6F46",
+      "#5D8351",
+      "#68945C"
+    ],
+    "recommendedNeighbors": [
+      "#555F4D",
+      "#6C8650",
+      "#A8BF8F",
+      "#2A6E3F"
+    ],
+    "recommendedComplements": [
+      "#7D5284",
+      "#6A5B6D",
+      "#DCC7E1",
+      "#6C216D"
+    ]
+  },
+  {
+    "nameHans": "翠虬",
+    "nameHant": "翠虯",
+    "namePy": "CUI QIU",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#446A37",
+    "rgb": {
+      "r": 68,
+      "g": 106,
+      "b": 55
+    },
+    "hsl": {
+      "h": 105,
+      "s": 32,
+      "l": 32
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "渟清沼以泛舟，浮翠虬与玄武。",
+    "sentenceHant": "渟清沼以泛舟，浮翠虯與玄武。",
+    "authorHans": "傅毅",
+    "authorHant": "傅毅",
+    "sentenceFromHans": "洛都赋",
+    "sentenceFromHant": "洛都賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#4F6F46",
+      "#5D8351",
+      "#4E6548",
+      "#4C8045"
+    ],
+    "recommendedNeighbors": [
+      "#779649",
+      "#79836C",
+      "#45493D",
+      "#A8B78C"
+    ],
+    "recommendedComplements": [
+      "#663D74",
+      "#D3CCD6",
+      "#DCC7E1",
+      "#A67EB7"
+    ]
+  },
+  {
+    "nameHans": "碧落",
+    "nameHant": "碧落",
+    "namePy": "BI LUO",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#AED0EE",
+    "rgb": {
+      "r": 174,
+      "g": 208,
+      "b": 238
+    },
+    "hsl": {
+      "h": 208,
+      "s": 65,
+      "l": 81
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "乘风游碧落，踏浪溯黄河。",
+    "sentenceHant": "乘風遊碧落，踏浪溯黃河。",
+    "authorHans": "陈玄",
+    "authorHant": "陳玄",
+    "sentenceFromHans": "游仙梦",
+    "sentenceFromHant": "遊仙夢",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BCD4E7",
+      "#88ABDA",
+      "#D4E5EF",
+      "#A3BBDB"
+    ],
+    "recommendedNeighbors": [
+      "#87C0CA",
+      "#A4ABD6",
+      "#5AA4AE",
+      "#A4C9CC"
+    ],
+    "recommendedComplements": [
+      "#9F6027",
+      "#7C5B3E",
+      "#E18A3B",
+      "#B49273"
+    ]
+  },
+  {
+    "nameHans": "挼蓝",
+    "nameHant": "挼藍",
+    "namePy": "RUA LAN",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#6E9BC5",
+    "rgb": {
+      "r": 110,
+      "g": 155,
+      "b": 197
+    },
+    "hsl": {
+      "h": 209,
+      "s": 43,
+      "l": 60
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "山泼黛，水挼蓝，翠相搀。",
+    "sentenceHant": "山潑黛，水挼藍，翠相攙。",
+    "authorHans": "黄庭坚",
+    "authorHant": "黃庭堅",
+    "sentenceFromHans": "诉衷情",
+    "sentenceFromHant": "訴衷情",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#8AABCC",
+      "#6F94CD",
+      "#4994C4",
+      "#88ABDA"
+    ],
+    "recommendedNeighbors": [
+      "#87C0CA",
+      "#5AA4AE",
+      "#6CA8AF",
+      "#A4ABD6"
+    ],
+    "recommendedComplements": [
+      "#E18A3B",
+      "#B49273",
+      "#D9883D",
+      "#ECD9C7"
+    ]
+  },
+  {
+    "nameHans": "青雀头黛",
+    "nameHant": "青雀頭黛",
+    "namePy": "QING QUE TOU DAI",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#354E6B",
+    "rgb": {
+      "r": 53,
+      "g": 78,
+      "b": 107
+    },
+    "hsl": {
+      "h": 212,
+      "s": 34,
+      "l": 31
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "河西王沮渠蒙逊，献青雀头黛百斤。",
+    "sentenceHant": "河西王沮渠蒙遜，獻青雀頭黛百斤。",
+    "authorHans": "李昉",
+    "authorHant": "李昉",
+    "sentenceFromHans": "太平御览",
+    "sentenceFromHant": "太平御覽",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#1E2732",
+      "#3C4654",
+      "#151D29",
+      "#576470"
+    ],
+    "recommendedNeighbors": [
+      "#32788A",
+      "#757CBB",
+      "#454659",
+      "#5AA4AE"
+    ],
+    "recommendedComplements": [
+      "#B49B7F",
+      "#D2A36C",
+      "#5F4321",
+      "#D08635"
+    ]
+  },
+  {
+    "nameHans": "螺子黛",
+    "nameHant": "螺子黛",
+    "namePy": "LUO ZI DAI",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#13393E",
+    "rgb": {
+      "r": 19,
+      "g": 57,
+      "b": 62
+    },
+    "hsl": {
+      "h": 187,
+      "s": 53,
+      "l": 16
+    },
+    "hue": "cyan",
+    "fiveElements": "water",
+    "sentenceHans": "浅螺黛，淡燕脂。闲妆取次宜。",
+    "sentenceHant": "淺螺黛，淡燕脂。閒妝取次宜。",
+    "authorHans": "欧阳修",
+    "authorHant": "歐陽修",
+    "sentenceFromHans": "阮郎归",
+    "sentenceFromHant": "阮郎歸",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#226B68",
+      "#206864",
+      "#32788A",
+      "#284852"
+    ],
+    "recommendedNeighbors": [
+      "#3271AE",
+      "#354E6B",
+      "#1E2732",
+      "#151D29"
+    ],
+    "recommendedComplements": [
+      "#D24735",
+      "#BA5140",
+      "#B13B2E",
+      "#C8B5B3"
+    ]
+  },
+  {
+    "nameHans": "露褐",
+    "nameHant": "露褐",
+    "namePy": "LU HE",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#BD8253",
+    "rgb": {
+      "r": 189,
+      "g": 130,
+      "b": 83
+    },
+    "hsl": {
+      "h": 27,
+      "s": 45,
+      "l": 53
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "圣人披褐而怀玉。",
+    "sentenceHant": "聖人披褐而懷玉。",
+    "authorHans": "老子",
+    "authorHant": "老子",
+    "sentenceFromHans": "道德经",
+    "sentenceFromHant": "道德經",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BC6E37",
+      "#B4884D",
+      "#D2A36C",
+      "#B49273"
+    ],
+    "recommendedNeighbors": [
+      "#BA5140",
+      "#C0AD5E",
+      "#AA9649",
+      "#D24735"
+    ],
+    "recommendedComplements": [
+      "#BCD4E7",
+      "#9AA7B1",
+      "#AED0EE",
+      "#003460"
+    ]
+  },
+  {
+    "nameHans": "檀褐",
+    "nameHant": "檀褐",
+    "namePy": "TAN HE",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#945635",
+    "rgb": {
+      "r": 148,
+      "g": 86,
+      "b": 53
+    },
+    "hsl": {
+      "h": 21,
+      "s": 47,
+      "l": 39
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "檀褐，用土黄入紫花合。",
+    "sentenceHant": "檀褐，用土黃入紫花合。",
+    "authorHans": "陶宗仪",
+    "authorHant": "陶宗儀",
+    "sentenceFromHans": "辍耕录·写像诀",
+    "sentenceFromHant": "輟耕錄·寫像訣",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#804C2E",
+      "#81492C",
+      "#984F31",
+      "#A46244"
+    ],
+    "recommendedNeighbors": [
+      "#95302E",
+      "#AA8534",
+      "#B3934B",
+      "#D3A237"
+    ],
+    "recommendedComplements": [
+      "#106898",
+      "#4182A4",
+      "#7F9FAF",
+      "#547689"
+    ]
+  },
+  {
+    "nameHans": "緅𫄨",
+    "nameHant": "緅絺",
+    "namePy": "ZOU CHI",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#804C2E",
+    "rgb": {
+      "r": 128,
+      "g": 76,
+      "b": 46
+    },
+    "hsl": {
+      "h": 22,
+      "s": 47,
+      "l": 34
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "三入为𫄸，五入为緅，七入为缁。",
+    "sentenceHant": "三入為纁，五入為緅，七入為緇。",
+    "authorHans": "周公旦",
+    "authorHant": "周公旦",
+    "sentenceFromHans": "周礼·考工记",
+    "sentenceFromHant": "周禮·考工記",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#81492C",
+      "#945635",
+      "#984F31",
+      "#775039"
+    ],
+    "recommendedNeighbors": [
+      "#AA8534",
+      "#95302E",
+      "#B3934B",
+      "#D3A237"
+    ],
+    "recommendedComplements": [
+      "#547689",
+      "#D4E5EF",
+      "#106898",
+      "#4994C4"
+    ]
+  },
+  {
+    "nameHans": "目童子",
+    "nameHant": "目童子",
+    "namePy": "MU TONG ZI",
+    "categoryHans": "谷雨",
+    "categoryHant": "穀雨",
+    "term": "guyu",
+    "hex": "#5B3222",
+    "rgb": {
+      "r": 91,
+      "g": 50,
+      "b": 34
+    },
+    "hsl": {
+      "h": 17,
+      "s": 46,
+      "l": 25
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "存我两目童子，光如流星，焕落五方。",
+    "sentenceHant": "存我兩目童子，光如流星，煥落五方。",
+    "authorHans": "张君房",
+    "authorHant": "張君房",
+    "sentenceFromHans": "云笈七签·流金火铃",
+    "sentenceFromHant": "雲笈七簽·流金火鈴",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#422517",
+      "#81492C",
+      "#804C2E",
+      "#984F31"
+    ],
+    "recommendedNeighbors": [
+      "#822327",
+      "#662B2F",
+      "#81663B",
+      "#7C191E"
+    ],
+    "recommendedComplements": [
+      "#98B6C2",
+      "#D4DDE1",
+      "#A2D2E2",
+      "#284852"
+    ]
+  },
+  {
+    "nameHans": "青粲",
+    "nameHant": "青粲",
+    "namePy": "QING CAN",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#C3D94E",
+    "rgb": {
+      "r": 195,
+      "g": 217,
+      "b": 78
+    },
+    "hsl": {
+      "h": 69,
+      "s": 65,
+      "l": 58
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "御宿青粲，瓜州红菱，冀野之梁。",
+    "sentenceHant": "禦宿青粲，瓜州紅菱，冀野之梁。",
+    "authorHans": "段成式",
+    "authorHant": "段成式",
+    "sentenceFromHans": "酉阳杂俎",
+    "sentenceFromHant": "酉陽雜俎",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#B7D332",
+      "#D8DE8A",
+      "#E3EB98",
+      "#9EBC19"
+    ],
+    "recommendedNeighbors": [
+      "#D6BC46",
+      "#C0AD5E",
+      "#EAD89A",
+      "#AA9649"
+    ],
+    "recommendedComplements": [
+      "#535164",
+      "#343041",
+      "#615EA8",
+      "#4A4B9D"
+    ]
+  },
+  {
+    "nameHans": "翠缥",
+    "nameHant": "翠縹",
+    "namePy": "CUI PIAO",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#B7D332",
+    "rgb": {
+      "r": 183,
+      "g": 211,
+      "b": 50
+    },
+    "hsl": {
+      "h": 70,
+      "s": 65,
+      "l": 51
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "红采兮骍衣，翠缥兮为裳。",
+    "sentenceHant": "紅採兮騂衣，翠縹兮為裳。",
+    "authorHans": "王褒",
+    "authorHant": "王褒",
+    "sentenceFromHans": "楚辞·九怀·通路",
+    "sentenceFromHant": "楚辭·九懷·通路",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#C3D94E",
+      "#9EBC19",
+      "#84A729",
+      "#84A729"
+    ],
+    "recommendedNeighbors": [
+      "#D6C560",
+      "#E1D279",
+      "#ECD452",
+      "#D6BC46"
+    ],
+    "recommendedComplements": [
+      "#535164",
+      "#343041",
+      "#615EA8",
+      "#4A4B9D"
+    ]
+  },
+  {
+    "nameHans": "人籁",
+    "nameHant": "人籟",
+    "namePy": "REN LAI",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#9EBC19",
+    "rgb": {
+      "r": 158,
+      "g": 188,
+      "b": 25
+    },
+    "hsl": {
+      "h": 71,
+      "s": 77,
+      "l": 42
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "竹简书汗青，高吟当人籁。",
+    "sentenceHant": "竹簡書汗青，高吟當人籟。",
+    "authorHans": "程俱",
+    "authorHant": "程俱",
+    "sentenceFromHans": "八音歌赠别赵子雍",
+    "sentenceFromHant": "八音歌贈別趙子雍",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B7D332",
+      "#84A729",
+      "#84A729",
+      "#C3D94E"
+    ],
+    "recommendedNeighbors": [
+      "#B6A014",
+      "#ECD452",
+      "#D6C560",
+      "#D6BC46"
+    ],
+    "recommendedComplements": [
+      "#343041",
+      "#535164",
+      "#615EA8",
+      "#4A4B9D"
+    ]
+  },
+  {
+    "nameHans": "水龙吟",
+    "nameHant": "水龍吟",
+    "namePy": "SHUI LONG YIN",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#84A729",
+    "rgb": {
+      "r": 132,
+      "g": 167,
+      "b": 41
+    },
+    "hsl": {
+      "h": 77,
+      "s": 61,
+      "l": 41
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "笛奏龙吟水，箫鸣凤下空。",
+    "sentenceHant": "笛奏龍吟水，簫鳴鳳下空。",
+    "authorHans": "李白",
+    "authorHant": "李白",
+    "sentenceFromHans": "宫中行乐词八首",
+    "sentenceFromHant": "宮中行樂詞八首",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B7D332",
+      "#9EBC19",
+      "#C3D94E",
+      "#779649"
+    ],
+    "recommendedNeighbors": [
+      "#938F4C",
+      "#6A8D52",
+      "#B6A014",
+      "#92905D"
+    ],
+    "recommendedComplements": [
+      "#343041",
+      "#535164",
+      "#9B8EA9",
+      "#615EA8"
+    ]
+  },
+  {
+    "nameHans": "地籁",
+    "nameHant": "地籟",
+    "namePy": "DI LAI",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#84A729",
+    "rgb": {
+      "r": 191,
+      "g": 167,
+      "b": 130
+    },
+    "hsl": {
+      "h": 77,
+      "s": 61,
+      "l": 41
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "虚心闻地籁，妄意觅桃源。",
+    "sentenceHant": "虛心聞地籟，妄意覓桃源。",
+    "authorHans": "苏轼",
+    "authorHant": "蘇軾",
+    "sentenceFromHans": "风水洞二首和李节推",
+    "sentenceFromHant": "風水洞二首和李節推",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B7D332",
+      "#9EBC19",
+      "#C3D94E",
+      "#779649"
+    ],
+    "recommendedNeighbors": [
+      "#938F4C",
+      "#6A8D52",
+      "#B6A014",
+      "#92905D"
+    ],
+    "recommendedComplements": [
+      "#343041",
+      "#535164",
+      "#9B8EA9",
+      "#615EA8"
+    ]
+  },
+  {
+    "nameHans": "大块",
+    "nameHant": "大塊",
+    "namePy": "DA KUAI",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#BFA782",
+    "rgb": {
+      "r": 191,
+      "g": 167,
+      "b": 130
+    },
+    "hsl": {
+      "h": 36,
+      "s": 32,
+      "l": 63
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "茫茫大块，悠悠高旻，是生万物，余得为人。",
+    "sentenceHant": "茫茫大塊，悠悠高旻，是生萬物，餘得為人。",
+    "authorHans": "陶渊明",
+    "authorHant": "陶淵明",
+    "sentenceFromHans": "自祭文",
+    "sentenceFromHant": "自祭文",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BEA78B",
+      "#B49B7F",
+      "#D4C1A6",
+      "#BFA670"
+    ],
+    "recommendedNeighbors": [
+      "#8F6D5F",
+      "#955A42",
+      "#9A6655",
+      "#A9A773"
+    ],
+    "recommendedComplements": [
+      "#6B798E",
+      "#6F94CD",
+      "#8BA3C7",
+      "#151D29"
+    ]
+  },
+  {
+    "nameHans": "养生主",
+    "nameHant": "養生主",
+    "namePy": "YANG SHENG ZHU",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#B49B7F",
+    "rgb": {
+      "r": 180,
+      "g": 155,
+      "b": 127
+    },
+    "hsl": {
+      "h": 32,
+      "s": 26,
+      "l": 60
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "缘督以为经，可以保身，可以全生，可以养亲，可以尽年。",
+    "sentenceHant": "緣督以為經，可以保身，可以全生，可以養親，可以盡年。",
+    "authorHans": "庄子",
+    "authorHant": "莊子",
+    "sentenceFromHans": "庄子·养生主",
+    "sentenceFromHant": "莊子·養生主",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BEA78B",
+      "#B49273",
+      "#BFA782",
+      "#9E8368"
+    ],
+    "recommendedNeighbors": [
+      "#CAC5A0",
+      "#B26D5D",
+      "#B15A43",
+      "#D5D1AE"
+    ],
+    "recommendedComplements": [
+      "#354E6B",
+      "#1E2732",
+      "#3271AE",
+      "#88ABDA"
+    ]
+  },
+  {
+    "nameHans": "大云",
+    "nameHant": "大雲",
+    "namePy": "DA YUN",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#94784F",
+    "rgb": {
+      "r": 148,
+      "g": 120,
+      "b": 79
+    },
+    "hsl": {
+      "h": 36,
+      "s": 30,
+      "l": 45
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "老子当归兴已浓，令君何事寄苁蓉。",
+    "sentenceHant": "老子當歸興已濃，令君何事寄蓯蓉。",
+    "authorHans": "王十朋",
+    "authorHant": "王十朋",
+    "sentenceFromHans": "丁惠安赠肉苁蓉",
+    "sentenceFromHant": "丁惠安贈肉蓯蓉",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9E8358",
+      "#896D47",
+      "#A58A5F",
+      "#AA8E59"
+    ],
+    "recommendedNeighbors": [
+      "#955A42",
+      "#8F6D5F",
+      "#9A6655",
+      "#938F4C"
+    ],
+    "recommendedComplements": [
+      "#6B798E",
+      "#6F94CD",
+      "#8BA3C7",
+      "#151D29"
+    ]
+  },
+  {
+    "nameHans": "溶溶月",
+    "nameHant": "溶溶月",
+    "namePy": "RONG RONG YUE",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#BEC2BC",
+    "rgb": {
+      "r": 190,
+      "g": 194,
+      "b": 188
+    },
+    "hsl": {
+      "h": 100,
+      "s": 5,
+      "l": 75
+    },
+    "hue": "neutral",
+    "fiveElements": "metal",
+    "sentenceHans": "梨花院落溶溶月，柳絮池塘淡淡风。",
+    "sentenceHant": "梨花院落溶溶月，柳絮池塘淡淡風。",
+    "authorHans": "晏殊",
+    "authorHant": "晏殊",
+    "sentenceFromHans": "寓意",
+    "sentenceFromHant": "寓意",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BECAB7",
+      "#CAD7C5",
+      "#B3BDA9",
+      "#9BB496"
+    ],
+    "recommendedNeighbors": [
+      "#A7AAA1",
+      "#A8B78C",
+      "#778A77",
+      "#BEC2B3"
+    ],
+    "recommendedComplements": [
+      "#D3CCD6",
+      "#A67EB7",
+      "#422256",
+      "#BBA1CB"
+    ]
+  },
+  {
+    "nameHans": "绍衣",
+    "nameHant": "紹衣",
+    "namePy": "SHAO YI",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#A8A19C",
+    "rgb": {
+      "r": 168,
+      "g": 161,
+      "b": 156
+    },
+    "hsl": {
+      "h": 25,
+      "s": 6,
+      "l": 64
+    },
+    "hue": "neutral",
+    "fiveElements": "fire",
+    "sentenceHans": "今民将在祗遹乃文考，绍闻衣。",
+    "sentenceHant": "今民將在祗遹乃文考，紹聞衣。",
+    "authorHans": "孔子",
+    "authorHant": "孔子",
+    "sentenceFromHans": "尚书·康诰",
+    "sentenceFromHant": "尚書·康誥",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BEB1AA",
+      "#BEA89D",
+      "#D3CBC5",
+      "#99806C"
+    ],
+    "recommendedNeighbors": [
+      "#C8B5B3",
+      "#A9A082",
+      "#92896B",
+      "#D4C9AA"
+    ],
+    "recommendedComplements": [
+      "#12507B",
+      "#06436F",
+      "#9AA7B1",
+      "#66889E"
+    ]
+  },
+  {
+    "nameHans": "石莲褐",
+    "nameHant": "石蓮褐",
+    "namePy": "SHI LIAN HE",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#92897B",
+    "rgb": {
+      "r": 146,
+      "g": 137,
+      "b": 123
+    },
+    "hsl": {
+      "h": 37,
+      "s": 10,
+      "l": 53
+    },
+    "hue": "neutral",
+    "fiveElements": "earth",
+    "sentenceHans": "鱼生玉藕下，人在石莲中。",
+    "sentenceHant": "魚生玉藕下，人在石蓮中。",
+    "authorHans": "李贺",
+    "authorHant": "李賀",
+    "sentenceFromHans": "恼公",
+    "sentenceFromHant": "惱公",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#AC9F8A",
+      "#9E8C6B",
+      "#70695D",
+      "#887657"
+    ],
+    "recommendedNeighbors": [
+      "#8F6D5F",
+      "#A9A886",
+      "#C7C6B6",
+      "#92905D"
+    ],
+    "recommendedComplements": [
+      "#6B798E",
+      "#6F94CD",
+      "#8BA3C7",
+      "#151D29"
+    ]
+  },
+  {
+    "nameHans": "黑朱",
+    "nameHant": "黑朱",
+    "namePy": "HEI ZHU",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#70695D",
+    "rgb": {
+      "r": 112,
+      "g": 105,
+      "b": 93
+    },
+    "hsl": {
+      "h": 38,
+      "s": 9,
+      "l": 40
+    },
+    "hue": "neutral",
+    "fiveElements": "earth",
+    "sentenceHans": "其条痕为灰黑色，画面呈丝绒质感。",
+    "sentenceHant": "其條痕為灰黑色，畫面呈絲絨質感。",
+    "authorHans": "杨小晋",
+    "authorHant": "楊小晉",
+    "sentenceFromHans": "中国画之色",
+    "sentenceFromHant": "中國畫之色",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#585248",
+      "#665F4D",
+      "#92897B",
+      "#887657"
+    ],
+    "recommendedNeighbors": [
+      "#796860",
+      "#92905D",
+      "#8F6D5F",
+      "#938F4C"
+    ],
+    "recommendedComplements": [
+      "#2E59A7",
+      "#19325F",
+      "#6B798E",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "朱颜酡",
+    "nameHant": "朱顏酡",
+    "namePy": "ZHU YAN TUO",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#F29A76",
+    "rgb": {
+      "r": 242,
+      "g": 154,
+      "b": 118
+    },
+    "hsl": {
+      "h": 17,
+      "s": 83,
+      "l": 71
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "美人既醉，朱颜酡些。",
+    "sentenceHant": "美人既醉，朱顏酡些。",
+    "authorHans": "屈原",
+    "authorHant": "屈原",
+    "sentenceFromHans": "楚辞·招魂",
+    "sentenceFromHant": "楚辭·招魂",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#EF845D",
+      "#F18F60",
+      "#EE7959",
+      "#F5B087"
+    ],
+    "recommendedNeighbors": [
+      "#E5A84B",
+      "#DB9B34",
+      "#C8161D",
+      "#F2C867"
+    ],
+    "recommendedComplements": [
+      "#98B6C2",
+      "#D4DDE1",
+      "#A2D2E2",
+      "#284852"
+    ]
+  },
+  {
+    "nameHans": "苕荣",
+    "nameHant": "苕榮",
+    "namePy": "SHAO RONG",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#ED6D3D",
+    "rgb": {
+      "r": 237,
+      "g": 109,
+      "b": 61
+    },
+    "hsl": {
+      "h": 16,
+      "s": 83,
+      "l": 58
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "美人荧荧兮，颜若苕之荣。",
+    "sentenceHant": "美人熒熒兮，顏若苕之榮。",
+    "authorHans": "司马迁",
+    "authorHant": "司馬遷",
+    "sentenceFromHans": "史记·赵世家",
+    "sentenceFromHant": "史記·趙世家",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#ED6D46",
+      "#EF845D",
+      "#EE7959",
+      "#EA5514"
+    ],
+    "recommendedNeighbors": [
+      "#E5A84B",
+      "#DB9B34",
+      "#E60012",
+      "#8F1D22"
+    ],
+    "recommendedComplements": [
+      "#98B6C2",
+      "#A2D2E2",
+      "#284852",
+      "#D4DDE1"
+    ]
+  },
+  {
+    "nameHans": "檎丹",
+    "nameHant": "檎丹",
+    "namePy": "QIN DAN",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#E94829",
+    "rgb": {
+      "r": 233,
+      "g": 72,
+      "b": 41
+    },
+    "hsl": {
+      "h": 10,
+      "s": 81,
+      "l": 54
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "林擒味好来山鹊，啄破枝头数点红。",
+    "sentenceHant": "林擒味好來山鵲，啄破枝頭數點紅。",
+    "authorHans": "徐庸",
+    "authorHant": "徐庸",
+    "sentenceFromHans": "林禽山鹊",
+    "sentenceFromHant": "林禽山鵲",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#D23918",
+      "#ED6D46",
+      "#EE7959",
+      "#ED6D3D"
+    ],
+    "recommendedNeighbors": [
+      "#E18A3B",
+      "#D9883D",
+      "#B81A35",
+      "#F091A0"
+    ],
+    "recommendedComplements": [
+      "#87C0CA",
+      "#32788A",
+      "#006D87",
+      "#13393E"
+    ]
+  },
+  {
+    "nameHans": "丹罽",
+    "nameHant": "丹罽",
+    "namePy": "DAN JI",
+    "categoryHans": "立夏",
+    "categoryHant": "立夏",
+    "term": "lixia",
+    "hex": "#E60012",
+    "rgb": {
+      "r": 230,
+      "g": 0,
+      "b": 18
+    },
+    "hsl": {
+      "h": 355,
+      "s": 100,
+      "l": 45
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "灼灼若朝霞之映日，离离如繁星之著天，皮似丹罽，肤若明珰。",
+    "sentenceHant": "灼灼若朝霞之映日，離離如繁星之著天，皮似丹罽，膚若明璫。",
+    "authorHans": "王逸",
+    "authorHant": "王逸",
+    "sentenceFromHans": "荔支赋",
+    "sentenceFromHant": "荔支賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#C8161D",
+      "#B81A35",
+      "#AB1D22",
+      "#D12920"
+    ],
+    "recommendedNeighbors": [
+      "#ED6D46",
+      "#ED6D3D",
+      "#EA5514",
+      "#EF845D"
+    ],
+    "recommendedComplements": [
+      "#5DA39D",
+      "#3D8E86",
+      "#206864",
+      "#88BFB8"
+    ]
+  },
+  {
+    "nameHans": "彤管",
+    "nameHant": "彤管",
+    "namePy": "TONG GUAN",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#E2A2AC",
+    "rgb": {
+      "r": 226,
+      "g": 162,
+      "b": 172
+    },
+    "hsl": {
+      "h": 351,
+      "s": 52,
+      "l": 76
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "静女其娈，贻我彤管。彤管有炜，说怿女美。",
+    "sentenceHant": "靜女其孌，貽我彤管。彤管有煒，說懌女美。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "诗经·邺风·静女",
+    "sentenceFromHant": "詩經·鄴風·靜女",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#E3ADB9",
+      "#CE8892",
+      "#EFC4CE",
+      "#CF929E"
+    ],
+    "recommendedNeighbors": [
+      "#CC73A0",
+      "#E67762",
+      "#BA5B49",
+      "#DA9E8C"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "渥赭",
+    "nameHant": "渥赭",
+    "namePy": "WO ZHE",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#DD6B7B",
+    "rgb": {
+      "r": 221,
+      "g": 107,
+      "b": 123
+    },
+    "hsl": {
+      "h": 352,
+      "s": 63,
+      "l": 64
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "赫如渥赭，公言锡爵。",
+    "sentenceHant": "赫如渥赭，公言錫爵。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "诗经·邺风·简兮",
+    "sentenceFromHant": "詩經·鄴風·簡兮",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#DC6B82",
+      "#E2A2AC",
+      "#F091A0",
+      "#C25160"
+    ],
+    "recommendedNeighbors": [
+      "#DD6B4F",
+      "#D77F66",
+      "#B83570",
+      "#F3A694"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "唇脂",
+    "nameHant": "唇脂",
+    "namePy": "CHUN ZHI",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#C25160",
+    "rgb": {
+      "r": 194,
+      "g": 81,
+      "b": 96
+    },
+    "hsl": {
+      "h": 352,
+      "s": 48,
+      "l": 54
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "唇脂，以丹作之，象唇赤也",
+    "sentenceHant": "脣脂，以丹作之，象脣赤也",
+    "authorHans": "刘熙",
+    "authorHant": "劉熙",
+    "sentenceFromHans": "释名·释首饰",
+    "sentenceFromHant": "釋名·釋首飾",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#C35C6A",
+      "#B04552",
+      "#C35C5D",
+      "#CE8892"
+    ],
+    "recommendedNeighbors": [
+      "#B83570",
+      "#B26D5D",
+      "#B15A43",
+      "#D77F66"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "朱孔阳",
+    "nameHant": "朱孔陽",
+    "namePy": "ZHU KONG YANG",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#B81A35",
+    "rgb": {
+      "r": 184,
+      "g": 26,
+      "b": 53
+    },
+    "hsl": {
+      "h": 350,
+      "s": 75,
+      "l": 41
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "载玄载黄，我朱孔阳，为公子裳",
+    "sentenceHant": "載玄載黃，我朱孔陽，為公子裳",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "诗经·豳风·七月",
+    "sentenceFromHant": "詩經·豳風·七月",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#AB1D22",
+      "#C8161D",
+      "#A72126",
+      "#8F1D22"
+    ],
+    "recommendedNeighbors": [
+      "#D23918",
+      "#E94829",
+      "#CB523E",
+      "#873424"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "石发",
+    "nameHant": "石發",
+    "namePy": "SHI FA",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#6A8D52",
+    "rgb": {
+      "r": 106,
+      "g": 141,
+      "b": 82
+    },
+    "hsl": {
+      "h": 96,
+      "s": 26,
+      "l": 44
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "石发，水苔也，青绿色，皆生于石也。",
+    "sentenceHant": "石發，水苔也，青綠色，皆生於石也。",
+    "authorHans": "周处",
+    "authorHant": "周處",
+    "sentenceFromHans": "风土记",
+    "sentenceFromHant": "風土記",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#6C8650",
+      "#788A6F",
+      "#555F4D",
+      "#5D8351"
+    ],
+    "recommendedNeighbors": [
+      "#A8B092",
+      "#81A380",
+      "#778A77",
+      "#BEC2B3"
+    ],
+    "recommendedComplements": [
+      "#422256",
+      "#BBA1CB",
+      "#D3CCD6",
+      "#A67EB7"
+    ]
+  },
+  {
+    "nameHans": "漆姑",
+    "nameHant": "漆姑",
+    "namePy": "QI GU",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#5D8351",
+    "rgb": {
+      "r": 93,
+      "g": 131,
+      "b": 81
+    },
+    "hsl": {
+      "h": 106,
+      "s": 24,
+      "l": 42
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "云中之鹿胶，吴中之鳔胶，东阿之牛胶，漆姑汁，炼煎并为重采，郁而用之。",
+    "sentenceHant": "雲中之鹿膠，吳中之鰾膠，東阿之牛膠，漆姑汁，鍊煎並為重採，鬱而用之。",
+    "authorHans": "张彦远",
+    "authorHant": "張彥遠",
+    "sentenceFromHans": "历代名画记·论 画体工用拓写",
+    "sentenceFromHant": "歷代名畫記·論 畫體工用拓寫",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#68945C",
+      "#4F6F46",
+      "#4E6548",
+      "#446A37"
+    ],
+    "recommendedNeighbors": [
+      "#90A07D",
+      "#79836C",
+      "#779649",
+      "#A8B78C"
+    ],
+    "recommendedComplements": [
+      "#663D74",
+      "#DCC7E1",
+      "#D3CCD6",
+      "#A67EB7"
+    ]
+  },
+  {
+    "nameHans": "芰荷",
+    "nameHant": "芰荷",
+    "namePy": "JI HE",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#4F794A",
+    "rgb": {
+      "r": 79,
+      "g": 121,
+      "b": 74
+    },
+    "hsl": {
+      "h": 114,
+      "s": 24,
+      "l": 38
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "制芰荷以为衣兮，集芙蓉以为裳。",
+    "sentenceHant": "制芰荷以為衣兮，集芙蓉以為裳。",
+    "authorHans": "屈原",
+    "authorHant": "屈原",
+    "sentenceFromHans": "楚辞·离骚",
+    "sentenceFromHant": "楚辭·離騷",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#4C8045",
+      "#4F6F46",
+      "#4E6548",
+      "#5D7259"
+    ],
+    "recommendedNeighbors": [
+      "#555F4D",
+      "#6C8650",
+      "#2A6E3F",
+      "#A8BF8F"
+    ],
+    "recommendedComplements": [
+      "#7D5284",
+      "#6A5B6D",
+      "#6C216D",
+      "#7E527F"
+    ]
+  },
+  {
+    "nameHans": "官绿",
+    "nameHant": "官綠",
+    "namePy": "GUAN LV",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#2A6E3F",
+    "rgb": {
+      "r": 42,
+      "g": 110,
+      "b": 63
+    },
+    "hsl": {
+      "h": 139,
+      "s": 45,
+      "l": 30
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "大红官绿色，槐花煎水染，蓝淀盖。",
+    "sentenceHant": "大紅官綠色，槐花煎水染，藍澱蓋。",
+    "authorHans": "宋应星",
+    "authorHant": "宋應星",
+    "sentenceFromHans": "天工开物",
+    "sentenceFromHant": "天工開物",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#5F766A",
+      "#6B7D73",
+      "#80A492",
+      "#819D8E"
+    ],
+    "recommendedNeighbors": [
+      "#4F794A",
+      "#4C8045",
+      "#778A77",
+      "#81A380"
+    ],
+    "recommendedComplements": [
+      "#E4B8D5",
+      "#420B2F",
+      "#CE93BF",
+      "#F0CFE3"
+    ]
+  },
+  {
+    "nameHans": "仙米",
+    "nameHant": "仙米",
+    "namePy": "XIAN MI",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#D4C9AA",
+    "rgb": {
+      "r": 212,
+      "g": 201,
+      "b": 170
+    },
+    "hsl": {
+      "h": 44,
+      "s": 33,
+      "l": 75
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "舂秫作美酒，酒熟吾自斟",
+    "sentenceHant": "舂秫作美酒，酒熟吾自斟",
+    "authorHans": "陶渊明",
+    "authorHant": "陶淵明",
+    "sentenceFromHans": "和郭主簿二首",
+    "sentenceFromHant": "和郭主簿二首",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D5C8A0",
+      "#DFD7C2",
+      "#DFD6B8",
+      "#C4B798"
+    ],
+    "recommendedNeighbors": [
+      "#BFC1A9",
+      "#DDC5B8",
+      "#D8DE8A",
+      "#B3B59C"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#2C2F3B",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "黄螺",
+    "nameHant": "黃螺",
+    "namePy": "HUANG LUO",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#B4A379",
+    "rgb": {
+      "r": 180,
+      "g": 163,
+      "b": 121
+    },
+    "hsl": {
+      "h": 43,
+      "s": 28,
+      "l": 59
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "黄螺圆出，垂蕤散舒。",
+    "sentenceHant": "黃螺圓出，垂蕤散舒。",
+    "authorHans": "夏侯湛",
+    "authorHant": "夏侯湛",
+    "sentenceFromHans": "芙蓉赋",
+    "sentenceFromHant": "芙蓉賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#C4B798",
+      "#BFA670",
+      "#A9A082",
+      "#AA8E59"
+    ],
+    "recommendedNeighbors": [
+      "#CDD171",
+      "#BD9683",
+      "#B3B59C",
+      "#BFC1A9"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#12264F",
+      "#2E59A7"
+    ]
+  },
+  {
+    "nameHans": "降真香",
+    "nameHant": "降真香",
+    "namePy": "JIANG ZHEN XIANG",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#9E8358",
+    "rgb": {
+      "r": 158,
+      "g": 131,
+      "b": 88
+    },
+    "hsl": {
+      "h": 37,
+      "s": 28,
+      "l": 48
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "日尽窗前更无事，唯烧一炷降真香。",
+    "sentenceHant": "日盡窗前更無事，唯燒一炷降真香。",
+    "authorHans": "白居易",
+    "authorHant": "白居易",
+    "sentenceFromHans": "赠朱道士",
+    "sentenceFromHant": "贈朱道士",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A58A5F",
+      "#94784F",
+      "#AA8E59",
+      "#887657"
+    ],
+    "recommendedNeighbors": [
+      "#938F4C",
+      "#BC836B",
+      "#8F6D5F",
+      "#955A42"
+    ],
+    "recommendedComplements": [
+      "#6B798E",
+      "#6F94CD",
+      "#8BA3C7",
+      "#151D29"
+    ]
+  },
+  {
+    "nameHans": "远志",
+    "nameHant": "遠志",
+    "namePy": "YUAN ZHI",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#81663B",
+    "rgb": {
+      "r": 129,
+      "g": 102,
+      "b": 59
+    },
+    "hsl": {
+      "h": 37,
+      "s": 37,
+      "l": 37
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "凡使远志，先须去心，若不去心，服之令人闷。",
+    "sentenceHant": "凡使遠志，先須去心，若不去心，服之令人悶。",
+    "authorHans": "雷敩",
+    "authorHant": "雷斆",
+    "sentenceFromHans": "雷公炮炙论",
+    "sentenceFromHant": "雷公炮炙論",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#8B7042",
+      "#7C623F",
+      "#896D47",
+      "#6D5C3D"
+    ],
+    "recommendedNeighbors": [
+      "#955A42",
+      "#938F4C",
+      "#984F31",
+      "#5B3222"
+    ],
+    "recommendedComplements": [
+      "#6B798E",
+      "#6F94CD",
+      "#8BA3C7",
+      "#151D29"
+    ]
+  },
+  {
+    "nameHans": "嫩鹅黄",
+    "nameHant": "嫩鵝黃",
+    "namePy": "NEN E HUANG",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#F2C867",
+    "rgb": {
+      "r": 242,
+      "g": 200,
+      "b": 103
+    },
+    "hsl": {
+      "h": 42,
+      "s": 84,
+      "l": 68
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "已醺浮蚁嫩鹅黄，想见翻成雪浪。",
+    "sentenceHant": "已醺浮蟻嫩鵝黃，想見翻成雪浪。",
+    "authorHans": "黄庭坚",
+    "authorHant": "黃庭堅",
+    "sentenceFromHans": "西江月·茶",
+    "sentenceFromHant": "西江月·茶",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#FAC03D",
+      "#E5A84B",
+      "#FEDC5E",
+      "#ECD452"
+    ],
+    "recommendedNeighbors": [
+      "#F5B087",
+      "#F18F60",
+      "#CC5D20",
+      "#CC5D20"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#12264F",
+      "#2E59A7"
+    ]
+  },
+  {
+    "nameHans": "鞠衣",
+    "nameHant": "鞠衣",
+    "namePy": "JU YI",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#D3A237",
+    "rgb": {
+      "r": 211,
+      "g": 162,
+      "b": 55
+    },
+    "hsl": {
+      "h": 41,
+      "s": 64,
+      "l": 52
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "鞠衣，黄桑服也，色如鞠尘，像桑叶始生。",
+    "sentenceHant": "鞠衣，黃桑服也，色如鞠塵，像桑葉始生。",
+    "authorHans": "周公旦",
+    "authorHant": "周公旦",
+    "sentenceFromHans": "周礼·天官·内司服",
+    "sentenceFromHant": "周禮·天官·內司服",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BE8A2F",
+      "#DB9B34",
+      "#D5B45C",
+      "#AA8534"
+    ],
+    "recommendedNeighbors": [
+      "#CC5D20",
+      "#CC5D20",
+      "#CC5D20",
+      "#CC5D20"
+    ],
+    "recommendedComplements": [
+      "#1A2847",
+      "#12264F",
+      "#5976BA",
+      "#2E59A7"
+    ]
+  },
+  {
+    "nameHans": "郁金裙",
+    "nameHant": "鬱金裙",
+    "namePy": "YU JIN QUN",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#D08635",
+    "rgb": {
+      "r": 208,
+      "g": 134,
+      "b": 53
+    },
+    "hsl": {
+      "h": 31,
+      "s": 62,
+      "l": 51
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "垂手乱翻雕玉佩，折腰争舞郁金裙。",
+    "sentenceHant": "垂手亂翻雕玉佩，折腰爭舞鬱金裙。",
+    "authorHans": "李商隐",
+    "authorHant": "李商隱",
+    "sentenceFromHans": "牡丹",
+    "sentenceFromHant": "牡丹",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#D9883D",
+      "#DA9233",
+      "#DB9C5E",
+      "#E18A3B"
+    ],
+    "recommendedNeighbors": [
+      "#DD6B4F",
+      "#D6C560",
+      "#E1D279",
+      "#D23918"
+    ],
+    "recommendedComplements": [
+      "#3271AE",
+      "#354E6B",
+      "#8AABCC",
+      "#6E9BC5"
+    ]
+  },
+  {
+    "nameHans": "黄流",
+    "nameHant": "黃流",
+    "namePy": "HUANG LIU",
+    "categoryHans": "小满",
+    "categoryHant": "小滿",
+    "term": "xiaoman",
+    "hex": "#9F6027",
+    "rgb": {
+      "r": 159,
+      "g": 96,
+      "b": 39
+    },
+    "hsl": {
+      "h": 28,
+      "s": 61,
+      "l": 39
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "瑟彼玉瓒，黄流在中。",
+    "sentenceHant": "瑟彼玉瓚，黃流在中。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "诗经·大雅·旱麓",
+    "sentenceFromHant": "詩經·大雅·旱麓",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7C461E",
+      "#9F5221",
+      "#BC6E37",
+      "#D08635"
+    ],
+    "recommendedNeighbors": [
+      "#CB523E",
+      "#B93A26",
+      "#BA5140",
+      "#D24735"
+    ],
+    "recommendedComplements": [
+      "#AED0EE",
+      "#003460",
+      "#003D74",
+      "#6E9BC5"
+    ]
+  },
+  {
+    "nameHans": "筠雾",
+    "nameHant": "筠霧",
+    "namePy": "YUN WU",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#D5D1AE",
+    "rgb": {
+      "r": 213,
+      "g": 209,
+      "b": 174
+    },
+    "hsl": {
+      "h": 54,
+      "s": 32,
+      "l": 76
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "裁筠比雾，裂素轻蝉。",
+    "sentenceHant": "裁筠比霧，裂素輕蟬。",
+    "authorHans": "庾肩吾",
+    "authorHant": "庾肩吾",
+    "sentenceFromHans": "团扇铭",
+    "sentenceFromHant": "團扇銘",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#CAC5A0",
+      "#E0DFC6",
+      "#BFB99C",
+      "#EEEAD9"
+    ],
+    "recommendedNeighbors": [
+      "#D4C1A6",
+      "#BEA78B",
+      "#B49B7F",
+      "#E1C199"
+    ],
+    "recommendedComplements": [
+      "#757CBB",
+      "#A4ABD6",
+      "#454659",
+      "#45465E"
+    ]
+  },
+  {
+    "nameHans": "瓷秘",
+    "nameHant": "瓷秘",
+    "namePy": "CI MI",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#BFC096",
+    "rgb": {
+      "r": 191,
+      "g": 192,
+      "b": 150
+    },
+    "hsl": {
+      "h": 61,
+      "s": 25,
+      "l": 67
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "瓷秘色碗七口，内二口银棱，瓷秘色盘子、叠子共六枚。",
+    "sentenceHant": "瓷祕色碗七口，內二口銀棱，瓷祕色盤子、疊子共六枚。",
+    "authorHans": "碑文",
+    "authorHant": "碑文",
+    "sentenceFromHans": "监送真身时随真身供养 道具及金银宝器衣物帐",
+    "sentenceFromHant": "監送真身時隨真身供養 道具及金銀寶器衣物帳",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#A9A773",
+      "#BFC1A9",
+      "#A9A886",
+      "#B3B59C"
+    ],
+    "recommendedNeighbors": [
+      "#C4B798",
+      "#A8B78C",
+      "#C0D695",
+      "#BFA670"
+    ],
+    "recommendedComplements": [
+      "#615EA8",
+      "#4A4B9D",
+      "#45465E",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "琬琰",
+    "nameHant": "琬琰",
+    "namePy": "WAN YAN",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#A9A886",
+    "rgb": {
+      "r": 169,
+      "g": 168,
+      "b": 134
+    },
+    "hsl": {
+      "h": 58,
+      "s": 17,
+      "l": 59
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "吸飞泉之微液兮， 怀琬琰之华英。",
+    "sentenceHant": "吸飛泉之微液兮， 懷琬琰之華英。",
+    "authorHans": "屈原",
+    "authorHant": "屈原",
+    "sentenceFromHans": "楚辞远游",
+    "sentenceFromHant": "楚辭遠遊",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9D9D82",
+      "#A9A773",
+      "#919177",
+      "#BFC096"
+    ],
+    "recommendedNeighbors": [
+      "#9E8C6B",
+      "#AA8E59",
+      "#AC9F8A",
+      "#92897B"
+    ],
+    "recommendedComplements": [
+      "#45465E",
+      "#454659",
+      "#4A4B9D",
+      "#757CBB"
+    ]
+  },
+  {
+    "nameHans": "青圭",
+    "nameHant": "青圭",
+    "namePy": "QING GUI",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#92905D",
+    "rgb": {
+      "r": 146,
+      "g": 144,
+      "b": 93
+    },
+    "hsl": {
+      "h": 58,
+      "s": 22,
+      "l": 47
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "以青圭礼东方，以赤璋礼南方。",
+    "sentenceHant": "以青圭禮東方，以赤璋禮南方。",
+    "authorHans": "周公旦",
+    "authorHant": "周公旦",
+    "sentenceFromHans": "周礼·春官·大宗伯",
+    "sentenceFromHant": "周禮·春官·大宗伯",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A9A773",
+      "#938F4C",
+      "#919177",
+      "#A9A886"
+    ],
+    "recommendedNeighbors": [
+      "#9E8C6B",
+      "#AA8E59",
+      "#887657",
+      "#6D5C3D"
+    ],
+    "recommendedComplements": [
+      "#45465E",
+      "#454659",
+      "#4A4B9D",
+      "#757CBB"
+    ]
+  },
+  {
+    "nameHans": "鸣珂",
+    "nameHant": "鳴珂",
+    "namePy": "MING KE",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#B3B59C",
+    "rgb": {
+      "r": 179,
+      "g": 181,
+      "b": 156
+    },
+    "hsl": {
+      "h": 65,
+      "s": 14,
+      "l": 66
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "官府鸣珂有底，崆峒散发何人。",
+    "sentenceHant": "官府鳴珂有底，崆峒散發何人。",
+    "authorHans": "王维",
+    "authorHant": "王維",
+    "sentenceFromHans": "田园乐七首",
+    "sentenceFromHant": "田園樂七首",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BFC1A9",
+      "#BFC096",
+      "#9D9D82",
+      "#A9A886"
+    ],
+    "recommendedNeighbors": [
+      "#A9A082",
+      "#92896B",
+      "#C9CFC1",
+      "#90A07D"
+    ],
+    "recommendedComplements": [
+      "#535164",
+      "#615EA8",
+      "#4A4B9D",
+      "#45465E"
+    ]
+  },
+  {
+    "nameHans": "青玉案",
+    "nameHant": "青玉案",
+    "namePy": "QING YU AN",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#A8B092",
+    "rgb": {
+      "r": 168,
+      "g": 176,
+      "b": 146
+    },
+    "hsl": {
+      "h": 76,
+      "s": 16,
+      "l": 63
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "美人赠我锦绣段，何以报之青玉案。",
+    "sentenceHant": "美人贈我錦繡段，何以報之青玉案。",
+    "authorHans": "张衡",
+    "authorHant": "張衡",
+    "sentenceFromHans": "四愁诗",
+    "sentenceFromHant": "四愁詩",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BEC2B3",
+      "#A8B78C",
+      "#A7AAA1",
+      "#A9BE7B"
+    ],
+    "recommendedNeighbors": [
+      "#C7C6B6",
+      "#6A8D52",
+      "#938F4C",
+      "#BECAB7"
+    ],
+    "recommendedComplements": [
+      "#343041",
+      "#535164",
+      "#9B8EA9",
+      "#615EA8"
+    ]
+  },
+  {
+    "nameHans": "出岫",
+    "nameHant": "出岫",
+    "namePy": "CHU XIU",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#A9A773",
+    "rgb": {
+      "r": 169,
+      "g": 167,
+      "b": 115
+    },
+    "hsl": {
+      "h": 58,
+      "s": 24,
+      "l": 56
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "云无心以出岫，鸟倦飞而知还。",
+    "sentenceHant": "雲無心以出岫，鳥倦飛而知還。",
+    "authorHans": "陶渊明",
+    "authorHant": "陶淵明",
+    "sentenceFromHans": "归去来兮辞",
+    "sentenceFromHant": "歸去來兮辭",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A9A886",
+      "#92905D",
+      "#BFC096",
+      "#9D9D82"
+    ],
+    "recommendedNeighbors": [
+      "#9E8C6B",
+      "#AA8E59",
+      "#887657",
+      "#A58A5F"
+    ],
+    "recommendedComplements": [
+      "#45465E",
+      "#454659",
+      "#4A4B9D",
+      "#757CBB"
+    ]
+  },
+  {
+    "nameHans": "风入松",
+    "nameHant": "風入松",
+    "namePy": "FENG RU SONG",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#868C4E",
+    "rgb": {
+      "r": 134,
+      "g": 140,
+      "b": 78
+    },
+    "hsl": {
+      "h": 66,
+      "s": 28,
+      "l": 43
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "暖风十里丽人天，花压鬓云偏。画船载取春归去，余情寄、湖水湖烟。",
+    "sentenceHant": "暖風十裏麗人天，花壓鬢雲偏。畫船載取春歸去，餘情寄、湖水湖煙。",
+    "authorHans": "俞国宝",
+    "authorHant": "俞國寶",
+    "sentenceFromHans": "风入松·一春长费买花钱",
+    "sentenceFromHant": "風入松·一春長費買花錢",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#92905D",
+      "#938F4C",
+      "#A9A773",
+      "#919177"
+    ],
+    "recommendedNeighbors": [
+      "#756C4B",
+      "#92896B",
+      "#79836C",
+      "#A9A082"
+    ],
+    "recommendedComplements": [
+      "#535164",
+      "#615EA8",
+      "#4A4B9D",
+      "#45465E"
+    ]
+  },
+  {
+    "nameHans": "如梦令",
+    "nameHant": "如夢令",
+    "namePy": "RU MENG LING",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#DDBB99",
+    "rgb": {
+      "r": 221,
+      "g": 187,
+      "b": 153
+    },
+    "hsl": {
+      "h": 30,
+      "s": 50,
+      "l": 73
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "常记溪亭日暮，沉醉不知归路。兴尽晚回舟，误入藕花深处。",
+    "sentenceHant": "常記溪亭日暮，沉醉不知歸路。興盡晚回舟，誤入藕花深處。",
+    "authorHans": "李清照",
+    "authorHant": "李清照",
+    "sentenceFromHans": "如梦令·常记溪亭日暮",
+    "sentenceFromHant": "如夢令·常記溪亭日暮",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E1C199",
+      "#D2A36C",
+      "#ECD9C7",
+      "#DDB078"
+    ],
+    "recommendedNeighbors": [
+      "#EEEAD9",
+      "#E1D384",
+      "#D6BC46",
+      "#EBE1A9"
+    ],
+    "recommendedComplements": [
+      "#3271AE",
+      "#8AABCC",
+      "#6E9BC5",
+      "#576470"
+    ]
+  },
+  {
+    "nameHans": "芸黄",
+    "nameHant": "芸黃",
+    "namePy": "YUN HUANG",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#D2A36C",
+    "rgb": {
+      "r": 210,
+      "g": 163,
+      "b": 108
+    },
+    "hsl": {
+      "h": 32,
+      "s": 53,
+      "l": 62
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "苕之华，芸其黄矣。",
+    "sentenceHant": "苕之華，芸其黃矣。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "诗经·小雅·苕之华",
+    "sentenceFromHant": "詩經·小雅·苕之華",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#DDB078",
+      "#DB9C5E",
+      "#DDBB99",
+      "#E1C199"
+    ],
+    "recommendedNeighbors": [
+      "#D77F66",
+      "#D6C560",
+      "#E1D384",
+      "#E1D279"
+    ],
+    "recommendedComplements": [
+      "#354E6B",
+      "#1E2732",
+      "#3271AE",
+      "#88ABDA"
+    ]
+  },
+  {
+    "nameHans": "金埒",
+    "nameHant": "金埒",
+    "namePy": "JIN LIE",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#BE9457",
+    "rgb": {
+      "r": 190,
+      "g": 148,
+      "b": 87
+    },
+    "hsl": {
+      "h": 36,
+      "s": 44,
+      "l": 54
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "草迎金埒马，花伴玉楼人。",
+    "sentenceHant": "草迎金埒馬，花伴玉樓人。",
+    "authorHans": "孟浩然",
+    "authorHant": "孟浩然",
+    "sentenceFromHans": "长安早春",
+    "sentenceFromHant": "長安早春",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#C6A268",
+      "#B4884D",
+      "#BFA670",
+      "#B3934B"
+    ],
+    "recommendedNeighbors": [
+      "#955A42",
+      "#984F31",
+      "#938F4C",
+      "#9A6655"
+    ],
+    "recommendedComplements": [
+      "#6B798E",
+      "#6F94CD",
+      "#8BA3C7",
+      "#151D29"
+    ]
+  },
+  {
+    "nameHans": "雌黄",
+    "nameHant": "雌黃",
+    "namePy": "CI HUANG",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#B4884D",
+    "rgb": {
+      "r": 180,
+      "g": 136,
+      "b": 77
+    },
+    "hsl": {
+      "h": 34,
+      "s": 41,
+      "l": 50
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "夕照雌黄笔，秋烟水墨屏。",
+    "sentenceHant": "夕照雌黃筆，秋煙水墨屏。",
+    "authorHans": "白玉蟾",
+    "authorHant": "白玉蟾",
+    "sentenceFromHans": "景泰晚眺",
+    "sentenceFromHant": "景泰晚眺",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BE9457",
+      "#C6A268",
+      "#94784F",
+      "#896D47"
+    ],
+    "recommendedNeighbors": [
+      "#9A6655",
+      "#B15A43",
+      "#954024",
+      "#CAC5A0"
+    ],
+    "recommendedComplements": [
+      "#88ABDA",
+      "#A3BBDB",
+      "#1E2732",
+      "#3C4654"
+    ]
+  },
+  {
+    "nameHans": "曾青",
+    "nameHant": "曾青",
+    "namePy": "CENG QING",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#535164",
+    "rgb": {
+      "r": 83,
+      "g": 81,
+      "b": 100
+    },
+    "hsl": {
+      "h": 246,
+      "s": 10,
+      "l": 35
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "石黛刷幽草，曾青泽古苔。",
+    "sentenceHant": "石黛刷幽草，曾青澤古苔。",
+    "authorHans": "李白",
+    "authorHant": "李白",
+    "sentenceFromHans": "求崔山人百丈崖瀑布图",
+    "sentenceFromHant": "求崔山人百丈崖瀑布圖",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#45465E",
+      "#454659",
+      "#343041",
+      "#615EA8"
+    ],
+    "recommendedNeighbors": [
+      "#9B8EA9",
+      "#5976BA",
+      "#6B798E",
+      "#3C4654"
+    ],
+    "recommendedComplements": [
+      "#868C4E",
+      "#E3EB98",
+      "#B3B59C",
+      "#BFC1A9"
+    ]
+  },
+  {
+    "nameHans": "䒌靘",
+    "nameHant": "䒌靘",
+    "namePy": "MING QING",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#454659",
+    "rgb": {
+      "r": 69,
+      "g": 70,
+      "b": 89
+    },
+    "hsl": {
+      "h": 237,
+      "s": 13,
+      "l": 31
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "何时倒银汉，与世开䒌靘。",
+    "sentenceHant": "何時倒銀漢，與世開䒌靘。",
+    "authorHans": "郝经",
+    "authorHant": "郝經",
+    "sentenceFromHans": "原古上元学士",
+    "sentenceFromHant": "原古上元學士",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#45465E",
+      "#535164",
+      "#2C2F3B",
+      "#4A4B9D"
+    ],
+    "recommendedNeighbors": [
+      "#3C4654",
+      "#6B798E",
+      "#151D29",
+      "#1E2732"
+    ],
+    "recommendedComplements": [
+      "#938F4C",
+      "#C7C6B6",
+      "#A9A886",
+      "#92905D"
+    ]
+  },
+  {
+    "nameHans": "璆琳",
+    "nameHant": "璆琳",
+    "namePy": "QIU LIN",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#343041",
+    "rgb": {
+      "r": 52,
+      "g": 48,
+      "b": 65
+    },
+    "hsl": {
+      "h": 254,
+      "s": 15,
+      "l": 22
+    },
+    "hue": "blue",
+    "fiveElements": "water",
+    "sentenceHans": "不向一时求赏音，亿代宝之如璆琳。",
+    "sentenceHant": "不向一時求賞音，億代寶之如璆琳。",
+    "authorHans": "宋滕岑",
+    "authorHant": "宋滕岑",
+    "sentenceFromHans": "中兴碑",
+    "sentenceFromHant": "中興碑",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#535164",
+      "#45465E",
+      "#454659",
+      "#615EA8"
+    ],
+    "recommendedNeighbors": [
+      "#2C2F3B",
+      "#422256",
+      "#757CBB",
+      "#663D74"
+    ],
+    "recommendedComplements": [
+      "#BEC2B3",
+      "#A8B092",
+      "#9EBC19",
+      "#84A729"
+    ]
+  },
+  {
+    "nameHans": "瑾瑜",
+    "nameHant": "瑾瑜",
+    "namePy": "JIN YU",
+    "categoryHans": "芒种",
+    "categoryHant": "芒種",
+    "term": "mangzhong",
+    "hex": "#1E2732",
+    "rgb": {
+      "r": 30,
+      "g": 39,
+      "b": 50
+    },
+    "hsl": {
+      "h": 213,
+      "s": 25,
+      "l": 16
+    },
+    "hue": "blue",
+    "fiveElements": "water",
+    "sentenceHans": "高下在心，川泽纳污，山薮藏疾，瑾瑜匿瑕。",
+    "sentenceHant": "高下在心，川澤納污，山藪藏疾，瑾瑜匿瑕。",
+    "authorHans": "左丘明",
+    "authorHant": "左丘明",
+    "sentenceFromHans": "左传·宣公十五年",
+    "sentenceFromHant": "左傳·宣公十五年",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#151D29",
+      "#3C4654",
+      "#354E6B",
+      "#1A2847"
+    ],
+    "recommendedNeighbors": [
+      "#284852",
+      "#454659",
+      "#32788A",
+      "#45465E"
+    ],
+    "recommendedComplements": [
+      "#5F4321",
+      "#644D31",
+      "#DDB078",
+      "#E1C199"
+    ]
+  },
+  {
+    "nameHans": "赩炽",
+    "nameHant": "赩熾",
+    "namePy": "XI CHI",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#CB523E",
+    "rgb": {
+      "r": 203,
+      "g": 82,
+      "b": 62
+    },
+    "hsl": {
+      "h": 9,
+      "s": 58,
+      "l": 52
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "丹沙赩炽出其坂，蜜房郁毓被其阜。",
+    "sentenceHant": "丹沙赩熾出其坂，蜜房鬱毓被其阜。",
+    "authorHans": "左思",
+    "authorHant": "左思",
+    "sentenceFromHans": "蜀都赋",
+    "sentenceFromHant": "蜀都賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#D24735",
+      "#BA5140",
+      "#B13B2E",
+      "#B93A26"
+    ],
+    "recommendedNeighbors": [
+      "#9F6027",
+      "#D9883D",
+      "#E18A3B",
+      "#B81A35"
+    ],
+    "recommendedComplements": [
+      "#87C0CA",
+      "#13393E",
+      "#5AA4AE",
+      "#32788A"
+    ]
+  },
+  {
+    "nameHans": "石榴裙",
+    "nameHant": "石榴裙",
+    "namePy": "SHI LIU QUN",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#B13B2E",
+    "rgb": {
+      "r": 177,
+      "g": 59,
+      "b": 46
+    },
+    "hsl": {
+      "h": 6,
+      "s": 59,
+      "l": 44
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "红粉青娥映楚云，桃花马上石榴裙。",
+    "sentenceHant": "紅粉青娥映楚雲，桃花馬上石榴裙。",
+    "authorHans": "杜审言",
+    "authorHant": "杜審言",
+    "sentenceFromHans": "戏赠赵使君美人",
+    "sentenceFromHant": "戲贈趙使君美人",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B93A26",
+      "#A64036",
+      "#9E2A22",
+      "#D24735"
+    ],
+    "recommendedNeighbors": [
+      "#BC6E37",
+      "#7C461E",
+      "#9F6027",
+      "#BD8253"
+    ],
+    "recommendedComplements": [
+      "#6CA8AF",
+      "#13393E",
+      "#5AA4AE",
+      "#108B96"
+    ]
+  },
+  {
+    "nameHans": "朱湛",
+    "nameHant": "朱湛",
+    "namePy": "ZHU ZHAN",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#95302E",
+    "rgb": {
+      "r": 149,
+      "g": 48,
+      "b": 46
+    },
+    "hsl": {
+      "h": 1,
+      "s": 53,
+      "l": 38
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "钟氏染羽，以朱湛丹秫，三月而炽之，淳而渍之。",
+    "sentenceHant": "鍾氏染羽，以朱湛丹秫，三月而熾之，淳而漬之。",
+    "authorHans": "周公旦",
+    "authorHant": "周公旦",
+    "sentenceFromHans": "周礼·考工记",
+    "sentenceFromHant": "周禮·考工記",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A64036",
+      "#822327",
+      "#B13B2E",
+      "#9E2A22"
+    ],
+    "recommendedNeighbors": [
+      "#81492C",
+      "#945635",
+      "#804C2E",
+      "#903754"
+    ],
+    "recommendedComplements": [
+      "#007175",
+      "#B2B6B6",
+      "#509296",
+      "#226B68"
+    ]
+  },
+  {
+    "nameHans": "大繎",
+    "nameHant": "大繎",
+    "namePy": "DA RAN",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#822327",
+    "rgb": {
+      "r": 130,
+      "g": 35,
+      "b": 39
+    },
+    "hsl": {
+      "h": 357,
+      "s": 58,
+      "l": 32
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "烝栗绢绀缙红繎。",
+    "sentenceHant": "烝慄絹紺縉紅繎。",
+    "authorHans": "史游",
+    "authorHant": "史遊",
+    "sentenceFromHans": "急就篇",
+    "sentenceFromHant": "急就篇",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#8F1D22",
+      "#7C191E",
+      "#95302E",
+      "#A72126"
+    ],
+    "recommendedNeighbors": [
+      "#984F31",
+      "#5B3222",
+      "#955A42",
+      "#A73766"
+    ],
+    "recommendedComplements": [
+      "#206864",
+      "#226B68",
+      "#5DA39D",
+      "#B2B6B6"
+    ]
+  },
+  {
+    "nameHans": "月魄",
+    "nameHant": "月魄",
+    "namePy": "YUE PO",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#B2B6B6",
+    "rgb": {
+      "r": 178,
+      "g": 182,
+      "b": 182
+    },
+    "hsl": {
+      "h": 180,
+      "s": 3,
+      "l": 71
+    },
+    "hue": "neutral",
+    "fiveElements": "metal",
+    "sentenceHans": "疏帘留月魄，珍簟接烟波。",
+    "sentenceHant": "疏簾留月魄，珍簟接煙波。",
+    "authorHans": "李商隐",
+    "authorHant": "李商隱",
+    "sentenceFromHans": "街西池馆",
+    "sentenceFromHant": "街西池館",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#A4C9CC",
+      "#B2BFC3",
+      "#88BFB8",
+      "#6CA8AF"
+    ],
+    "recommendedNeighbors": [
+      "#BDCBD2",
+      "#7F9FAF",
+      "#7D929F",
+      "#B1D5C8"
+    ],
+    "recommendedComplements": [
+      "#B27777",
+      "#EFEFEF",
+      "#BDB2B2",
+      "#A88787"
+    ]
+  },
+  {
+    "nameHans": "不皂",
+    "nameHant": "不皂",
+    "namePy": "BU ZAO",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#A7AAA1",
+    "rgb": {
+      "r": 167,
+      "g": 170,
+      "b": 161
+    },
+    "hsl": {
+      "h": 80,
+      "s": 5,
+      "l": 65
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "粉光深紫腻，肉色退红娇。",
+    "sentenceHant": "粉光深紫膩，肉色退紅嬌。",
+    "authorHans": "王建",
+    "authorHant": "王建",
+    "sentenceFromHans": "题所赁宅牡丹花",
+    "sentenceFromHant": "題所賃宅牡丹花",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BEC2B3",
+      "#A8B092",
+      "#7A7B78",
+      "#A8B78C"
+    ],
+    "recommendedNeighbors": [
+      "#BEC2BC",
+      "#9D9D82",
+      "#919177",
+      "#BFC096"
+    ],
+    "recommendedComplements": [
+      "#343041",
+      "#9B8EA9",
+      "#535164",
+      "#422256"
+    ]
+  },
+  {
+    "nameHans": "雷雨垂",
+    "nameHant": "雷雨垂",
+    "namePy": "LEI YU CHUI",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#7A7B78",
+    "rgb": {
+      "r": 122,
+      "g": 123,
+      "b": 120
+    },
+    "hsl": {
+      "h": 80,
+      "s": 1,
+      "l": 48
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "白摧朽骨龙虎死，黑入太阴雷雨垂。",
+    "sentenceHant": "白摧朽骨龍虎死，黑入太陰雷雨垂。",
+    "authorHans": "杜甫",
+    "authorHant": "杜甫",
+    "sentenceFromHans": "戏为韦偃双松图歌",
+    "sentenceFromHant": "戲為韋偃雙松圖歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#79836C",
+      "#A7AAA1",
+      "#90A07D",
+      "#A8B092"
+    ],
+    "recommendedNeighbors": [
+      "#686A67",
+      "#788A6F",
+      "#919177",
+      "#9D9D82"
+    ],
+    "recommendedComplements": [
+      "#343041",
+      "#9B8EA9",
+      "#535164",
+      "#422256"
+    ]
+  },
+  {
+    "nameHans": "石涅",
+    "nameHant": "石涅",
+    "namePy": "SHI NIE",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#686A67",
+    "rgb": {
+      "r": 104,
+      "g": 106,
+      "b": 103
+    },
+    "hsl": {
+      "h": 100,
+      "s": 1,
+      "l": 41
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "黑石脂，一名石涅，一名石墨。",
+    "sentenceHant": "黑石脂，一名石涅，一名石墨。",
+    "authorHans": "神农",
+    "authorHant": "神農",
+    "sentenceFromHans": "神农本草经",
+    "sentenceFromHant": "神農本草經",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#788A6F",
+      "#555F4D",
+      "#5D7259",
+      "#4E6548"
+    ],
+    "recommendedNeighbors": [
+      "#7A7B78",
+      "#778A77",
+      "#45493D",
+      "#698E6A"
+    ],
+    "recommendedComplements": [
+      "#D3CCD6",
+      "#A67EB7",
+      "#422256",
+      "#BBA1CB"
+    ]
+  },
+  {
+    "nameHans": "扶光",
+    "nameHant": "扶光",
+    "namePy": "FU GUANG",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#F0C2A2",
+    "rgb": {
+      "r": 240,
+      "g": 194,
+      "b": 162
+    },
+    "hsl": {
+      "h": 25,
+      "s": 72,
+      "l": 79
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "日以阳德，月以阴灵。擅扶光于东沼，嗣若英于西冥。",
+    "sentenceHant": "日以陽德，月以陰靈。擅扶光於東沼，嗣若英於西冥。",
+    "authorHans": "谢庄",
+    "authorHant": "謝莊",
+    "sentenceFromHans": "月赋",
+    "sentenceFromHant": "月賦",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#F5B087",
+      "#F29A76",
+      "#F18F60",
+      "#DB9C5E"
+    ],
+    "recommendedNeighbors": [
+      "#D5B45C",
+      "#EAD89A",
+      "#CAB272",
+      "#EBE3C7"
+    ],
+    "recommendedComplements": [
+      "#12507B",
+      "#06436F",
+      "#9AA7B1",
+      "#66889E"
+    ]
+  },
+  {
+    "nameHans": "椒房",
+    "nameHant": "椒房",
+    "namePy": "JIAO FANG",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#DB9C5E",
+    "rgb": {
+      "r": 219,
+      "g": 156,
+      "b": 94
+    },
+    "hsl": {
+      "h": 30,
+      "s": 63,
+      "l": 61
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "梨园弟子白发新，椒房阿监青娥老。",
+    "sentenceHant": "梨園弟子白髮新，椒房阿監青娥老。",
+    "authorHans": "白居易",
+    "authorHant": "白居易",
+    "sentenceFromHans": "长恨歌",
+    "sentenceFromHant": "長恨歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#D9883D",
+      "#DDB078",
+      "#D08635",
+      "#D2A36C"
+    ],
+    "recommendedNeighbors": [
+      "#D6BC46",
+      "#E67762",
+      "#D6C560",
+      "#E1D279"
+    ],
+    "recommendedComplements": [
+      "#3271AE",
+      "#8AABCC",
+      "#6E9BC5",
+      "#576470"
+    ]
+  },
+  {
+    "nameHans": "红友",
+    "nameHant": "紅友",
+    "namePy": "HONG YOU",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#D9883D",
+    "rgb": {
+      "r": 217,
+      "g": 136,
+      "b": 61
+    },
+    "hsl": {
+      "h": 29,
+      "s": 67,
+      "l": 55
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "兴来搦管呼红友，倦去移床就绿阴。",
+    "sentenceHant": "興來搦管呼紅友，倦去移牀就綠陰。",
+    "authorHans": "韩日缵",
+    "authorHant": "韓日纘",
+    "sentenceFromHans": "次韵和夏濮山侍御园亭",
+    "sentenceFromHant": "次韻和夏濮山侍御園亭",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#E18A3B",
+      "#DB9C5E",
+      "#D08635",
+      "#DA9233"
+    ],
+    "recommendedNeighbors": [
+      "#E67762",
+      "#D6BC46",
+      "#E94829",
+      "#CB523E"
+    ],
+    "recommendedComplements": [
+      "#6E9BC5",
+      "#576470",
+      "#3271AE",
+      "#AED0EE"
+    ]
+  },
+  {
+    "nameHans": "光明砂",
+    "nameHant": "光明砂",
+    "namePy": "GUANG MING SHA",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#CC5D20",
+    "rgb": {
+      "r": 204,
+      "g": 93,
+      "b": 32
+    },
+    "hsl": {
+      "h": 21,
+      "s": 73,
+      "l": 46
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "曲龙丈人冠藕花，其颜色映光明砂。",
+    "sentenceHant": "曲龍丈人冠藕花，其顏色映光明砂。",
+    "authorHans": "顾况",
+    "authorHant": "顧況",
+    "sentenceFromHans": "曲龙山歌",
+    "sentenceFromHant": "曲龍山歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9F5221",
+      "#EA5514",
+      "#ED6D3D",
+      "#E18A3B"
+    ],
+    "recommendedNeighbors": [
+      "#D3A237",
+      "#AA8534",
+      "#95302E",
+      "#C8161D"
+    ],
+    "recommendedComplements": [
+      "#106898",
+      "#4182A4",
+      "#7F9FAF",
+      "#547689"
+    ]
+  },
+  {
+    "nameHans": "山矾",
+    "nameHant": "山礬",
+    "namePy": "SHAN FAN",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#CC5D20",
+    "rgb": {
+      "r": 245,
+      "g": 243,
+      "b": 242
+    },
+    "hsl": {
+      "h": 21,
+      "s": 73,
+      "l": 46
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "山矾纷似玉，黄檗碎如金。",
+    "sentenceHant": "山礬紛似玉，黃檗碎如金。",
+    "authorHans": "刘倓",
+    "authorHant": "劉倓",
+    "sentenceFromHans": "小玉蕊花",
+    "sentenceFromHant": "小玉蕊花",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9F5221",
+      "#EA5514",
+      "#ED6D3D",
+      "#E18A3B"
+    ],
+    "recommendedNeighbors": [
+      "#D3A237",
+      "#AA8534",
+      "#95302E",
+      "#C8161D"
+    ],
+    "recommendedComplements": [
+      "#106898",
+      "#4182A4",
+      "#7F9FAF",
+      "#547689"
+    ]
+  },
+  {
+    "nameHans": "玉頩",
+    "nameHant": "玉頩",
+    "namePy": "YU PING",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#CC5D20",
+    "rgb": {
+      "r": 234,
+      "g": 229,
+      "b": 227
+    },
+    "hsl": {
+      "h": 21,
+      "s": 73,
+      "l": 46
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "丹鼎夺胎那是宝，玉人頩颊更多姿。",
+    "sentenceHant": "丹鼎奪胎那是寶，玉人頩頰更多姿。",
+    "authorHans": "苏轼",
+    "authorHant": "蘇軾",
+    "sentenceFromHans": "红梅三首",
+    "sentenceFromHant": "紅梅三首",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9F5221",
+      "#EA5514",
+      "#ED6D3D",
+      "#E18A3B"
+    ],
+    "recommendedNeighbors": [
+      "#D3A237",
+      "#AA8534",
+      "#95302E",
+      "#C8161D"
+    ],
+    "recommendedComplements": [
+      "#106898",
+      "#4182A4",
+      "#7F9FAF",
+      "#547689"
+    ]
+  },
+  {
+    "nameHans": "二目鱼",
+    "nameHant": "二目魚",
+    "namePy": "ER MU YU",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#CC5D20",
+    "rgb": {
+      "r": 223,
+      "g": 224,
+      "b": 217
+    },
+    "hsl": {
+      "h": 21,
+      "s": 73,
+      "l": 46
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "二目白，鱼。",
+    "sentenceHant": "二目白，魚。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "尔雅·释畜",
+    "sentenceFromHant": "爾雅·釋畜",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9F5221",
+      "#EA5514",
+      "#ED6D3D",
+      "#E18A3B"
+    ],
+    "recommendedNeighbors": [
+      "#D3A237",
+      "#AA8534",
+      "#95302E",
+      "#C8161D"
+    ],
+    "recommendedComplements": [
+      "#106898",
+      "#4182A4",
+      "#7F9FAF",
+      "#547689"
+    ]
+  },
+  {
+    "nameHans": "明月珰",
+    "nameHant": "明月璫",
+    "namePy": "MING YUE DANG",
+    "categoryHans": "夏至",
+    "categoryHant": "夏至",
+    "term": "xiazhi",
+    "hex": "#CC5D20",
+    "rgb": {
+      "r": 212,
+      "g": 211,
+      "b": 202
+    },
+    "hsl": {
+      "h": 21,
+      "s": 73,
+      "l": 46
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "头安金步摇，耳系明月珰。",
+    "sentenceHant": "頭安金步搖，耳係明月璫。",
+    "authorHans": "傅玄",
+    "authorHant": "傅玄",
+    "sentenceFromHans": "艳歌行有女篇",
+    "sentenceFromHant": "艷歌行有女篇",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9F5221",
+      "#EA5514",
+      "#ED6D3D",
+      "#E18A3B"
+    ],
+    "recommendedNeighbors": [
+      "#D3A237",
+      "#AA8534",
+      "#95302E",
+      "#C8161D"
+    ],
+    "recommendedComplements": [
+      "#106898",
+      "#4182A4",
+      "#7F9FAF",
+      "#547689"
+    ]
+  },
+  {
+    "nameHans": "骍刚",
+    "nameHant": "騂剛",
+    "namePy": "XING GANG",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#F5B087",
+    "rgb": {
+      "r": 245,
+      "g": 176,
+      "b": 135
+    },
+    "hsl": {
+      "h": 22,
+      "s": 85,
+      "l": 75
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "秋而载尝，夏而楅衡，白牡骍刚。",
+    "sentenceHant": "秋而載嘗，夏而楅衡，白牡騂剛。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "诗经·鲁颂·閟宫",
+    "sentenceFromHant": "詩經·魯頌·閟宮",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#F18F60",
+      "#F29A76",
+      "#F0C2A2",
+      "#EF845D"
+    ],
+    "recommendedNeighbors": [
+      "#F2C867",
+      "#FAC03D",
+      "#D12920",
+      "#D3A237"
+    ],
+    "recommendedComplements": [
+      "#547689",
+      "#D4E5EF",
+      "#106898",
+      "#4994C4"
+    ]
+  },
+  {
+    "nameHans": "赪霞",
+    "nameHant": "赬霞",
+    "namePy": "CHENG XIA",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#F18F60",
+    "rgb": {
+      "r": 241,
+      "g": 143,
+      "b": 96
+    },
+    "hsl": {
+      "h": 19,
+      "s": 84,
+      "l": 66
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "丹田微蒸香露溢，著面已觉赪霞生。",
+    "sentenceHant": "丹田微蒸香露溢，著面已覺赬霞生。",
+    "authorHans": "刘崧",
+    "authorHant": "劉崧",
+    "sentenceFromHans": "楚酒苦如蘗歌",
+    "sentenceFromHant": "楚酒苦如蘗歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#EF845D",
+      "#F29A76",
+      "#ED6D3D",
+      "#F5B087"
+    ],
+    "recommendedNeighbors": [
+      "#F2C867",
+      "#FAC03D",
+      "#C8161D",
+      "#BE8A2F"
+    ],
+    "recommendedComplements": [
+      "#7F9FAF",
+      "#D4DDE1",
+      "#BDCBD2",
+      "#106898"
+    ]
+  },
+  {
+    "nameHans": "赪尾",
+    "nameHant": "赬尾",
+    "namePy": "CHENG WEI",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#EF845D",
+    "rgb": {
+      "r": 239,
+      "g": 132,
+      "b": 93
+    },
+    "hsl": {
+      "h": 16,
+      "s": 82,
+      "l": 65
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "鲂鱼赪尾，王室如毁。",
+    "sentenceHant": "魴魚赬尾，王室如毀。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "诗经·周南·汝坟",
+    "sentenceFromHant": "詩經·周南·汝墳",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#EE7959",
+      "#F29A76",
+      "#F18F60",
+      "#ED6D46"
+    ],
+    "recommendedNeighbors": [
+      "#E5A84B",
+      "#DB9B34",
+      "#E60012",
+      "#F091A0"
+    ],
+    "recommendedComplements": [
+      "#98B6C2",
+      "#A2D2E2",
+      "#284852",
+      "#D4DDE1"
+    ]
+  },
+  {
+    "nameHans": "朱柿",
+    "nameHant": "朱柿",
+    "namePy": "ZHU SHI",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#ED6D46",
+    "rgb": {
+      "r": 237,
+      "g": 109,
+      "b": 70
+    },
+    "hsl": {
+      "h": 14,
+      "s": 82,
+      "l": 60
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "宛中朱柿，房陵缥李，酒泉白柰。",
+    "sentenceHant": "宛中朱柿，房陵縹李，酒泉白柰。",
+    "authorHans": "王逸",
+    "authorHant": "王逸",
+    "sentenceFromHans": "荔支赋",
+    "sentenceFromHant": "荔支賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#EE7959",
+      "#ED6D3D",
+      "#EF845D",
+      "#E94829"
+    ],
+    "recommendedNeighbors": [
+      "#DA9233",
+      "#C67915",
+      "#DDB078",
+      "#E5A84B"
+    ],
+    "recommendedComplements": [
+      "#284852",
+      "#B2BFC3",
+      "#A2D2E2",
+      "#32788A"
+    ]
+  },
+  {
+    "nameHans": "天球",
+    "nameHant": "天球",
+    "namePy": "TIAN QIU",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#E0DFC6",
+    "rgb": {
+      "r": 224,
+      "g": 223,
+      "b": 198
+    },
+    "hsl": {
+      "h": 58,
+      "s": 30,
+      "l": 83
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "天球大贝在高阁，见之使我惭轻薄。",
+    "sentenceHant": "天球大貝在高閣，見之使我慚輕薄。",
+    "authorHans": "陈恭尹",
+    "authorHant": "陳恭尹",
+    "sentenceFromHans": "赠别陈季长",
+    "sentenceFromHant": "贈別陳季長",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E0E0D0",
+      "#D5D1AE",
+      "#CAC5A0",
+      "#BFC096"
+    ],
+    "recommendedNeighbors": [
+      "#D8D1C5",
+      "#C0D09D",
+      "#C6BEB1",
+      "#D4C1A6"
+    ],
+    "recommendedComplements": [
+      "#45465E",
+      "#454659",
+      "#4A4B9D",
+      "#757CBB"
+    ]
+  },
+  {
+    "nameHans": "行香子",
+    "nameHant": "行香子",
+    "namePy": "XING XIANG ZI",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#BFB99C",
+    "rgb": {
+      "r": 191,
+      "g": 185,
+      "b": 156
+    },
+    "hsl": {
+      "h": 50,
+      "s": 21,
+      "l": 68
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "行香暂出天桥上，巡礼常过禁殿中。",
+    "sentenceHant": "行香暫出天橋上，巡禮常過禁殿中。",
+    "authorHans": "张籍",
+    "authorHant": "張籍",
+    "sentenceFromHans": "送令狐尚书赴东都留守",
+    "sentenceFromHant": "送令狐尚書赴東都留守",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#CAC5A0",
+      "#A9A082",
+      "#A99F70",
+      "#D5D1AE"
+    ],
+    "recommendedNeighbors": [
+      "#9E8368",
+      "#B49273",
+      "#EBEDDF",
+      "#99806C"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#A4ABD6",
+      "#757CBB",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "王刍",
+    "nameHant": "王芻",
+    "namePy": "WANG CHU",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#A99F70",
+    "rgb": {
+      "r": 169,
+      "g": 159,
+      "b": 112
+    },
+    "hsl": {
+      "h": 49,
+      "s": 25,
+      "l": 55
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "荒烟草映王刍绿，落日花开谢豹红。",
+    "sentenceHant": "荒煙草映王芻綠，落日花開謝豹紅。",
+    "authorHans": "郑真",
+    "authorHant": "鄭真",
+    "sentenceFromHans": "送春",
+    "sentenceFromHant": "送春",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A9A082",
+      "#877D52",
+      "#92896B",
+      "#B4A379"
+    ],
+    "recommendedNeighbors": [
+      "#9E8368",
+      "#B49273",
+      "#906C4A",
+      "#99806C"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#A4ABD6",
+      "#757CBB",
+      "#5976BA"
+    ]
+  },
+  {
+    "nameHans": "荩箧",
+    "nameHant": "藎篋",
+    "namePy": "JIN QIE",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#877D52",
+    "rgb": {
+      "r": 135,
+      "g": 125,
+      "b": 82
+    },
+    "hsl": {
+      "h": 49,
+      "s": 24,
+      "l": 43
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "顾我无衣搜荩箧，泥他沽酒拔金钗。",
+    "sentenceHant": "顧我無衣搜藎篋，泥他沽酒拔金釵。",
+    "authorHans": "元稹",
+    "authorHant": "元稹",
+    "sentenceFromHans": "遣悲怀三首",
+    "sentenceFromHant": "遣悲懷三首",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7F754C",
+      "#756C4B",
+      "#A99F70",
+      "#92896B"
+    ],
+    "recommendedNeighbors": [
+      "#9E8368",
+      "#906C4A",
+      "#B49273",
+      "#7C5B3E"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#A4ABD6",
+      "#757CBB",
+      "#5976BA"
+    ]
+  },
+  {
+    "nameHans": "赤灵",
+    "nameHant": "赤靈",
+    "namePy": "CHI LING",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#954024",
+    "rgb": {
+      "r": 149,
+      "g": 64,
+      "b": 36
+    },
+    "hsl": {
+      "h": 15,
+      "s": 61,
+      "l": 36
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "松子神陂，赤灵解角。",
+    "sentenceHant": "松子神陂，赤靈解角。",
+    "authorHans": "张衡",
+    "authorHant": "張衡",
+    "sentenceFromHans": "南都赋",
+    "sentenceFromHant": "南都賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#873424",
+      "#984F31",
+      "#8F3D2C",
+      "#81492C"
+    ],
+    "recommendedNeighbors": [
+      "#DA9233",
+      "#C67915",
+      "#662B2F",
+      "#B4884D"
+    ],
+    "recommendedComplements": [
+      "#A2D2E2",
+      "#284852",
+      "#B2BFC3",
+      "#98B6C2"
+    ]
+  },
+  {
+    "nameHans": "丹秫",
+    "nameHant": "丹秫",
+    "namePy": "DAN SHU",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#873424",
+    "rgb": {
+      "r": 135,
+      "g": 52,
+      "b": 36
+    },
+    "hsl": {
+      "h": 10,
+      "s": 58,
+      "l": 34
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "钟氏染羽，以朱湛丹秫，三月而炽之，淳而渍之。",
+    "sentenceHant": "鍾氏染羽，以朱湛丹秫，三月而熾之，淳而漬之。",
+    "authorHans": "周公旦",
+    "authorHant": "周公旦",
+    "sentenceFromHans": "周礼·考工记",
+    "sentenceFromHant": "周禮·考工記",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#8F3D2C",
+      "#662B1F",
+      "#954024",
+      "#B13B2E"
+    ],
+    "recommendedNeighbors": [
+      "#B81A35",
+      "#D9883D",
+      "#D08635",
+      "#E18A3B"
+    ],
+    "recommendedComplements": [
+      "#87C0CA",
+      "#32788A",
+      "#006D87",
+      "#13393E"
+    ]
+  },
+  {
+    "nameHans": "术兰",
+    "nameHant": "術蘭",
+    "namePy": "SHU LAN",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#662B1F",
+    "rgb": {
+      "r": 102,
+      "g": 43,
+      "b": 31
+    },
+    "hsl": {
+      "h": 10,
+      "s": 53,
+      "l": 26
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "又有像牙桃枝扇，或绿沉色，或木兰色，或作紫绀色，或作郁金色。",
+    "sentenceHant": "又有像牙桃枝扇，或綠沉色，或木蘭色，或作紫紺色，或作鬱金色。",
+    "authorHans": "陆翙",
+    "authorHant": "陸翽",
+    "sentenceFromHans": "邺中记",
+    "sentenceFromHant": "鄴中記",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#873424",
+      "#8F3D2C",
+      "#4C1E1A",
+      "#5B3222"
+    ],
+    "recommendedNeighbors": [
+      "#5F4321",
+      "#906C4A",
+      "#B81A35",
+      "#D08635"
+    ],
+    "recommendedComplements": [
+      "#87C0CA",
+      "#32788A",
+      "#006D87",
+      "#13393E"
+    ]
+  },
+  {
+    "nameHans": "麒麟竭",
+    "nameHant": "麒麟竭",
+    "namePy": "QI LIN JIE",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#4C1E1A",
+    "rgb": {
+      "r": 76,
+      "g": 30,
+      "b": 26
+    },
+    "hsl": {
+      "h": 5,
+      "s": 49,
+      "l": 20
+    },
+    "hue": "red_warm",
+    "fiveElements": "water",
+    "sentenceHans": "其脂液从木中流出，滴下如胶饴，久则坚凝而成，赤如血色，故谓之血竭。",
+    "sentenceHant": "其脂液從木中流出，滴下如膠飴，久則堅凝而成，赤如血色，故謂之血竭。",
+    "authorHans": "苏颂",
+    "authorHant": "蘇頌",
+    "sentenceFromHans": "本草图经",
+    "sentenceFromHant": "本草圖經",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#662B1F",
+      "#683632",
+      "#873424",
+      "#95302E"
+    ],
+    "recommendedNeighbors": [
+      "#7C461E",
+      "#BC6E37",
+      "#9F6027",
+      "#7C5B3E"
+    ],
+    "recommendedComplements": [
+      "#108B96",
+      "#A4C9CC",
+      "#6CA8AF",
+      "#13393E"
+    ]
+  },
+  {
+    "nameHans": "柔蓝",
+    "nameHant": "柔藍",
+    "namePy": "ROU LAN",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#106898",
+    "rgb": {
+      "r": 16,
+      "g": 104,
+      "b": 152
+    },
+    "hsl": {
+      "h": 201,
+      "s": 81,
+      "l": 33
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "欲教鱼目无分别，须学揉蓝染钓丝。",
+    "sentenceHant": "欲教魚目無分別，須學揉藍染釣絲。",
+    "authorHans": "方干",
+    "authorHant": "方乾",
+    "sentenceFromHans": "赠江上老人",
+    "sentenceFromHant": "贈江上老人",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#12507B",
+      "#06436F",
+      "#003D74",
+      "#006D87"
+    ],
+    "recommendedNeighbors": [
+      "#007175",
+      "#12264F",
+      "#226B68",
+      "#1A2847"
+    ],
+    "recommendedComplements": [
+      "#BEB1AA",
+      "#945635",
+      "#CC5D20",
+      "#CC5D20"
+    ]
+  },
+  {
+    "nameHans": "碧城",
+    "nameHant": "碧城",
+    "namePy": "BI CHENG",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#12507B",
+    "rgb": {
+      "r": 18,
+      "g": 80,
+      "b": 123
+    },
+    "hsl": {
+      "h": 205,
+      "s": 74,
+      "l": 28
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "居紫云之阙，碧霞为城。",
+    "sentenceHant": "居紫雲之闕，碧霞為城。",
+    "authorHans": "李昉",
+    "authorHant": "李昉",
+    "sentenceFromHans": "太平御览",
+    "sentenceFromHant": "太平御覽",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#106898",
+      "#06436F",
+      "#3271AE",
+      "#003D74"
+    ],
+    "recommendedNeighbors": [
+      "#108B96",
+      "#007175",
+      "#226B68",
+      "#206864"
+    ],
+    "recommendedComplements": [
+      "#A8A19C",
+      "#F0C2A2",
+      "#BC6E37",
+      "#7C461E"
+    ]
+  },
+  {
+    "nameHans": "蓝采和",
+    "nameHant": "藍采和",
+    "namePy": "LAN CAI HE",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#06436F",
+    "rgb": {
+      "r": 6,
+      "g": 67,
+      "b": 111
+    },
+    "hsl": {
+      "h": 205,
+      "s": 90,
+      "l": 23
+    },
+    "hue": "blue",
+    "fiveElements": "water",
+    "sentenceHans": "踏歌踏歌蓝采和，世界能几何。",
+    "sentenceHant": "踏歌踏歌藍採和，世界能幾何。",
+    "authorHans": "蓝采和",
+    "authorHant": "藍採和",
+    "sentenceFromHans": "踏歌",
+    "sentenceFromHant": "踏歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#003D74",
+      "#003460",
+      "#106898",
+      "#12507B"
+    ],
+    "recommendedNeighbors": [
+      "#108B96",
+      "#007175",
+      "#226B68",
+      "#206864"
+    ],
+    "recommendedComplements": [
+      "#A8A19C",
+      "#F0C2A2",
+      "#BC6E37",
+      "#7C461E"
+    ]
+  },
+  {
+    "nameHans": "帝释青",
+    "nameHant": "帝釋青",
+    "namePy": "DI SHI QING",
+    "categoryHans": "小暑",
+    "categoryHant": "小暑",
+    "term": "xiaoshu",
+    "hex": "#003460",
+    "rgb": {
+      "r": 0,
+      "g": 52,
+      "b": 96
+    },
+    "hsl": {
+      "h": 208,
+      "s": 100,
+      "l": 19
+    },
+    "hue": "blue",
+    "fiveElements": "water",
+    "sentenceHans": "霜余远水呈天碧，雨过遥空现帝青。",
+    "sentenceHant": "霜餘遠水呈天碧，雨過遙空現帝青。",
+    "authorHans": "楼钥",
+    "authorHant": "樓鑰",
+    "sentenceFromHans": "题桃源王少卿占山亭",
+    "sentenceFromHant": "題桃源王少卿佔山亭",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#003D74",
+      "#06436F",
+      "#106898",
+      "#12507B"
+    ],
+    "recommendedNeighbors": [
+      "#108B96",
+      "#007175",
+      "#13393E",
+      "#226B68"
+    ],
+    "recommendedComplements": [
+      "#9F6027",
+      "#7C5B3E",
+      "#E18A3B",
+      "#B49273"
+    ]
+  },
+  {
+    "nameHans": "夕岚",
+    "nameHant": "夕嵐",
+    "namePy": "XI LAN",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#E3ADB9",
+    "rgb": {
+      "r": 227,
+      "g": 173,
+      "b": 185
+    },
+    "hsl": {
+      "h": 347,
+      "s": 49,
+      "l": 78
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "残雨斜阳照，夕岚飞鸟还。",
+    "sentenceHant": "殘雨斜陽照，夕嵐飛鳥還。",
+    "authorHans": "王维",
+    "authorHant": "王維",
+    "sentenceFromHans": "崔濮阳兄季重前山兴",
+    "sentenceFromHant": "崔濮陽兄季重前山興",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E2A2AC",
+      "#EFC4CE",
+      "#CF929E",
+      "#ECB0C1"
+    ],
+    "recommendedNeighbors": [
+      "#F0CFE3",
+      "#D24735",
+      "#C8B5B3",
+      "#BA5140"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#B1D5C8"
+    ]
+  },
+  {
+    "nameHans": "雌霓",
+    "nameHant": "雌霓",
+    "namePy": "CI NI",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#CF929E",
+    "rgb": {
+      "r": 207,
+      "g": 146,
+      "b": 158
+    },
+    "hsl": {
+      "h": 348,
+      "s": 39,
+      "l": 69
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "建采虹之长旃，系雌霓而为旗。",
+    "sentenceHant": "建採虹之長旃，系雌霓而為旗。",
+    "authorHans": "张衡",
+    "authorHant": "張衡",
+    "sentenceFromHans": "七辩",
+    "sentenceFromHant": "七辯",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#CE8892",
+      "#E3ADB9",
+      "#BB7A8C",
+      "#E2A2AC"
+    ],
+    "recommendedNeighbors": [
+      "#BA5140",
+      "#BA5B49",
+      "#D24735",
+      "#B26D5D"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "绛纱",
+    "nameHant": "絳紗",
+    "namePy": "JIANG SHA",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#B27777",
+    "rgb": {
+      "r": 178,
+      "g": 119,
+      "b": 119
+    },
+    "hsl": {
+      "h": 0,
+      "s": 28,
+      "l": 58
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "日陪鲤也趋文苑，谁道门生隔绛纱。",
+    "sentenceHant": "日陪鯉也趨文苑，誰道門生隔絳紗。",
+    "authorHans": "钱起",
+    "authorHant": "錢起",
+    "sentenceFromHans": "登刘宾客高斋",
+    "sentenceFromHant": "登劉賓客高齋",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A85858",
+      "#A88787",
+      "#A35F65",
+      "#9E696D"
+    ],
+    "recommendedNeighbors": [
+      "#BD9683",
+      "#BEA89D",
+      "#A46244",
+      "#D2AF9D"
+    ],
+    "recommendedComplements": [
+      "#B2B6B6",
+      "#007175",
+      "#226B68",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "茹藘",
+    "nameHant": "茹藘",
+    "namePy": "RU LV",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#A35F65",
+    "rgb": {
+      "r": 163,
+      "g": 95,
+      "b": 101
+    },
+    "hsl": {
+      "h": 355,
+      "s": 27,
+      "l": 51
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "缟衣茹藘，聊可与娱。",
+    "sentenceHant": "縞衣茹藘，聊可與娛。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "诗经·郑风·出其东门",
+    "sentenceFromHant": "詩經·鄭風·出其東門",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9E696D",
+      "#9E4E56",
+      "#A85858",
+      "#81474C"
+    ],
+    "recommendedNeighbors": [
+      "#9A6655",
+      "#B0436F",
+      "#9D858F",
+      "#8F6D5F"
+    ],
+    "recommendedComplements": [
+      "#5DA39D",
+      "#3D8E86",
+      "#206864",
+      "#88BFB8"
+    ]
+  },
+  {
+    "nameHans": "葱青",
+    "nameHant": "蔥青",
+    "namePy": "CONG QING",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#EDF1BB",
+    "rgb": {
+      "r": 237,
+      "g": 241,
+      "b": 187
+    },
+    "hsl": {
+      "h": 64,
+      "s": 66,
+      "l": 84
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "瞻荒榛之芜秽兮，顾东山之葱青。",
+    "sentenceHant": "瞻荒榛之蕪穢兮，顧東山之蔥青。",
+    "authorHans": "阮籍",
+    "authorHant": "阮籍",
+    "sentenceFromHans": "东平赋",
+    "sentenceFromHant": "東平賦",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E3EB98",
+      "#F6F9E4",
+      "#D8DE8A",
+      "#ECEBC2"
+    ],
+    "recommendedNeighbors": [
+      "#D5B45C",
+      "#D5C8A0",
+      "#F5F2E9",
+      "#D4BF89"
+    ],
+    "recommendedComplements": [
+      "#535164",
+      "#615EA8",
+      "#4A4B9D",
+      "#45465E"
+    ]
+  },
+  {
+    "nameHans": "少艾",
+    "nameHant": "少艾",
+    "namePy": "SHAO AI",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#E3EB98",
+    "rgb": {
+      "r": 227,
+      "g": 235,
+      "b": 152
+    },
+    "hsl": {
+      "h": 66,
+      "s": 67,
+      "l": 76
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "掌中看珠二少艾，捧腮却立鸦鬟奴。",
+    "sentenceHant": "掌中看珠二少艾，捧腮卻立鴉鬟奴。",
+    "authorHans": "王炎",
+    "authorHant": "王炎",
+    "sentenceFromHans": "题徐参议所藏唐人浴儿图",
+    "sentenceFromHant": "題徐參議所藏唐人浴兒圖",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#EDF1BB",
+      "#D8DE8A",
+      "#C3D94E",
+      "#F6F9E4"
+    ],
+    "recommendedNeighbors": [
+      "#EAD89A",
+      "#EBE3C7",
+      "#D5B45C",
+      "#DFD6B8"
+    ],
+    "recommendedComplements": [
+      "#535164",
+      "#615EA8",
+      "#4A4B9D",
+      "#45465E"
+    ]
+  },
+  {
+    "nameHans": "绮钱",
+    "nameHant": "綺錢",
+    "namePy": "QI QIAN",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#D8DE8A",
+    "rgb": {
+      "r": 216,
+      "g": 222,
+      "b": 138
+    },
+    "hsl": {
+      "h": 64,
+      "s": 56,
+      "l": 71
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "长风隐细草，深堂没绮钱。",
+    "sentenceHant": "長風隱細草，深堂沒綺錢。",
+    "authorHans": "沈约",
+    "authorHant": "沈約",
+    "sentenceFromHans": "咏青苔诗",
+    "sentenceFromHant": "詠青苔詩",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#CDD171",
+      "#E3EB98",
+      "#EDF1BB",
+      "#ECEBC2"
+    ],
+    "recommendedNeighbors": [
+      "#D5B45C",
+      "#D5C8A0",
+      "#CAB272",
+      "#D4BF89"
+    ],
+    "recommendedComplements": [
+      "#535164",
+      "#615EA8",
+      "#4A4B9D",
+      "#45465E"
+    ]
+  },
+  {
+    "nameHans": "翠樽",
+    "nameHant": "翠樽",
+    "namePy": "CUI ZUN",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#CDD171",
+    "rgb": {
+      "r": 205,
+      "g": 209,
+      "b": 113
+    },
+    "hsl": {
+      "h": 62,
+      "s": 51,
+      "l": 63
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "于是盛以翠樽，酌以雕觞，浮蚁鼎沸，酷烈馨香。",
+    "sentenceHant": "於是盛以翠樽，酌以雕觴，浮蟻鼎沸，酷烈馨香。",
+    "authorHans": "曹植",
+    "authorHant": "曹植",
+    "sentenceFromHans": "七启",
+    "sentenceFromHant": "七啟",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D8DE8A",
+      "#C3D94E",
+      "#ECEBC2",
+      "#E3EB98"
+    ],
+    "recommendedNeighbors": [
+      "#D4BF89",
+      "#BF9C46",
+      "#B3934B",
+      "#BFA670"
+    ],
+    "recommendedComplements": [
+      "#615EA8",
+      "#4A4B9D",
+      "#45465E",
+      "#535164"
+    ]
+  },
+  {
+    "nameHans": "石蜜",
+    "nameHant": "石蜜",
+    "namePy": "SHI MI",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#D4BF89",
+    "rgb": {
+      "r": 212,
+      "g": 191,
+      "b": 137
+    },
+    "hsl": {
+      "h": 43,
+      "s": 47,
+      "l": 68
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "沙饧石蜜，远国储珍。",
+    "sentenceHant": "沙餳石蜜，遠國儲珍。",
+    "authorHans": "张衡",
+    "authorHant": "張衡",
+    "sentenceFromHans": "七辨",
+    "sentenceFromHant": "七辨",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#CAB272",
+      "#D5C8A0",
+      "#BFA670",
+      "#D5B45C"
+    ],
+    "recommendedNeighbors": [
+      "#CDD171",
+      "#D8DE8A",
+      "#DDC5B8",
+      "#D2AF9D"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#12264F",
+      "#2E59A7"
+    ]
+  },
+  {
+    "nameHans": "沙饧",
+    "nameHant": "沙餳",
+    "namePy": "SHA TANG",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#BFA670",
+    "rgb": {
+      "r": 191,
+      "g": 166,
+      "b": 112
+    },
+    "hsl": {
+      "h": 41,
+      "s": 38,
+      "l": 59
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "沙饧石蜜，远国储珍。",
+    "sentenceHant": "沙餳石蜜，遠國儲珍。",
+    "authorHans": "张衡",
+    "authorHant": "張衡",
+    "sentenceFromHans": "七辨",
+    "sentenceFromHant": "七辨",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B3934B",
+      "#CAB272",
+      "#C6A268",
+      "#B4A379"
+    ],
+    "recommendedNeighbors": [
+      "#BD9683",
+      "#BFC096",
+      "#D2AF9D",
+      "#CDD171"
+    ],
+    "recommendedComplements": [
+      "#1A2847",
+      "#12264F",
+      "#5976BA",
+      "#2E59A7"
+    ]
+  },
+  {
+    "nameHans": "巨吕",
+    "nameHant": "巨呂",
+    "namePy": "JU LV",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#AA8E59",
+    "rgb": {
+      "r": 170,
+      "g": 142,
+      "b": 89
+    },
+    "hsl": {
+      "h": 39,
+      "s": 32,
+      "l": 51
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "次第二煎，则渐微重，名曰巨吕。",
+    "sentenceHant": "次第二煎，則漸微重，名曰巨呂。",
+    "authorHans": "藏出版株式会社",
+    "authorHant": "藏出版株式會社",
+    "sentenceFromHans": "正法念处经",
+    "sentenceFromHant": "正法念處經",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A58A5F",
+      "#9E8358",
+      "#94784F",
+      "#BFA670"
+    ],
+    "recommendedNeighbors": [
+      "#A9A773",
+      "#92905D",
+      "#BD9683",
+      "#A46244"
+    ],
+    "recommendedComplements": [
+      "#2E59A7",
+      "#19325F",
+      "#12264F",
+      "#1A2847"
+    ]
+  },
+  {
+    "nameHans": "吉金",
+    "nameHant": "吉金",
+    "namePy": "JI JIN",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#896D47",
+    "rgb": {
+      "r": 137,
+      "g": 109,
+      "b": 71
+    },
+    "hsl": {
+      "h": 35,
+      "s": 32,
+      "l": 41
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "吉日初庚，吴王光择其吉金，玄囗、白囗，台乍叔姬寺吁宗彝荐鉴。",
+    "sentenceHant": "吉日初庚，吳王光擇其吉金，玄囗、白囗，臺乍叔姬寺籲宗彝薦鑑。",
+    "authorHans": "文物",
+    "authorHant": "文物",
+    "sentenceFromHans": "吴王光鉴",
+    "sentenceFromHant": "吳王光鑑",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7C623F",
+      "#94784F",
+      "#8B7042",
+      "#81663B"
+    ],
+    "recommendedNeighbors": [
+      "#9A6655",
+      "#938F4C",
+      "#B15A43",
+      "#72453A"
+    ],
+    "recommendedComplements": [
+      "#3C4654",
+      "#6B798E",
+      "#88ABDA",
+      "#6F94CD"
+    ]
+  },
+  {
+    "nameHans": "山岚",
+    "nameHant": "山嵐",
+    "namePy": "SHAN LAN",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#BED2BB",
+    "rgb": {
+      "r": 190,
+      "g": 210,
+      "b": 187
+    },
+    "hsl": {
+      "h": 112,
+      "s": 20,
+      "l": 78
+    },
+    "hue": "green",
+    "fiveElements": "metal",
+    "sentenceHans": "江水弯弯漾碧波，山岚冉冉映青螺。",
+    "sentenceHant": "江水彎彎漾碧波，山嵐冉冉映青螺。",
+    "authorHans": "薛时雨",
+    "authorHant": "薛時雨",
+    "sentenceFromHans": "浣溪纱·咏江山船",
+    "sentenceFromHant": "浣溪紗·詠江山船",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D5E3D4",
+      "#9BB496",
+      "#CAD7C5",
+      "#81A380"
+    ],
+    "recommendedNeighbors": [
+      "#B3BDA9",
+      "#EBEEE8",
+      "#A8BF8F",
+      "#C9CFC1"
+    ],
+    "recommendedComplements": [
+      "#7D5284",
+      "#6A5B6D",
+      "#DCC7E1",
+      "#6C216D"
+    ]
+  },
+  {
+    "nameHans": "渌波",
+    "nameHant": "淥波",
+    "namePy": "LU BO",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#9BB496",
+    "rgb": {
+      "r": 155,
+      "g": 180,
+      "b": 150
+    },
+    "hsl": {
+      "h": 110,
+      "s": 17,
+      "l": 65
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "春草碧色，春水渌波。",
+    "sentenceHant": "春草碧色，春水淥波。",
+    "authorHans": "江淹",
+    "authorHant": "江淹",
+    "sentenceFromHans": "别赋",
+    "sentenceFromHant": "別賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BED2BB",
+      "#81A380",
+      "#68945C",
+      "#CAD7C5"
+    ],
+    "recommendedNeighbors": [
+      "#B3BDA9",
+      "#A8BF8F",
+      "#90A07D",
+      "#EBEEE8"
+    ],
+    "recommendedComplements": [
+      "#6A5B6D",
+      "#DCC7E1",
+      "#7D5284",
+      "#663D74"
+    ]
+  },
+  {
+    "nameHans": "青楸",
+    "nameHant": "青楸",
+    "namePy": "QING QIU",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#81A380",
+    "rgb": {
+      "r": 129,
+      "g": 163,
+      "b": 128
+    },
+    "hsl": {
+      "h": 118,
+      "s": 16,
+      "l": 57
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "见红兰之受露，望青楸之离霜。",
+    "sentenceHant": "見紅蘭之受露，望青楸之離霜。",
+    "authorHans": "江淹",
+    "authorHant": "江淹",
+    "sentenceFromHans": "别赋",
+    "sentenceFromHant": "別賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#778A77",
+      "#698E6A",
+      "#9BB496",
+      "#4F794A"
+    ],
+    "recommendedNeighbors": [
+      "#BECAB7",
+      "#6A8D52",
+      "#86908A",
+      "#555F4D"
+    ],
+    "recommendedComplements": [
+      "#6C216D",
+      "#7E527F",
+      "#7D5284",
+      "#9C8D9B"
+    ]
+  },
+  {
+    "nameHans": "菉竹",
+    "nameHant": "菉竹",
+    "namePy": "LU ZHU",
+    "categoryHans": "大暑",
+    "categoryHant": "大暑",
+    "term": "dashu",
+    "hex": "#698E6A",
+    "rgb": {
+      "r": 105,
+      "g": 142,
+      "b": 106
+    },
+    "hsl": {
+      "h": 122,
+      "s": 15,
+      "l": 48
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "有草似竹，高五六尺，淇水侧人谓之菉竹。",
+    "sentenceHant": "有草似竹，高五六尺，淇水側人謂之菉竹。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "草木疏",
+    "sentenceFromHant": "草木疏",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#778A77",
+      "#81A380",
+      "#4F794A",
+      "#4C8045"
+    ],
+    "recommendedNeighbors": [
+      "#788A6F",
+      "#86908A",
+      "#686A67",
+      "#CAD7C5"
+    ],
+    "recommendedComplements": [
+      "#9C8D9B",
+      "#6C216D",
+      "#7E527F",
+      "#A6559D"
+    ]
+  },
+  {
+    "nameHans": "窃蓝",
+    "nameHant": "竊藍",
+    "namePy": "QIE LAN",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#88ABDA",
+    "rgb": {
+      "r": 136,
+      "g": 171,
+      "b": 218
+    },
+    "hsl": {
+      "h": 214,
+      "s": 53,
+      "l": 69
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "秋鳸，窃蓝。",
+    "sentenceHant": "秋鳸，竊藍。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "尔雅·释鸟",
+    "sentenceFromHant": "爾雅·釋鳥",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#6F94CD",
+      "#A3BBDB",
+      "#8AABCC",
+      "#6E9BC5"
+    ],
+    "recommendedNeighbors": [
+      "#A2D2E2",
+      "#757CBB",
+      "#87C0CA",
+      "#32788A"
+    ],
+    "recommendedComplements": [
+      "#C67915",
+      "#B4884D",
+      "#7C623F",
+      "#DA9233"
+    ]
+  },
+  {
+    "nameHans": "监德",
+    "nameHant": "監德",
+    "namePy": "JIAN DE",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#6F94CD",
+    "rgb": {
+      "r": 111,
+      "g": 148,
+      "b": 205
+    },
+    "hsl": {
+      "h": 216,
+      "s": 48,
+      "l": 62
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "正月，与斗、牵牛晨出东方，名曰监德。",
+    "sentenceHant": "正月，與鬥、牽牛晨出東方，名曰監德。",
+    "authorHans": "司马迁",
+    "authorHant": "司馬遷",
+    "sentenceFromHans": "史记·天官书",
+    "sentenceFromHant": "史記·天官書",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#88ABDA",
+      "#8BA3C7",
+      "#A3BBDB",
+      "#6E9BC5"
+    ],
+    "recommendedNeighbors": [
+      "#98B6C2",
+      "#A2D2E2",
+      "#4A4B9D",
+      "#32788A"
+    ],
+    "recommendedComplements": [
+      "#E5A84B",
+      "#BFA782",
+      "#94784F",
+      "#BE9457"
+    ]
+  },
+  {
+    "nameHans": "苍苍",
+    "nameHant": "蒼蒼",
+    "namePy": "CANG CANG",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#5976BA",
+    "rgb": {
+      "r": 89,
+      "g": 118,
+      "b": 186
+    },
+    "hsl": {
+      "h": 222,
+      "s": 41,
+      "l": 54
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "天之苍苍，其正色邪。",
+    "sentenceHant": "天之蒼蒼，其正色邪。",
+    "authorHans": "庄周",
+    "authorHant": "莊周",
+    "sentenceFromHans": "逍遥游",
+    "sentenceFromHant": "逍遙遊",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#6F94CD",
+      "#8BA3C7",
+      "#2E59A7",
+      "#88ABDA"
+    ],
+    "recommendedNeighbors": [
+      "#4994C4",
+      "#615EA8",
+      "#4182A4",
+      "#547689"
+    ],
+    "recommendedComplements": [
+      "#FAC03D",
+      "#F2C867",
+      "#C4B798",
+      "#B3934B"
+    ]
+  },
+  {
+    "nameHans": "群青",
+    "nameHant": "群青",
+    "namePy": "QUN QING",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#2E59A7",
+    "rgb": {
+      "r": 46,
+      "g": 89,
+      "b": 167
+    },
+    "hsl": {
+      "h": 219,
+      "s": 57,
+      "l": 42
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "回头却顾人间世，但见群青似小童。",
+    "sentenceHant": "回頭卻顧人間世，但見羣青似小童。",
+    "authorHans": "楼异",
+    "authorHant": "樓異",
+    "sentenceFromHans": "嵩山二十四咏华盖峰",
+    "sentenceFromHant": "嵩山二十四詠華蓋峯",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#19325F",
+      "#3271AE",
+      "#5976BA",
+      "#6F94CD"
+    ],
+    "recommendedNeighbors": [
+      "#4A4B9D",
+      "#7F9FAF",
+      "#615EA8",
+      "#32788A"
+    ],
+    "recommendedComplements": [
+      "#AA8E59",
+      "#9E8C6B",
+      "#6D5C3D",
+      "#8B7042"
+    ]
+  },
+  {
+    "nameHans": "白青",
+    "nameHant": "白青",
+    "namePy": "BAI QING",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#98B6C2",
+    "rgb": {
+      "r": 152,
+      "g": 182,
+      "b": 194
+    },
+    "hsl": {
+      "h": 197,
+      "s": 26,
+      "l": 68
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "亦似空青，圆如铁珠，色白而腹不空，亦谓之碧青，以其研之色碧也。",
+    "sentenceHant": "亦似空青，圓如鐵珠，色白而腹不空，亦謂之碧青，以其研之色碧也。",
+    "authorHans": "苏颂",
+    "authorHant": "蘇頌",
+    "sentenceFromHans": "本草图经",
+    "sentenceFromHant": "本草圖經",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7F9FAF",
+      "#BDCBD2",
+      "#B2BFC3",
+      "#D4DDE1"
+    ],
+    "recommendedNeighbors": [
+      "#8BA3C7",
+      "#6B798E",
+      "#6F94CD",
+      "#5DA39D"
+    ],
+    "recommendedComplements": [
+      "#984F31",
+      "#5B3222",
+      "#F29A76",
+      "#955A42"
+    ]
+  },
+  {
+    "nameHans": "竹月",
+    "nameHant": "竹月",
+    "namePy": "ZHU YUE",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#7F9FAF",
+    "rgb": {
+      "r": 127,
+      "g": 159,
+      "b": 175
+    },
+    "hsl": {
+      "h": 200,
+      "s": 23,
+      "l": 59
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "竹月泛凉影，萱露澹幽丛。",
+    "sentenceHant": "竹月泛涼影，萱露澹幽叢。",
+    "authorHans": "张籍",
+    "authorHant": "張籍",
+    "sentenceFromHans": "奉和舍人叔直省时思琴",
+    "sentenceFromHant": "奉和舍人叔直省時思琴",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7D929F",
+      "#98B6C2",
+      "#66889E",
+      "#547689"
+    ],
+    "recommendedNeighbors": [
+      "#B2B6B6",
+      "#5976BA",
+      "#5DA39D",
+      "#2E59A7"
+    ],
+    "recommendedComplements": [
+      "#422517",
+      "#D2AF9D",
+      "#BD9683",
+      "#81492C"
+    ]
+  },
+  {
+    "nameHans": "空青",
+    "nameHant": "空青",
+    "namePy": "KONG QING",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#66889E",
+    "rgb": {
+      "r": 102,
+      "g": 136,
+      "b": 158
+    },
+    "hsl": {
+      "h": 204,
+      "s": 22,
+      "l": 51
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "况空青之丽宝，亦挺山海之不测。",
+    "sentenceHant": "況空青之麗寶，亦挺山海之不測。",
+    "authorHans": "江淹",
+    "authorHant": "江淹",
+    "sentenceFromHans": "空青赋",
+    "sentenceFromHant": "空青賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7D929F",
+      "#547689",
+      "#7F9FAF",
+      "#9AA7B1"
+    ],
+    "recommendedNeighbors": [
+      "#509296",
+      "#A4C9CC",
+      "#B2B6B6",
+      "#2C2F3B"
+    ],
+    "recommendedComplements": [
+      "#A8A19C",
+      "#F0C2A2",
+      "#BC6E37",
+      "#9F5221"
+    ]
+  },
+  {
+    "nameHans": "太师青",
+    "nameHant": "太師青",
+    "namePy": "TAI SHI QING",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#547689",
+    "rgb": {
+      "r": 84,
+      "g": 118,
+      "b": 137
+    },
+    "hsl": {
+      "h": 202,
+      "s": 24,
+      "l": 43
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "蔡太师作相时，衣青道衣，谓之太师青。",
+    "sentenceHant": "蔡太師作相時，衣青道衣，謂之太師青。",
+    "authorHans": "陆游",
+    "authorHant": "陸遊",
+    "sentenceFromHans": "老学庵笔记",
+    "sentenceFromHant": "老學庵筆記",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#66889E",
+      "#7D929F",
+      "#7F9FAF",
+      "#576470"
+    ],
+    "recommendedNeighbors": [
+      "#509296",
+      "#5976BA",
+      "#1A2847",
+      "#5DA39D"
+    ],
+    "recommendedComplements": [
+      "#775039",
+      "#804C2E",
+      "#F5B087",
+      "#68361A"
+    ]
+  },
+  {
+    "nameHans": "缟羽",
+    "nameHant": "縞羽",
+    "namePy": "GAO YU",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#EFEFEF",
+    "rgb": {
+      "r": 239,
+      "g": 239,
+      "b": 239
+    },
+    "hsl": {
+      "h": 0,
+      "s": 0,
+      "l": 94
+    },
+    "hue": "neutral",
+    "fiveElements": "metal",
+    "sentenceHans": "缟，鲜色也。",
+    "sentenceHant": "縞，鮮色也。",
+    "authorHans": "许慎",
+    "authorHant": "許慎",
+    "sentenceFromHans": "说文解字·糸部",
+    "sentenceFromHant": "說文解字·糸部",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BDB2B2",
+      "#C8B5B3",
+      "#A88787",
+      "#C8B6BB"
+    ],
+    "recommendedNeighbors": [
+      "#BEB1AA",
+      "#BEA89D",
+      "#E7CAD3",
+      "#D3CBC5"
+    ],
+    "recommendedComplements": [
+      "#B2B6B6",
+      "#007175",
+      "#226B68",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "香皮",
+    "nameHant": "香皮",
+    "namePy": "XIANG PI",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#D8D1C5",
+    "rgb": {
+      "r": 216,
+      "g": 209,
+      "b": 197
+    },
+    "hsl": {
+      "h": 38,
+      "s": 20,
+      "l": 81
+    },
+    "hue": "orange",
+    "fiveElements": "metal",
+    "sentenceHans": "汗竹功犹浅，香皮世益珍。",
+    "sentenceHant": "汗竹功猶淺，香皮世益珍。",
+    "authorHans": "郭印",
+    "authorHant": "郭印",
+    "sentenceFromHans": "明复作文房四物诗因用其韵。",
+    "sentenceFromHant": "明復作文房四物詩因用其韻。",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#C6BEB1",
+      "#DFD7C2",
+      "#C4B798",
+      "#D4C1A6"
+    ],
+    "recommendedNeighbors": [
+      "#E0DFC6",
+      "#E0E0D0",
+      "#A9A886",
+      "#A9A773"
+    ],
+    "recommendedComplements": [
+      "#2E59A7",
+      "#19325F",
+      "#6B798E",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "云母",
+    "nameHant": "雲母",
+    "namePy": "YUN MU",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#C6BEB1",
+    "rgb": {
+      "r": 198,
+      "g": 190,
+      "b": 177
+    },
+    "hsl": {
+      "h": 37,
+      "s": 16,
+      "l": 74
+    },
+    "hue": "orange",
+    "fiveElements": "metal",
+    "sentenceHans": "云母屏风烛影深，长河渐落晓星沉。",
+    "sentenceHant": "雲母屏風燭影深，長河漸落曉星沉。",
+    "authorHans": "李商隐",
+    "authorHant": "李商隱",
+    "sentenceFromHans": "嫦娥",
+    "sentenceFromHant": "嫦娥",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D8D1C5",
+      "#AC9F8A",
+      "#C4B798",
+      "#BEA78B"
+    ],
+    "recommendedNeighbors": [
+      "#C7C6B6",
+      "#A9A886",
+      "#E0DFC6",
+      "#A9A773"
+    ],
+    "recommendedComplements": [
+      "#6B798E",
+      "#6F94CD",
+      "#8BA3C7",
+      "#151D29"
+    ]
+  },
+  {
+    "nameHans": "佩玖",
+    "nameHant": "佩玖",
+    "namePy": "PEI JIU",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#AC9F8A",
+    "rgb": {
+      "r": 172,
+      "g": 159,
+      "b": 138
+    },
+    "hsl": {
+      "h": 37,
+      "s": 17,
+      "l": 61
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "彼留之子，贻我佩玖。",
+    "sentenceHant": "彼留之子，貽我佩玖。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "丘中有麻",
+    "sentenceFromHant": "丘中有麻",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#92897B",
+      "#9E8C6B",
+      "#C6BEB1",
+      "#B49B7F"
+    ],
+    "recommendedNeighbors": [
+      "#C7C6B6",
+      "#A9A886",
+      "#8F6D5F",
+      "#A9A773"
+    ],
+    "recommendedComplements": [
+      "#6B798E",
+      "#6F94CD",
+      "#8BA3C7",
+      "#151D29"
+    ]
+  },
+  {
+    "nameHans": "曲尘",
+    "nameHant": "麴塵",
+    "namePy": "QU CHEN",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#C0D09D",
+    "rgb": {
+      "r": 192,
+      "g": 208,
+      "b": 157
+    },
+    "hsl": {
+      "h": 79,
+      "s": 35,
+      "l": 72
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "须臾吐昨夜所食，皆作朽烂气，如黄衣曲尘之色，斯乃榇中送亡人之食也。",
+    "sentenceHant": "須臾吐昨夜所食，皆作朽爛氣，如黃衣麴塵之色，斯乃櫬中送亡人之食也。",
+    "authorHans": "谷神子",
+    "authorHant": "穀神子",
+    "sentenceFromHans": "博异志·阎敬立",
+    "sentenceFromHant": "博異志·閻敬立",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#C0D695",
+      "#A9BE7B",
+      "#A8B78C",
+      "#A8B092"
+    ],
+    "recommendedNeighbors": [
+      "#E0E0D0",
+      "#BECAB7",
+      "#E0DFC6",
+      "#ECEBC2"
+    ],
+    "recommendedComplements": [
+      "#343041",
+      "#9B8EA9",
+      "#535164",
+      "#615EA8"
+    ]
+  },
+  {
+    "nameHans": "绿沈",
+    "nameHant": "綠沈",
+    "namePy": "LV SHEN",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#938F4C",
+    "rgb": {
+      "r": 147,
+      "g": 143,
+      "b": 76
+    },
+    "hsl": {
+      "h": 57,
+      "s": 32,
+      "l": 44
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "绿沈，言其色深沈，正今之苦绿色",
+    "sentenceHant": "綠沈，言其色深沈，正今之苦綠色",
+    "authorHans": "方以智",
+    "authorHant": "方以智",
+    "sentenceFromHans": "通雅",
+    "sentenceFromHant": "通雅",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#92905D",
+      "#A9A773",
+      "#877D52",
+      "#868C4E"
+    ],
+    "recommendedNeighbors": [
+      "#8B7042",
+      "#887657",
+      "#9E8358",
+      "#A58A5F"
+    ],
+    "recommendedComplements": [
+      "#454659",
+      "#45465E",
+      "#4A4B9D",
+      "#757CBB"
+    ]
+  },
+  {
+    "nameHans": "绞衣",
+    "nameHant": "絞衣",
+    "namePy": "JIAO YI",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#7F754C",
+    "rgb": {
+      "r": 127,
+      "g": 117,
+      "b": 76
+    },
+    "hsl": {
+      "h": 48,
+      "s": 25,
+      "l": 40
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "绞，谓缯黑黄间色也",
+    "sentenceHant": "絞，謂繒黑黃間色也",
+    "authorHans": "张戬",
+    "authorHant": "張戩",
+    "sentenceFromHans": "考声",
+    "sentenceFromHant": "考聲",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#877D52",
+      "#756C4B",
+      "#595333",
+      "#92896B"
+    ],
+    "recommendedNeighbors": [
+      "#906C4A",
+      "#7C5B3E",
+      "#B49273",
+      "#99806C"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#A4ABD6",
+      "#5976BA",
+      "#757CBB"
+    ]
+  },
+  {
+    "nameHans": "素綦",
+    "nameHant": "素綦",
+    "namePy": "SU QI",
+    "categoryHans": "立秋",
+    "categoryHant": "立秋",
+    "term": "liqiu",
+    "hex": "#595333",
+    "rgb": {
+      "r": 89,
+      "g": 83,
+      "b": 51
+    },
+    "hsl": {
+      "h": 51,
+      "s": 27,
+      "l": 27
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "质如缃缛，文如素綦。",
+    "sentenceHant": "質如緗縟，文如素綦。",
+    "authorHans": "公孙诡",
+    "authorHant": "公孫詭",
+    "sentenceFromHans": "文鹿赋",
+    "sentenceFromHant": "文鹿賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7F754C",
+      "#756C4B",
+      "#877D52",
+      "#938F4C"
+    ],
+    "recommendedNeighbors": [
+      "#5A4B3B",
+      "#31322C",
+      "#906C4A",
+      "#7C5B3E"
+    ],
+    "recommendedComplements": [
+      "#A4ABD6",
+      "#2C2F3B",
+      "#757CBB",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "退红",
+    "nameHant": "退紅",
+    "namePy": "TUI HONG",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#F0CFE3",
+    "rgb": {
+      "r": 240,
+      "g": 207,
+      "b": 227
+    },
+    "hsl": {
+      "h": 324,
+      "s": 52,
+      "l": 88
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "与褪同为浅红也，半新半旧日福。",
+    "sentenceHant": "與褪同為淺紅也，半新半舊日福。",
+    "authorHans": "方以智",
+    "authorHant": "方以智",
+    "sentenceFromHans": "通雅·衣服·彩色",
+    "sentenceFromHant": "通雅·衣服·彩色",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E4B8D5",
+      "#CC73A0",
+      "#CE93BF",
+      "#DE82A7"
+    ],
+    "recommendedNeighbors": [
+      "#ECB0C1",
+      "#EFC4CE",
+      "#DD7694",
+      "#E3ADB9"
+    ],
+    "recommendedComplements": [
+      "#86908A",
+      "#6B7D73",
+      "#819D8E",
+      "#2A6E3F"
+    ]
+  },
+  {
+    "nameHans": "樱花",
+    "nameHant": "櫻花",
+    "namePy": "YING HUA",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#E4B8D5",
+    "rgb": {
+      "r": 228,
+      "g": 184,
+      "b": 213
+    },
+    "hsl": {
+      "h": 320,
+      "s": 45,
+      "l": 81
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "何处哀筝随急管，樱花永巷垂杨岸。",
+    "sentenceHant": "何處哀箏隨急管，櫻花永巷垂楊岸。",
+    "authorHans": "李商隐",
+    "authorHant": "李商隱",
+    "sentenceFromHans": "无题四首",
+    "sentenceFromHant": "無題四首",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#F0CFE3",
+      "#CE93BF",
+      "#CC73A0",
+      "#B95A89"
+    ],
+    "recommendedNeighbors": [
+      "#D9A0B3",
+      "#E7CAD3",
+      "#CB5C83",
+      "#ECB0C1"
+    ],
+    "recommendedComplements": [
+      "#2A6E3F",
+      "#86908A",
+      "#6B7D73",
+      "#819D8E"
+    ]
+  },
+  {
+    "nameHans": "丁香",
+    "nameHant": "丁香",
+    "namePy": "DING XIANG",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#CE93BF",
+    "rgb": {
+      "r": 206,
+      "g": 147,
+      "b": 191
+    },
+    "hsl": {
+      "h": 315,
+      "s": 38,
+      "l": 69
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "青鸟不传云外信，丁香空结雨中愁。",
+    "sentenceHant": "青鳥不傳雲外信，丁香空結雨中愁。",
+    "authorHans": "李璟",
+    "authorHant": "李璟",
+    "sentenceFromHans": "摊破浣溪沙· 手卷真珠上玉钩",
+    "sentenceFromHant": "攤破浣溪沙· 手捲真珠上玉鉤",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#E4B8D5",
+      "#BA79B1",
+      "#A6559D",
+      "#F0CFE3"
+    ],
+    "recommendedNeighbors": [
+      "#DE82A7",
+      "#B0436F",
+      "#A73766",
+      "#9D858F"
+    ],
+    "recommendedComplements": [
+      "#2A6E3F",
+      "#86908A",
+      "#6B7D73",
+      "#698E6A"
+    ]
+  },
+  {
+    "nameHans": "木槿",
+    "nameHant": "木槿",
+    "namePy": "MU JIN",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#BA79B1",
+    "rgb": {
+      "r": 186,
+      "g": 121,
+      "b": 177
+    },
+    "hsl": {
+      "h": 308,
+      "s": 32,
+      "l": 60
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "有女同车，颜如舜华。",
+    "sentenceHant": "有女同車，顏如舜華。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "有女同车",
+    "sentenceFromHant": "有女同車",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A6559D",
+      "#CE93BF",
+      "#9C8D9B",
+      "#91828F"
+    ],
+    "recommendedNeighbors": [
+      "#B95A89",
+      "#DCC7E1",
+      "#CC73A0",
+      "#A76283"
+    ],
+    "recommendedComplements": [
+      "#698E6A",
+      "#778A77",
+      "#81A380",
+      "#2A6E3F"
+    ]
+  },
+  {
+    "nameHans": "余白",
+    "nameHant": "餘白",
+    "namePy": "YU BAI",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#C9CFC1",
+    "rgb": {
+      "r": 201,
+      "g": 207,
+      "b": 193
+    },
+    "hsl": {
+      "h": 86,
+      "s": 13,
+      "l": 78
+    },
+    "hue": "green",
+    "fiveElements": "metal",
+    "sentenceHans": "白绿色曰余白，浅红白色曰出炉银。",
+    "sentenceHant": "白綠色曰餘白，淺紅白色曰出爐銀。",
+    "authorHans": "李斗",
+    "authorHant": "李鬥",
+    "sentenceFromHans": "扬州画舫录",
+    "sentenceFromHant": "揚州畫舫錄",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#B3BDA9",
+      "#EBEEE8",
+      "#A7AAA1",
+      "#A8BF8F"
+    ],
+    "recommendedNeighbors": [
+      "#BFC1A9",
+      "#B3B59C",
+      "#9BB496",
+      "#BED2BB"
+    ],
+    "recommendedComplements": [
+      "#9B8EA9",
+      "#422256",
+      "#BBA1CB",
+      "#343041"
+    ]
+  },
+  {
+    "nameHans": "兰苕",
+    "nameHant": "蘭苕",
+    "namePy": "LAN SHAO",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#A8B78C",
+    "rgb": {
+      "r": 168,
+      "g": 183,
+      "b": 140
+    },
+    "hsl": {
+      "h": 81,
+      "s": 23,
+      "l": 63
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "翡翠戏兰苕，容色更相鲜。",
+    "sentenceHant": "翡翠戲蘭苕，容色更相鮮。",
+    "authorHans": "郭璞",
+    "authorHant": "郭璞",
+    "sentenceFromHans": "游仙诗",
+    "sentenceFromHant": "遊仙詩",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A9BE7B",
+      "#A8B092",
+      "#C0D09D",
+      "#90A07D"
+    ],
+    "recommendedNeighbors": [
+      "#BFC096",
+      "#788A6F",
+      "#BEC2BC",
+      "#9D9D82"
+    ],
+    "recommendedComplements": [
+      "#343041",
+      "#9B8EA9",
+      "#535164",
+      "#422256"
+    ]
+  },
+  {
+    "nameHans": "碧滋",
+    "nameHant": "碧滋",
+    "namePy": "BI ZI",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#90A07D",
+    "rgb": {
+      "r": 144,
+      "g": 160,
+      "b": 125
+    },
+    "hsl": {
+      "h": 87,
+      "s": 16,
+      "l": 56
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "庭树发红彩，闺草含碧滋。",
+    "sentenceHant": "庭樹發紅彩，閨草含碧滋。",
+    "authorHans": "江淹",
+    "authorHant": "江淹",
+    "sentenceFromHans": "张司空华离情",
+    "sentenceFromHant": "張司空華離情",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#79836C",
+      "#A8BF8F",
+      "#B3BDA9",
+      "#A8B78C"
+    ],
+    "recommendedNeighbors": [
+      "#5D8351",
+      "#68945C",
+      "#B3B59C",
+      "#868C4E"
+    ],
+    "recommendedComplements": [
+      "#9B8EA9",
+      "#422256",
+      "#BBA1CB",
+      "#343041"
+    ]
+  },
+  {
+    "nameHans": "葱倩",
+    "nameHant": "蔥倩",
+    "namePy": "CONG QIAN",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#6C8650",
+    "rgb": {
+      "r": 108,
+      "g": 134,
+      "b": 80
+    },
+    "hsl": {
+      "h": 89,
+      "s": 25,
+      "l": 42
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "当严劲而葱倩，承和煦而芬腴。",
+    "sentenceHant": "當嚴勁而蔥倩，承和煦而芬腴。",
+    "authorHans": "谢灵运",
+    "authorHant": "謝靈運",
+    "sentenceFromHans": "山居赋",
+    "sentenceFromHant": "山居賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#6A8D52",
+      "#779649",
+      "#79836C",
+      "#90A07D"
+    ],
+    "recommendedNeighbors": [
+      "#4E6548",
+      "#3F503B",
+      "#5D7259",
+      "#868C4E"
+    ],
+    "recommendedComplements": [
+      "#9B8EA9",
+      "#422256",
+      "#BBA1CB",
+      "#D3CCD6"
+    ]
+  },
+  {
+    "nameHans": "云门",
+    "nameHant": "雲門",
+    "namePy": "YUN MEN",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#A2D2E2",
+    "rgb": {
+      "r": 162,
+      "g": 210,
+      "b": 226
+    },
+    "hsl": {
+      "h": 195,
+      "s": 52,
+      "l": 76
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "男耕女桑不相失，宫中圣人奏云门。",
+    "sentenceHant": "男耕女桑不相失，宮中聖人奏雲門。",
+    "authorHans": "杜甫",
+    "authorHant": "杜甫",
+    "sentenceFromHans": "忆昔二首",
+    "sentenceFromHant": "憶昔二首",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D4E5EF",
+      "#87C0CA",
+      "#BCD4E7",
+      "#98B6C2"
+    ],
+    "recommendedNeighbors": [
+      "#88ABDA",
+      "#A3BBDB",
+      "#6F94CD",
+      "#8BA3C7"
+    ],
+    "recommendedComplements": [
+      "#9A6655",
+      "#954024",
+      "#F8C6B5",
+      "#ED6D3D"
+    ]
+  },
+  {
+    "nameHans": "西子",
+    "nameHant": "西子",
+    "namePy": "XI ZI",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#87C0CA",
+    "rgb": {
+      "r": 135,
+      "g": 192,
+      "b": 202
+    },
+    "hsl": {
+      "h": 189,
+      "s": 39,
+      "l": 66
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "欲把西湖比西子，淡妆浓抹总相宜。",
+    "sentenceHant": "欲把西湖比西子，淡妝濃抹總相宜。",
+    "authorHans": "苏轼",
+    "authorHant": "蘇軾",
+    "sentenceFromHans": "饮湖上初晴后雨二首",
+    "sentenceFromHant": "飲湖上初晴後雨二首",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#A4C9CC",
+      "#5AA4AE",
+      "#6CA8AF",
+      "#A2D2E2"
+    ],
+    "recommendedNeighbors": [
+      "#6E9BC5",
+      "#8AABCC",
+      "#AED0EE",
+      "#3271AE"
+    ],
+    "recommendedComplements": [
+      "#CB523E",
+      "#BA5140",
+      "#BA5B49",
+      "#E94829"
+    ]
+  },
+  {
+    "nameHans": "天水碧",
+    "nameHant": "天水碧",
+    "namePy": "TIAN SHUI BI",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#5AA4AE",
+    "rgb": {
+      "r": 90,
+      "g": 164,
+      "b": 174
+    },
+    "hsl": {
+      "h": 187,
+      "s": 34,
+      "l": 52
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "天水碧，因煜之内人染碧，夕露于中庭，为露所染，其色特好，遂名之。",
+    "sentenceHant": "天水碧，因煜之內人染碧，夕露於中庭，為露所染，其色特好，遂名之。",
+    "authorHans": "鲍士恭",
+    "authorHant": "鮑士恭",
+    "sentenceFromHans": "五国故事",
+    "sentenceFromHant": "五國故事",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#6CA8AF",
+      "#509296",
+      "#87C0CA",
+      "#A4C9CC"
+    ],
+    "recommendedNeighbors": [
+      "#9AA7B1",
+      "#6E9BC5",
+      "#8AABCC",
+      "#576470"
+    ],
+    "recommendedComplements": [
+      "#D24735",
+      "#BA5140",
+      "#B13B2E",
+      "#C8B5B3"
+    ]
+  },
+  {
+    "nameHans": "法翠",
+    "nameHant": "法翠",
+    "namePy": "FA CUI",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#108B96",
+    "rgb": {
+      "r": 16,
+      "g": 139,
+      "b": 150
+    },
+    "hsl": {
+      "h": 185,
+      "s": 81,
+      "l": 33
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "法蓝、法翠二色，旧惟成窑有，翡翠最佳。",
+    "sentenceHant": "法藍、法翠二色，舊惟成窯有，翡翠最佳。",
+    "authorHans": "张九钺",
+    "authorHant": "張九鉞",
+    "sentenceFromHans": "南窑笔记",
+    "sentenceFromHant": "南窯筆記",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#007175",
+      "#006D87",
+      "#106898",
+      "#226B68"
+    ],
+    "recommendedNeighbors": [
+      "#12507B",
+      "#06436F",
+      "#003D74",
+      "#003460"
+    ],
+    "recommendedComplements": [
+      "#C12C1F",
+      "#A64036",
+      "#4C1E1A",
+      "#9E2A22"
+    ]
+  },
+  {
+    "nameHans": "桑蕾",
+    "nameHant": "桑蕾",
+    "namePy": "SANG LEI",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#EAD89A",
+    "rgb": {
+      "r": 234,
+      "g": 216,
+      "b": 154
+    },
+    "hsl": {
+      "h": 47,
+      "s": 66,
+      "l": 76
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "小凭笋舆行稻田，麦芒桑蕾春无边。",
+    "sentenceHant": "小憑筍輿行稻田，麥芒桑蕾春無邊。",
+    "authorHans": "王炎",
+    "authorHant": "王炎",
+    "sentenceFromHans": "春日",
+    "sentenceFromHant": "春日",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#EBE1A9",
+      "#ECE093",
+      "#E1D384",
+      "#E1D279"
+    ],
+    "recommendedNeighbors": [
+      "#E3EB98",
+      "#F0C2A2",
+      "#C3D94E",
+      "#F6F9E4"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#5976BA",
+      "#A4ABD6",
+      "#1A2847"
+    ]
+  },
+  {
+    "nameHans": "太一余粮",
+    "nameHant": "太一餘糧",
+    "namePy": "TAI YI YU LIANG",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#D5B45C",
+    "rgb": {
+      "r": 213,
+      "g": 180,
+      "b": 92
+    },
+    "hsl": {
+      "h": 44,
+      "s": 59,
+      "l": 60
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "太一余粮，中黄侭玉。",
+    "sentenceHant": "太一餘糧，中黃儘玉。",
+    "authorHans": "张衡",
+    "authorHant": "張衡",
+    "sentenceFromHans": "南都赋",
+    "sentenceFromHant": "南都賦",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D3A237",
+      "#D6BC46",
+      "#BF9C46",
+      "#D6C560"
+    ],
+    "recommendedNeighbors": [
+      "#BC6E37",
+      "#D8DE8A",
+      "#F0C2A2",
+      "#EDF1BB"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#2C2F3B",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "秋香",
+    "nameHant": "秋香",
+    "namePy": "QIU XIANG",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#BF9C46",
+    "rgb": {
+      "r": 191,
+      "g": 156,
+      "b": 70
+    },
+    "hsl": {
+      "h": 43,
+      "s": 49,
+      "l": 51
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "画栏桂树悬秋香，三十六宫土花碧。",
+    "sentenceHant": "畫欄桂樹懸秋香，三十六宮土花碧。",
+    "authorHans": "李贺",
+    "authorHant": "李賀",
+    "sentenceFromHans": "金铜仙人辞汉歌",
+    "sentenceFromHant": "金銅仙人辭漢歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B3934B",
+      "#AA8534",
+      "#CAB272",
+      "#C0AD5E"
+    ],
+    "recommendedNeighbors": [
+      "#CDD171",
+      "#804C2E",
+      "#9F5221",
+      "#945635"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#12264F",
+      "#2E59A7"
+    ]
+  },
+  {
+    "nameHans": "老茯神",
+    "nameHant": "老茯神",
+    "namePy": "LAO FU SHEN",
+    "categoryHans": "处暑",
+    "categoryHant": "處暑",
+    "term": "chushu",
+    "hex": "#AA8534",
+    "rgb": {
+      "r": 170,
+      "g": 133,
+      "b": 52
+    },
+    "hsl": {
+      "h": 41,
+      "s": 53,
+      "l": 44
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "曾为老茯神，本是寒松液。",
+    "sentenceHant": "曾為老茯神，本是寒松液。",
+    "authorHans": "韦应物",
+    "authorHant": "韋應物",
+    "sentenceFromHans": "咏琥珀",
+    "sentenceFromHant": "詠琥珀",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BF9C46",
+      "#BE8A2F",
+      "#B3934B",
+      "#D3A237"
+    ],
+    "recommendedNeighbors": [
+      "#804C2E",
+      "#945635",
+      "#775039",
+      "#68361A"
+    ],
+    "recommendedComplements": [
+      "#1A2847",
+      "#12264F",
+      "#5976BA",
+      "#2E59A7"
+    ]
+  },
+  {
+    "nameHans": "凝脂",
+    "nameHant": "凝脂",
+    "namePy": "NING ZHI",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#F5F2E9",
+    "rgb": {
+      "r": 245,
+      "g": 242,
+      "b": 233
+    },
+    "hsl": {
+      "h": 45,
+      "s": 38,
+      "l": 94
+    },
+    "hue": "neutral",
+    "fiveElements": "earth",
+    "sentenceHans": "春寒赐浴华清池，温泉水滑洗凝脂。",
+    "sentenceHant": "春寒賜浴華清池，溫泉水滑洗凝脂。",
+    "authorHans": "白居易",
+    "authorHant": "白居易",
+    "sentenceFromHans": "长恨歌",
+    "sentenceFromHant": "長恨歌",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#EAE4D1",
+      "#EEEAD9",
+      "#EBE3C7",
+      "#DFD6B8"
+    ],
+    "recommendedNeighbors": [
+      "#D3CBC5",
+      "#D8DE8A",
+      "#EDF1BB",
+      "#EBEDDF"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#5976BA",
+      "#1A2847",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "玉色",
+    "nameHant": "玉色",
+    "namePy": "YU SE",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#EAE4D1",
+    "rgb": {
+      "r": 234,
+      "g": 228,
+      "b": 209
+    },
+    "hsl": {
+      "h": 46,
+      "s": 37,
+      "l": 87
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "玉色雌龙金络头，真妃骑出纵闲游。",
+    "sentenceHant": "玉色雌龍金絡頭，真妃騎出縱閒遊。",
+    "authorHans": "曹唐",
+    "authorHant": "曹唐",
+    "sentenceFromHans": "小游仙诗九十八首",
+    "sentenceFromHant": "小遊仙詩九十八首",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#EEEAD9",
+      "#DFD6B8",
+      "#F5F2E9",
+      "#DFD7C2"
+    ],
+    "recommendedNeighbors": [
+      "#BFC1A9",
+      "#D3CBC5",
+      "#EBEDDF",
+      "#B3B59C"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#5976BA",
+      "#1A2847",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "黄润",
+    "nameHant": "黃潤",
+    "namePy": "HUANG RUN",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#DFD6B8",
+    "rgb": {
+      "r": 223,
+      "g": 214,
+      "b": 184
+    },
+    "hsl": {
+      "h": 46,
+      "s": 38,
+      "l": 80
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "筒中黄润，一端数金。",
+    "sentenceHant": "筒中黃潤，一端數金。",
+    "authorHans": "扬雄",
+    "authorHant": "揚雄",
+    "sentenceFromHans": "蜀都赋",
+    "sentenceFromHant": "蜀都賦",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#EAE4D1",
+      "#D5C8A0",
+      "#D4C9AA",
+      "#DFD7C2"
+    ],
+    "recommendedNeighbors": [
+      "#BFC1A9",
+      "#D3CBC5",
+      "#B3B59C",
+      "#BD8253"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#5976BA",
+      "#1A2847",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "缣缃",
+    "nameHant": "縑緗",
+    "namePy": "JIAN XIANG",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#D5C8A0",
+    "rgb": {
+      "r": 213,
+      "g": 200,
+      "b": 160
+    },
+    "hsl": {
+      "h": 45,
+      "s": 39,
+      "l": 73
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "缃，帛浅黄色也。",
+    "sentenceHant": "緗，帛淺黃色也。",
+    "authorHans": "许慎",
+    "authorHant": "許慎",
+    "sentenceFromHans": "说文解字·糸部",
+    "sentenceFromHant": "說文解字·糸部",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D4C9AA",
+      "#DFD6B8",
+      "#D4BF89",
+      "#DFD7C2"
+    ],
+    "recommendedNeighbors": [
+      "#D8DE8A",
+      "#D3CBC5",
+      "#BFC1A9",
+      "#B3B59C"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#5976BA",
+      "#1A2847",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "蕉月",
+    "nameHant": "蕉月",
+    "namePy": "JIAO YUE",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#86908A",
+    "rgb": {
+      "r": 134,
+      "g": 144,
+      "b": 138
+    },
+    "hsl": {
+      "h": 144,
+      "s": 4,
+      "l": 55
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "芭蕉月上露枝迟，促织声先到耳痴。",
+    "sentenceHant": "芭蕉月上露枝遲，促織聲先到耳癡。",
+    "authorHans": "霍韬",
+    "authorHant": "霍韜",
+    "sentenceFromHans": "中秋夜饮",
+    "sentenceFromHant": "中秋夜飲",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#819D8E",
+      "#6B7D73",
+      "#80A492",
+      "#5F766A"
+    ],
+    "recommendedNeighbors": [
+      "#698E6A",
+      "#778A77",
+      "#81A380",
+      "#88BFB8"
+    ],
+    "recommendedComplements": [
+      "#F0CFE3",
+      "#995D7F",
+      "#420B2F",
+      "#E4B8D5"
+    ]
+  },
+  {
+    "nameHans": "千山翠",
+    "nameHant": "千山翠",
+    "namePy": "QIAN SHAN CUI",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#6B7D73",
+    "rgb": {
+      "r": 107,
+      "g": 125,
+      "b": 115
+    },
+    "hsl": {
+      "h": 147,
+      "s": 8,
+      "l": 45
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "九秋风露越窑开，夺得千峰翠色来。",
+    "sentenceHant": "九秋風露越窯開，奪得千峯翠色來。",
+    "authorHans": "陆龟蒙",
+    "authorHant": "陸龜蒙",
+    "sentenceFromHans": "秘色越器",
+    "sentenceFromHant": "祕色越器",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#5F766A",
+      "#819D8E",
+      "#86908A",
+      "#80A492"
+    ],
+    "recommendedNeighbors": [
+      "#698E6A",
+      "#778A77",
+      "#88BFB8",
+      "#5DA39D"
+    ],
+    "recommendedComplements": [
+      "#995D7F",
+      "#F0CFE3",
+      "#CC73A0",
+      "#B95A89"
+    ]
+  },
+  {
+    "nameHans": "结绿",
+    "nameHant": "結綠",
+    "namePy": "JIE LV",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#555F4D",
+    "rgb": {
+      "r": 85,
+      "g": 95,
+      "b": 77
+    },
+    "hsl": {
+      "h": 93,
+      "s": 10,
+      "l": 34
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "庶青萍、结绿，长价于薛、卞之门。",
+    "sentenceHant": "庶青萍、結綠，長價於薛、卞之門。",
+    "authorHans": "李白",
+    "authorHant": "李白",
+    "sentenceFromHans": "与韩荆州书",
+    "sentenceFromHant": "與韓荊州書",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#686A67",
+      "#6C8650",
+      "#79836C",
+      "#6A8D52"
+    ],
+    "recommendedNeighbors": [
+      "#4F794A",
+      "#4C8045",
+      "#31322C",
+      "#81A380"
+    ],
+    "recommendedComplements": [
+      "#422256",
+      "#9B8EA9",
+      "#BBA1CB",
+      "#D3CCD6"
+    ]
+  },
+  {
+    "nameHans": "绿云",
+    "nameHant": "綠雲",
+    "namePy": "LV YUN",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#45493D",
+    "rgb": {
+      "r": 69,
+      "g": 73,
+      "b": 61
+    },
+    "hsl": {
+      "h": 80,
+      "s": 9,
+      "l": 26
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "绿云扰扰，梳晓鬟也。",
+    "sentenceHant": "綠雲擾擾，梳曉鬟也。",
+    "authorHans": "杜牧",
+    "authorHant": "杜牧",
+    "sentenceFromHans": "阿房宫赋",
+    "sentenceFromHant": "阿房宮賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#31322C",
+      "#7A7B78",
+      "#79836C",
+      "#555F4D"
+    ],
+    "recommendedNeighbors": [
+      "#686A67",
+      "#788A6F",
+      "#919177",
+      "#9D9D82"
+    ],
+    "recommendedComplements": [
+      "#343041",
+      "#9B8EA9",
+      "#535164",
+      "#422256"
+    ]
+  },
+  {
+    "nameHans": "藕丝秋半",
+    "nameHant": "藕絲秋半",
+    "namePy": "OU SI QIU BAN",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#D3CBC5",
+    "rgb": {
+      "r": 211,
+      "g": 203,
+      "b": 197
+    },
+    "hsl": {
+      "h": 26,
+      "s": 14,
+      "l": 80
+    },
+    "hue": "orange",
+    "fiveElements": "metal",
+    "sentenceHans": "藕丝衫子柳花裙，空著沈香慢火熏。",
+    "sentenceHant": "藕絲衫子柳花裙，空著沈香慢火燻。",
+    "authorHans": "元稹",
+    "authorHant": "元稹",
+    "sentenceFromHans": "白衣裳二首",
+    "sentenceFromHant": "白衣裳二首",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BEB1AA",
+      "#A8A19C",
+      "#BEA89D",
+      "#C6BEB1"
+    ],
+    "recommendedNeighbors": [
+      "#C8B5B3",
+      "#A9A082",
+      "#D5C8A0",
+      "#DFD6B8"
+    ],
+    "recommendedComplements": [
+      "#9AA7B1",
+      "#EAEEF1",
+      "#12507B",
+      "#06436F"
+    ]
+  },
+  {
+    "nameHans": "苍烟落照",
+    "nameHant": "蒼煙落照",
+    "namePy": "CANG YAN LUO ZHAO",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#C8B5B3",
+    "rgb": {
+      "r": 200,
+      "g": 181,
+      "b": 179
+    },
+    "hsl": {
+      "h": 6,
+      "s": 16,
+      "l": 74
+    },
+    "hue": "red_warm",
+    "fiveElements": "metal",
+    "sentenceHans": "家住苍烟落照间，丝毫尘事不相关。",
+    "sentenceHant": "家住蒼煙落照間，絲毫塵事不相關。",
+    "authorHans": "陆游",
+    "authorHant": "陸遊",
+    "sentenceFromHans": "鹧鸪天",
+    "sentenceFromHant": "鷓鴣天",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BDB2B2",
+      "#A88787",
+      "#B27777",
+      "#DAA9A9"
+    ],
+    "recommendedNeighbors": [
+      "#D3CBC5",
+      "#A8A19C",
+      "#C8B6BB",
+      "#99806C"
+    ],
+    "recommendedComplements": [
+      "#6CA8AF",
+      "#13393E",
+      "#5AA4AE",
+      "#108B96"
+    ]
+  },
+  {
+    "nameHans": "红藤杖",
+    "nameHant": "紅藤杖",
+    "namePy": "HONG TENG ZHANG",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#928187",
+    "rgb": {
+      "r": 146,
+      "g": 129,
+      "b": 135
+    },
+    "hsl": {
+      "h": 339,
+      "s": 7,
+      "l": 54
+    },
+    "hue": "neutral",
+    "fiveElements": "fire",
+    "sentenceHans": "唯有红藤杖，相随万里来。",
+    "sentenceHant": "唯有紅藤杖，相隨萬裏來。",
+    "authorHans": "白居易",
+    "authorHant": "白居易",
+    "sentenceFromHans": "红藤杖",
+    "sentenceFromHant": "紅藤杖",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9D858F",
+      "#76555D",
+      "#C8B6BB",
+      "#5C4F55"
+    ],
+    "recommendedNeighbors": [
+      "#A88787",
+      "#BDB2B2",
+      "#B27777",
+      "#A85858"
+    ],
+    "recommendedComplements": [
+      "#B1D5C8",
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1"
+    ]
+  },
+  {
+    "nameHans": "紫鼠",
+    "nameHant": "紫鼠",
+    "namePy": "ZI SHU",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#594C57",
+    "rgb": {
+      "r": 89,
+      "g": 76,
+      "b": 87
+    },
+    "hsl": {
+      "h": 309,
+      "s": 8,
+      "l": 32
+    },
+    "hue": "neutral",
+    "fiveElements": "fire",
+    "sentenceHans": "将军纵博场场胜，赌得单于貂鼠袍。",
+    "sentenceHant": "將軍縱博場場勝，賭得單于貂鼠袍。",
+    "authorHans": "岑参",
+    "authorHant": "岑參",
+    "sentenceFromHans": "赵将军歌",
+    "sentenceFromHant": "趙將軍歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#91828F",
+      "#7E527F",
+      "#9C8D9B",
+      "#A6559D"
+    ],
+    "recommendedNeighbors": [
+      "#6A5B6D",
+      "#5C4F55",
+      "#814662",
+      "#A76283"
+    ],
+    "recommendedComplements": [
+      "#698E6A",
+      "#778A77",
+      "#2A6E3F",
+      "#81A380"
+    ]
+  },
+  {
+    "nameHans": "黄粱",
+    "nameHant": "黃粱",
+    "namePy": "HUANG LIANG",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#C4B798",
+    "rgb": {
+      "r": 196,
+      "g": 183,
+      "b": 152
+    },
+    "hsl": {
+      "h": 42,
+      "s": 27,
+      "l": 68
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "夜雨翦春韭，新炊间黄粱。",
+    "sentenceHant": "夜雨翦春韭，新炊間黃粱。",
+    "authorHans": "杜甫",
+    "authorHant": "杜甫",
+    "sentenceFromHans": "赠卫八处士",
+    "sentenceFromHant": "贈衛八處士",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#B4A379",
+      "#D4C9AA",
+      "#BFA782",
+      "#D5C8A0"
+    ],
+    "recommendedNeighbors": [
+      "#BFC096",
+      "#DDC5B8",
+      "#BEB1AA",
+      "#BD9683"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#12264F",
+      "#2E59A7"
+    ]
+  },
+  {
+    "nameHans": "蒸栗",
+    "nameHant": "蒸栗",
+    "namePy": "ZHENG LI",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#A58A5F",
+    "rgb": {
+      "r": 165,
+      "g": 138,
+      "b": 95
+    },
+    "hsl": {
+      "h": 37,
+      "s": 28,
+      "l": 51
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "烝栗绢绀缙红繎，青绮绫縠靡润鲜。",
+    "sentenceHant": "烝慄絹紺縉紅繎，青綺綾縠靡潤鮮。",
+    "authorHans": "史游",
+    "authorHant": "史遊",
+    "sentenceFromHans": "急就篇",
+    "sentenceFromHant": "急就篇",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9E8358",
+      "#AA8E59",
+      "#94784F",
+      "#9E8C6B"
+    ],
+    "recommendedNeighbors": [
+      "#BC836B",
+      "#938F4C",
+      "#8F6D5F",
+      "#955A42"
+    ],
+    "recommendedComplements": [
+      "#6B798E",
+      "#6F94CD",
+      "#8BA3C7",
+      "#151D29"
+    ]
+  },
+  {
+    "nameHans": "射干",
+    "nameHant": "射干",
+    "namePy": "YE GAN",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#7C623F",
+    "rgb": {
+      "r": 124,
+      "g": 98,
+      "b": 63
+    },
+    "hsl": {
+      "h": 34,
+      "s": 33,
+      "l": 37
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "青荃射干，揭车苞并。",
+    "sentenceHant": "青荃射幹，揭車苞並。",
+    "authorHans": "秦宋玉",
+    "authorHant": "秦宋玉",
+    "sentenceFromHans": "高唐赋",
+    "sentenceFromHant": "高唐賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#896D47",
+      "#81663B",
+      "#644D31",
+      "#8B7042"
+    ],
+    "recommendedNeighbors": [
+      "#9A6655",
+      "#72453A",
+      "#B15A43",
+      "#938F4C"
+    ],
+    "recommendedComplements": [
+      "#88ABDA",
+      "#A3BBDB",
+      "#1E2732",
+      "#3C4654"
+    ]
+  },
+  {
+    "nameHans": "油葫芦",
+    "nameHant": "油葫蘆",
+    "namePy": "YOU HU LU",
+    "categoryHans": "白露",
+    "categoryHant": "白露",
+    "term": "bailu",
+    "hex": "#644D31",
+    "rgb": {
+      "r": 100,
+      "g": 77,
+      "b": 49
+    },
+    "hsl": {
+      "h": 33,
+      "s": 34,
+      "l": 29
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "油葫芦，黑睛浅黄晕，青黑喙，吻根黄。",
+    "sentenceHant": "油葫蘆，黑睛淺黃暈，青黑喙，吻根黃。",
+    "authorHans": "蒋廷锡",
+    "authorHant": "蔣廷錫",
+    "sentenceFromHans": "清宫鸟谱",
+    "sentenceFromHant": "清宮鳥譜",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7C623F",
+      "#81663B",
+      "#7C5B3E",
+      "#896D47"
+    ],
+    "recommendedNeighbors": [
+      "#72453A",
+      "#B15A43",
+      "#662B1F",
+      "#B26D5D"
+    ],
+    "recommendedComplements": [
+      "#1E2732",
+      "#354E6B",
+      "#88ABDA",
+      "#A3BBDB"
+    ]
+  },
+  {
+    "nameHans": "卵色",
+    "nameHant": "卵色",
+    "namePy": "LUAN SE",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#D5E3D4",
+    "rgb": {
+      "r": 213,
+      "g": 227,
+      "b": 212
+    },
+    "hsl": {
+      "h": 116,
+      "s": 21,
+      "l": 86
+    },
+    "hue": "green",
+    "fiveElements": "metal",
+    "sentenceHans": "夜月琉璃水，春风卵色天。",
+    "sentenceHant": "夜月琉璃水，春風卵色天。",
+    "authorHans": "沈青箱",
+    "authorHant": "沈青箱",
+    "sentenceFromHans": "过台城感旧",
+    "sentenceFromHant": "過臺城感舊",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BED2BB",
+      "#9BB496",
+      "#CAD7C5",
+      "#81A380"
+    ],
+    "recommendedNeighbors": [
+      "#EBEEE8",
+      "#B3BDA9",
+      "#6A8D52",
+      "#A8BF8F"
+    ],
+    "recommendedComplements": [
+      "#6C216D",
+      "#7E527F",
+      "#7D5284",
+      "#6A5B6D"
+    ]
+  },
+  {
+    "nameHans": "葭菼",
+    "nameHant": "葭菼",
+    "namePy": "JIA TAN",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#CAD7C5",
+    "rgb": {
+      "r": 202,
+      "g": 215,
+      "b": 197
+    },
+    "hsl": {
+      "h": 103,
+      "s": 18,
+      "l": 81
+    },
+    "hue": "green",
+    "fiveElements": "metal",
+    "sentenceHans": "内阜川禽，外丰葭菼。",
+    "sentenceHant": "內阜川禽，外豐葭菼。",
+    "authorHans": "张衡",
+    "authorHant": "張衡",
+    "sentenceFromHans": "东京赋",
+    "sentenceFromHant": "東京賦",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BECAB7",
+      "#BEC2BC",
+      "#BED2BB",
+      "#9BB496"
+    ],
+    "recommendedNeighbors": [
+      "#A8B78C",
+      "#A7AAA1",
+      "#698E6A",
+      "#C0D09D"
+    ],
+    "recommendedComplements": [
+      "#D3CCD6",
+      "#A67EB7",
+      "#663D74",
+      "#DCC7E1"
+    ]
+  },
+  {
+    "nameHans": "冰台",
+    "nameHant": "冰台",
+    "namePy": "BING TAI",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#BECAB7",
+    "rgb": {
+      "r": 190,
+      "g": 202,
+      "b": 183
+    },
+    "hsl": {
+      "h": 98,
+      "s": 15,
+      "l": 75
+    },
+    "hue": "green",
+    "fiveElements": "metal",
+    "sentenceHans": "春将去、冰台初长，绮钱重叠。",
+    "sentenceHant": "春將去、冰臺初長，綺錢重疊。",
+    "authorHans": "徐灿",
+    "authorHant": "徐燦",
+    "sentenceFromHans": "满江红",
+    "sentenceFromHant": "滿江紅",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BEC2BC",
+      "#CAD7C5",
+      "#B3BDA9",
+      "#EBEEE8"
+    ],
+    "recommendedNeighbors": [
+      "#C0D09D",
+      "#81A380",
+      "#BEC2B3",
+      "#A9BE7B"
+    ],
+    "recommendedComplements": [
+      "#422256",
+      "#BBA1CB",
+      "#D3CCD6",
+      "#A67EB7"
+    ]
+  },
+  {
+    "nameHans": "青古",
+    "nameHant": "青古",
+    "namePy": "QING GU",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#B3BDA9",
+    "rgb": {
+      "r": 179,
+      "g": 189,
+      "b": 169
+    },
+    "hsl": {
+      "h": 90,
+      "s": 13,
+      "l": 70
+    },
+    "hue": "green",
+    "fiveElements": "metal",
+    "sentenceHans": "金箔行，为本乡有名出品，有青、赤二种。",
+    "sentenceHant": "金箔行，為本鄉有名出品，有青、赤二種。",
+    "authorHans": "冼宝干",
+    "authorHant": "冼寶榦",
+    "sentenceFromHans": "佛山忠义乡志",
+    "sentenceFromHant": "佛山忠義鄉志",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#C9CFC1",
+      "#A8BF8F",
+      "#90A07D",
+      "#BECAB7"
+    ],
+    "recommendedNeighbors": [
+      "#9BB496",
+      "#BED2BB",
+      "#EBEDDF",
+      "#5D7259"
+    ],
+    "recommendedComplements": [
+      "#9B8EA9",
+      "#422256",
+      "#BBA1CB",
+      "#D3CCD6"
+    ]
+  },
+  {
+    "nameHans": "栾华",
+    "nameHant": "欒華",
+    "namePy": "LUAN HUA",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#C0AD5E",
+    "rgb": {
+      "r": 192,
+      "g": 173,
+      "b": 94
+    },
+    "hsl": {
+      "h": 48,
+      "s": 44,
+      "l": 56
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "叶似木槿而薄细，花黄似槐而稍长大。",
+    "sentenceHant": "葉似木槿而薄細，花黃似槐而稍長大。",
+    "authorHans": "栾华",
+    "authorHant": "欒華",
+    "sentenceFromHans": "本草图经",
+    "sentenceFromHant": "本草圖經",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#AA9649",
+      "#CAB272",
+      "#BF9C46",
+      "#B3934B"
+    ],
+    "recommendedNeighbors": [
+      "#B49273",
+      "#906C4A",
+      "#BD8253",
+      "#D9883D"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#A4ABD6",
+      "#5976BA",
+      "#757CBB"
+    ]
+  },
+  {
+    "nameHans": "大赤",
+    "nameHant": "大赤",
+    "namePy": "DA CHI",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#AA9649",
+    "rgb": {
+      "r": 170,
+      "g": 150,
+      "b": 73
+    },
+    "hsl": {
+      "h": 48,
+      "s": 40,
+      "l": 48
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "大赤，九旗之通帛。",
+    "sentenceHant": "大赤，九旗之通帛。",
+    "authorHans": "郑玄",
+    "authorHant": "鄭玄",
+    "sentenceFromHans": "周礼·春官·巾车·注",
+    "sentenceFromHant": "周禮·春官·巾車·注",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#C0AD5E",
+      "#B3934B",
+      "#BF9C46",
+      "#A99F70"
+    ],
+    "recommendedNeighbors": [
+      "#906C4A",
+      "#B49273",
+      "#7C5B3E",
+      "#BD8253"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#A4ABD6",
+      "#5976BA",
+      "#757CBB"
+    ]
+  },
+  {
+    "nameHans": "佛赤",
+    "nameHant": "佛赤",
+    "namePy": "FU CHI",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#8F3D2C",
+    "rgb": {
+      "r": 143,
+      "g": 61,
+      "b": 44
+    },
+    "hsl": {
+      "h": 10,
+      "s": 53,
+      "l": 37
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "亦称紫赤金。",
+    "sentenceHant": "亦稱紫赤金。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "中国绘画雕塑建筑",
+    "sentenceFromHant": "中國繪畫雕塑建築",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#873424",
+      "#662B1F",
+      "#A64036",
+      "#B13B2E"
+    ],
+    "recommendedNeighbors": [
+      "#906C4A",
+      "#D9883D",
+      "#D08635",
+      "#B81A35"
+    ],
+    "recommendedComplements": [
+      "#87C0CA",
+      "#32788A",
+      "#006D87",
+      "#13393E"
+    ]
+  },
+  {
+    "nameHans": "蜜褐",
+    "nameHant": "蜜褐",
+    "namePy": "MI HE",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#683632",
+    "rgb": {
+      "r": 104,
+      "g": 54,
+      "b": 50
+    },
+    "hsl": {
+      "h": 4,
+      "s": 35,
+      "l": 30
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "王家池上见芙蕖，蜜褐装成态有余。",
+    "sentenceHant": "王家池上見芙蕖，蜜褐裝成態有餘。",
+    "authorHans": "程敏政",
+    "authorHant": "程敏政",
+    "sentenceFromHans": "丹徒王玺家蜜 褐莲卷追赋明",
+    "sentenceFromHant": "丹徒王璽家蜜 褐蓮卷追賦明",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#72453A",
+      "#662B2F",
+      "#4C1E1A",
+      "#95302E"
+    ],
+    "recommendedNeighbors": [
+      "#76555D",
+      "#7C5B3E",
+      "#9F5221",
+      "#903754"
+    ],
+    "recommendedComplements": [
+      "#108B96",
+      "#A4C9CC",
+      "#509296",
+      "#007175"
+    ]
+  },
+  {
+    "nameHans": "孔雀蓝",
+    "nameHant": "孔雀藍",
+    "namePy": "KONG QUE LAN",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#4994C4",
+    "rgb": {
+      "r": 73,
+      "g": 148,
+      "b": 196
+    },
+    "hsl": {
+      "h": 203,
+      "s": 51,
+      "l": 53
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "法蓝、法翠二色，旧惟成窑有，翡翠最佳。",
+    "sentenceHant": "法藍、法翠二色，舊惟成窯有，翡翠最佳。",
+    "authorHans": "张九钺",
+    "authorHant": "張九鉞",
+    "sentenceFromHans": "南窑笔记",
+    "sentenceFromHant": "南窯筆記",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#4182A4",
+      "#6E9BC5",
+      "#3271AE",
+      "#8AABCC"
+    ],
+    "recommendedNeighbors": [
+      "#5976BA",
+      "#509296",
+      "#226B68",
+      "#206864"
+    ],
+    "recommendedComplements": [
+      "#9F5221",
+      "#775039",
+      "#804C2E",
+      "#F5B087"
+    ]
+  },
+  {
+    "nameHans": "吐绶蓝",
+    "nameHant": "吐綬藍",
+    "namePy": "TU SHOU LAN",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#4182A4",
+    "rgb": {
+      "r": 65,
+      "g": 130,
+      "b": 164
+    },
+    "hsl": {
+      "h": 201,
+      "s": 43,
+      "l": 45
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "吐绶鸟，其身大如鸐，五色，出巴东山中。",
+    "sentenceHant": "吐綬鳥，其身大如鸐，五色，出巴東山中。",
+    "authorHans": "任昉",
+    "authorHant": "任昉",
+    "sentenceFromHans": "吐绶鸟",
+    "sentenceFromHant": "吐綬鳥",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#4994C4",
+      "#547689",
+      "#32788A",
+      "#3271AE"
+    ],
+    "recommendedNeighbors": [
+      "#5976BA",
+      "#1A2847",
+      "#226B68",
+      "#12264F"
+    ],
+    "recommendedComplements": [
+      "#BEB1AA",
+      "#945635",
+      "#CC5D20",
+      "#CC5D20"
+    ]
+  },
+  {
+    "nameHans": "鱼师青",
+    "nameHant": "魚師青",
+    "namePy": "YU SHI QING",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#32788A",
+    "rgb": {
+      "r": 50,
+      "g": 120,
+      "b": 138
+    },
+    "hsl": {
+      "h": 192,
+      "s": 47,
+      "l": 37
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "翠小者，谓之翠碧鸟，一名鱼师。",
+    "sentenceHant": "翠小者，謂之翠碧鳥，一名魚師。",
+    "authorHans": "陆佃",
+    "authorHant": "陸佃",
+    "sentenceFromHans": "埤雅",
+    "sentenceFromHant": "埤雅",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#284852",
+      "#4182A4",
+      "#5AA4AE",
+      "#13393E"
+    ],
+    "recommendedNeighbors": [
+      "#354E6B",
+      "#88BFB8",
+      "#1E2732",
+      "#6F94CD"
+    ],
+    "recommendedComplements": [
+      "#DD6B4F",
+      "#72453A",
+      "#F3A694",
+      "#EE7959"
+    ]
+  },
+  {
+    "nameHans": "软翠",
+    "nameHant": "軟翠",
+    "namePy": "RUAN CUI",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#006D87",
+    "rgb": {
+      "r": 0,
+      "g": 109,
+      "b": 135
+    },
+    "hsl": {
+      "h": 192,
+      "s": 100,
+      "l": 26
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "鸭绿澹不波，软翠净如洗。",
+    "sentenceHant": "鴨綠澹不波，軟翠淨如洗。",
+    "authorHans": "程公许",
+    "authorHant": "程公許",
+    "sentenceFromHans": "解缆凌云快晴",
+    "sentenceFromHant": "解纜凌雲快晴",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#007175",
+      "#108B96",
+      "#106898",
+      "#06436F"
+    ],
+    "recommendedNeighbors": [
+      "#12264F",
+      "#19325F",
+      "#2E59A7",
+      "#354E6B"
+    ],
+    "recommendedComplements": [
+      "#DD6B4F",
+      "#72453A",
+      "#F3A694",
+      "#EE7959"
+    ]
+  },
+  {
+    "nameHans": "浅云",
+    "nameHant": "淺雲",
+    "namePy": "QIAN YUN",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#EAEEF1",
+    "rgb": {
+      "r": 234,
+      "g": 238,
+      "b": 241
+    },
+    "hsl": {
+      "h": 206,
+      "s": 20,
+      "l": 93
+    },
+    "hue": "neutral",
+    "fiveElements": "metal",
+    "sentenceHans": "小抹淡随寒露立，半横细入浅云笼。",
+    "sentenceHant": "小抹淡隨寒露立，半橫細入淺雲籠。",
+    "authorHans": "雁字三十首次韵",
+    "authorHant": "雁字三十首次韻",
+    "sentenceFromHans": "雁字三十首次韵",
+    "sentenceFromHant": "雁字三十首次韻",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D4DDE1",
+      "#BDCBD2",
+      "#D4E5EF",
+      "#9AA7B1"
+    ],
+    "recommendedNeighbors": [
+      "#A4C9CC",
+      "#6CA8AF",
+      "#5AA4AE",
+      "#A4ABD6"
+    ],
+    "recommendedComplements": [
+      "#7C461E",
+      "#D3CBC5",
+      "#BD8253",
+      "#A8A19C"
+    ]
+  },
+  {
+    "nameHans": "素采",
+    "nameHant": "素採",
+    "namePy": "SU CAI",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#D4DDE1",
+    "rgb": {
+      "r": 212,
+      "g": 221,
+      "b": 225
+    },
+    "hsl": {
+      "h": 198,
+      "s": 18,
+      "l": 86
+    },
+    "hue": "cyan",
+    "fiveElements": "metal",
+    "sentenceHans": "波间素彩涵秋净，天际清光映树低。",
+    "sentenceHant": "波間素彩涵秋淨，天際清光映樹低。",
+    "authorHans": "林环",
+    "authorHant": "林環",
+    "sentenceFromHans": "卢沟晓日",
+    "sentenceFromHant": "盧溝曉日",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BDCBD2",
+      "#B2BFC3",
+      "#EAEEF1",
+      "#98B6C2"
+    ],
+    "recommendedNeighbors": [
+      "#88BFB8",
+      "#5DA39D",
+      "#5976BA",
+      "#3D8E86"
+    ],
+    "recommendedComplements": [
+      "#BC836B",
+      "#EA5514",
+      "#984F31",
+      "#A46244"
+    ]
+  },
+  {
+    "nameHans": "影青",
+    "nameHant": "影青",
+    "namePy": "YING QING",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#BDCBD2",
+    "rgb": {
+      "r": 189,
+      "g": 203,
+      "b": 210
+    },
+    "hsl": {
+      "h": 200,
+      "s": 19,
+      "l": 78
+    },
+    "hue": "cyan",
+    "fiveElements": "metal",
+    "sentenceHans": "有一种碗碟，质薄而色白，微似定，市肆人呼为影青，以其釉色微带青色也。",
+    "sentenceHant": "有一種碗碟，質薄而色白，微似定，市肆人呼為影青，以其釉色微帶青色也。",
+    "authorHans": "刘子芬",
+    "authorHant": "劉子芬",
+    "sentenceFromHans": "竹园陶说",
+    "sentenceFromHant": "竹園陶說",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D4DDE1",
+      "#98B6C2",
+      "#B2BFC3",
+      "#9AA7B1"
+    ],
+    "recommendedNeighbors": [
+      "#B2B6B6",
+      "#5976BA",
+      "#5DA39D",
+      "#88BFB8"
+    ],
+    "recommendedComplements": [
+      "#422517",
+      "#D2AF9D",
+      "#BD9683",
+      "#81492C"
+    ]
+  },
+  {
+    "nameHans": "逍遥游",
+    "nameHant": "逍遙遊",
+    "namePy": "XIAO YAO YOU",
+    "categoryHans": "秋分",
+    "categoryHant": "秋分",
+    "term": "qiufen",
+    "hex": "#B2BFC3",
+    "rgb": {
+      "r": 178,
+      "g": 191,
+      "b": 195
+    },
+    "hsl": {
+      "h": 194,
+      "s": 12,
+      "l": 73
+    },
+    "hue": "neutral",
+    "fiveElements": "metal",
+    "sentenceHans": "自言其中有至乐，适意无异逍遥游。",
+    "sentenceHant": "自言其中有至樂，適意無異逍遙遊。",
+    "authorHans": "苏轼",
+    "authorHant": "蘇軾",
+    "sentenceFromHans": "石苍舒醉墨堂",
+    "sentenceFromHant": "石蒼舒醉墨堂",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BDCBD2",
+      "#98B6C2",
+      "#D4DDE1",
+      "#7F9FAF"
+    ],
+    "recommendedNeighbors": [
+      "#5DA39D",
+      "#88BFB8",
+      "#8BA3C7",
+      "#6B798E"
+    ],
+    "recommendedComplements": [
+      "#ED6D46",
+      "#DA9E8C",
+      "#EE7959",
+      "#9A6655"
+    ]
+  },
+  {
+    "nameHans": "醽醁",
+    "nameHant": "醽醁",
+    "namePy": "LING LU",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#A6BAB1",
+    "rgb": {
+      "r": 166,
+      "g": 186,
+      "b": 177
+    },
+    "hsl": {
+      "h": 153,
+      "s": 13,
+      "l": 69
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "波翻醽醁盏，雾暖芙蓉绣。",
+    "sentenceHant": "波翻醽醁醆，霧暖芙蓉繡。",
+    "authorHans": "周紫芝",
+    "authorHant": "周紫芝",
+    "sentenceFromHans": "千秋岁·生日",
+    "sentenceFromHant": "千秋歲·生日",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#99BCAC",
+      "#80A492",
+      "#819D8E",
+      "#B1D5C8"
+    ],
+    "recommendedNeighbors": [
+      "#88BFB8",
+      "#5DA39D",
+      "#B2B6B6",
+      "#3D8E86"
+    ],
+    "recommendedComplements": [
+      "#B83570",
+      "#5C4F55",
+      "#814662",
+      "#602641"
+    ]
+  },
+  {
+    "nameHans": "翠涛",
+    "nameHant": "翠濤",
+    "namePy": "CUI TAO",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#819D8E",
+    "rgb": {
+      "r": 129,
+      "g": 157,
+      "b": 142
+    },
+    "hsl": {
+      "h": 148,
+      "s": 13,
+      "l": 56
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "碧瑶杯重翠涛深，笑领飞琼语。",
+    "sentenceHant": "碧瑤杯重翠濤深，笑領飛瓊語。",
+    "authorHans": "陈著",
+    "authorHant": "陳著",
+    "sentenceFromHans": "烛影摇红·寿 元实通判母",
+    "sentenceFromHant": "燭影搖紅·壽 元實通判母",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#80A492",
+      "#86908A",
+      "#6B7D73",
+      "#5F766A"
+    ],
+    "recommendedNeighbors": [
+      "#88BFB8",
+      "#698E6A",
+      "#5DA39D",
+      "#778A77"
+    ],
+    "recommendedComplements": [
+      "#CC73A0",
+      "#B95A89",
+      "#995D7F",
+      "#A76283"
+    ]
+  },
+  {
+    "nameHans": "青梅",
+    "nameHant": "青梅",
+    "namePy": "QING MEI",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#778A77",
+    "rgb": {
+      "r": 119,
+      "g": 138,
+      "b": 119
+    },
+    "hsl": {
+      "h": 120,
+      "s": 8,
+      "l": 50
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "茂绿满繁枝，青梅结子时。",
+    "sentenceHant": "茂綠滿繁枝，青梅結子時。",
+    "authorHans": "蔡伸",
+    "authorHant": "蔡伸",
+    "sentenceFromHans": "菩萨蛮",
+    "sentenceFromHant": "菩薩蠻",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#698E6A",
+      "#81A380",
+      "#5D7259",
+      "#4F794A"
+    ],
+    "recommendedNeighbors": [
+      "#788A6F",
+      "#686A67",
+      "#BEC2BC",
+      "#86908A"
+    ],
+    "recommendedComplements": [
+      "#6C216D",
+      "#7E527F",
+      "#9C8D9B",
+      "#A6559D"
+    ]
+  },
+  {
+    "nameHans": "翕赩",
+    "nameHant": "翕赩",
+    "namePy": "XI XI",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#5F766A",
+    "rgb": {
+      "r": 95,
+      "g": 118,
+      "b": 106
+    },
+    "hsl": {
+      "h": 149,
+      "s": 11,
+      "l": 42
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "朝野盛文物，衣冠何翕赩。",
+    "sentenceHant": "朝野盛文物，衣冠何翕赩。",
+    "authorHans": "李白",
+    "authorHant": "李白",
+    "sentenceFromHans": "君子有所思行",
+    "sentenceFromHant": "君子有所思行",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#6B7D73",
+      "#819D8E",
+      "#80A492",
+      "#86908A"
+    ],
+    "recommendedNeighbors": [
+      "#88BFB8",
+      "#698E6A",
+      "#5DA39D",
+      "#3D8E86"
+    ],
+    "recommendedComplements": [
+      "#CC73A0",
+      "#B95A89",
+      "#A76283",
+      "#5C4F55"
+    ]
+  },
+  {
+    "nameHans": "九斤黄",
+    "nameHant": "九斤黃",
+    "namePy": "JIU JIN HUANG",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#DDB078",
+    "rgb": {
+      "r": 221,
+      "g": 176,
+      "b": 120
+    },
+    "hsl": {
+      "h": 33,
+      "s": 60,
+      "l": 67
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "鸡，产浦东者大，有九斤黄、黑十二之名。",
+    "sentenceHant": "雞，產浦東者大，有九斤黃、黑十二之名。",
+    "authorHans": "薛振东",
+    "authorHant": "薛振東",
+    "sentenceFromHans": "南汇县志",
+    "sentenceFromHant": "南匯縣志",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E1C199",
+      "#D2A36C",
+      "#DB9C5E",
+      "#DDBB99"
+    ],
+    "recommendedNeighbors": [
+      "#DA9E8C",
+      "#ECE093",
+      "#D77F66",
+      "#DD6B4F"
+    ],
+    "recommendedComplements": [
+      "#1E2732",
+      "#354E6B",
+      "#88ABDA",
+      "#A3BBDB"
+    ]
+  },
+  {
+    "nameHans": "杏子",
+    "nameHant": "杏子",
+    "namePy": "XING ZI",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#DA9233",
+    "rgb": {
+      "r": 218,
+      "g": 146,
+      "b": 51
+    },
+    "hsl": {
+      "h": 34,
+      "s": 69,
+      "l": 53
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "杏子梢头香蕾破，淡红褪白胭脂涴。",
+    "sentenceHant": "杏子梢頭香蕾破，淡紅褪白胭脂涴。",
+    "authorHans": "苏轼",
+    "authorHant": "蘇軾",
+    "sentenceFromHans": "蝶恋花",
+    "sentenceFromHant": "蝶戀花",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#DB9B34",
+      "#D08635",
+      "#E5A84B",
+      "#D9883D"
+    ],
+    "recommendedNeighbors": [
+      "#954024",
+      "#ED6D46",
+      "#D77F66",
+      "#DD6B4F"
+    ],
+    "recommendedComplements": [
+      "#88ABDA",
+      "#A3BBDB",
+      "#1E2732",
+      "#3C4654"
+    ]
+  },
+  {
+    "nameHans": "媚蝶",
+    "nameHant": "媚蝶",
+    "namePy": "MEI DIE",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#BC6E37",
+    "rgb": {
+      "r": 188,
+      "g": 110,
+      "b": 55
+    },
+    "hsl": {
+      "h": 25,
+      "s": 55,
+      "l": 48
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "乳莺啼晓销兰炷，媚蝶伤春失蕙丛。",
+    "sentenceHant": "乳鶯啼曉銷蘭炷，媚蝶傷春失蕙叢。",
+    "authorHans": "刘筠",
+    "authorHant": "劉筠",
+    "sentenceFromHans": "代意",
+    "sentenceFromHant": "代意",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BD8253",
+      "#9F6027",
+      "#D08635",
+      "#945635"
+    ],
+    "recommendedNeighbors": [
+      "#B13B2E",
+      "#D5B45C",
+      "#A64036",
+      "#CAB272"
+    ],
+    "recommendedComplements": [
+      "#12507B",
+      "#06436F",
+      "#9AA7B1",
+      "#66889E"
+    ]
+  },
+  {
+    "nameHans": "韎韐",
+    "nameHant": "韎韐",
+    "namePy": "MEI GE",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#9F5221",
+    "rgb": {
+      "r": 159,
+      "g": 82,
+      "b": 33
+    },
+    "hsl": {
+      "h": 23,
+      "s": 66,
+      "l": 38
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "君子至止，福禄如茨；韎韐有奭，以作六师。",
+    "sentenceHant": "君子至止，福祿如茨；韎韐有奭，以作六師。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "瞻彼洛矣",
+    "sentenceFromHant": "瞻彼洛矣",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7C461E",
+      "#9F6027",
+      "#CC5D20",
+      "#CC5D20"
+    ],
+    "recommendedNeighbors": [
+      "#9E2A22",
+      "#D12920",
+      "#BF9C46",
+      "#95302E"
+    ],
+    "recommendedComplements": [
+      "#4994C4",
+      "#7D929F",
+      "#66889E",
+      "#547689"
+    ]
+  },
+  {
+    "nameHans": "东方既白",
+    "nameHant": "東方既白",
+    "namePy": "DONG FANG JI BAI",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#8BA3C7",
+    "rgb": {
+      "r": 139,
+      "g": 163,
+      "b": 199
+    },
+    "hsl": {
+      "h": 216,
+      "s": 35,
+      "l": 66
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "相与枕藉乎舟中，不知东方之既白。",
+    "sentenceHant": "相與枕藉乎舟中，不知東方之既白。",
+    "authorHans": "苏轼",
+    "authorHant": "蘇軾",
+    "sentenceFromHans": "赤壁赋",
+    "sentenceFromHant": "赤壁賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#8AABCC",
+      "#A3BBDB",
+      "#6F94CD",
+      "#6E9BC5"
+    ],
+    "recommendedNeighbors": [
+      "#98B6C2",
+      "#A2D2E2",
+      "#B2BFC3",
+      "#4A4B9D"
+    ],
+    "recommendedComplements": [
+      "#E5A84B",
+      "#BFA782",
+      "#94784F",
+      "#BE9457"
+    ]
+  },
+  {
+    "nameHans": "绀宇",
+    "nameHant": "紺宇",
+    "namePy": "GAN YU",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#003D74",
+    "rgb": {
+      "r": 0,
+      "g": 61,
+      "b": 116
+    },
+    "hsl": {
+      "h": 208,
+      "s": 100,
+      "l": 23
+    },
+    "hue": "blue",
+    "fiveElements": "water",
+    "sentenceHans": "白发金山续旧游，依然绀宇压中流。",
+    "sentenceHant": "白髮金山續舊遊，依然紺宇壓中流。",
+    "authorHans": "文徵明",
+    "authorHant": "文徵明",
+    "sentenceFromHans": "金山诗追赋",
+    "sentenceFromHant": "金山詩追賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#003460",
+      "#06436F",
+      "#106898",
+      "#12507B"
+    ],
+    "recommendedNeighbors": [
+      "#108B96",
+      "#007175",
+      "#13393E",
+      "#226B68"
+    ],
+    "recommendedComplements": [
+      "#9F6027",
+      "#7C5B3E",
+      "#E18A3B",
+      "#B49273"
+    ]
+  },
+  {
+    "nameHans": "佛头青",
+    "nameHant": "佛頭青",
+    "namePy": "FU TOU QING",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#19325F",
+    "rgb": {
+      "r": 25,
+      "g": 50,
+      "b": 95
+    },
+    "hsl": {
+      "h": 219,
+      "s": 58,
+      "l": 24
+    },
+    "hue": "blue",
+    "fiveElements": "water",
+    "sentenceHans": "潮花人鬓白，山色佛头青。",
+    "sentenceHant": "潮花人鬢白，山色佛頭青。",
+    "authorHans": "白玉蟾",
+    "authorHant": "白玉蟾",
+    "sentenceFromHans": "景泰晚眺",
+    "sentenceFromHant": "景泰晚眺",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#12264F",
+      "#1A2847",
+      "#2E59A7",
+      "#3271AE"
+    ],
+    "recommendedNeighbors": [
+      "#4A4B9D",
+      "#284852",
+      "#32788A",
+      "#45465E"
+    ],
+    "recommendedComplements": [
+      "#AA8E59",
+      "#9E8C6B",
+      "#6D5C3D",
+      "#8B7042"
+    ]
+  },
+  {
+    "nameHans": "花青",
+    "nameHant": "花青",
+    "namePy": "HUA QING",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#1A2847",
+    "rgb": {
+      "r": 26,
+      "g": 40,
+      "b": 71
+    },
+    "hsl": {
+      "h": 221,
+      "s": 46,
+      "l": 19
+    },
+    "hue": "blue",
+    "fiveElements": "water",
+    "sentenceHans": "笑老去心情，也将醉眼，镇为花青。",
+    "sentenceHant": "笑老去心情，也將醉眼，鎮為花青。",
+    "authorHans": "赵以夫",
+    "authorHant": "趙以夫",
+    "sentenceFromHans": "忆旧游慢",
+    "sentenceFromHant": "憶舊遊慢",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#19325F",
+      "#12264F",
+      "#151D29",
+      "#354E6B"
+    ],
+    "recommendedNeighbors": [
+      "#4182A4",
+      "#547689",
+      "#106898",
+      "#615EA8"
+    ],
+    "recommendedComplements": [
+      "#D3A237",
+      "#BFA670",
+      "#AA8534",
+      "#FAC03D"
+    ]
+  },
+  {
+    "nameHans": "弗肯红",
+    "nameHant": "弗肯紅",
+    "namePy": "FU KEN HONG",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#ECD9C7",
+    "rgb": {
+      "r": 236,
+      "g": 217,
+      "b": 199
+    },
+    "hsl": {
+      "h": 29,
+      "s": 49,
+      "l": 85
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "今人染弗肯红名玉色，非也，当名肉红耳。",
+    "sentenceHant": "今人染弗肯紅名玉色，非也，當名肉紅耳。",
+    "authorHans": "袁文",
+    "authorHant": "袁文",
+    "sentenceFromHans": "瓮牗闲评",
+    "sentenceFromHant": "甕牗閑評",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#DDBB99",
+      "#E1C199",
+      "#D4C1A6",
+      "#DDC5B8"
+    ],
+    "recommendedNeighbors": [
+      "#EEEAD9",
+      "#EBE1A9",
+      "#E1D384",
+      "#C0AD5E"
+    ],
+    "recommendedComplements": [
+      "#6E9BC5",
+      "#576470",
+      "#3271AE",
+      "#AED0EE"
+    ]
+  },
+  {
+    "nameHans": "赤璋",
+    "nameHant": "赤璋",
+    "namePy": "CHI ZHANG",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#E1C199",
+    "rgb": {
+      "r": 225,
+      "g": 193,
+      "b": 153
+    },
+    "hsl": {
+      "h": 33,
+      "s": 55,
+      "l": 74
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "以青圭礼东方，以赤璋礼南方。",
+    "sentenceHant": "以青圭禮東方，以赤璋禮南方。",
+    "authorHans": "周公旦",
+    "authorHant": "周公旦",
+    "sentenceFromHans": "周礼·春官·大宗伯",
+    "sentenceFromHant": "周禮·春官·大宗伯",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#DDBB99",
+      "#DDB078",
+      "#D2A36C",
+      "#ECD9C7"
+    ],
+    "recommendedNeighbors": [
+      "#DA9E8C",
+      "#ECE093",
+      "#D77F66",
+      "#DD6B4F"
+    ],
+    "recommendedComplements": [
+      "#1E2732",
+      "#354E6B",
+      "#88ABDA",
+      "#A3BBDB"
+    ]
+  },
+  {
+    "nameHans": "茧色",
+    "nameHant": "繭色",
+    "namePy": "JIAN SE",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#C6A268",
+    "rgb": {
+      "r": 198,
+      "g": 162,
+      "b": 104
+    },
+    "hsl": {
+      "h": 37,
+      "s": 45,
+      "l": 59
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "半岭晴云堆茧色，上方朝雨杂龙涎。",
+    "sentenceHant": "半嶺晴雲堆繭色，上方朝雨雜龍涎。",
+    "authorHans": "丁复",
+    "authorHant": "丁復",
+    "sentenceFromHans": "送僧还径山",
+    "sentenceFromHant": "送僧還徑山",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BE9457",
+      "#BFA670",
+      "#B4884D",
+      "#D2A36C"
+    ],
+    "recommendedNeighbors": [
+      "#BC836B",
+      "#955A42",
+      "#938F4C",
+      "#984F31"
+    ],
+    "recommendedComplements": [
+      "#6B798E",
+      "#6F94CD",
+      "#8BA3C7",
+      "#151D29"
+    ]
+  },
+  {
+    "nameHans": "密陀僧",
+    "nameHant": "密陀僧",
+    "namePy": "MI TUO SENG",
+    "categoryHans": "寒露",
+    "categoryHant": "寒露",
+    "term": "hanlu",
+    "hex": "#B3934B",
+    "rgb": {
+      "r": 179,
+      "g": 147,
+      "b": 75
+    },
+    "hsl": {
+      "h": 42,
+      "s": 41,
+      "l": 50
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "黄丹胡粉密陀僧，此是嘉州造化能。",
+    "sentenceHant": "黃丹胡粉密陀僧，此是嘉州造化能。",
+    "authorHans": "陈楠",
+    "authorHant": "陳楠",
+    "sentenceFromHans": "金丹诗诀",
+    "sentenceFromHant": "金丹詩訣",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BF9C46",
+      "#BFA670",
+      "#AA8E59",
+      "#AA9649"
+    ],
+    "recommendedNeighbors": [
+      "#775039",
+      "#CDD171",
+      "#804C2E",
+      "#945635"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#12264F",
+      "#2E59A7"
+    ]
+  },
+  {
+    "nameHans": "银朱",
+    "nameHant": "銀硃",
+    "namePy": "YIN ZHU",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#D12920",
+    "rgb": {
+      "r": 209,
+      "g": 41,
+      "b": 32
+    },
+    "hsl": {
+      "h": 3,
+      "s": 73,
+      "l": 47
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "职司虽翰墨，佩服已银朱。",
+    "sentenceHant": "職司雖翰墨，佩服已銀硃。",
+    "authorHans": "柳贯",
+    "authorHant": "柳貫",
+    "sentenceFromHans": "赠别宋季任赴 甘肃提举二十韵",
+    "sentenceFromHant": "贈別宋季任赴 甘肅提舉二十韻",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#C12C1F",
+      "#9E2A22",
+      "#C8161D",
+      "#B93A26"
+    ],
+    "recommendedNeighbors": [
+      "#9F5221",
+      "#68361A",
+      "#DD7694",
+      "#BC6E37"
+    ],
+    "recommendedComplements": [
+      "#509296",
+      "#007175",
+      "#108B96",
+      "#A4C9CC"
+    ]
+  },
+  {
+    "nameHans": "胭脂虫",
+    "nameHant": "胭脂蟲",
+    "namePy": "YAN ZHI CHONG",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#AB1D22",
+    "rgb": {
+      "r": 171,
+      "g": 29,
+      "b": 34
+    },
+    "hsl": {
+      "h": 358,
+      "s": 71,
+      "l": 39
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "谁碾朱砂拥菊丛，丹葩和露绽西风；一从番舶来中土，赢得扶桑晓日红。",
+    "sentenceHant": "誰碾硃砂擁菊叢，丹葩和露綻西風；一從番舶來中土，贏得扶桑曉日紅。",
+    "authorHans": "缪公恩",
+    "authorHant": "繆公恩",
+    "sentenceFromHans": "洋红",
+    "sentenceFromHant": "洋紅",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A72126",
+      "#8F1D22",
+      "#C8161D",
+      "#7C191E"
+    ],
+    "recommendedNeighbors": [
+      "#984F31",
+      "#EA5514",
+      "#CB5C83",
+      "#CC5D20"
+    ],
+    "recommendedComplements": [
+      "#226B68",
+      "#206864",
+      "#B2B6B6",
+      "#5DA39D"
+    ]
+  },
+  {
+    "nameHans": "朱樱",
+    "nameHant": "朱櫻",
+    "namePy": "ZHU YING",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#8F1D22",
+    "rgb": {
+      "r": 143,
+      "g": 29,
+      "b": 34
+    },
+    "hsl": {
+      "h": 357,
+      "s": 66,
+      "l": 34
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "朱樱春熟，素柰夏成。",
+    "sentenceHant": "朱櫻春熟，素柰夏成。",
+    "authorHans": "左思",
+    "authorHant": "左思",
+    "sentenceFromHans": "三都赋",
+    "sentenceFromHant": "三都賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7C191E",
+      "#A72126",
+      "#AB1D22",
+      "#822327"
+    ],
+    "recommendedNeighbors": [
+      "#984F31",
+      "#5B3222",
+      "#A73766",
+      "#ED6D3D"
+    ],
+    "recommendedComplements": [
+      "#206864",
+      "#226B68",
+      "#5DA39D",
+      "#B2B6B6"
+    ]
+  },
+  {
+    "nameHans": "爵头",
+    "nameHant": "爵頭",
+    "namePy": "JUE TOU",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#631216",
+    "rgb": {
+      "r": 99,
+      "g": 18,
+      "b": 22
+    },
+    "hsl": {
+      "h": 357,
+      "s": 69,
+      "l": 23
+    },
+    "hue": "red_warm",
+    "fiveElements": "water",
+    "sentenceHans": "云‘如爵头然’者，以目验爵头，赤多黑少，故以爵头为喻也。",
+    "sentenceHant": "雲『如爵頭然』者，以目驗爵頭，赤多黑少，故以爵頭為喻也。",
+    "authorHans": "郑玄",
+    "authorHant": "鄭玄",
+    "sentenceFromHans": "仪礼注疏",
+    "sentenceFromHant": "儀禮註疏",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7C191E",
+      "#8F1D22",
+      "#822327",
+      "#A72126"
+    ],
+    "recommendedNeighbors": [
+      "#5B3222",
+      "#984F31",
+      "#68361A",
+      "#422517"
+    ],
+    "recommendedComplements": [
+      "#206864",
+      "#226B68",
+      "#5DA39D",
+      "#B2B6B6"
+    ]
+  },
+  {
+    "nameHans": "甘石",
+    "nameHant": "甘石",
+    "namePy": "GAN SHI",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#BDB2B2",
+    "rgb": {
+      "r": 189,
+      "g": 178,
+      "b": 178
+    },
+    "hsl": {
+      "h": 0,
+      "s": 8,
+      "l": 72
+    },
+    "hue": "neutral",
+    "fiveElements": "metal",
+    "sentenceHans": "炉甘石，阳明经药也，治目病为要药。",
+    "sentenceHant": "爐甘石，陽明經藥也，治目病為要藥。",
+    "authorHans": "李时珍",
+    "authorHant": "李時珍",
+    "sentenceFromHans": "本草纲目",
+    "sentenceFromHant": "本草綱目",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#C8B5B3",
+      "#A88787",
+      "#EFEFEF",
+      "#B27777"
+    ],
+    "recommendedNeighbors": [
+      "#BEA89D",
+      "#BEB1AA",
+      "#928187",
+      "#BD9683"
+    ],
+    "recommendedComplements": [
+      "#B2B6B6",
+      "#007175",
+      "#226B68",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "迷楼灰",
+    "nameHant": "迷樓灰",
+    "namePy": "MI LOU HUI",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#91828F",
+    "rgb": {
+      "r": 145,
+      "g": 130,
+      "b": 143
+    },
+    "hsl": {
+      "h": 308,
+      "s": 6,
+      "l": 54
+    },
+    "hue": "neutral",
+    "fiveElements": "fire",
+    "sentenceHans": "神器失所托，化作迷楼灰。",
+    "sentenceHant": "神器失所託，化作迷樓灰。",
+    "authorHans": "曹勋",
+    "authorHant": "曹勳",
+    "sentenceFromHans": "隋堤柳",
+    "sentenceFromHant": "隋堤柳",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9C8D9B",
+      "#594C57",
+      "#A6559D",
+      "#BA79B1"
+    ],
+    "recommendedNeighbors": [
+      "#A76283",
+      "#5C4F55",
+      "#9D858F",
+      "#DCC7E1"
+    ],
+    "recommendedComplements": [
+      "#698E6A",
+      "#778A77",
+      "#81A380",
+      "#2A6E3F"
+    ]
+  },
+  {
+    "nameHans": "鸦雏",
+    "nameHant": "鴉雛",
+    "namePy": "YA CHU",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#6A5B6D",
+    "rgb": {
+      "r": 106,
+      "g": 91,
+      "b": 109
+    },
+    "hsl": {
+      "h": 290,
+      "s": 9,
+      "l": 39
+    },
+    "hue": "neutral",
+    "fiveElements": "water",
+    "sentenceHans": "单衫杏子红，双鬓鸦雏色。",
+    "sentenceHant": "單衫杏子紅，雙鬢鴉雛色。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "西洲曲",
+    "sentenceFromHant": "西洲曲",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7D5284",
+      "#7E527F",
+      "#663D74",
+      "#A67EB7"
+    ],
+    "recommendedNeighbors": [
+      "#594C57",
+      "#9B8EA9",
+      "#CE93BF",
+      "#995D7F"
+    ],
+    "recommendedComplements": [
+      "#9BB496",
+      "#5D7259",
+      "#3F503B",
+      "#BED2BB"
+    ]
+  },
+  {
+    "nameHans": "烟墨",
+    "nameHant": "煙墨",
+    "namePy": "YAN MO",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#5C4F55",
+    "rgb": {
+      "r": 92,
+      "g": 79,
+      "b": 85
+    },
+    "hsl": {
+      "h": 332,
+      "s": 8,
+      "l": 34
+    },
+    "hue": "neutral",
+    "fiveElements": "fire",
+    "sentenceHans": "徒以烟墨不言，受其驱染；纸札无情，任其摇襞。",
+    "sentenceHant": "徒以煙墨不言，受其驅染；紙札無情，任其搖襞。",
+    "authorHans": "萧纲",
+    "authorHant": "蕭綱",
+    "sentenceFromHans": "与湘东王书",
+    "sentenceFromHant": "與湘東王書",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#814662",
+      "#9D858F",
+      "#995D7F",
+      "#928187"
+    ],
+    "recommendedNeighbors": [
+      "#594C57",
+      "#7C4449",
+      "#81474C",
+      "#9E696D"
+    ],
+    "recommendedComplements": [
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1",
+      "#80A492"
+    ]
+  },
+  {
+    "nameHans": "十样锦",
+    "nameHant": "十樣錦",
+    "namePy": "SHI YANG JIN",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#F8C6B5",
+    "rgb": {
+      "r": 248,
+      "g": 198,
+      "b": 181
+    },
+    "hsl": {
+      "h": 15,
+      "s": 83,
+      "l": 84
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "孟氏在蜀时制十样锦，名长安竹、天下乐、雕团...",
+    "sentenceHant": "孟氏在蜀時製十樣錦，名長安竹、天下樂、鵰團...",
+    "authorHans": "戚辅之",
+    "authorHant": "戚輔之",
+    "sentenceFromHans": "佩轩楚客谈",
+    "sentenceFromHant": "佩軒楚客談",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#F3A694",
+      "#F29A76",
+      "#F5B087",
+      "#EF845D"
+    ],
+    "recommendedNeighbors": [
+      "#E5A84B",
+      "#F091A0",
+      "#DA9233",
+      "#F6BEC8"
+    ],
+    "recommendedComplements": [
+      "#A2D2E2",
+      "#284852",
+      "#B2BFC3",
+      "#98B6C2"
+    ]
+  },
+  {
+    "nameHans": "檀唇",
+    "nameHant": "檀唇",
+    "namePy": "TAN CHUN",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#DA9E8C",
+    "rgb": {
+      "r": 218,
+      "g": 158,
+      "b": 140
+    },
+    "hsl": {
+      "h": 14,
+      "s": 51,
+      "l": 70
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "檀唇呼吸宫商改，怨情渐逐清新举。",
+    "sentenceHant": "檀脣呼吸宮商改，怨情漸逐清新舉。",
+    "authorHans": "秦韬玉",
+    "authorHant": "秦韜玉",
+    "sentenceFromHans": "吹笙歌",
+    "sentenceFromHant": "吹笙歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#D77F66",
+      "#D2AF9D",
+      "#BC836B",
+      "#DD6B4F"
+    ],
+    "recommendedNeighbors": [
+      "#E1C199",
+      "#DDB078",
+      "#BEA78B",
+      "#D4C1A6"
+    ],
+    "recommendedComplements": [
+      "#284852",
+      "#B2BFC3",
+      "#A2D2E2",
+      "#32788A"
+    ]
+  },
+  {
+    "nameHans": "琼琚",
+    "nameHant": "瓊琚",
+    "namePy": "QIONG JU",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#D77F66",
+    "rgb": {
+      "r": 215,
+      "g": 127,
+      "b": 102
+    },
+    "hsl": {
+      "h": 13,
+      "s": 59,
+      "l": 62
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "投我以木瓜，报之以琼琚。",
+    "sentenceHant": "投我以木瓜，報之以瓊琚。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "诗经·卫风·木瓜",
+    "sentenceFromHant": "詩經·衛風·木瓜",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#DD6B4F",
+      "#DA9E8C",
+      "#CB523E",
+      "#E67762"
+    ],
+    "recommendedNeighbors": [
+      "#D2A36C",
+      "#DDB078",
+      "#E1C199",
+      "#DD6B7B"
+    ],
+    "recommendedComplements": [
+      "#284852",
+      "#32788A",
+      "#006D87",
+      "#B2BFC3"
+    ]
+  },
+  {
+    "nameHans": "棠梨",
+    "nameHant": "棠梨",
+    "namePy": "TANG LI",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#B15A43",
+    "rgb": {
+      "r": 177,
+      "g": 90,
+      "b": 67
+    },
+    "hsl": {
+      "h": 13,
+      "s": 45,
+      "l": 48
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "棠梨花白春似雪，棠梨叶赤秋如血。",
+    "sentenceHant": "棠梨花白春似雪，棠梨葉赤秋如血。",
+    "authorHans": "王翰",
+    "authorHant": "王翰",
+    "sentenceFromHans": "棠梨墓歌",
+    "sentenceFromHant": "棠梨墓歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BA5B49",
+      "#BA5140",
+      "#B26D5D",
+      "#955A42"
+    ],
+    "recommendedNeighbors": [
+      "#9E4E56",
+      "#B04552",
+      "#D2A36C",
+      "#B4884D"
+    ],
+    "recommendedComplements": [
+      "#284852",
+      "#32788A",
+      "#006D87",
+      "#B2BFC3"
+    ]
+  },
+  {
+    "nameHans": "蜜合",
+    "nameHant": "蜜合",
+    "namePy": "MI HE",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#DFD7C2",
+    "rgb": {
+      "r": 223,
+      "g": 215,
+      "b": 194
+    },
+    "hsl": {
+      "h": 43,
+      "s": 31,
+      "l": 82
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "僧钵饭归三篾饱，蜂房蜜合百华香。",
+    "sentenceHant": "僧缽飯歸三篾飽，蜂房蜜合百華香。",
+    "authorHans": "释正觉",
+    "authorHant": "釋正覺",
+    "sentenceFromHans": "方上人持钵乞颂",
+    "sentenceFromHant": "方上人持缽乞頌",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D4C9AA",
+      "#DFD6B8",
+      "#EAE4D1",
+      "#D5C8A0"
+    ],
+    "recommendedNeighbors": [
+      "#DDC5B8",
+      "#CDD171",
+      "#D2AF9D",
+      "#BFC1A9"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#12264F",
+      "#2E59A7"
+    ]
+  },
+  {
+    "nameHans": "假山南",
+    "nameHant": "假山南",
+    "namePy": "JIA SHAN NAN",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#D4C1A6",
+    "rgb": {
+      "r": 212,
+      "g": 193,
+      "b": 166
+    },
+    "hsl": {
+      "h": 35,
+      "s": 35,
+      "l": 74
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "广都纸有四色：一曰假山南，二曰假荣，三曰冉村，四曰竹纸。",
+    "sentenceHant": "廣都紙有四色：一曰假山南，二曰假榮，三曰冉村，四曰竹紙。",
+    "authorHans": "费著",
+    "authorHant": "費著",
+    "sentenceFromHans": "蜀笺谱",
+    "sentenceFromHant": "蜀箋譜",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BFA782",
+      "#BEA78B",
+      "#C4B798",
+      "#D8D1C5"
+    ],
+    "recommendedNeighbors": [
+      "#D5D1AE",
+      "#DA9E8C",
+      "#E0DFC6",
+      "#C7C6B6"
+    ],
+    "recommendedComplements": [
+      "#3C4654",
+      "#6B798E",
+      "#88ABDA",
+      "#6F94CD"
+    ]
+  },
+  {
+    "nameHans": "紫花布",
+    "nameHant": "紫花布",
+    "namePy": "ZI HUA BU",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#BEA78B",
+    "rgb": {
+      "r": 190,
+      "g": 167,
+      "b": 139
+    },
+    "hsl": {
+      "h": 33,
+      "s": 28,
+      "l": 65
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "用紫木棉织成，色赭而淡，名紫花布。",
+    "sentenceHant": "用紫木棉織成，色赭而淡，名紫花布。",
+    "authorHans": "顾清",
+    "authorHant": "顧清",
+    "sentenceFromHans": "松江府志",
+    "sentenceFromHant": "松江府志",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B49B7F",
+      "#BFA782",
+      "#B49273",
+      "#D4C1A6"
+    ],
+    "recommendedNeighbors": [
+      "#CAC5A0",
+      "#D5D1AE",
+      "#DA9E8C",
+      "#B26D5D"
+    ],
+    "recommendedComplements": [
+      "#1E2732",
+      "#354E6B",
+      "#88ABDA",
+      "#A3BBDB"
+    ]
+  },
+  {
+    "nameHans": "沉香",
+    "nameHant": "沉香",
+    "namePy": "CHEN XIANG",
+    "categoryHans": "霜降",
+    "categoryHant": "霜降",
+    "term": "shuangjiang",
+    "hex": "#99806C",
+    "rgb": {
+      "r": 153,
+      "g": 128,
+      "b": 108
+    },
+    "hsl": {
+      "h": 27,
+      "s": 18,
+      "l": 51
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "宁知谪仙子，捧研在沉香。",
+    "sentenceHant": "寧知謫仙子，捧研在沉香。",
+    "authorHans": "胡应麟",
+    "authorHant": "胡應麟",
+    "sentenceFromHans": "嘲老杜",
+    "sentenceFromHant": "嘲老杜",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9E8368",
+      "#B49273",
+      "#B49B7F",
+      "#906C4A"
+    ],
+    "recommendedNeighbors": [
+      "#92896B",
+      "#A9A082",
+      "#756C4B",
+      "#7F754C"
+    ],
+    "recommendedComplements": [
+      "#BCD4E7",
+      "#9AA7B1",
+      "#AED0EE",
+      "#003460"
+    ]
+  },
+  {
+    "nameHans": "半见",
+    "nameHant": "半見",
+    "namePy": "BAN JIAN",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#FFFBC7",
+    "rgb": {
+      "r": 255,
+      "g": 251,
+      "b": 199
+    },
+    "hsl": {
+      "h": 56,
+      "s": 100,
+      "l": 89
+    },
+    "hue": "neutral",
+    "fiveElements": "earth",
+    "sentenceHans": "郁金半见缃白䋤，缥𫄫绿纨皂紫硟。",
+    "sentenceHant": "鬱金半見緗白䋤，縹綟綠紈皁紫硟。",
+    "authorHans": "史游",
+    "authorHant": "史遊",
+    "sentenceFromHans": "急就篇",
+    "sentenceFromHant": "急就篇",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#FFF799",
+      "#FFEE6F",
+      "#F7EEAD",
+      "#FEDC5E"
+    ],
+    "recommendedNeighbors": [
+      "#E5A84B",
+      "#DB9B34",
+      "#DA9233",
+      "#DDB078"
+    ],
+    "recommendedComplements": [
+      "#454659",
+      "#45465E",
+      "#757CBB",
+      "#4A4B9D"
+    ]
+  },
+  {
+    "nameHans": "女贞黄",
+    "nameHant": "女貞黃",
+    "namePy": "NV ZHEN HUANG",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#F7EEAD",
+    "rgb": {
+      "r": 247,
+      "g": 238,
+      "b": 173
+    },
+    "hsl": {
+      "h": 53,
+      "s": 82,
+      "l": 82
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "楚云低，潇潇暮雨，女贞细琐黄花。",
+    "sentenceHant": "楚雲低，瀟瀟暮雨，女貞細瑣黃花。",
+    "authorHans": "沈曾植",
+    "authorHant": "沈曾植",
+    "sentenceFromHans": "芳草·长吉多 神语，戏效其意",
+    "sentenceFromHant": "芳草·長吉多 神語，戲效其意",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#ECE093",
+      "#FFF799",
+      "#FFFBC7",
+      "#ECD452"
+    ],
+    "recommendedNeighbors": [
+      "#DDB078",
+      "#E1C199",
+      "#DA9233",
+      "#DB9C5E"
+    ],
+    "recommendedComplements": [
+      "#A4ABD6",
+      "#757CBB",
+      "#454659",
+      "#45465E"
+    ]
+  },
+  {
+    "nameHans": "绢纨",
+    "nameHant": "絹紈",
+    "namePy": "JUAN WAN",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#ECE093",
+    "rgb": {
+      "r": 236,
+      "g": 224,
+      "b": 147
+    },
+    "hsl": {
+      "h": 52,
+      "s": 70,
+      "l": 75
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "绡谓之绢，螈谓之红，缥谓之绛，缁谓之皂。",
+    "sentenceHant": "綃謂之絹，螈謂之紅，縹謂之絳，緇謂之皁。",
+    "authorHans": "张揖",
+    "authorHant": "張揖",
+    "sentenceFromHans": "广雅·释器",
+    "sentenceFromHant": "廣雅·釋器",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#EBE1A9",
+      "#E1D279",
+      "#E1D384",
+      "#EAD89A"
+    ],
+    "recommendedNeighbors": [
+      "#DDB078",
+      "#E1C199",
+      "#D2A36C",
+      "#DB9C5E"
+    ],
+    "recommendedComplements": [
+      "#A4ABD6",
+      "#757CBB",
+      "#2C2F3B",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "姜黄",
+    "nameHant": "薑黃",
+    "namePy": "JIANG HUANG",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#D6C560",
+    "rgb": {
+      "r": 214,
+      "g": 197,
+      "b": 96
+    },
+    "hsl": {
+      "h": 51,
+      "s": 59,
+      "l": 61
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "漫空沙气蜀姜黄，一角高城漏日光。",
+    "sentenceHant": "漫空沙氣蜀薑黃，一角高城漏日光。",
+    "authorHans": "毛澄",
+    "authorHant": "毛澄",
+    "sentenceFromHans": "饮西郊归作",
+    "sentenceFromHant": "飲西郊歸作",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E1D279",
+      "#D6BC46",
+      "#E1D384",
+      "#D5B45C"
+    ],
+    "recommendedNeighbors": [
+      "#D2A36C",
+      "#B7D332",
+      "#D08635",
+      "#DB9C5E"
+    ],
+    "recommendedComplements": [
+      "#A4ABD6",
+      "#2C2F3B",
+      "#757CBB",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "繱犗",
+    "nameHant": "繱犗",
+    "namePy": "CONG JIE",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#88BFB8",
+    "rgb": {
+      "r": 136,
+      "g": 191,
+      "b": 184
+    },
+    "hsl": {
+      "h": 172,
+      "s": 30,
+      "l": 64
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "繱，帛青色也。",
+    "sentenceHant": "繱，帛青色也。",
+    "authorHans": "许慎",
+    "authorHant": "許慎",
+    "sentenceFromHans": "说文解字",
+    "sentenceFromHant": "說文解字",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#5DA39D",
+      "#3D8E86",
+      "#A4C9CC",
+      "#509296"
+    ],
+    "recommendedNeighbors": [
+      "#99BCAC",
+      "#A6BAB1",
+      "#D5EBE1",
+      "#80A492"
+    ],
+    "recommendedComplements": [
+      "#DD6B7B",
+      "#C25160",
+      "#C35C6A",
+      "#F091A0"
+    ]
+  },
+  {
+    "nameHans": "二绿",
+    "nameHant": "二綠",
+    "namePy": "ER LV",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#5DA39D",
+    "rgb": {
+      "r": 93,
+      "g": 163,
+      "b": 157
+    },
+    "hsl": {
+      "h": 175,
+      "s": 28,
+      "l": 50
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "凡合用颜色细色，头青、二青、三青、深中青...",
+    "sentenceHant": "凡合用顏色細色，頭青、二青、三青、深中青...",
+    "authorHans": "陶宗仪",
+    "authorHant": "陶宗儀",
+    "sentenceFromHans": "南村辍耕录",
+    "sentenceFromHant": "南村輟耕錄",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#88BFB8",
+      "#3D8E86",
+      "#509296",
+      "#6CA8AF"
+    ],
+    "recommendedNeighbors": [
+      "#284852",
+      "#B2BFC3",
+      "#98B6C2",
+      "#99BCAC"
+    ],
+    "recommendedComplements": [
+      "#E60012",
+      "#A35F65",
+      "#9E696D",
+      "#81474C"
+    ]
+  },
+  {
+    "nameHans": "铜青",
+    "nameHant": "銅青",
+    "namePy": "TONG QING",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#3D8E86",
+    "rgb": {
+      "r": 61,
+      "g": 142,
+      "b": 134
+    },
+    "hsl": {
+      "h": 174,
+      "s": 40,
+      "l": 40
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "铜青衫子紫香囊；清歌一曲送霞觞。",
+    "sentenceHant": "銅青衫子紫香囊；清歌一曲送霞觴。",
+    "authorHans": "杨慎",
+    "authorHant": "楊慎",
+    "sentenceFromHans": "浣溪沙",
+    "sentenceFromHant": "浣溪沙",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#5DA39D",
+      "#226B68",
+      "#206864",
+      "#509296"
+    ],
+    "recommendedNeighbors": [
+      "#284852",
+      "#99BCAC",
+      "#4182A4",
+      "#98B6C2"
+    ],
+    "recommendedComplements": [
+      "#9E4E56",
+      "#E60012",
+      "#A35F65",
+      "#9E696D"
+    ]
+  },
+  {
+    "nameHans": "石绿",
+    "nameHant": "石綠",
+    "namePy": "SHI LV",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#206864",
+    "rgb": {
+      "r": 32,
+      "g": 104,
+      "b": 100
+    },
+    "hsl": {
+      "h": 177,
+      "s": 53,
+      "l": 27
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "石绿藤黄间麝煤，半枯瘦筿羽毰毸。",
+    "sentenceHant": "石綠藤黃間麝煤，半枯瘦篠羽毰毸。",
+    "authorHans": "方回",
+    "authorHant": "方回",
+    "sentenceFromHans": "题宣和黄头画",
+    "sentenceFromHant": "題宣和黃頭畫",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#226B68",
+      "#3D8E86",
+      "#13393E",
+      "#509296"
+    ],
+    "recommendedNeighbors": [
+      "#4182A4",
+      "#106898",
+      "#4994C4",
+      "#12507B"
+    ],
+    "recommendedComplements": [
+      "#7C191E",
+      "#822327",
+      "#8F1D22",
+      "#631216"
+    ]
+  },
+  {
+    "nameHans": "黄琮",
+    "nameHant": "黃琮",
+    "namePy": "HUANG CONG",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#9E8C6B",
+    "rgb": {
+      "r": 158,
+      "g": 140,
+      "b": 107
+    },
+    "hsl": {
+      "h": 39,
+      "s": 21,
+      "l": 52
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "以苍璧礼天，以黄琮礼地，以青圭礼东方。",
+    "sentenceHant": "以蒼璧禮天，以黃琮禮地，以青圭禮東方。",
+    "authorHans": "周公旦",
+    "authorHant": "周公旦",
+    "sentenceFromHans": "周礼·春官·大宗伯",
+    "sentenceFromHant": "周禮·春官·大宗伯",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A58A5F",
+      "#887657",
+      "#9E8358",
+      "#AC9F8A"
+    ],
+    "recommendedNeighbors": [
+      "#A9A773",
+      "#92905D",
+      "#A9A886",
+      "#BD9683"
+    ],
+    "recommendedComplements": [
+      "#2E59A7",
+      "#19325F",
+      "#12264F",
+      "#1A2847"
+    ]
+  },
+  {
+    "nameHans": "茶色",
+    "nameHant": "茶色",
+    "namePy": "CHA SE",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#887657",
+    "rgb": {
+      "r": 136,
+      "g": 118,
+      "b": 87
+    },
+    "hsl": {
+      "h": 38,
+      "s": 22,
+      "l": 44
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "来衣茶色袍，归变椹色服。",
+    "sentenceHant": "來衣茶色袍，歸變椹色服。",
+    "authorHans": "梅尧臣",
+    "authorHant": "梅堯臣",
+    "sentenceFromHans": "送良玉人上还昆山",
+    "sentenceFromHant": "送良玉人上還崑山",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#9E8358",
+      "#9E8C6B",
+      "#94784F",
+      "#A58A5F"
+    ],
+    "recommendedNeighbors": [
+      "#938F4C",
+      "#796860",
+      "#92905D",
+      "#A9A773"
+    ],
+    "recommendedComplements": [
+      "#2E59A7",
+      "#19325F",
+      "#6B798E",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "伽罗",
+    "nameHant": "伽羅",
+    "namePy": "GA LUO",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#6D5C3D",
+    "rgb": {
+      "r": 109,
+      "g": 92,
+      "b": 61
+    },
+    "hsl": {
+      "h": 39,
+      "s": 28,
+      "l": 33
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "伽罗翻黑，经所谓黑沉香是矣。",
+    "sentenceHant": "伽羅翻黑，經所謂黑沉香是矣。",
+    "authorHans": "释善住",
+    "authorHant": "釋善住",
+    "sentenceFromHans": "谷响集",
+    "sentenceFromHant": "谷響集",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#81663B",
+      "#8B7042",
+      "#7C623F",
+      "#896D47"
+    ],
+    "recommendedNeighbors": [
+      "#694B3C",
+      "#92905D",
+      "#81492C",
+      "#A46244"
+    ],
+    "recommendedComplements": [
+      "#2E59A7",
+      "#19325F",
+      "#12264F",
+      "#1A2847"
+    ]
+  },
+  {
+    "nameHans": "苍艾",
+    "nameHant": "蒼艾",
+    "namePy": "CANG AI",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#5A4B3B",
+    "rgb": {
+      "r": 90,
+      "g": 75,
+      "b": 59
+    },
+    "hsl": {
+      "h": 31,
+      "s": 21,
+      "l": 29
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "苍艾浸成色，素丝飒垂领。",
+    "sentenceHant": "蒼艾浸成色，素絲颯垂領。",
+    "authorHans": "释文珦",
+    "authorHant": "釋文珦",
+    "sentenceFromHans": "老景",
+    "sentenceFromHant": "老景",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#644D31",
+      "#7C5B3E",
+      "#7C623F",
+      "#6D5C3D"
+    ],
+    "recommendedNeighbors": [
+      "#72453A",
+      "#595333",
+      "#B26D5D",
+      "#662B1F"
+    ],
+    "recommendedComplements": [
+      "#3271AE",
+      "#354E6B",
+      "#8AABCC",
+      "#6E9BC5"
+    ]
+  },
+  {
+    "nameHans": "藕丝褐",
+    "nameHant": "藕絲褐",
+    "namePy": "OU SI HE",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#A88787",
+    "rgb": {
+      "r": 168,
+      "g": 135,
+      "b": 135
+    },
+    "hsl": {
+      "h": 0,
+      "s": 16,
+      "l": 59
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "藕褐色，苏木水薄染，入莲子壳，青矾水薄盖。",
+    "sentenceHant": "藕褐色，蘇木水薄染，入蓮子殼，青礬水薄蓋。",
+    "authorHans": "宋应星",
+    "authorHant": "宋應星",
+    "sentenceFromHans": "天工开物",
+    "sentenceFromHant": "天工開物",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B27777",
+      "#9E696D",
+      "#BDB2B2",
+      "#A35F65"
+    ],
+    "recommendedNeighbors": [
+      "#BEA89D",
+      "#796860",
+      "#BD9683",
+      "#928187"
+    ],
+    "recommendedComplements": [
+      "#B2B6B6",
+      "#007175",
+      "#226B68",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "葡萄褐",
+    "nameHant": "葡萄褐",
+    "namePy": "PU TAO HE",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#9E696D",
+    "rgb": {
+      "r": 158,
+      "g": 105,
+      "b": 109
+    },
+    "hsl": {
+      "h": 355,
+      "s": 21,
+      "l": 52
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "葡葡褐，用粉入三绿紫花合。",
+    "sentenceHant": "葡葡褐，用粉入三緑紫花合。",
+    "authorHans": "陶宗仪",
+    "authorHant": "陶宗儀",
+    "sentenceFromHans": "辍耕录·写像诀",
+    "sentenceFromHant": "輟耕錄·寫像訣",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A35F65",
+      "#A88787",
+      "#B27777",
+      "#A85858"
+    ],
+    "recommendedNeighbors": [
+      "#9A6655",
+      "#9D858F",
+      "#8F6D5F",
+      "#B0436F"
+    ],
+    "recommendedComplements": [
+      "#5DA39D",
+      "#3D8E86",
+      "#206864",
+      "#88BFB8"
+    ]
+  },
+  {
+    "nameHans": "苏方",
+    "nameHant": "蘇方",
+    "namePy": "SU FANG",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#81474C",
+    "rgb": {
+      "r": 129,
+      "g": 71,
+      "b": 76
+    },
+    "hsl": {
+      "h": 355,
+      "s": 29,
+      "l": 39
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "虽得苏方木，犹贪玳瑁皮。",
+    "sentenceHant": "雖得蘇方木，猶貪玳瑁皮。",
+    "authorHans": "崔涯",
+    "authorHant": "崔涯",
+    "sentenceFromHans": "嘲妓",
+    "sentenceFromHant": "嘲妓",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7C4449",
+      "#9E4E56",
+      "#A35F65",
+      "#A85858"
+    ],
+    "recommendedNeighbors": [
+      "#9A6655",
+      "#B0436F",
+      "#955A42",
+      "#A73766"
+    ],
+    "recommendedComplements": [
+      "#5DA39D",
+      "#3D8E86",
+      "#206864",
+      "#88BFB8"
+    ]
+  },
+  {
+    "nameHans": "福色",
+    "nameHant": "福色",
+    "namePy": "FU SE",
+    "categoryHans": "立冬",
+    "categoryHant": "立冬",
+    "term": "lidong",
+    "hex": "#662B2F",
+    "rgb": {
+      "r": 102,
+      "g": 43,
+      "b": 47
+    },
+    "hsl": {
+      "h": 356,
+      "s": 41,
+      "l": 28
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "近用膏粱红、樱桃红，谓之福色。",
+    "sentenceHant": "近用膏粱紅、櫻桃紅，謂之福色。",
+    "authorHans": "李斗",
+    "authorHant": "李鬥",
+    "sentenceFromHans": "扬州画舫录",
+    "sentenceFromHant": "揚州畫舫錄",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7C4449",
+      "#81474C",
+      "#683632",
+      "#822327"
+    ],
+    "recommendedNeighbors": [
+      "#5B3222",
+      "#954024",
+      "#9A6655",
+      "#955A42"
+    ],
+    "recommendedComplements": [
+      "#5DA39D",
+      "#206864",
+      "#3D8E86",
+      "#226B68"
+    ]
+  },
+  {
+    "nameHans": "龙膏烛",
+    "nameHant": "龍膏燭",
+    "namePy": "LONG GAO ZHU",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#DE82A7",
+    "rgb": {
+      "r": 222,
+      "g": 130,
+      "b": 167
+    },
+    "hsl": {
+      "h": 336,
+      "s": 58,
+      "l": 69
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "灯掩香云坠宝花，龙膏照影月笼纱。",
+    "sentenceHant": "燈掩香雲墜寶花，龍膏照影月籠紗。",
+    "authorHans": "黎𬸣",
+    "authorHant": "黎鶱",
+    "sentenceFromHans": "七夕作",
+    "sentenceFromHant": "七夕作",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#CB5C83",
+      "#DD7694",
+      "#CC73A0",
+      "#D9A0B3"
+    ],
+    "recommendedNeighbors": [
+      "#CE93BF",
+      "#C35C5D",
+      "#CD7372",
+      "#DAA9A9"
+    ],
+    "recommendedComplements": [
+      "#B1D5C8",
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1"
+    ]
+  },
+  {
+    "nameHans": "黪紫",
+    "nameHant": "黲紫",
+    "namePy": "CAN ZI",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#CC73A0",
+    "rgb": {
+      "r": 204,
+      "g": 115,
+      "b": 160
+    },
+    "hsl": {
+      "h": 330,
+      "s": 47,
+      "l": 63
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "黪紫，浅紫也。",
+    "sentenceHant": "黲紫，淺紫也。",
+    "authorHans": "方以智",
+    "authorHant": "方以智",
+    "sentenceFromHans": "通雅",
+    "sentenceFromHant": "通雅",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B95A89",
+      "#DE82A7",
+      "#B0436F",
+      "#CB5C83"
+    ],
+    "recommendedNeighbors": [
+      "#CE8892",
+      "#E2A2AC",
+      "#C35C6A",
+      "#C25160"
+    ],
+    "recommendedComplements": [
+      "#80A492",
+      "#5F766A",
+      "#819D8E",
+      "#D5EBE1"
+    ]
+  },
+  {
+    "nameHans": "胭脂水",
+    "nameHant": "胭脂水",
+    "namePy": "YAN ZHI SHUI",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#B95A89",
+    "rgb": {
+      "r": 185,
+      "g": 90,
+      "b": 137
+    },
+    "hsl": {
+      "h": 330,
+      "s": 40,
+      "l": 54
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "翻疑误泼胭脂水，化出花身迥不同。",
+    "sentenceHant": "翻疑誤潑胭脂水，化出花身迥不同。",
+    "authorHans": "金朝觐",
+    "authorHant": "金朝覲",
+    "sentenceFromHans": "紫丁香",
+    "sentenceFromHant": "紫丁香",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#CC73A0",
+      "#A76283",
+      "#B0436F",
+      "#A73766"
+    ],
+    "recommendedNeighbors": [
+      "#CE8892",
+      "#C35C6A",
+      "#C25160",
+      "#BA79B1"
+    ],
+    "recommendedComplements": [
+      "#80A492",
+      "#5F766A",
+      "#819D8E",
+      "#D5EBE1"
+    ]
+  },
+  {
+    "nameHans": "胭脂紫",
+    "nameHant": "胭脂紫",
+    "namePy": "YAN ZHI ZI",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#B0436F",
+    "rgb": {
+      "r": 176,
+      "g": 67,
+      "b": 111
+    },
+    "hsl": {
+      "h": 336,
+      "s": 45,
+      "l": 48
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "檀唇深注胭脂紫，琪树匀排火齐圆。",
+    "sentenceHant": "檀脣深注胭脂紫，琪樹勻排火齊圓。",
+    "authorHans": "华镇",
+    "authorHant": "華鎮",
+    "sentenceFromHans": "食樱桃思越中风俗",
+    "sentenceFromHant": "食櫻桃思越中風俗",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A73766",
+      "#B83570",
+      "#903754",
+      "#CB5C83"
+    ],
+    "recommendedNeighbors": [
+      "#A35F65",
+      "#81474C",
+      "#7C4449",
+      "#662B2F"
+    ],
+    "recommendedComplements": [
+      "#B1D5C8",
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1"
+    ]
+  },
+  {
+    "nameHans": "小红",
+    "nameHant": "小紅",
+    "namePy": "XIAO HONG",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#E67762",
+    "rgb": {
+      "r": 230,
+      "g": 119,
+      "b": 98
+    },
+    "hsl": {
+      "h": 10,
+      "s": 73,
+      "l": 64
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "染小红，以练物帛十两为率。",
+    "sentenceHant": "染小紅，以練物帛十兩為率。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "居家必用事类全集",
+    "sentenceFromHant": "居家必用事類全集",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#DD6B4F",
+      "#EE7959",
+      "#ED6D46",
+      "#E94829"
+    ],
+    "recommendedNeighbors": [
+      "#E18A3B",
+      "#D9883D",
+      "#F091A0",
+      "#DB9C5E"
+    ],
+    "recommendedComplements": [
+      "#87C0CA",
+      "#32788A",
+      "#006D87",
+      "#13393E"
+    ]
+  },
+  {
+    "nameHans": "岱赭",
+    "nameHant": "岱赭",
+    "namePy": "DAI ZHE",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#DD6B4F",
+    "rgb": {
+      "r": 221,
+      "g": 107,
+      "b": 79
+    },
+    "hsl": {
+      "h": 12,
+      "s": 68,
+      "l": 59
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "厥贡岱赭，盐山、角弓、龙须席、苁蓉、野马皮、麝香。",
+    "sentenceHant": "厥貢岱赭，鹽山、角弓、龍鬚席、蓯蓉、野馬皮、麝香。",
+    "authorHans": "李林甫",
+    "authorHant": "李林甫",
+    "sentenceFromHans": "唐六典·户部尚书",
+    "sentenceFromHant": "唐六典·戶部尚書",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#E67762",
+      "#D77F66",
+      "#D24735",
+      "#CB523E"
+    ],
+    "recommendedNeighbors": [
+      "#D08635",
+      "#DD6B7B",
+      "#D2A36C",
+      "#DDB078"
+    ],
+    "recommendedComplements": [
+      "#32788A",
+      "#006D87",
+      "#284852",
+      "#B2BFC3"
+    ]
+  },
+  {
+    "nameHans": "鹤顶红",
+    "nameHant": "鶴頂紅",
+    "namePy": "HE DING HONG",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#D24735",
+    "rgb": {
+      "r": 210,
+      "g": 71,
+      "b": 53
+    },
+    "hsl": {
+      "h": 7,
+      "s": 64,
+      "l": 52
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "掌中调丹砂，染此鹤顶红。",
+    "sentenceHant": "掌中調丹砂，染此鶴頂紅。",
+    "authorHans": "苏轼",
+    "authorHant": "蘇軾",
+    "sentenceFromHans": "山茶",
+    "sentenceFromHant": "山茶",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#CB523E",
+      "#B93A26",
+      "#B13B2E",
+      "#C12C1F"
+    ],
+    "recommendedNeighbors": [
+      "#DC6B82",
+      "#7C461E",
+      "#9F6027",
+      "#D9883D"
+    ],
+    "recommendedComplements": [
+      "#13393E",
+      "#5AA4AE",
+      "#6CA8AF",
+      "#87C0CA"
+    ]
+  },
+  {
+    "nameHans": "朱殷",
+    "nameHant": "朱殷",
+    "namePy": "ZHU YIN",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#B93A26",
+    "rgb": {
+      "r": 185,
+      "g": 58,
+      "b": 38
+    },
+    "hsl": {
+      "h": 8,
+      "s": 66,
+      "l": 44
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "左轮朱殷，岂敢言病。",
+    "sentenceHant": "左輪朱殷，豈敢言病。",
+    "authorHans": "左丘",
+    "authorHant": "左丘",
+    "sentenceFromHans": "左传",
+    "sentenceFromHant": "左傳",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B13B2E",
+      "#C12C1F",
+      "#D24735",
+      "#9E2A22"
+    ],
+    "recommendedNeighbors": [
+      "#9F6027",
+      "#D9883D",
+      "#E18A3B",
+      "#BD8253"
+    ],
+    "recommendedComplements": [
+      "#13393E",
+      "#87C0CA",
+      "#5AA4AE",
+      "#6CA8AF"
+    ]
+  },
+  {
+    "nameHans": "月白",
+    "nameHant": "月白",
+    "namePy": "YUE BAI",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#D4E5EF",
+    "rgb": {
+      "r": 212,
+      "g": 229,
+      "b": 239
+    },
+    "hsl": {
+      "h": 202,
+      "s": 46,
+      "l": 88
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "月白、草白二色，俱靛水微染，今法用苋蓝煎水，半生半熟染。",
+    "sentenceHant": "月白、草白二色，俱靛水微染，今法用莧藍煎水，半生半熟染。",
+    "authorHans": "宋应星",
+    "authorHant": "宋應星",
+    "sentenceFromHans": "天工开物",
+    "sentenceFromHant": "天工開物",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BCD4E7",
+      "#A2D2E2",
+      "#AED0EE",
+      "#8AABCC"
+    ],
+    "recommendedNeighbors": [
+      "#5976BA",
+      "#509296",
+      "#A4ABD6",
+      "#B2B6B6"
+    ],
+    "recommendedComplements": [
+      "#775039",
+      "#804C2E",
+      "#F5B087",
+      "#68361A"
+    ]
+  },
+  {
+    "nameHans": "星郎",
+    "nameHant": "星郎",
+    "namePy": "XING LANG",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#BCD4E7",
+    "rgb": {
+      "r": 188,
+      "g": 212,
+      "b": 231
+    },
+    "hsl": {
+      "h": 207,
+      "s": 47,
+      "l": 82
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "红迷天子帆边日，紫夺星郎帐外兰。",
+    "sentenceHant": "紅迷天子帆邊日，紫奪星郎帳外蘭。",
+    "authorHans": "郑谷",
+    "authorHant": "鄭谷",
+    "sentenceFromHans": "锦二首",
+    "sentenceFromHant": "錦二首",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D4E5EF",
+      "#A3BBDB",
+      "#8AABCC",
+      "#AED0EE"
+    ],
+    "recommendedNeighbors": [
+      "#A4C9CC",
+      "#A4ABD6",
+      "#5AA4AE",
+      "#6CA8AF"
+    ],
+    "recommendedComplements": [
+      "#BD8253",
+      "#99806C",
+      "#7C461E",
+      "#9F6027"
+    ]
+  },
+  {
+    "nameHans": "晴山",
+    "nameHant": "晴山",
+    "namePy": "QING SHAN",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#A3BBDB",
+    "rgb": {
+      "r": 163,
+      "g": 187,
+      "b": 219
+    },
+    "hsl": {
+      "h": 214,
+      "s": 44,
+      "l": 75
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "云散晴山几万重，烟收春色更冲融。",
+    "sentenceHant": "雲散晴山幾萬重，煙收春色更衝融。",
+    "authorHans": "宣宗",
+    "authorHant": "宣宗",
+    "sentenceFromHans": "幸华严寺",
+    "sentenceFromHant": "幸華嚴寺",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#88ABDA",
+      "#8AABCC",
+      "#8BA3C7",
+      "#6F94CD"
+    ],
+    "recommendedNeighbors": [
+      "#A2D2E2",
+      "#757CBB",
+      "#87C0CA",
+      "#B2BFC3"
+    ],
+    "recommendedComplements": [
+      "#C67915",
+      "#B4884D",
+      "#7C623F",
+      "#DA9233"
+    ]
+  },
+  {
+    "nameHans": "品月",
+    "nameHant": "品月",
+    "namePy": "PIN YUE",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#8AABCC",
+    "rgb": {
+      "r": 138,
+      "g": 171,
+      "b": 204
+    },
+    "hsl": {
+      "h": 210,
+      "s": 39,
+      "l": 67
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "宝枕垂云选梦，玉萧品月偷声。",
+    "sentenceHant": "寶枕垂雲選夢，玉蕭品月偷聲。",
+    "authorHans": "杨慎",
+    "authorHant": "楊慎",
+    "sentenceFromHans": "题周昉琼枝夜醉图",
+    "sentenceFromHant": "題周昉瓊枝夜醉圖",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#6E9BC5",
+      "#A3BBDB",
+      "#8BA3C7",
+      "#6F94CD"
+    ],
+    "recommendedNeighbors": [
+      "#87C0CA",
+      "#A4ABD6",
+      "#5AA4AE",
+      "#757CBB"
+    ],
+    "recommendedComplements": [
+      "#DDBB99",
+      "#DB9C5E",
+      "#9E8368",
+      "#E18A3B"
+    ]
+  },
+  {
+    "nameHans": "明茶褐",
+    "nameHant": "明茶褐",
+    "namePy": "MING CHA HE",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#9E8368",
+    "rgb": {
+      "r": 158,
+      "g": 131,
+      "b": 104
+    },
+    "hsl": {
+      "h": 30,
+      "s": 22,
+      "l": 51
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "染明茶褐，以帛十两为率。黄芦五两半研碎，白矾二两研末。",
+    "sentenceHant": "染明茶褐，以帛十兩為率。黃蘆五兩半研碎，白礬二兩研末。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "居家必用事类全集",
+    "sentenceFromHant": "居家必用事類全集",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#99806C",
+      "#B49B7F",
+      "#B49273",
+      "#906C4A"
+    ],
+    "recommendedNeighbors": [
+      "#A99F70",
+      "#877D52",
+      "#B26D5D",
+      "#BFB99C"
+    ],
+    "recommendedComplements": [
+      "#3271AE",
+      "#8AABCC",
+      "#6E9BC5",
+      "#576470"
+    ]
+  },
+  {
+    "nameHans": "荆褐",
+    "nameHant": "荊褐",
+    "namePy": "JING HE",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#906C4A",
+    "rgb": {
+      "r": 144,
+      "g": 108,
+      "b": 74
+    },
+    "hsl": {
+      "h": 29,
+      "s": 32,
+      "l": 43
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "染荆褐，以物帛十两为率。荆叶五两、白矾二两、皂矾少许。",
+    "sentenceHant": "染荊褐，以物帛十兩為率。荊葉五兩、白礬二兩、皁礬少許。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "居家必用事类全集",
+    "sentenceFromHant": "居家必用事類全集",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7C5B3E",
+      "#7C623F",
+      "#896D47",
+      "#9E8368"
+    ],
+    "recommendedNeighbors": [
+      "#7F754C",
+      "#AA9649",
+      "#877D52",
+      "#BA5B49"
+    ],
+    "recommendedComplements": [
+      "#6E9BC5",
+      "#576470",
+      "#3271AE",
+      "#AED0EE"
+    ]
+  },
+  {
+    "nameHans": "驼褐",
+    "nameHant": "駝褐",
+    "namePy": "TUO HE",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#7C5B3E",
+    "rgb": {
+      "r": 124,
+      "g": 91,
+      "b": 62
+    },
+    "hsl": {
+      "h": 28,
+      "s": 33,
+      "l": 36
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "露侵驼褐晓寒轻，星斗阑干分外明。",
+    "sentenceHant": "露侵駝褐曉寒輕，星鬥闌幹分外明。",
+    "authorHans": "陈与义",
+    "authorHant": "陳與義",
+    "sentenceFromHans": "早行",
+    "sentenceFromHant": "早行",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#906C4A",
+      "#7C623F",
+      "#775039",
+      "#644D31"
+    ],
+    "recommendedNeighbors": [
+      "#756C4B",
+      "#7F754C",
+      "#AA9649",
+      "#877D52"
+    ],
+    "recommendedComplements": [
+      "#AED0EE",
+      "#003460",
+      "#003D74",
+      "#6E9BC5"
+    ]
+  },
+  {
+    "nameHans": "椒褐",
+    "nameHant": "椒褐",
+    "namePy": "JIAO HE",
+    "categoryHans": "小雪",
+    "categoryHant": "小雪",
+    "term": "xiaoxue",
+    "hex": "#72453A",
+    "rgb": {
+      "r": 114,
+      "g": 69,
+      "b": 58
+    },
+    "hsl": {
+      "h": 12,
+      "s": 33,
+      "l": 34
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "染椒褐，以绢十两为率。",
+    "sentenceHant": "染椒褐，以絹十兩為率。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "居家必用事类全集",
+    "sentenceFromHant": "居家必用事類全集",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#955A42",
+      "#9A6655",
+      "#683632",
+      "#694B3C"
+    ],
+    "recommendedNeighbors": [
+      "#5A4B3B",
+      "#B04552",
+      "#644D31",
+      "#7C623F"
+    ],
+    "recommendedComplements": [
+      "#32788A",
+      "#006D87",
+      "#284852",
+      "#B2BFC3"
+    ]
+  },
+  {
+    "nameHans": "粉米",
+    "nameHant": "粉米",
+    "namePy": "FEN MI",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#EFC4CE",
+    "rgb": {
+      "r": 239,
+      "g": 196,
+      "b": 206
+    },
+    "hsl": {
+      "h": 346,
+      "s": 57,
+      "l": 85
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "节叶瘦且赤，蘼芜交翠箸；细蕊亦鲜洁，粉米糅丹素。",
+    "sentenceHant": "節葉瘦且赤，蘼蕪交翠箸；細蕊亦鮮潔，粉米糅丹素。",
+    "authorHans": "郝经",
+    "authorHant": "郝經",
+    "sentenceFromHans": "甲子岁后园秋色四首",
+    "sentenceFromHant": "甲子歲後園秋色四首",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#ECB0C1",
+      "#E3ADB9",
+      "#E2A2AC",
+      "#F6BEC8"
+    ],
+    "recommendedNeighbors": [
+      "#F0CFE3",
+      "#E4B8D5",
+      "#D24735",
+      "#E67762"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#B1D5C8",
+      "#3D8E86",
+      "#5DA39D"
+    ]
+  },
+  {
+    "nameHans": "縓缘",
+    "nameHant": "縓緣",
+    "namePy": "QUAN YUAN",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#CE8892",
+    "rgb": {
+      "r": 206,
+      "g": 136,
+      "b": 146
+    },
+    "hsl": {
+      "h": 351,
+      "s": 42,
+      "l": 67
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "练衣黄里縓缘。",
+    "sentenceHant": "練衣黃裏縓緣。",
+    "authorHans": "戴德和",
+    "authorHant": "戴德和",
+    "sentenceFromHans": "礼记·檀弓上",
+    "sentenceFromHant": "禮記·檀弓上",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#CF929E",
+      "#C35C6A",
+      "#E2A2AC",
+      "#C25160"
+    ],
+    "recommendedNeighbors": [
+      "#BA5B49",
+      "#CC73A0",
+      "#B26D5D",
+      "#B95A89"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "美人祭",
+    "nameHant": "美人祭",
+    "namePy": "MEI REN JI",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#C35C6A",
+    "rgb": {
+      "r": 195,
+      "g": 92,
+      "b": 106
+    },
+    "hsl": {
+      "h": 352,
+      "s": 46,
+      "l": 56
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "美人祭，又曰美人齐，祭红之淡粉色者也。",
+    "sentenceHant": "美人祭，又曰美人齊，祭紅之淡粉色者也。",
+    "authorHans": "许之衡",
+    "authorHant": "許之衡",
+    "sentenceFromHans": "饮流斋说瓷",
+    "sentenceFromHant": "飲流齋說瓷",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#C25160",
+      "#B04552",
+      "#CE8892",
+      "#C35C5D"
+    ],
+    "recommendedNeighbors": [
+      "#B26D5D",
+      "#B83570",
+      "#B15A43",
+      "#D77F66"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "鞓红",
+    "nameHant": "鞓紅",
+    "namePy": "TING HONG",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#B04552",
+    "rgb": {
+      "r": 176,
+      "g": 69,
+      "b": 82
+    },
+    "hsl": {
+      "h": 353,
+      "s": 44,
+      "l": 48
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "白首归来玉堂署，君王殿后见鞓红。",
+    "sentenceHant": "白首歸來玉堂署，君王殿後見鞓紅。",
+    "authorHans": "欧阳修",
+    "authorHant": "歐陽修",
+    "sentenceFromHans": "禁中见鞓红牡丹",
+    "sentenceFromHant": "禁中見鞓紅牡丹",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#C25160",
+      "#C35C6A",
+      "#9E4E56",
+      "#C35C5D"
+    ],
+    "recommendedNeighbors": [
+      "#B15A43",
+      "#B83570",
+      "#72453A",
+      "#D77F66"
+    ],
+    "recommendedComplements": [
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "米汤娇",
+    "nameHant": "米湯嬌",
+    "namePy": "MI TANG JIAO",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#EEEAD9",
+    "rgb": {
+      "r": 238,
+      "g": 234,
+      "b": 217
+    },
+    "hsl": {
+      "h": 49,
+      "s": 38,
+      "l": 89
+    },
+    "hue": "neutral",
+    "fiveElements": "earth",
+    "sentenceHans": "缃色即今之谷色，京师呼米汤娇。",
+    "sentenceHant": "緗色即今之谷色，京師呼米湯嬌。",
+    "authorHans": "平步青",
+    "authorHant": "平步青",
+    "sentenceFromHans": "霞外捃屑",
+    "sentenceFromHant": "霞外捃屑",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#EAE4D1",
+      "#F5F2E9",
+      "#EBE3C7",
+      "#DFD6B8"
+    ],
+    "recommendedNeighbors": [
+      "#EBEDDF",
+      "#ECD9C7",
+      "#DDBB99",
+      "#F6F9E4"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#A4ABD6",
+      "#757CBB",
+      "#5976BA"
+    ]
+  },
+  {
+    "nameHans": "草白",
+    "nameHant": "草白",
+    "namePy": "CAO BAI",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#BFC1A9",
+    "rgb": {
+      "r": 191,
+      "g": 193,
+      "b": 169
+    },
+    "hsl": {
+      "h": 65,
+      "s": 16,
+      "l": 71
+    },
+    "hue": "yellow",
+    "fiveElements": "metal",
+    "sentenceHans": "松色随野深，月露依草白。",
+    "sentenceHant": "松色隨野深，月露依草白。",
+    "authorHans": "鲍照",
+    "authorHant": "鮑照",
+    "sentenceFromHans": "过铜山掘黄精诗",
+    "sentenceFromHant": "過銅山掘黃精詩",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#B3B59C",
+      "#BFC096",
+      "#E0E0D0",
+      "#9D9D82"
+    ],
+    "recommendedNeighbors": [
+      "#A9A082",
+      "#C9CFC1",
+      "#92896B",
+      "#DFD6B8"
+    ],
+    "recommendedComplements": [
+      "#535164",
+      "#615EA8",
+      "#4A4B9D",
+      "#45465E"
+    ]
+  },
+  {
+    "nameHans": "玄校",
+    "nameHant": "玄校",
+    "namePy": "XUAN XIAO",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#A9A082",
+    "rgb": {
+      "r": 169,
+      "g": 160,
+      "b": 130
+    },
+    "hsl": {
+      "h": 46,
+      "s": 18,
+      "l": 59
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "玄也者，黑也；校也者，若绿色然，妇人未嫁者衣之。",
+    "sentenceHant": "玄也者，黑也；校也者，若緑色然，婦人未嫁者衣之。",
+    "authorHans": "戴德",
+    "authorHant": "戴德",
+    "sentenceFromHans": "大戴礼记·夏小正",
+    "sentenceFromHant": "大戴禮記·夏小正",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#92896B",
+      "#A99F70",
+      "#B4A379",
+      "#BFB99C"
+    ],
+    "recommendedNeighbors": [
+      "#99806C",
+      "#B3B59C",
+      "#BFC1A9",
+      "#A8A19C"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#5976BA",
+      "#1A2847",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "𫄫绶",
+    "nameHant": "綟綬",
+    "namePy": "𫄫 SHOU",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#756C4B",
+    "rgb": {
+      "r": 117,
+      "g": 108,
+      "b": 75
+    },
+    "hsl": {
+      "h": 47,
+      "s": 22,
+      "l": 38
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "郁金半见缃白䋤，缥𫄫绿纨皂紫硟。",
+    "sentenceHant": "鬱金半見緗白䋤，縹綟綠紈皁紫硟。",
+    "authorHans": "史游",
+    "authorHant": "史遊",
+    "sentenceFromHans": "急就篇",
+    "sentenceFromHant": "急就篇",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7F754C",
+      "#877D52",
+      "#665F4D",
+      "#92896B"
+    ],
+    "recommendedNeighbors": [
+      "#868C4E",
+      "#7C5B3E",
+      "#99806C",
+      "#BD8253"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#5976BA",
+      "#A4ABD6",
+      "#1A2847"
+    ]
+  },
+  {
+    "nameHans": "雀梅",
+    "nameHant": "雀梅",
+    "namePy": "QUE MEI",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#788A6F",
+    "rgb": {
+      "r": 120,
+      "g": 138,
+      "b": 111
+    },
+    "hsl": {
+      "h": 100,
+      "s": 11,
+      "l": 49
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "树头蚕葚熟，篱下雀梅香。",
+    "sentenceHant": "樹頭蠶葚熟，籬下雀梅香。",
+    "authorHans": "王谌",
+    "authorHant": "王諶",
+    "sentenceFromHans": "入邑",
+    "sentenceFromHant": "入邑",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#686A67",
+      "#6A8D52",
+      "#68945C",
+      "#5D8351"
+    ],
+    "recommendedNeighbors": [
+      "#778A77",
+      "#7A7B78",
+      "#A8B78C",
+      "#A7AAA1"
+    ],
+    "recommendedComplements": [
+      "#D3CCD6",
+      "#A67EB7",
+      "#422256",
+      "#BBA1CB"
+    ]
+  },
+  {
+    "nameHans": "油绿",
+    "nameHant": "油綠",
+    "namePy": "YOU LV",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#5D7259",
+    "rgb": {
+      "r": 93,
+      "g": 114,
+      "b": 89
+    },
+    "hsl": {
+      "h": 110,
+      "s": 12,
+      "l": 40
+    },
+    "hue": "neutral",
+    "fiveElements": "wood",
+    "sentenceHans": "叶丰发油绿，香心刻黄琮。",
+    "sentenceHant": "葉豐髮油綠，香心刻黃琮。",
+    "authorHans": "张镃",
+    "authorHant": "張鎡",
+    "sentenceFromHans": "分韵赋檐卜得松字",
+    "sentenceFromHant": "分韻賦簷蔔得松字",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#4E6548",
+      "#4F6F46",
+      "#3F503B",
+      "#68945C"
+    ],
+    "recommendedNeighbors": [
+      "#6C8650",
+      "#79836C",
+      "#90A07D",
+      "#B3BDA9"
+    ],
+    "recommendedComplements": [
+      "#6A5B6D",
+      "#DCC7E1",
+      "#7D5284",
+      "#663D74"
+    ]
+  },
+  {
+    "nameHans": "莓莓",
+    "nameHant": "莓莓",
+    "namePy": "MEI MEI",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#4E6548",
+    "rgb": {
+      "r": 78,
+      "g": 101,
+      "b": 72
+    },
+    "hsl": {
+      "h": 108,
+      "s": 17,
+      "l": 34
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "兰渚莓莓，石濑汤汤。",
+    "sentenceHant": "蘭渚莓莓，石瀨湯湯。",
+    "authorHans": "左思",
+    "authorHant": "左思",
+    "sentenceFromHans": "三都赋",
+    "sentenceFromHant": "三都賦",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#4F6F46",
+      "#3F503B",
+      "#5D7259",
+      "#5D8351"
+    ],
+    "recommendedNeighbors": [
+      "#6C8650",
+      "#79836C",
+      "#90A07D",
+      "#A8BF8F"
+    ],
+    "recommendedComplements": [
+      "#DCC7E1",
+      "#6A5B6D",
+      "#663D74",
+      "#7D5284"
+    ]
+  },
+  {
+    "nameHans": "螺青",
+    "nameHant": "螺青",
+    "namePy": "LUO QING",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#3F503B",
+    "rgb": {
+      "r": 63,
+      "g": 80,
+      "b": 59
+    },
+    "hsl": {
+      "h": 109,
+      "s": 15,
+      "l": 27
+    },
+    "hue": "green",
+    "fiveElements": "wood",
+    "sentenceHans": "瓦屋螺青披雾出，锦江鸭绿抱山来。",
+    "sentenceHant": "瓦屋螺青披霧出，錦江鴨綠抱山來。",
+    "authorHans": "陆游",
+    "authorHant": "陸遊",
+    "sentenceFromHans": "快晴",
+    "sentenceFromHant": "快晴",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#4E6548",
+      "#4F6F46",
+      "#5D7259",
+      "#4F794A"
+    ],
+    "recommendedNeighbors": [
+      "#6C8650",
+      "#79836C",
+      "#90A07D",
+      "#A8BF8F"
+    ],
+    "recommendedComplements": [
+      "#DCC7E1",
+      "#6A5B6D",
+      "#7D5284",
+      "#663D74"
+    ]
+  },
+  {
+    "nameHans": "暮山紫",
+    "nameHant": "暮山紫",
+    "namePy": "MU SHAN ZI",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#A4ABD6",
+    "rgb": {
+      "r": 164,
+      "g": 171,
+      "b": 214
+    },
+    "hsl": {
+      "h": 232,
+      "s": 38,
+      "l": 74
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "潦水尽而寒潭清，烟光凝而暮山紫。",
+    "sentenceHant": "潦水盡而寒潭清，煙光凝而暮山紫。",
+    "authorHans": "王勃",
+    "authorHant": "王勃",
+    "sentenceFromHans": "滕王阁序",
+    "sentenceFromHant": "滕王閣序",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#757CBB",
+      "#5976BA",
+      "#615EA8",
+      "#4A4B9D"
+    ],
+    "recommendedNeighbors": [
+      "#8AABCC",
+      "#6E9BC5",
+      "#BCD4E7",
+      "#AED0EE"
+    ],
+    "recommendedComplements": [
+      "#B6A014",
+      "#ECE093",
+      "#FFEE6F",
+      "#ECD452"
+    ]
+  },
+  {
+    "nameHans": "紫苑",
+    "nameHant": "紫苑",
+    "namePy": "ZI YUAN",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#757CBB",
+    "rgb": {
+      "r": 117,
+      "g": 124,
+      "b": 187
+    },
+    "hsl": {
+      "h": 234,
+      "s": 34,
+      "l": 60
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "春晖开紫苑，淑景媚兰场。",
+    "sentenceHant": "春暉開紫苑，淑景媚蘭場。",
+    "authorHans": "李世民",
+    "authorHant": "李世民",
+    "sentenceFromHans": "芳兰",
+    "sentenceFromHant": "芳蘭",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A4ABD6",
+      "#4A4B9D",
+      "#615EA8",
+      "#5976BA"
+    ],
+    "recommendedNeighbors": [
+      "#A3BBDB",
+      "#88ABDA",
+      "#8AABCC",
+      "#6E9BC5"
+    ],
+    "recommendedComplements": [
+      "#D5D1AE",
+      "#FFF799",
+      "#FFEE6F",
+      "#F7EEAD"
+    ]
+  },
+  {
+    "nameHans": "优昙瑞",
+    "nameHant": "優曇瑞",
+    "namePy": "YOU TAN RUI",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#615EA8",
+    "rgb": {
+      "r": 97,
+      "g": 94,
+      "b": 168
+    },
+    "hsl": {
+      "h": 242,
+      "s": 30,
+      "l": 51
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "优昙瑞世花，既涤名蓝之篆。",
+    "sentenceHant": "優曇瑞世花，既滌名藍之篆。",
+    "authorHans": "刘侗",
+    "authorHant": "劉侗",
+    "sentenceFromHans": "大正藏",
+    "sentenceFromHant": "大正藏",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#4A4B9D",
+      "#757CBB",
+      "#45465E",
+      "#535164"
+    ],
+    "recommendedNeighbors": [
+      "#5976BA",
+      "#2E59A7",
+      "#8BA3C7",
+      "#6B798E"
+    ],
+    "recommendedComplements": [
+      "#CDD171",
+      "#BFC096",
+      "#E0E0D0",
+      "#9D9D82"
+    ]
+  },
+  {
+    "nameHans": "延维",
+    "nameHant": "延維",
+    "namePy": "YAN WEI",
+    "categoryHans": "大雪",
+    "categoryHant": "大雪",
+    "term": "daxue",
+    "hex": "#4A4B9D",
+    "rgb": {
+      "r": 74,
+      "g": 75,
+      "b": 157
+    },
+    "hsl": {
+      "h": 239,
+      "s": 36,
+      "l": 45
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "有神焉，人首蛇身，长如辕，左右有首，衣紫衣，冠旃冠，名曰延维。",
+    "sentenceHant": "有神焉，人首蛇身，長如轅，左右有首，衣紫衣，冠旃冠，名曰延維。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "山海经·海内经",
+    "sentenceFromHant": "山海經·海內經",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#615EA8",
+      "#757CBB",
+      "#45465E",
+      "#454659"
+    ],
+    "recommendedNeighbors": [
+      "#2E59A7",
+      "#19325F",
+      "#6F94CD",
+      "#8BA3C7"
+    ],
+    "recommendedComplements": [
+      "#ECEBC2",
+      "#E0E0D0",
+      "#9D9D82",
+      "#919177"
+    ]
+  },
+  {
+    "nameHans": "银红",
+    "nameHant": "銀紅",
+    "namePy": "YIN HONG",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#E7CAD3",
+    "rgb": {
+      "r": 231,
+      "g": 202,
+      "b": 211
+    },
+    "hsl": {
+      "h": 341,
+      "s": 38,
+      "l": 85
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "银红裙裥皱宫纱。风前坐，闲斗郁金芽。",
+    "sentenceHant": "銀紅裙襉皺宮紗。風前坐，閒鬥鬱金芽。",
+    "authorHans": "蒋捷",
+    "authorHant": "蔣捷",
+    "sentenceFromHans": "小重山",
+    "sentenceFromHant": "小重山",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D9A0B3",
+      "#E3ADB9",
+      "#CF929E",
+      "#EFC4CE"
+    ],
+    "recommendedNeighbors": [
+      "#DAA9A9",
+      "#E4B8D5",
+      "#CD7372",
+      "#B27777"
+    ],
+    "recommendedComplements": [
+      "#B1D5C8",
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1"
+    ]
+  },
+  {
+    "nameHans": "莲红",
+    "nameHant": "蓮紅",
+    "namePy": "LIAN HONG",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#D9A0B3",
+    "rgb": {
+      "r": 217,
+      "g": 160,
+      "b": 179
+    },
+    "hsl": {
+      "h": 340,
+      "s": 43,
+      "l": 74
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "游女泛江晴，莲红水复清。",
+    "sentenceHant": "遊女泛江晴，蓮紅水復清。",
+    "authorHans": "张敬徽",
+    "authorHant": "張敬徽",
+    "sentenceFromHans": "采莲曲",
+    "sentenceFromHant": "採蓮曲",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#E7CAD3",
+      "#E3ADB9",
+      "#CF929E",
+      "#DE82A7"
+    ],
+    "recommendedNeighbors": [
+      "#DAA9A9",
+      "#E4B8D5",
+      "#C35C5D",
+      "#CD7372"
+    ],
+    "recommendedComplements": [
+      "#B1D5C8",
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1"
+    ]
+  },
+  {
+    "nameHans": "紫梅",
+    "nameHant": "紫梅",
+    "namePy": "ZI MEI",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#BB7A8C",
+    "rgb": {
+      "r": 187,
+      "g": 122,
+      "b": 140
+    },
+    "hsl": {
+      "h": 343,
+      "s": 32,
+      "l": 61
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "紫梅发初遍，黄鸟歌犹涩。",
+    "sentenceHant": "紫梅發初遍，黃鳥歌猶澀。",
+    "authorHans": "王维",
+    "authorHant": "王維",
+    "sentenceFromHans": "早春行",
+    "sentenceFromHant": "早春行",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#CF929E",
+      "#D9A0B3",
+      "#CE8892",
+      "#CB5C83"
+    ],
+    "recommendedNeighbors": [
+      "#C8B5B3",
+      "#F0CFE3",
+      "#A64036",
+      "#E4B8D5"
+    ],
+    "recommendedComplements": [
+      "#B1D5C8",
+      "#88BFB8",
+      "#D5EBE1",
+      "#99BCAC"
+    ]
+  },
+  {
+    "nameHans": "紫矿",
+    "nameHant": "紫礦",
+    "namePy": "ZI KUANG",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#9E4E56",
+    "rgb": {
+      "r": 158,
+      "g": 78,
+      "b": 86
+    },
+    "hsl": {
+      "h": 354,
+      "s": 34,
+      "l": 46
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "紫矿，紫色如胶。",
+    "sentenceHant": "紫礦，紫色如膠。",
+    "authorHans": "苏敬",
+    "authorHant": "蘇敬",
+    "sentenceFromHans": "新修本草",
+    "sentenceFromHant": "新修本草",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A35F65",
+      "#81474C",
+      "#7C4449",
+      "#B04552"
+    ],
+    "recommendedNeighbors": [
+      "#B15A43",
+      "#A73766",
+      "#9A6655",
+      "#814662"
+    ],
+    "recommendedComplements": [
+      "#3D8E86",
+      "#5DA39D",
+      "#88BFB8",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "咸池",
+    "nameHant": "咸池",
+    "namePy": "XIAN CHI",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#DAA9A9",
+    "rgb": {
+      "r": 218,
+      "g": 169,
+      "b": 169
+    },
+    "hsl": {
+      "h": 0,
+      "s": 40,
+      "l": 76
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "与女沐兮咸池，曦女发兮阳之阿。",
+    "sentenceHant": "與女沐兮鹹池，曦女發兮陽之阿。",
+    "authorHans": "屈原",
+    "authorHant": "屈原",
+    "sentenceFromHans": "九歌",
+    "sentenceFromHant": "九歌",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#CD7372",
+      "#CE8892",
+      "#C35C5D",
+      "#E2A2AC"
+    ],
+    "recommendedNeighbors": [
+      "#E7CAD3",
+      "#D9A0B3",
+      "#D2AF9D",
+      "#DDC5B8"
+    ],
+    "recommendedComplements": [
+      "#B2B6B6",
+      "#007175",
+      "#226B68",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "红面",
+    "nameHant": "紅麵",
+    "namePy": "HONG MIAN",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#CD7372",
+    "rgb": {
+      "r": 205,
+      "g": 115,
+      "b": 114
+    },
+    "hsl": {
+      "h": 1,
+      "s": 48,
+      "l": 63
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "面，麦核屑也。",
+    "sentenceHant": "麵，麥核屑也。",
+    "authorHans": "许慎",
+    "authorHant": "許慎",
+    "sentenceFromHans": "说文解字·麦部",
+    "sentenceFromHant": "說文解字·麥部",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#C35C5D",
+      "#DAA9A9",
+      "#C35C6A",
+      "#BA5140"
+    ],
+    "recommendedNeighbors": [
+      "#D2AF9D",
+      "#BD9683",
+      "#D9A0B3",
+      "#CB5C83"
+    ],
+    "recommendedComplements": [
+      "#007175",
+      "#B2B6B6",
+      "#509296",
+      "#226B68"
+    ]
+  },
+  {
+    "nameHans": "蚩尤旗",
+    "nameHant": "蚩尤旗",
+    "namePy": "CHI YOU QI",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#A85858",
+    "rgb": {
+      "r": 168,
+      "g": 88,
+      "b": 88
+    },
+    "hsl": {
+      "h": 0,
+      "s": 31,
+      "l": 50
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "中宵倚长剑，起视蚩尤旗。",
+    "sentenceHant": "中宵倚長劍，起視蚩尤旗。",
+    "authorHans": "刘禹锡",
+    "authorHant": "劉禹錫",
+    "sentenceFromHans": "和董庶中古散 调词赠尹果毅",
+    "sentenceFromHant": "和董庶中古散 調詞贈尹果毅",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#B27777",
+      "#A35F65",
+      "#9E4E56",
+      "#9E696D"
+    ],
+    "recommendedNeighbors": [
+      "#A46244",
+      "#BD9683",
+      "#796860",
+      "#903754"
+    ],
+    "recommendedComplements": [
+      "#B2B6B6",
+      "#007175",
+      "#226B68",
+      "#206864"
+    ]
+  },
+  {
+    "nameHans": "霁红",
+    "nameHant": "霽紅",
+    "namePy": "JI HONG",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#7C4449",
+    "rgb": {
+      "r": 124,
+      "g": 68,
+      "b": 73
+    },
+    "hsl": {
+      "h": 355,
+      "s": 29,
+      "l": 38
+    },
+    "hue": "red_warm",
+    "fiveElements": "fire",
+    "sentenceHans": "叶舞霁红枫映寺，蓓含霜紫菊迎人。",
+    "sentenceHant": "葉舞霽紅楓映寺，蓓含霜紫菊迎人。",
+    "authorHans": "刘挚",
+    "authorHant": "劉摯",
+    "sentenceFromHans": "秋日即事",
+    "sentenceFromHant": "秋日即事",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#81474C",
+      "#9E4E56",
+      "#A35F65",
+      "#662B2F"
+    ],
+    "recommendedNeighbors": [
+      "#9A6655",
+      "#B0436F",
+      "#955A42",
+      "#A73766"
+    ],
+    "recommendedComplements": [
+      "#5DA39D",
+      "#3D8E86",
+      "#206864",
+      "#88BFB8"
+    ]
+  },
+  {
+    "nameHans": "莺儿",
+    "nameHant": "鶯兒",
+    "namePy": "YING ER",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#EBE1A9",
+    "rgb": {
+      "r": 235,
+      "g": 225,
+      "b": 169
+    },
+    "hsl": {
+      "h": 51,
+      "s": 62,
+      "l": 79
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "打起黄莺儿，莫教枝上啼。",
+    "sentenceHant": "打起黃鶯兒，莫教枝上啼。",
+    "authorHans": "金昌绪",
+    "authorHant": "金昌緒",
+    "sentenceFromHans": "春怨",
+    "sentenceFromHant": "春怨",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E1D384",
+      "#ECE093",
+      "#EAD89A",
+      "#E1D279"
+    ],
+    "recommendedNeighbors": [
+      "#D2A36C",
+      "#DDBB99",
+      "#DB9C5E",
+      "#ECD9C7"
+    ],
+    "recommendedComplements": [
+      "#A4ABD6",
+      "#2C2F3B",
+      "#757CBB",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "禹余粮",
+    "nameHant": "禹餘糧",
+    "namePy": "YU YU LIANG",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#E1D279",
+    "rgb": {
+      "r": 225,
+      "g": 210,
+      "b": 121
+    },
+    "hsl": {
+      "h": 51,
+      "s": 63,
+      "l": 68
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "山好真登秦望处，石桥偏拾禹余粮。",
+    "sentenceHant": "山好真登秦望處，石橋偏拾禹餘糧。",
+    "authorHans": "释行海",
+    "authorHant": "釋行海",
+    "sentenceFromHans": "送用上人",
+    "sentenceFromHant": "送用上人",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E1D384",
+      "#D6C560",
+      "#ECE093",
+      "#EBE1A9"
+    ],
+    "recommendedNeighbors": [
+      "#D2A36C",
+      "#B7D332",
+      "#DB9C5E",
+      "#D08635"
+    ],
+    "recommendedComplements": [
+      "#A4ABD6",
+      "#2C2F3B",
+      "#757CBB",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "姚黄",
+    "nameHant": "姚黃",
+    "namePy": "YAO HUANG",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#D6BC46",
+    "rgb": {
+      "r": 214,
+      "g": 188,
+      "b": 70
+    },
+    "hsl": {
+      "h": 49,
+      "s": 64,
+      "l": 56
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "曾与诗翁定花品，一丘一壑过姚黄。",
+    "sentenceHant": "曾與詩翁定花品，一丘一壑過姚黃。",
+    "authorHans": "陆游",
+    "authorHant": "陸遊",
+    "sentenceFromHans": "梅花绝句十首其二",
+    "sentenceFromHant": "梅花絕句十首其二",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D6C560",
+      "#D5B45C",
+      "#E1D279",
+      "#E1D384"
+    ],
+    "recommendedNeighbors": [
+      "#DB9C5E",
+      "#C3D94E",
+      "#D9883D",
+      "#E18A3B"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#A4ABD6",
+      "#757CBB",
+      "#5976BA"
+    ]
+  },
+  {
+    "nameHans": "蛾黄",
+    "nameHant": "蛾黃",
+    "namePy": "E HUANG",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#BE8A2F",
+    "rgb": {
+      "r": 190,
+      "g": 138,
+      "b": 47
+    },
+    "hsl": {
+      "h": 38,
+      "s": 60,
+      "l": 46
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "琉璃剪芳葆，蛾黄拂仙裾。",
+    "sentenceHant": "琉璃剪芳葆，蛾黃拂仙裾。",
+    "authorHans": "郦权",
+    "authorHant": "酈權",
+    "sentenceFromHans": "木樨",
+    "sentenceFromHant": "木樨",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#D3A237",
+      "#AA8534",
+      "#DB9B34",
+      "#DA9233"
+    ],
+    "recommendedNeighbors": [
+      "#A46244",
+      "#984F31",
+      "#EA5514",
+      "#954024"
+    ],
+    "recommendedComplements": [
+      "#2E59A7",
+      "#19325F",
+      "#6B798E",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "濯绛",
+    "nameHant": "濯絳",
+    "namePy": "ZHUO JIANG",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#796860",
+    "rgb": {
+      "r": 121,
+      "g": 104,
+      "b": 96
+    },
+    "hsl": {
+      "h": 19,
+      "s": 12,
+      "l": 43
+    },
+    "hue": "neutral",
+    "fiveElements": "fire",
+    "sentenceHans": "素波濯绛华，惠风时纷披。",
+    "sentenceHant": "素波濯絳華，惠風時紛披。",
+    "authorHans": "欧大任",
+    "authorHant": "歐大任",
+    "sentenceFromHans": "芙蓉园",
+    "sentenceFromHant": "芙蓉園",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#8F6D5F",
+      "#694B3C",
+      "#99806C",
+      "#9A6655"
+    ],
+    "recommendedNeighbors": [
+      "#70695D",
+      "#887657",
+      "#585248",
+      "#A88787"
+    ],
+    "recommendedComplements": [
+      "#7F9FAF",
+      "#D4DDE1",
+      "#BDCBD2",
+      "#106898"
+    ]
+  },
+  {
+    "nameHans": "墨黪",
+    "nameHant": "墨黲",
+    "namePy": "MO CAN",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#585248",
+    "rgb": {
+      "r": 88,
+      "g": 82,
+      "b": 72
+    },
+    "hsl": {
+      "h": 38,
+      "s": 10,
+      "l": 31
+    },
+    "hue": "neutral",
+    "fiveElements": "earth",
+    "sentenceHans": "今谓物将败时，颜色黪黪也。",
+    "sentenceHant": "今謂物將敗時，顏色黲黲也。",
+    "authorHans": "顾野王",
+    "authorHant": "顧野王",
+    "sentenceFromHans": "玉篇",
+    "sentenceFromHant": "玉篇",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#70695D",
+      "#665F4D",
+      "#46433B",
+      "#887657"
+    ],
+    "recommendedNeighbors": [
+      "#796860",
+      "#92905D",
+      "#938F4C",
+      "#8F6D5F"
+    ],
+    "recommendedComplements": [
+      "#2E59A7",
+      "#19325F",
+      "#6B798E",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "驖骊",
+    "nameHant": "驖驪",
+    "namePy": "TIE LI",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#46433B",
+    "rgb": {
+      "r": 70,
+      "g": 67,
+      "b": 59
+    },
+    "hsl": {
+      "h": 44,
+      "s": 9,
+      "l": 25
+    },
+    "hue": "neutral",
+    "fiveElements": "earth",
+    "sentenceHans": "驷驖孔阜，六辔在手；公之媚子，从公于狩。",
+    "sentenceHant": "駟驖孔阜，六轡在手；公之媚子，從公於狩。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "诗经·秦风·驷驖",
+    "sentenceFromHant": "詩經·秦風·駟驖",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#665F4D",
+      "#585248",
+      "#70695D",
+      "#756C4B"
+    ],
+    "recommendedNeighbors": [
+      "#868C4E",
+      "#694B3C",
+      "#775039",
+      "#31322C"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#2C2F3B",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "京元",
+    "nameHant": "京元",
+    "namePy": "JING YUAN",
+    "categoryHans": "冬至",
+    "categoryHant": "冬至",
+    "term": "dongzhi",
+    "hex": "#31322C",
+    "rgb": {
+      "r": 49,
+      "g": 50,
+      "b": 44
+    },
+    "hsl": {
+      "h": 70,
+      "s": 6,
+      "l": 18
+    },
+    "hue": "neutral",
+    "fiveElements": "water",
+    "sentenceHans": "元青元在缴缁之间，合青则为冥色。",
+    "sentenceHant": "元青元在繳緇之間，合青則為冥色。",
+    "authorHans": "李斗",
+    "authorHant": "李鬥",
+    "sentenceFromHans": "扬州画舫录",
+    "sentenceFromHant": "揚州畫舫錄",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#45493D",
+      "#868C4E",
+      "#7A7B78",
+      "#919177"
+    ],
+    "recommendedNeighbors": [
+      "#595333",
+      "#6C8650",
+      "#555F4D",
+      "#877D52"
+    ],
+    "recommendedComplements": [
+      "#535164",
+      "#343041",
+      "#615EA8",
+      "#4A4B9D"
+    ]
+  },
+  {
+    "nameHans": "酂白",
+    "nameHant": "酇白",
+    "namePy": "CUO BAI",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#F6F9E4",
+    "rgb": {
+      "r": 246,
+      "g": 249,
+      "b": 228
+    },
+    "hsl": {
+      "h": 69,
+      "s": 64,
+      "l": 94
+    },
+    "hue": "neutral",
+    "fiveElements": "earth",
+    "sentenceHans": "登高新酒倾酂白，吊古空山涌帝青。",
+    "sentenceHant": "登高新酒傾酇白，弔古空山湧帝青。",
+    "authorHans": "唐伯虎",
+    "authorHant": "唐伯虎",
+    "sentenceFromHans": "与朱彦明诸 子同游保叔寺",
+    "sentenceFromHant": "與朱彥明諸 子同遊保叔寺",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#EDF1BB",
+      "#E3EB98",
+      "#ECEBC2",
+      "#D8DE8A"
+    ],
+    "recommendedNeighbors": [
+      "#EAD89A",
+      "#EEEAD9",
+      "#EBE3C7",
+      "#EAE4D1"
+    ],
+    "recommendedComplements": [
+      "#535164",
+      "#343041",
+      "#615EA8",
+      "#4A4B9D"
+    ]
+  },
+  {
+    "nameHans": "断肠",
+    "nameHant": "斷腸",
+    "namePy": "DUAN CHANG",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#ECEBC2",
+    "rgb": {
+      "r": 236,
+      "g": 235,
+      "b": 194
+    },
+    "hsl": {
+      "h": 59,
+      "s": 53,
+      "l": 84
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "江柳断肠色，黄丝垂未齐。",
+    "sentenceHant": "江柳斷腸色，黃絲垂未齊。",
+    "authorHans": "戎昱",
+    "authorHant": "戎昱",
+    "sentenceFromHans": "江上柳送人",
+    "sentenceFromHant": "江上柳送人",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#EDF1BB",
+      "#D8DE8A",
+      "#EBE1A9",
+      "#E3EB98"
+    ],
+    "recommendedNeighbors": [
+      "#C0D695",
+      "#C0D09D",
+      "#A9BE7B",
+      "#C6A268"
+    ],
+    "recommendedComplements": [
+      "#4A4B9D",
+      "#45465E",
+      "#454659",
+      "#615EA8"
+    ]
+  },
+  {
+    "nameHans": "田赤",
+    "nameHant": "田赤",
+    "namePy": "TIAN CHI",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#E1D384",
+    "rgb": {
+      "r": 225,
+      "g": 211,
+      "b": 132
+    },
+    "hsl": {
+      "h": 51,
+      "s": 61,
+      "l": 70
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "田赤金，色淡黄，以淡金打成。",
+    "sentenceHant": "田赤金，色淡黃，以淡金打成。",
+    "authorHans": "迮朗",
+    "authorHant": "迮朗",
+    "sentenceFromHans": "绘事琐言",
+    "sentenceFromHant": "繪事瑣言",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#E1D279",
+      "#EBE1A9",
+      "#D6C560",
+      "#ECE093"
+    ],
+    "recommendedNeighbors": [
+      "#D2A36C",
+      "#B7D332",
+      "#DB9C5E",
+      "#DDBB99"
+    ],
+    "recommendedComplements": [
+      "#A4ABD6",
+      "#2C2F3B",
+      "#757CBB",
+      "#454659"
+    ]
+  },
+  {
+    "nameHans": "黄封",
+    "nameHant": "黃封",
+    "namePy": "HUANG FENG",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#CAB272",
+    "rgb": {
+      "r": 202,
+      "g": 178,
+      "b": 114
+    },
+    "hsl": {
+      "h": 44,
+      "s": 45,
+      "l": 62
+    },
+    "hue": "orange",
+    "fiveElements": "earth",
+    "sentenceHans": "花雾轻幂幂为我取黄封，亲拆官泥赤。",
+    "sentenceHant": "花霧輕冪冪為我取黃封，親拆官泥赤。",
+    "authorHans": "苏轼",
+    "authorHant": "蘇軾",
+    "sentenceFromHans": "岐亭五首其一",
+    "sentenceFromHant": "岐亭五首其一",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D4BF89",
+      "#BFA670",
+      "#C0AD5E",
+      "#BF9C46"
+    ],
+    "recommendedNeighbors": [
+      "#BC6E37",
+      "#D8DE8A",
+      "#F0C2A2",
+      "#D2AF9D"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#2C2F3B",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "丁香褐",
+    "nameHant": "丁香褐",
+    "namePy": "DING XIANG HE",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#BD9683",
+    "rgb": {
+      "r": 189,
+      "g": 150,
+      "b": 131
+    },
+    "hsl": {
+      "h": 20,
+      "s": 31,
+      "l": 63
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "丁香褐，用肉红为主，入少槐花合。",
+    "sentenceHant": "丁香褐，用肉紅為主，入少槐花合。",
+    "authorHans": "陶宗仪",
+    "authorHant": "陶宗儀",
+    "sentenceFromHans": "辍耕录·写相诀",
+    "sentenceFromHant": "輟耕錄·寫相訣",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BC836B",
+      "#D2AF9D",
+      "#BEA89D",
+      "#DDC5B8"
+    ],
+    "recommendedNeighbors": [
+      "#AA8E59",
+      "#B27777",
+      "#9E8C6B",
+      "#CD7372"
+    ],
+    "recommendedComplements": [
+      "#7F9FAF",
+      "#BDCBD2",
+      "#106898",
+      "#4182A4"
+    ]
+  },
+  {
+    "nameHans": "棠梨褐",
+    "nameHant": "棠梨褐",
+    "namePy": "TANG LI HE",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#955A42",
+    "rgb": {
+      "r": 149,
+      "g": 90,
+      "b": 66
+    },
+    "hsl": {
+      "h": 17,
+      "s": 39,
+      "l": 42
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "棠梨褐，用粉入土黄，银朱合。",
+    "sentenceHant": "棠梨褐，用粉入土黃，銀硃合。",
+    "authorHans": "陶宗仪",
+    "authorHant": "陶宗儀",
+    "sentenceFromHans": "南村辍耕录·采绘法",
+    "sentenceFromHant": "南村輟耕錄·採繪法",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A46244",
+      "#B15A43",
+      "#945635",
+      "#9A6655"
+    ],
+    "recommendedNeighbors": [
+      "#94784F",
+      "#BE9457",
+      "#81663B",
+      "#9E8358"
+    ],
+    "recommendedComplements": [
+      "#98B6C2",
+      "#D4DDE1",
+      "#A2D2E2",
+      "#284852"
+    ]
+  },
+  {
+    "nameHans": "朱石栗",
+    "nameHant": "朱石栗",
+    "namePy": "ZHU SHI LI",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#81492C",
+    "rgb": {
+      "r": 129,
+      "g": 73,
+      "b": 44
+    },
+    "hsl": {
+      "h": 20,
+      "s": 49,
+      "l": 34
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "广州无栗，惟勤州山中有石栗，一年方熟，皮厚而肉少，味似胡桃仁。",
+    "sentenceHant": "廣州無慄，惟勤州山中有石慄，一年方熟，皮厚而肉少，味似胡桃仁。",
+    "authorHans": "刘恂",
+    "authorHant": "劉恂",
+    "sentenceFromHans": "岭表录异",
+    "sentenceFromHant": "嶺表錄異",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#804C2E",
+      "#945635",
+      "#984F31",
+      "#5B3222"
+    ],
+    "recommendedNeighbors": [
+      "#95302E",
+      "#AA8534",
+      "#6D5C3D",
+      "#AA8E59"
+    ],
+    "recommendedComplements": [
+      "#7F9FAF",
+      "#BDCBD2",
+      "#106898",
+      "#4182A4"
+    ]
+  },
+  {
+    "nameHans": "枣褐",
+    "nameHant": "棗褐",
+    "namePy": "ZAO HE",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#68361A",
+    "rgb": {
+      "r": 104,
+      "g": 54,
+      "b": 26
+    },
+    "hsl": {
+      "h": 22,
+      "s": 60,
+      "l": 25
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "染枣褐，以十两帛为率。苏木四两，明矾一两为细。",
+    "sentenceHant": "染棗褐，以十兩帛為率。蘇木四兩，明礬一兩為細。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "居家必用事类全集",
+    "sentenceFromHant": "居家必用事類全集",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#7C461E",
+      "#9F5221",
+      "#81492C",
+      "#422517"
+    ],
+    "recommendedNeighbors": [
+      "#AA8534",
+      "#95302E",
+      "#D12920",
+      "#D3A237"
+    ],
+    "recommendedComplements": [
+      "#547689",
+      "#D4E5EF",
+      "#106898",
+      "#4994C4"
+    ]
+  },
+  {
+    "nameHans": "秋蓝",
+    "nameHant": "秋藍",
+    "namePy": "QIU LAN",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#7D929F",
+    "rgb": {
+      "r": 125,
+      "g": 146,
+      "b": 159
+    },
+    "hsl": {
+      "h": 203,
+      "s": 15,
+      "l": 56
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "染罗衣，秋蓝难著色；不是无心人，为作台邛客。",
+    "sentenceHant": "染羅衣，秋藍難著色；不是無心人，為作臺邛客。",
+    "authorHans": "李贺",
+    "authorHant": "李賀",
+    "sentenceFromHans": "河阳歌",
+    "sentenceFromHant": "河陽歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#66889E",
+      "#7F9FAF",
+      "#9AA7B1",
+      "#547689"
+    ],
+    "recommendedNeighbors": [
+      "#509296",
+      "#5976BA",
+      "#B2B6B6",
+      "#5DA39D"
+    ],
+    "recommendedComplements": [
+      "#9F5221",
+      "#775039",
+      "#804C2E",
+      "#F5B087"
+    ]
+  },
+  {
+    "nameHans": "育阳染",
+    "nameHant": "育陽染",
+    "namePy": "YU YANG RAN",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#576470",
+    "rgb": {
+      "r": 87,
+      "g": 100,
+      "b": 112
+    },
+    "hsl": {
+      "h": 209,
+      "s": 13,
+      "l": 39
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "䋭，帛青经缥纬，一曰育阳染也。",
+    "sentenceHant": "䋭，帛青經縹緯，一曰育陽染也。",
+    "authorHans": "许慎",
+    "authorHant": "許慎",
+    "sentenceFromHans": "说文解字",
+    "sentenceFromHant": "說文解字",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#3C4654",
+      "#6B798E",
+      "#66889E",
+      "#547689"
+    ],
+    "recommendedNeighbors": [
+      "#2C2F3B",
+      "#5AA4AE",
+      "#6CA8AF",
+      "#87C0CA"
+    ],
+    "recommendedComplements": [
+      "#E18A3B",
+      "#B49273",
+      "#D9883D",
+      "#ECD9C7"
+    ]
+  },
+  {
+    "nameHans": "霁蓝",
+    "nameHant": "霽藍",
+    "namePy": "JI LAN",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#3C4654",
+    "rgb": {
+      "r": 60,
+      "g": 70,
+      "b": 84
+    },
+    "hsl": {
+      "h": 215,
+      "s": 17,
+      "l": 28
+    },
+    "hue": "blue",
+    "fiveElements": "wood",
+    "sentenceHans": "霁青器，亦官古户兼仿造，镇陶无专作霁青器者。",
+    "sentenceHant": "霽青器，亦官古戶兼仿造，鎮陶無專作霽青器者。",
+    "authorHans": "蓝浦",
+    "authorHant": "藍浦",
+    "sentenceFromHans": "景德镇陶录",
+    "sentenceFromHant": "景德鎮陶錄",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#1E2732",
+      "#576470",
+      "#354E6B",
+      "#6B798E"
+    ],
+    "recommendedNeighbors": [
+      "#454659",
+      "#284852",
+      "#45465E",
+      "#757CBB"
+    ],
+    "recommendedComplements": [
+      "#896D47",
+      "#D4C1A6",
+      "#E5A84B",
+      "#C67915"
+    ]
+  },
+  {
+    "nameHans": "獭见",
+    "nameHant": "獺見",
+    "namePy": "TA JIAN",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#151D29",
+    "rgb": {
+      "r": 21,
+      "g": 29,
+      "b": 41
+    },
+    "hsl": {
+      "h": 216,
+      "s": 32,
+      "l": 12
+    },
+    "hue": "neutral",
+    "fiveElements": "water",
+    "sentenceHans": "花妥莺捎蝶，溪喧獭趁鱼。",
+    "sentenceHant": "花妥鶯捎蝶，溪喧獺趁魚。",
+    "authorHans": "杜甫",
+    "authorHant": "杜甫",
+    "sentenceFromHans": "重过何氏五首",
+    "sentenceFromHant": "重過何氏五首",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#1E2732",
+      "#1A2847",
+      "#354E6B",
+      "#3C4654"
+    ],
+    "recommendedNeighbors": [
+      "#284852",
+      "#454659",
+      "#45465E",
+      "#32788A"
+    ],
+    "recommendedComplements": [
+      "#E5A84B",
+      "#BFA782",
+      "#94784F",
+      "#BE9457"
+    ]
+  },
+  {
+    "nameHans": "井天",
+    "nameHant": "井天",
+    "namePy": "JING TIAN",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#A4C9CC",
+    "rgb": {
+      "r": 164,
+      "g": 201,
+      "b": 204
+    },
+    "hsl": {
+      "h": 185,
+      "s": 28,
+      "l": 72
+    },
+    "hue": "cyan",
+    "fiveElements": "metal",
+    "sentenceHans": "修垣蔽轩楹，如观坐井天。",
+    "sentenceHant": "修垣蔽軒楹，如觀坐井天。",
+    "authorHans": "陈棣",
+    "authorHant": "陳棣",
+    "sentenceFromHans": "再次韵柏桐轩",
+    "sentenceFromHant": "再次韻柏桐軒",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#87C0CA",
+      "#6CA8AF",
+      "#5AA4AE",
+      "#B2BFC3"
+    ],
+    "recommendedNeighbors": [
+      "#66889E",
+      "#9AA7B1",
+      "#EAEEF1",
+      "#BCD4E7"
+    ],
+    "recommendedComplements": [
+      "#C12C1F",
+      "#A64036",
+      "#4C1E1A",
+      "#9E2A22"
+    ]
+  },
+  {
+    "nameHans": "正青",
+    "nameHant": "正青",
+    "namePy": "ZHENG QING",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#6CA8AF",
+    "rgb": {
+      "r": 108,
+      "g": 168,
+      "b": 175
+    },
+    "hsl": {
+      "h": 186,
+      "s": 30,
+      "l": 55
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "缲成白雪桑重绿，割尽黄云稻正青。",
+    "sentenceHant": "繰成白雪桑重綠，割盡黃雲稻正青。",
+    "authorHans": "王安石",
+    "authorHant": "王安石",
+    "sentenceFromHans": "木末",
+    "sentenceFromHant": "木末",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#5AA4AE",
+      "#509296",
+      "#87C0CA",
+      "#A4C9CC"
+    ],
+    "recommendedNeighbors": [
+      "#9AA7B1",
+      "#6E9BC5",
+      "#8AABCC",
+      "#576470"
+    ],
+    "recommendedComplements": [
+      "#B13B2E",
+      "#C8B5B3",
+      "#C12C1F",
+      "#A64036"
+    ]
+  },
+  {
+    "nameHans": "扁青",
+    "nameHant": "扁青",
+    "namePy": "BIAN QING",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#509296",
+    "rgb": {
+      "r": 80,
+      "g": 146,
+      "b": 150
+    },
+    "hsl": {
+      "h": 183,
+      "s": 30,
+      "l": 45
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "帝赐后村奎画在，作堂安用扁青涂。",
+    "sentenceHant": "帝賜後村奎畫在，作堂安用扁青塗。",
+    "authorHans": "刘克庄",
+    "authorHant": "劉克莊",
+    "sentenceFromHans": "四和其二",
+    "sentenceFromHant": "四和其二",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#5AA4AE",
+      "#6CA8AF",
+      "#5DA39D",
+      "#3D8E86"
+    ],
+    "recommendedNeighbors": [
+      "#547689",
+      "#66889E",
+      "#7D929F",
+      "#4994C4"
+    ],
+    "recommendedComplements": [
+      "#D12920",
+      "#9E2A22",
+      "#683632",
+      "#C12C1F"
+    ]
+  },
+  {
+    "nameHans": "䌦色",
+    "nameHant": "䌦色",
+    "namePy": "DAO SE",
+    "categoryHans": "小寒",
+    "categoryHant": "小寒",
+    "term": "xiaohan",
+    "hex": "#226B68",
+    "rgb": {
+      "r": 34,
+      "g": 107,
+      "b": 104
+    },
+    "hsl": {
+      "h": 178,
+      "s": 52,
+      "l": 28
+    },
+    "hue": "cyan",
+    "fiveElements": "wood",
+    "sentenceHans": "䌦，大到切绿也。",
+    "sentenceHant": "䌦，大到切綠也。",
+    "authorHans": "顾野王",
+    "authorHant": "顧野王",
+    "sentenceFromHans": "玉篇",
+    "sentenceFromHant": "玉篇",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#206864",
+      "#3D8E86",
+      "#13393E",
+      "#509296"
+    ],
+    "recommendedNeighbors": [
+      "#4182A4",
+      "#106898",
+      "#4994C4",
+      "#547689"
+    ],
+    "recommendedComplements": [
+      "#C8161D",
+      "#A72126",
+      "#AB1D22",
+      "#7C191E"
+    ]
+  },
+  {
+    "nameHans": "紫府",
+    "nameHant": "紫府",
+    "namePy": "ZI FU",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#995D7F",
+    "rgb": {
+      "r": 153,
+      "g": 93,
+      "b": 127
+    },
+    "hsl": {
+      "h": 326,
+      "s": 24,
+      "l": 48
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "紫府仙人号宝灯，云浆未饮结成冰。",
+    "sentenceHant": "紫府仙人號寶燈，雲漿未飲結成冰。",
+    "authorHans": "李商隐",
+    "authorHant": "李商隱",
+    "sentenceFromHans": "无题",
+    "sentenceFromHant": "無題",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A76283",
+      "#814662",
+      "#B95A89",
+      "#9D858F"
+    ],
+    "recommendedNeighbors": [
+      "#A6559D",
+      "#76555D",
+      "#9C8D9B",
+      "#6B5458"
+    ],
+    "recommendedComplements": [
+      "#6B7D73",
+      "#86908A",
+      "#819D8E",
+      "#5F766A"
+    ]
+  },
+  {
+    "nameHans": "地血",
+    "nameHant": "地血",
+    "namePy": "DI XUE",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#814662",
+    "rgb": {
+      "r": 129,
+      "g": 70,
+      "b": 98
+    },
+    "hsl": {
+      "h": 332,
+      "s": 30,
+      "l": 39
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "龙精埋地血，马革绣苔衣。",
+    "sentenceHant": "龍精埋地血，馬革繡苔衣。",
+    "authorHans": "王余佑",
+    "authorHant": "王餘佑",
+    "sentenceFromHans": "过立节吊袁紫烟将军",
+    "sentenceFromHant": "過立節吊袁紫煙將軍",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A76283",
+      "#995D7F",
+      "#602641",
+      "#B95A89"
+    ],
+    "recommendedNeighbors": [
+      "#9E4E56",
+      "#B04552",
+      "#81474C",
+      "#7C4449"
+    ],
+    "recommendedComplements": [
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1",
+      "#80A492"
+    ]
+  },
+  {
+    "nameHans": "芥拾紫",
+    "nameHant": "芥拾紫",
+    "namePy": "JIE SHI ZI",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#602641",
+    "rgb": {
+      "r": 96,
+      "g": 38,
+      "b": 65
+    },
+    "hsl": {
+      "h": 332,
+      "s": 43,
+      "l": 26
+    },
+    "hue": "pink",
+    "fiveElements": "fire",
+    "sentenceHans": "隽手芥拾紫，忠肝蒲伏青。",
+    "sentenceHant": "雋手芥拾紫，忠肝蒲伏青。",
+    "authorHans": "洪咨夔",
+    "authorHant": "洪諮夔",
+    "sentenceFromHans": "何正言挽诗",
+    "sentenceFromHant": "何正言挽詩",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#814662",
+      "#A73766",
+      "#903754",
+      "#B83570"
+    ],
+    "recommendedNeighbors": [
+      "#B04552",
+      "#662B2F",
+      "#8A1874",
+      "#C25160"
+    ],
+    "recommendedComplements": [
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1",
+      "#80A492"
+    ]
+  },
+  {
+    "nameHans": "油紫",
+    "nameHant": "油紫",
+    "namePy": "YOU ZI",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#420B2F",
+    "rgb": {
+      "r": 66,
+      "g": 11,
+      "b": 47
+    },
+    "hsl": {
+      "h": 321,
+      "s": 71,
+      "l": 15
+    },
+    "hue": "pink",
+    "fiveElements": "water",
+    "sentenceHans": "嘉祐染者，既入其色，复渍以油，故色重而近黑者，曰油紫。",
+    "sentenceHant": "嘉祐染者，既入其色，復漬以油，故色重而近黑者，曰油紫。",
+    "authorHans": "王得臣",
+    "authorHant": "王得臣",
+    "sentenceFromHans": "麈史·礼仪",
+    "sentenceFromHant": "麈史·禮儀",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#8A1874",
+      "#602641",
+      "#B83570",
+      "#A73766"
+    ],
+    "recommendedNeighbors": [
+      "#6C216D",
+      "#903754",
+      "#B81A35",
+      "#DD7694"
+    ],
+    "recommendedComplements": [
+      "#2A6E3F",
+      "#86908A",
+      "#6B7D73",
+      "#819D8E"
+    ]
+  },
+  {
+    "nameHans": "骨缥",
+    "nameHant": "骨縹",
+    "namePy": "GU PIAO",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#EBE3C7",
+    "rgb": {
+      "r": 235,
+      "g": 227,
+      "b": 199
+    },
+    "hsl": {
+      "h": 47,
+      "s": 47,
+      "l": 85
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "缥，帛青白色也。",
+    "sentenceHant": "縹，帛青白色也。",
+    "authorHans": "许慎",
+    "authorHant": "許慎",
+    "sentenceFromHans": "说文解字",
+    "sentenceFromHant": "說文解字",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#EAE4D1",
+      "#DFD6B8",
+      "#EEEAD9",
+      "#F5F2E9"
+    ],
+    "recommendedNeighbors": [
+      "#E3EB98",
+      "#F6F9E4",
+      "#EBEDDF",
+      "#F0C2A2"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#5976BA",
+      "#A4ABD6",
+      "#1A2847"
+    ]
+  },
+  {
+    "nameHans": "青白玉",
+    "nameHant": "青白玉",
+    "namePy": "QING BAI YU",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#CAC5A0",
+    "rgb": {
+      "r": 202,
+      "g": 197,
+      "b": 160
+    },
+    "hsl": {
+      "h": 53,
+      "s": 28,
+      "l": 71
+    },
+    "hue": "yellow",
+    "fiveElements": "metal",
+    "sentenceHans": "介于白色和淡青色、淡绿色之间的软玉。",
+    "sentenceHant": "介於白色和淡青色、淡綠色之間的軟玉。",
+    "authorHans": "佚名",
+    "authorHant": "佚名",
+    "sentenceFromHans": "清代宫廷玉器",
+    "sentenceFromHant": "清代宮廷玉器",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D5D1AE",
+      "#BFB99C",
+      "#E0DFC6",
+      "#C7C6B6"
+    ],
+    "recommendedNeighbors": [
+      "#BEA78B",
+      "#B49B7F",
+      "#B4884D",
+      "#A8B092"
+    ],
+    "recommendedComplements": [
+      "#A4ABD6",
+      "#757CBB",
+      "#454659",
+      "#45465E"
+    ]
+  },
+  {
+    "nameHans": "绿豆褐",
+    "nameHant": "綠豆褐",
+    "namePy": "LV DOU HE",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#92896B",
+    "rgb": {
+      "r": 146,
+      "g": 137,
+      "b": 107
+    },
+    "hsl": {
+      "h": 46,
+      "s": 15,
+      "l": 50
+    },
+    "hue": "yellow",
+    "fiveElements": "earth",
+    "sentenceHans": "内有青绿不可隔间处，于绿浅晕中用藤黄汁罩，谓之绿豆褐。",
+    "sentenceHant": "內有青綠不可隔間處，於綠淺暈中用藤黃汁罩，謂之綠豆褐。",
+    "authorHans": "李诫",
+    "authorHant": "李誡",
+    "sentenceFromHans": "营造法式·彩画作制度",
+    "sentenceFromHant": "營造法式·彩畫作制度",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#A9A082",
+      "#A99F70",
+      "#877D52",
+      "#756C4B"
+    ],
+    "recommendedNeighbors": [
+      "#99806C",
+      "#B3B59C",
+      "#868C4E",
+      "#BFC1A9"
+    ],
+    "recommendedComplements": [
+      "#2C2F3B",
+      "#5976BA",
+      "#1A2847",
+      "#12264F"
+    ]
+  },
+  {
+    "nameHans": "冥色",
+    "nameHant": "冥色",
+    "namePy": "MING SE",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#665F4D",
+    "rgb": {
+      "r": 102,
+      "g": 95,
+      "b": 77
+    },
+    "hsl": {
+      "h": 43,
+      "s": 14,
+      "l": 35
+    },
+    "hue": "brown",
+    "fiveElements": "earth",
+    "sentenceHans": "垆埴冥色，刚土柔种，免耕杀匿，使农事得。",
+    "sentenceHant": "壚埴冥色，剛土柔種，免耕殺匿，使農事得。",
+    "authorHans": "吕不韦",
+    "authorHant": "呂不韋",
+    "sentenceFromHans": "吕氏春秋·辩土",
+    "sentenceFromHant": "呂氏春秋·辯土",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#46433B",
+      "#585248",
+      "#756C4B",
+      "#70695D"
+    ],
+    "recommendedNeighbors": [
+      "#775039",
+      "#694B3C",
+      "#796860",
+      "#868C4E"
+    ],
+    "recommendedComplements": [
+      "#5976BA",
+      "#1A2847",
+      "#12264F",
+      "#2E59A7"
+    ]
+  },
+  {
+    "nameHans": "肉红",
+    "nameHant": "肉紅",
+    "namePy": "ROU HONG",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#DDC5B8",
+    "rgb": {
+      "r": 221,
+      "g": 197,
+      "b": 184
+    },
+    "hsl": {
+      "h": 21,
+      "s": 35,
+      "l": 79
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "便丐春工，染得桃红似肉红。",
+    "sentenceHant": "便丐春工，染得桃紅似肉紅。",
+    "authorHans": "苏轼",
+    "authorHant": "蘇軾",
+    "sentenceFromHans": "减字木兰花·立春",
+    "sentenceFromHant": "減字木蘭花·立春",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#D2AF9D",
+      "#BD9683",
+      "#BEA89D",
+      "#BC836B"
+    ],
+    "recommendedNeighbors": [
+      "#DAA9A9",
+      "#C4B798",
+      "#DFD7C2",
+      "#BFA670"
+    ],
+    "recommendedComplements": [
+      "#106898",
+      "#4182A4",
+      "#7F9FAF",
+      "#547689"
+    ]
+  },
+  {
+    "nameHans": "珠子褐",
+    "nameHant": "珠子褐",
+    "namePy": "ZHU ZI HE",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#BEA89D",
+    "rgb": {
+      "r": 190,
+      "g": 168,
+      "b": 157
+    },
+    "hsl": {
+      "h": 20,
+      "s": 20,
+      "l": 68
+    },
+    "hue": "orange",
+    "fiveElements": "fire",
+    "sentenceHans": "珠子褐，用粉入藤黄胭脂合。",
+    "sentenceHant": "珠子褐，用粉入藤黃臙脂合。",
+    "authorHans": "陶宗仪",
+    "authorHant": "陶宗儀",
+    "sentenceFromHans": "南村辍耕录·采绘法",
+    "sentenceFromHant": "南村輟耕錄·採繪法",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#BEB1AA",
+      "#BD9683",
+      "#D2AF9D",
+      "#A8A19C"
+    ],
+    "recommendedNeighbors": [
+      "#A88787",
+      "#9E8C6B",
+      "#BDB2B2",
+      "#B27777"
+    ],
+    "recommendedComplements": [
+      "#7F9FAF",
+      "#BDCBD2",
+      "#106898",
+      "#4182A4"
+    ]
+  },
+  {
+    "nameHans": "鹰背褐",
+    "nameHant": "鷹背褐",
+    "namePy": "YING BEI HE",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#8F6D5F",
+    "rgb": {
+      "r": 143,
+      "g": 109,
+      "b": 95
+    },
+    "hsl": {
+      "h": 17,
+      "s": 20,
+      "l": 47
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "鹰背褐，用粉入檀子烟墨土黄合。",
+    "sentenceHant": "鷹背褐，用粉入檀子煙墨土黃合。",
+    "authorHans": "陶宗仪",
+    "authorHant": "陶宗儀",
+    "sentenceFromHans": "南村辍耕录·采绘法",
+    "sentenceFromHant": "南村輟耕錄·採繪法",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#796860",
+      "#9A6655",
+      "#694B3C",
+      "#955A42"
+    ],
+    "recommendedNeighbors": [
+      "#94784F",
+      "#9E8358",
+      "#A58A5F",
+      "#92897B"
+    ],
+    "recommendedComplements": [
+      "#98B6C2",
+      "#D4DDE1",
+      "#A2D2E2",
+      "#284852"
+    ]
+  },
+  {
+    "nameHans": "麝香褐",
+    "nameHant": "麝香褐",
+    "namePy": "SHE XIANG HE",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#694B3C",
+    "rgb": {
+      "r": 105,
+      "g": 75,
+      "b": 60
+    },
+    "hsl": {
+      "h": 20,
+      "s": 27,
+      "l": 32
+    },
+    "hue": "brown",
+    "fiveElements": "fire",
+    "sentenceHans": "麝香褐，用土黄、檀子入烟墨合。",
+    "sentenceHant": "麝香褐，用土黃、檀子入煙墨合。",
+    "authorHans": "陶宗仪",
+    "authorHant": "陶宗儀",
+    "sentenceFromHans": "南村辍耕录·采绘法",
+    "sentenceFromHant": "南村輟耕錄·採繪法",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#775039",
+      "#955A42",
+      "#72453A",
+      "#7C5B3E"
+    ],
+    "recommendedNeighbors": [
+      "#6D5C3D",
+      "#AA8E59",
+      "#9E8C6B",
+      "#A85858"
+    ],
+    "recommendedComplements": [
+      "#7F9FAF",
+      "#BDCBD2",
+      "#106898",
+      "#4182A4"
+    ]
+  },
+  {
+    "nameHans": "石英",
+    "nameHant": "石英",
+    "namePy": "SHI YING",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#C8B6BB",
+    "rgb": {
+      "r": 200,
+      "g": 182,
+      "b": 187
+    },
+    "hsl": {
+      "h": 343,
+      "s": 14,
+      "l": 75
+    },
+    "hue": "red_cool",
+    "fiveElements": "metal",
+    "sentenceHans": "香甘方士青精饭，润滑仙家紫石英。",
+    "sentenceHant": "香甘方士青精飯，潤滑仙家紫石英。",
+    "authorHans": "何乔新",
+    "authorHant": "何喬新",
+    "sentenceFromHans": "斋居赐蜜饵",
+    "sentenceFromHant": "齋居賜蜜餌",
+    "fontColor": "#2F2F2F",
+    "recommendedShades": [
+      "#BB7A8C",
+      "#928187",
+      "#9D858F",
+      "#E7CAD3"
+    ],
+    "recommendedNeighbors": [
+      "#C8B5B3",
+      "#F0CFE3",
+      "#E4B8D5",
+      "#CE93BF"
+    ],
+    "recommendedComplements": [
+      "#B1D5C8",
+      "#88BFB8",
+      "#D5EBE1",
+      "#99BCAC"
+    ]
+  },
+  {
+    "nameHans": "银褐",
+    "nameHant": "銀褐",
+    "namePy": "YIN HE",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#9C8D9B",
+    "rgb": {
+      "r": 156,
+      "g": 141,
+      "b": 155
+    },
+    "hsl": {
+      "h": 304,
+      "s": 7,
+      "l": 58
+    },
+    "hue": "neutral",
+    "fiveElements": "fire",
+    "sentenceHans": "银褐，用粉入藤黄合。",
+    "sentenceHant": "銀褐，用粉入藤黃合。",
+    "authorHans": "陶宗仪",
+    "authorHant": "陶宗儀",
+    "sentenceFromHans": "南村辍耕录·采绘法",
+    "sentenceFromHant": "南村輟耕錄·採繪法",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#91828F",
+      "#7E527F",
+      "#BA79B1",
+      "#A6559D"
+    ],
+    "recommendedNeighbors": [
+      "#995D7F",
+      "#A67EB7",
+      "#D3CCD6",
+      "#663D74"
+    ],
+    "recommendedComplements": [
+      "#698E6A",
+      "#778A77",
+      "#81A380",
+      "#D5E3D4"
+    ]
+  },
+  {
+    "nameHans": "烟红",
+    "nameHant": "煙紅",
+    "namePy": "YAN HONG",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#9D858F",
+    "rgb": {
+      "r": 157,
+      "g": 133,
+      "b": 143
+    },
+    "hsl": {
+      "h": 335,
+      "s": 11,
+      "l": 57
+    },
+    "hue": "neutral",
+    "fiveElements": "fire",
+    "sentenceHans": "翠微泛樽绿，苔藓分烟红。",
+    "sentenceHant": "翠微泛樽綠，苔蘚分煙紅。",
+    "authorHans": "张为",
+    "authorHant": "張為",
+    "sentenceFromHans": "秋醉歌",
+    "sentenceFromHant": "秋醉歌",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#928187",
+      "#A76283",
+      "#5C4F55",
+      "#995D7F"
+    ],
+    "recommendedNeighbors": [
+      "#9E696D",
+      "#A35F65",
+      "#9E4E56",
+      "#81474C"
+    ],
+    "recommendedComplements": [
+      "#D5EBE1",
+      "#99BCAC",
+      "#A6BAB1",
+      "#B1D5C8"
+    ]
+  },
+  {
+    "nameHans": "紫诰",
+    "nameHant": "紫誥",
+    "namePy": "ZI GAO",
+    "categoryHans": "大寒",
+    "categoryHant": "大寒",
+    "term": "dahan",
+    "hex": "#76555D",
+    "rgb": {
+      "r": 118,
+      "g": 85,
+      "b": 93
+    },
+    "hsl": {
+      "h": 345,
+      "s": 16,
+      "l": 40
+    },
+    "hue": "red_cool",
+    "fiveElements": "fire",
+    "sentenceHans": "紫浩仍兼绾，黄麻似六经。",
+    "sentenceHant": "紫浩仍兼綰，黃麻似六經。",
+    "authorHans": "杜甫",
+    "authorHant": "杜甫",
+    "sentenceFromHans": "赠翰林张四学士",
+    "sentenceFromHant": "贈翰林張四學士",
+    "fontColor": "#FFFFFF",
+    "recommendedShades": [
+      "#6B5458",
+      "#928187",
+      "#9E696D",
+      "#81474C"
+    ],
+    "recommendedNeighbors": [
+      "#995D7F",
+      "#683632",
+      "#A64036",
+      "#C8B5B3"
+    ],
+    "recommendedComplements": [
+      "#B1D5C8",
+      "#88BFB8",
+      "#3D8E86",
+      "#5DA39D"
+    ]
+  }
+];
