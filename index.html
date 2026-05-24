@@ -634,35 +634,59 @@
 				box-sizing: border-box;
 			}
 
-			/* Accordion Color Strip - Redesigned Tall Aspect Ratio Flush Strips */
+			/* Accordion Color Strip - Redesigned Calligraphic 3x3 Nine-Grid Book Layout (线装书册页) */
 			.color-strip {
-				display: flex;
-				border-radius: 16px;
-				overflow: hidden;
-				height: 136px;
-				border: 1px solid rgba(26, 20, 16, 0.12); /* Elegant dynamic ink border */
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(3, 1fr);
+				gap: 8px; /* Delicate grid gap */
+				border-radius: 6px;
+				overflow: visible; /* Let hovered swatches pop out */
+				width: 200px; /* Golden medium centered book width for perfect slender legibility! */
+				margin: 12px 0; /* Left-aligned vertically with the palette title headers */
+				aspect-ratio: 2 / 3; /* STRICT 2:3 HISTORICAL BOOK RATIO */
+				height: auto; /* Dynamically driven by aspect-ratio! */
 				box-shadow: none;
 				background-color: transparent;
 				position: relative;
 				box-sizing: border-box;
-				width: 100%;
+				padding: 2px;
 			}
 
 			.strip-swatch {
-				flex: 1;
 				position: relative;
 				cursor: pointer;
-				transition: flex 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+				aspect-ratio: 2 / 3; /* STRICT 2:3 CARD RATIO */
 				height: 100%;
 				display: flex;
 				flex-direction: column;
-				justify-content: flex-end;
+				justify-content: center;
+				align-items: center;
 				box-sizing: border-box;
+				border-radius: 4px;
+				border: 1.2px solid rgba(26, 20, 16, 0.08); /* Faint Woodblock Grid (界格) */
+				box-shadow: 0 2px 5px rgba(26, 20, 16, 0.04); /* Hanging paper shadow */
+				transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 			}
 
 			.strip-swatch:hover {
-				flex: 1.8;
+				transform: scale(1.1); /* Pure Concentric Scale (expands equally in all directions) */
 				z-index: 10;
+				box-shadow: 0 8px 20px rgba(26, 20, 16, 0.12); /* Deep soft paper shadow */
+			}
+
+			/* Symmetrical Active Book Cover Title Slip (书签) */
+			.strip-swatch.active-center {
+				border: 1.5px solid var(--theme-primary);
+				outline: 1px solid rgba(26, 20, 16, 0.15); /* Faint double calligraphic border */
+				outline-offset: 2px;
+				box-shadow: 0 5px 15px rgba(26, 20, 16, 0.12); /* Stronger paper shadow */
+			}
+
+			.strip-swatch.active-center .strip-name {
+				border: 1px solid rgba(26, 20, 16, 0.2); /* Calligraphy frame enclosing the name */
+				padding: 4px 2px;
+				border-radius: 2px;
 			}
 
 			.strip-label {
@@ -671,7 +695,8 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				padding: 16px 4px 10px 4px;
+				justify-content: flex-start; /* Anchor calligraphic name towards the upper half */
+				padding: 12px 4px 4px 4px; /* Luxurious top padding */
 				box-sizing: border-box;
 				pointer-events: none; /* Let clicks pass to the swatch */
 				user-select: none;
@@ -681,21 +706,31 @@
 				writing-mode: vertical-rl;
 				text-orientation: upright;
 				font-family: "LXGW WenKai TC", serif !important;
-				font-size: 14px;
+				font-size: 13px;
 				font-weight: 600;
-				letter-spacing: 0.25em; /* Spacious letter-spacing exactly like screenshot! */
-				line-height: 1.2;
-				margin-top: 6px;
+				letter-spacing: 0.15em; /* Spacious letter-spacing exactly like screenshot! */
+				line-height: 1.1;
+				margin-bottom: 2px;
 			}
 
 			.strip-hex {
+				position: absolute;
+				bottom: 6px;
+				left: 50%;
+				transform: translateX(-50%) translateY(3px); /* Absolute horizontal centering */
 				font-family: "DM Mono", monospace !important;
-				font-size: 10px;
+				font-size: 9px;
 				font-weight: 500;
-				opacity: 0.85;
-				margin-top: auto;
-				letter-spacing: 0.05em;
+				opacity: 0;
+				transition: opacity 0.25s ease, transform 0.25s ease;
+				letter-spacing: 0.02em;
 				text-transform: uppercase;
+				white-space: nowrap; /* Prevent wrapping */
+			}
+
+			.strip-swatch:hover .strip-hex {
+				opacity: 0.85;
+				transform: translateX(-50%) translateY(0); /* Slide up while centered */
 			}
 
 			/* 3x2 Symmetrical Grid for Consolidative Palettes */
@@ -2071,23 +2106,35 @@
 					.classList.add("active");
 			}
 
-			// 2-Tab Exploration methods calculation hub (Redesigned with Tall Aspect Ratio Flush Strips)
+			// 2-Tab Exploration methods calculation hub (Redesigned with Calligraphic 3x3 Nine-Grids)
 			function calculateExplorationLabs() {
 				if (!activeViewerColor) return;
 				const c = activeViewerColor;
 
-				// Helper to render swatches into a strip container
+				// Utility to calculate shortest hue distance
+				const getHueDistance = (h1, h2) => {
+					let dh = Math.abs(h1 - h2);
+					return dh > 180 ? 360 - dh : dh;
+				};
+
+				// Helper to render swatches into a 3x3 grid container
 				const renderStrip = (containerId, colorList) => {
 					const container = document.getElementById(containerId);
 					if (!container) return;
 					container.innerHTML = "";
 
-					colorList.forEach((node) => {
+					colorList.forEach((node, idx) => {
 						if (!node) return;
 						const swatch = document.createElement("div");
 						swatch.className = "strip-swatch";
+						// Highlight the absolute center active swatch (index 4 in a 9-color list)
+						if (idx === 4) {
+							swatch.classList.add("active-center");
+							swatch.title = `主色: ${node.nameHans} ${node.hex}`;
+						} else {
+							swatch.title = `${node.nameHans} ${node.hex}`;
+						}
 						swatch.style.backgroundColor = node.hex;
-						swatch.title = `${node.nameHans} ${node.hex}`;
 						swatch.onclick = () => {
 							copyText(node.hex);
 						};
@@ -2104,62 +2151,87 @@
 				};
 
 				// 1. 雅致相依 (Classy Analogous)
-				// Combine shades & neighbors, sorted to create a smooth seasonal HSL gradient
+				// Combine shades & neighbors, sorted to create a smooth seasonal HSL gradient of 9 colors
 				const classyShades = c.recommendedShades
 					? c.recommendedShades
-							.map((hex) =>
-								colorsDb.find((oth) => oth.hex === hex),
-							)
+							.map((hex) => colorsDb.find((oth) => oth.hex === hex))
 							.filter(Boolean)
 					: [];
 				const classyNeighbors = c.recommendedNeighbors
 					? c.recommendedNeighbors
-							.map((hex) =>
-								colorsDb.find((oth) => oth.hex === hex),
-							)
+							.map((hex) => colorsDb.find((oth) => oth.hex === hex))
 							.filter(Boolean)
 					: [];
 
-				let classyList = [
-					classyShades[1] || classyShades[0],
-					classyNeighbors[0],
-					c,
-					classyNeighbors[1] || classyNeighbors[0],
-					classyShades[2] || classyShades[0],
-				].filter(Boolean);
-				classyList = [...new Set(classyList)].slice(0, 5);
-				while (
-					classyList.length < 5 &&
-					classyShades.length > classyList.length
-				) {
-					const nextShade = classyShades.find(
-						(s) => !classyList.includes(s),
-					);
-					if (nextShade) classyList.push(nextShade);
-					else break;
+				let classyList = [c, ...classyShades, ...classyNeighbors];
+				classyList = [...new Set(classyList)].filter(Boolean);
+
+				// Fill up to 9 colors using same solar term or nearby hue
+				if (classyList.length < 9) {
+					colorsDb.forEach((oth) => {
+						if (classyList.length >= 9) return;
+						if (
+							oth.categoryHans === c.categoryHans &&
+							!classyList.some((x) => x.hex === oth.hex)
+						) {
+							classyList.push(oth);
+						}
+					});
 				}
-				renderStrip("paletteClassy", classyList);
+				if (classyList.length < 9) {
+					colorsDb.forEach((oth) => {
+						if (classyList.length >= 9) return;
+						const dh = Math.abs(oth.hsl.h - c.hsl.h);
+						if (
+							dh < 15 &&
+							!classyList.some((x) => x.hex === oth.hex)
+						) {
+							classyList.push(oth);
+						}
+					});
+				}
+				classyList = classyList.slice(0, 9);
+				
+				// Symmetrically center active color c: sort remaining 8 by lightness
+				const activeIndex = classyList.findIndex((x) => x.hex === c.hex);
+				if (activeIndex !== -1) {
+					classyList.splice(activeIndex, 1);
+				}
+				classyList.sort((a, b) => a.hsl.l - b.hsl.l);
+				const classyLeft = classyList.slice(0, 4);
+				const classyRight = classyList.slice(4, 8);
+				const classyFinal = [...classyLeft, c, ...classyRight];
+				renderStrip("paletteClassy", classyFinal);
 
 				// 2. 水墨留白 (Spot Accent)
 				// Selected color as a vibrant accent flanked by classic, light & dark traditional neutrals
-				const jiaoYu = colorsDb.find(
-					(oth) => oth.nameHans === "皦玉",
-				) || { nameHans: "皦玉", hex: "#EBEEE8", fontColor: "#2F2F2F" };
-				const jiLiang = colorsDb.find(
-					(oth) => oth.nameHans === "吉量",
-				) || { nameHans: "吉量", hex: "#EBEDDF", fontColor: "#2F2F2F" };
-				const jiaHui = colorsDb.find(
-					(oth) => oth.nameHans === "葭灰",
-				) || { nameHans: "葭灰", hex: "#BEB1AA", fontColor: "#2F2F2F" };
-				const ganDie = colorsDb.find(
-					(oth) => oth.nameHans === "绀蝶",
-				) || { nameHans: "绀蝶", hex: "#2C2F3B", fontColor: "#FFFFFF" };
+				const allNeutrals = colorsDb.filter(
+					(oth) => oth.hue === "neutral" && oth.hex !== c.hex
+				);
+				const sortedNeutrals = [...allNeutrals].sort(
+					(a, b) => b.hsl.l - a.hsl.l
+				); // lightest first
 
-				const spotList = [jiaoYu, jiLiang, c, jiaHui, ganDie];
+				// Select 4 light neutrals and 4 dark neutrals
+				const lightNeutrals = sortedNeutrals.slice(0, 4);
+				const darkNeutrals = sortedNeutrals.slice(-4);
+				darkNeutrals.sort((a, b) => b.hsl.l - a.hsl.l); // sort dark neutrals from lightest of the darks to darkest
+
+				const spotList = [
+					lightNeutrals[0] || { nameHans: "皦玉", hex: "#EBEEE8", fontColor: "#2F2F2F" },
+					lightNeutrals[1] || { nameHans: "吉量", hex: "#EBEDDF", fontColor: "#2F2F2F" },
+					lightNeutrals[2] || { nameHans: "茶白", hex: "#F3F3FA", fontColor: "#2F2F2F" },
+					lightNeutrals[3] || { nameHans: "素采", hex: "#D4DDE1", fontColor: "#2F2F2F" },
+					c, // Active Accent at Center
+					darkNeutrals[0] || { nameHans: "葭灰", hex: "#BEB1AA", fontColor: "#2F2F2F" },
+					darkNeutrals[1] || { nameHans: "宿墨", hex: "#31322C", fontColor: "#FFFFFF" },
+					darkNeutrals[2] || { nameHans: "深大青", hex: "#1A2228", fontColor: "#FFFFFF" },
+					darkNeutrals[3] || { nameHans: "绀蝶", hex: "#2C2F3B", fontColor: "#FFFFFF" }
+				];
 				renderStrip("paletteSpot", spotList);
 
 				// 3. 五行相生 (Five Elements Balance)
-				// Query Wood, Fire, Earth, Metal, Water and sort candidate elements to align with active seasonal temperature
+				// wood, fire, earth, metal, water. Active is centered. Other elements get 2 colors each.
 				const elements = ["wood", "fire", "earth", "metal", "water"];
 				const activeTermName = c.categoryHans;
 
@@ -2171,150 +2243,294 @@
 					return dist > 12 ? 24 - dist : dist;
 				};
 
-				const fiveList = elements
-					.map((elem) => {
-						if (elem === c.fiveElements) return c;
-						const candidates = colorsDb.filter(
-							(oth) => oth.fiveElements === elem,
-						);
-						if (candidates.length === 0) return null;
-						let best = candidates[0];
-						let minDist = 999999;
-						candidates.forEach((cand) => {
-							const termDist = getTermDistance(
-								cand.categoryHans,
-								activeTermName,
-							);
+				const getFiveElementCandidates = (elem, count) => {
+					const candidates = colorsDb.filter(
+						(oth) => oth.fiveElements === elem && oth.hex !== c.hex
+					);
+					return candidates
+						.map((cand) => {
+							const termDist = getTermDistance(cand.categoryHans, activeTermName);
 							const lDist = Math.abs(cand.hsl.l - c.hsl.l);
 							const score = termDist * 50 + lDist;
-							if (score < minDist) {
-								minDist = score;
-								best = cand;
-							}
-						});
-						return best;
-					})
-					.filter(Boolean);
+							return { cand, score };
+						})
+						.sort((a, b) => a.score - b.score)
+						.map((x) => x.cand)
+						.slice(0, count);
+				};
+
+				const fiveList = [];
+				const orderedElements = ["wood", "fire", "earth", "metal", "water"];
+				orderedElements.forEach((elem) => {
+					if (elem === c.fiveElements) {
+						fiveList.push(c);
+					} else {
+						const candidates = getFiveElementCandidates(elem, 2);
+						if (candidates[0]) fiveList.push(candidates[0]);
+						if (candidates[1]) fiveList.push(candidates[1]);
+					}
+				});
+
+				while (fiveList.length < 9) {
+					fiveList.push(colorsDb[fiveList.length]);
+				}
+				// Swap c to index 4 (absolute center)
+				const actIdx = fiveList.findIndex((x) => x.hex === c.hex);
+				if (actIdx !== -1 && actIdx !== 4) {
+					const temp = fiveList[4];
+					fiveList[4] = fiveList[actIdx];
+					fiveList[actIdx] = temp;
+				}
 				renderStrip("paletteFiveElements", fiveList);
 
 				// 4. 双色对立 (Complementary Contrast)
-				// Complements are pre-encoded in c.recommendedComplements
+				// Interpolate 9-step complementary gradient with active color centered
 				const compHexes = c.recommendedComplements || [];
 				const compNodes = compHexes
 					.map((hex) => colorsDb.find((oth) => oth.hex === hex))
 					.filter(Boolean);
-				let compList = [c, ...compNodes].slice(0, 5);
-				if (compList.length < 5) {
-					const compColor = compNodes[0] || c;
-					compList = [];
-					const steps = 5;
-					for (let i = 0; i < steps; i++) {
-						const ratio = i / (steps - 1);
-						const interpL = Math.round(
-							c.hsl.l + (compColor.hsl.l - c.hsl.l) * ratio,
-						);
-						const interpS = Math.round(
-							c.hsl.s + (compColor.hsl.s - c.hsl.s) * ratio,
-						);
-						let interpH =
-							c.hsl.h + ratio * (compColor.hsl.h - c.hsl.h);
-						if (Math.abs(compColor.hsl.h - c.hsl.h) > 180) {
-							if (compColor.hsl.h > c.hsl.h) {
-								interpH =
-									(c.hsl.h +
-										360 +
-										ratio *
-											(compColor.hsl.h -
-												(c.hsl.h + 360))) %
-									360;
-							} else {
-								interpH =
-									(c.hsl.h +
-										ratio *
-											(compColor.hsl.h + 360 - c.hsl.h)) %
-									360;
-							}
+				const compColor = compNodes[0] || c;
+
+				const compList = [];
+				const steps = 9;
+				for (let i = 0; i < steps; i++) {
+					const ratio = i / (steps - 1);
+					const interpL = Math.round(
+						c.hsl.l + (compColor.hsl.l - c.hsl.l) * ratio
+					);
+					const interpS = Math.round(
+						c.hsl.s + (compColor.hsl.s - c.hsl.s) * ratio
+					);
+					let interpH = c.hsl.h + ratio * (compColor.hsl.h - c.hsl.h);
+					if (Math.abs(compColor.hsl.h - c.hsl.h) > 180) {
+						if (compColor.hsl.h > c.hsl.h) {
+							interpH =
+								(c.hsl.h +
+									360 +
+									ratio * (compColor.hsl.h - (c.hsl.h + 360))) %
+								360;
+						} else {
+							interpH =
+								(c.hsl.h + ratio * (compColor.hsl.h + 360 - c.hsl.h)) %
+								360;
 						}
-						const targetHsl = {
-							h: interpH,
-							s: interpS,
-							l: interpL,
-						};
-						let closest = colorsDb[0];
-						let minDist = 999999;
-						colorsDb.forEach((oth) => {
-							let dh = Math.abs(oth.hsl.h - targetHsl.h);
-							if (dh > 180) dh = 360 - dh;
-							const ds = oth.hsl.s - targetHsl.s;
-							const dl = oth.hsl.l - targetHsl.l;
-							const dist = Math.sqrt(
-								dh * dh + ds * ds * 0.5 + dl * dl * 0.5,
-							);
-							if (dist < minDist) {
-								minDist = dist;
-								closest = oth;
-							}
-						});
-						compList.push(closest);
 					}
+					const targetHsl = { h: interpH, s: interpS, l: interpL };
+
+					let closest = null;
+					let minDist = 999999;
+					colorsDb.forEach((oth) => {
+						const isDupe = compList.some((x) => x.hex === oth.hex);
+						let dh = Math.abs(oth.hsl.h - targetHsl.h);
+						if (dh > 180) dh = 360 - dh;
+						const ds = oth.hsl.s - targetHsl.s;
+						const dl = oth.hsl.l - targetHsl.l;
+						const dupePenalty = isDupe ? 40 : 0;
+						const dist =
+							Math.sqrt(dh * dh + ds * ds * 0.5 + dl * dl * 0.5) +
+							dupePenalty;
+						if (dist < minDist) {
+							minDist = dist;
+							closest = oth;
+						}
+					});
+					compList.push(closest || c);
+				}
+
+				const cIdx = compList.findIndex((x) => x.hex === c.hex);
+				if (cIdx !== -1 && cIdx !== 4) {
+					const temp = compList[4];
+					compList[4] = compList[cIdx];
+					compList[cIdx] = temp;
 				}
 				renderStrip("paletteComplementary", compList);
 
-				// 5. 水墨化境 (Ink Dilution Gradient)
-				// Dilute active color in 5 steps (12%, 35%, 58%, 80%, 100%) and query closest historic colors
-				const currentHsl = c.hsl;
-				const fractions = [0.12, 0.35, 0.58, 0.8, 1.0];
-				const getHslDistance = (hsl1, hsl2) => {
-					let dh = Math.abs(hsl1.h - hsl2.h);
-					if (dh > 180) dh = 360 - dh;
-					const ds = (hsl1.s - hsl2.s) * 0.5;
-					const dl = (hsl1.l - hsl2.l) * 0.5;
-					return Math.sqrt(dh * dh + ds * ds + dl * dl);
-				};
+				// 5. 淡墨 (Gradient / Ink Dilution)
+				// Active color at center (index 4), flanked by lighter dilutions (left) and deeper concentrations (right)
+				let gradientSearchWindow = 30;
+				let gradientCands = colorsDb.filter(
+					(oth) =>
+						getHueDistance(oth.hsl.h, c.hsl.h) <= gradientSearchWindow &&
+						oth.hex !== c.hex
+				);
+				if (gradientCands.length < 15) {
+					gradientSearchWindow = 50;
+					gradientCands = colorsDb.filter(
+						(oth) =>
+							getHueDistance(oth.hsl.h, c.hsl.h) <= gradientSearchWindow &&
+							oth.hex !== c.hex
+					);
+				}
 
-				const dilutionList = fractions
-					.map((op) => {
-						const targetL = Math.round(
-							currentHsl.l + (100 - currentHsl.l) * (1 - op),
-						);
-						const targetS = Math.round(currentHsl.s * op);
-						const targetHsl = {
-							h: currentHsl.h,
-							s: targetS,
-							l: targetL,
-						};
+				let leftPool = gradientCands
+					.filter((oth) => oth.hsl.l > c.hsl.l)
+					.sort((a, b) => a.hsl.l - b.hsl.l);
+				let rightPool = gradientCands
+					.filter((oth) => oth.hsl.l < c.hsl.l)
+					.sort((a, b) => b.hsl.l - a.hsl.l);
 
-						let closest = colorsDb[0];
-						let minDist = 999999;
-						colorsDb.forEach((oth) => {
-							const dist = getHslDistance(targetHsl, oth.hsl);
-							if (dist < minDist) {
-								minDist = dist;
-								closest = oth;
-							}
-						});
-						return closest;
-					})
-					.filter(Boolean);
+				leftPool = [...new Map(leftPool.map((item) => [item.hex, item])).values()];
+				rightPool = [...new Map(rightPool.map((item) => [item.hex, item])).values()];
+
+				const TRAD_WHITES = [
+					colorsDb.find((o) => o.nameHans === "缟羽") || { nameHans: "缟羽", hex: "#EFEFEF", fontColor: "#2F2F2F", hsl: { l: 94 } },
+					colorsDb.find((o) => o.nameHans === "皦玉") || { nameHans: "皦玉", hex: "#EBEEE8", fontColor: "#2F2F2F", hsl: { l: 92 } },
+					colorsDb.find((o) => o.nameHans === "吉量") || { nameHans: "吉量", hex: "#EBEDDF", fontColor: "#2F2F2F", hsl: { l: 91 } },
+					colorsDb.find((o) => o.nameHans === "茶白") || { nameHans: "茶白", hex: "#F3F3FA", fontColor: "#2F2F2F", hsl: { l: 96 } }
+				];
+
+				const TRAD_BLACKS = [
+					colorsDb.find((o) => o.nameHans === "绀蝶") || { nameHans: "绀蝶", hex: "#2C2F3B", fontColor: "#FFFFFF", hsl: { l: 20 } },
+					colorsDb.find((o) => o.nameHans === "京元") || { nameHans: "京元", hex: "#31322C", fontColor: "#FFFFFF", hsl: { l: 20 } },
+					colorsDb.find((o) => o.nameHans === "深大青") || { nameHans: "深大青", hex: "#1A2228", fontColor: "#FFFFFF", hsl: { l: 13 } },
+					colorsDb.find((o) => o.nameHans === "漆黑") || { nameHans: "漆黑", hex: "#161616", fontColor: "#FFFFFF", hsl: { l: 9 } }
+				];
+
+				let leftSelected = [];
+				if (leftPool.length >= 4) {
+					for (let i = 0; i < 4; i++) {
+						const idx = Math.floor((i * (leftPool.length - 1)) / 3);
+						leftSelected.push(leftPool[idx]);
+					}
+				} else {
+					leftSelected = [...leftPool];
+					let padCount = 4 - leftSelected.length;
+					for (let i = 0; i < padCount; i++) {
+						leftSelected.unshift(TRAD_WHITES[i % TRAD_WHITES.length]);
+					}
+				}
+				leftSelected.sort((a, b) => a.hsl.l - b.hsl.l);
+
+				let rightSelected = [];
+				if (rightPool.length >= 4) {
+					for (let i = 0; i < 4; i++) {
+						const idx = Math.floor((i * (rightPool.length - 1)) / 3);
+						rightSelected.push(rightPool[idx]);
+					}
+				} else {
+					rightSelected = [...rightPool];
+					let padCount = 4 - rightSelected.length;
+					for (let i = 0; i < padCount; i++) {
+						rightSelected.push(TRAD_BLACKS[i % TRAD_BLACKS.length]);
+					}
+				}
+				rightSelected.sort((a, b) => b.hsl.l - a.hsl.l);
+
+				const dilutionList = [...leftSelected, c, ...rightSelected];
 				renderStrip("paletteDilution", dilutionList);
 
-				// 6. 烟雨梦尘 (Misty Rain Dream - Option 2 / David's Pick)
-				// Desaturated, HSL-balanced traditional pigments flanking the active color c
-				const tianPiao = colorsDb.find(
-					(oth) => oth.nameHans === "天缥",
-				) || { nameHans: "天缥", hex: "#D5EBE1", fontColor: "#2F2F2F" };
-				const ouBi = colorsDb.find(
-					(oth) => oth.nameHans === "欧碧",
-				) || { nameHans: "欧碧", hex: "#C0D695", fontColor: "#2F2F2F" };
-				const ziPu = colorsDb.find(
-					(oth) => oth.nameHans === "紫蒲",
-				) || { nameHans: "紫蒲", hex: "#A6559D", fontColor: "#FFFFFF" };
-				const jiaHui2 = colorsDb.find(
-					(oth) => oth.nameHans === "葭灰",
-				) || { nameHans: "葭灰", hex: "#BEB1AA", fontColor: "#2F2F2F" };
+				// 6. 烟雨 (Misty / Misty Rain - Full-Spectrum Muted Harmony)
+				// 9 primary hue families to cover the full spectrum. Synced to active color's season.
+				const HUE_FAMILIES = [
+					{ key: "red_warm" },
+					{ key: "red_cool" },
+					{ key: "orange" },
+					{ key: "yellow" },
+					{ key: "green" },
+					{ key: "cyan" },
+					{ key: "blue" },
+					{ key: "purple" },
+					{ key: "pink" }
+				];
 
-				const scholarList = [tianPiao, ouBi, ziPu, c, jiaHui2];
-				renderStrip("paletteScholar", scholarList);
+				const chosenMisty = [];
+				const usedMistyHexes = new Set();
+
+				let activeFamilyKey = c.hue;
+				if (activeFamilyKey === "neutral" || !activeFamilyKey) {
+					activeFamilyKey = "yellow";
+				}
+
+				HUE_FAMILIES.forEach((fam) => {
+					if (
+						fam.key === activeFamilyKey ||
+						activeFamilyKey.includes(fam.key.split("_")[0])
+					) {
+						if (!usedMistyHexes.has(c.hex)) {
+							chosenMisty.push(c);
+							usedMistyHexes.add(c.hex);
+							return;
+						}
+					}
+
+					let candidates = colorsDb.filter((oth) => {
+						if (usedMistyHexes.has(oth.hex)) return false;
+						if (fam.key === "red_warm" || fam.key === "red_cool") {
+							return oth.hue === fam.key;
+						}
+						return (
+							oth.hue === fam.key ||
+							oth.hue === fam.key.split("_")[0]
+						);
+					});
+
+					if (candidates.length === 0) {
+						candidates = colorsDb.filter(
+							(oth) =>
+								oth.hue === fam.key ||
+								oth.hue === fam.key.split("_")[0]
+						);
+					}
+
+					// Mistiness HSL Envelope: middle lightness, soft saturation
+					let filtered = candidates.filter((oth) => {
+						return (
+							oth.hsl.l >= 40 &&
+							oth.hsl.l <= 78 &&
+							oth.hsl.s >= 20 &&
+							oth.hsl.s <= 65
+						);
+					});
+
+					if (filtered.length === 0) {
+						filtered = candidates;
+					}
+
+					let best = filtered[0];
+					let minScore = 999999;
+					filtered.forEach((oth) => {
+						const termDist = getTermDistance(
+							oth.categoryHans,
+							c.categoryHans
+						);
+						const lDist = Math.abs(oth.hsl.l - c.hsl.l);
+						const score = termDist * 20 + lDist;
+						if (score < minScore) {
+							minScore = score;
+							best = oth;
+						}
+					});
+
+					if (best) {
+						chosenMisty.push(best);
+						usedMistyHexes.add(best.hex);
+					}
+				});
+
+				while (chosenMisty.length < 9) {
+					const fallback = colorsDb.find(
+						(o) => !usedMistyHexes.has(o.hex) && o.hue === "neutral"
+					);
+					if (fallback) {
+						chosenMisty.push(fallback);
+						usedMistyHexes.add(fallback.hex);
+					} else {
+						break;
+					}
+				}
+
+				// Sort by HSL hue to form a continuous spectrum
+				chosenMisty.sort((a, b) => a.hsl.h - b.hsl.h);
+
+				// Ensure active color c sits in the middle (index 4)
+				const cMistyIdx = chosenMisty.findIndex((x) => x.hex === c.hex);
+				if (cMistyIdx !== -1 && cMistyIdx !== 4) {
+					const temp = chosenMisty[4];
+					chosenMisty[4] = chosenMisty[cMistyIdx];
+					chosenMisty[cMistyIdx] = temp;
+				}
+
+				renderStrip("paletteScholar", chosenMisty);
 
 				// Timeline remains seasonal and synced
 				updateTimelineForActiveColor(c);
