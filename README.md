@@ -24,8 +24,8 @@ Re-build palettes on the fly inside the palette viewer.
 
 ### Preview
 
-![](https://github.com/davidye0209/tc-colors/blob/main/Preview/screenshot-1.png)
+![](https://github.com/davidye0209/tc-colors/blob/main/Preview/screenshot-4.png)
 
-![](https://github.com/davidye0209/tc-colors/blob/main/Preview/screenshot-2.png)
+![](https://github.com/davidye0209/tc-colors/blob/main/Preview/screenshot-5.png)
 
-![](https://github.com/davidye0209/tc-colors/blob/main/Preview/screenshot-3.png)
+![](https://github.com/davidye0209/tc-colors/blob/main/Preview/screenshot-6.png)
