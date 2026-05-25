@@ -1,6 +1,6 @@
 /* ES Module: Intent-Based Palettes Component (意境配盘) */
 
-import { state, paletteTypes, CHRONO_TERMS, initScrollShadows, showToast } from "./app.js";
+import { state, paletteTypes, CHRONO_TERMS, showToast } from "./app.js";
 import { selectViewerColor } from "./hero.js";
 
 // Calculates dynamic color harmonies and returns an array of exactly 6 color objects
@@ -36,9 +36,9 @@ export function calculatePaletteColors(paletteKey, c) {
 		list = [c, ...shades, ...neighbors];
 		list = [...new Set(list)].filter(Boolean);
 
-		if (list.length < 6) {
+		if (list.length < 9) {
 			state.colorsDb.forEach((oth) => {
-				if (list.length >= 6) return;
+				if (list.length >= 9) return;
 				if (
 					oth.categoryHans === c.categoryHans &&
 					!list.some((x) => x.hex === oth.hex)
@@ -47,37 +47,52 @@ export function calculatePaletteColors(paletteKey, c) {
 				}
 			});
 		}
-		if (list.length < 6) {
+		if (list.length < 9) {
 			state.colorsDb.forEach((oth) => {
-				if (list.length >= 6) return;
+				if (list.length >= 9) return;
 				const dh = Math.abs(oth.hsl.h - c.hsl.h);
 				if (dh < 15 && !list.some((x) => x.hex === oth.hex)) {
 					list.push(oth);
 				}
 			});
 		}
-		list = list.slice(0, 6);
+		list = list.slice(0, 9);
 		const activeIndex = list.findIndex((x) => x.hex === c.hex);
-		if (activeIndex !== -1) list.splice(activeIndex, 1);
-		list.sort((a, b) => a.hsl.l - b.hsl.l);
-		list = [...list.slice(0, 2), c, ...list.slice(2, 5)];
+		if (activeIndex !== -1 && activeIndex !== 4) {
+			const temp = list[4];
+			list[4] = list[activeIndex];
+			list[activeIndex] = temp;
+		}
 	} else if (paletteKey === "spot") {
-		const neutrals = state.colorsDb.filter(
-			(oth) => oth.hue === "neutral" && oth.hex !== c.hex,
-		);
-		const sorted = [...neutrals].sort((a, b) => b.hsl.l - a.hsl.l); // lightest first
-		const lightNeutrals = sorted.slice(0, 2);
-		const darkNeutrals = sorted.slice(-3);
-		darkNeutrals.sort((a, b) => b.hsl.l - a.hsl.l);
+		const neutrals = state.colorsDb.filter((oth) => oth.hue === "neutral" && oth.hex !== c.hex);
 
-		list = [
-			lightNeutrals[0] || { nameHans: "皦玉", hex: "#EBEEE8", fontColor: "#2F2F2F" },
-			lightNeutrals[1] || { nameHans: "吉量", hex: "#EBEDDF", fontColor: "#2F2F2F" },
-			c,
-			darkNeutrals[0] || { nameHans: "宿墨", hex: "#31322C", fontColor: "#FFFFFF" },
-			darkNeutrals[1] || { nameHans: "深大青", hex: "#1A2228", fontColor: "#FFFFFF" },
-			darkNeutrals[2] || { nameHans: "绀蝶", hex: "#2C2F3B", fontColor: "#FFFFFF" },
-		];
+		// Score neutrals based on seasonal proximity (getTermDistance)
+		const scored = neutrals.map((n) => ({
+			node: n,
+			score: getTermDistance(n.categoryHans, c.categoryHans),
+		}));
+
+		// Pick 4 light accents (L > 65) closest to the current season
+		const lightPool = scored
+			.filter((x) => x.node.hsl.l > 65)
+			.sort((a, b) => a.score - b.score || b.node.hsl.l - a.node.hsl.l)
+			.slice(0, 4)
+			.map((x) => x.node)
+			.sort((a, b) => b.hsl.l - a.hsl.l); // Sort for smooth L-gradient
+
+		// Pick 4 dark accents (L <= 65) closest to the current season
+		const darkPool = scored
+			.filter((x) => x.node.hsl.l <= 65)
+			.sort((a, b) => a.score - b.score || a.node.hsl.l - b.node.hsl.l)
+			.slice(0, 4)
+			.map((x) => x.node)
+			.sort((a, b) => b.hsl.l - a.hsl.l); // Sort for smooth L-gradient
+
+		// Fallback padding if not enough neutrals in pools
+		while (lightPool.length < 4) lightPool.push(neutrals[0]);
+		while (darkPool.length < 4) darkPool.push(neutrals[neutrals.length - 1]);
+
+		list = [...lightPool, c, ...darkPool];
 	} else if (paletteKey === "five") {
 		const orderedElements = ["wood", "fire", "earth", "metal", "water"];
 		const getFiveElementCandidates = (elem, count) => {
@@ -102,22 +117,22 @@ export function calculatePaletteColors(paletteKey, c) {
 				const additional = getFiveElementCandidates(elem, 1);
 				if (additional[0]) fiveList.push(additional[0]);
 			} else {
-				const candidates = getFiveElementCandidates(elem, 1);
-				if (candidates[0]) fiveList.push(candidates[0]);
+				const candidates = getFiveElementCandidates(elem, 2);
+				candidates.forEach((cand) => fiveList.push(cand));
 			}
 		});
 
-		while (fiveList.length < 6) {
+		while (fiveList.length < 9) {
 			const fallback = state.colorsDb.find((oth) => !fiveList.some((x) => x.hex === oth.hex));
 			if (fallback) fiveList.push(fallback);
 			else break;
 		}
 
-		list = fiveList.slice(0, 6);
+		list = fiveList.slice(0, 9);
 		const actIdx = list.findIndex((x) => x.hex === c.hex);
-		if (actIdx !== -1 && actIdx !== 2) {
-			const temp = list[2];
-			list[2] = list[actIdx];
+		if (actIdx !== -1 && actIdx !== 4) {
+			const temp = list[4];
+			list[4] = list[actIdx];
 			list[actIdx] = temp;
 		}
 	} else if (paletteKey === "complementary") {
@@ -128,8 +143,8 @@ export function calculatePaletteColors(paletteKey, c) {
 		const compColor = compNodes[0] || c;
 
 		const compList = [];
-		for (let i = 0; i < 6; i++) {
-			const ratio = i / 5;
+		for (let i = 0; i < 9; i++) {
+			const ratio = i / 8;
 			const interpL = Math.round(c.hsl.l + (compColor.hsl.l - c.hsl.l) * ratio);
 			const interpS = Math.round(c.hsl.s + (compColor.hsl.s - c.hsl.s) * ratio);
 			let interpH = c.hsl.h + ratio * (compColor.hsl.h - c.hsl.h);
@@ -161,9 +176,9 @@ export function calculatePaletteColors(paletteKey, c) {
 		}
 
 		const cIdx = compList.findIndex((x) => x.hex === c.hex);
-		if (cIdx !== -1 && cIdx !== 2) {
-			const temp = compList[2];
-			compList[2] = compList[cIdx];
+		if (cIdx !== -1 && cIdx !== 4) {
+			const temp = compList[4];
+			compList[4] = compList[cIdx];
 			compList[cIdx] = temp;
 		}
 		list = compList;
@@ -172,7 +187,7 @@ export function calculatePaletteColors(paletteKey, c) {
 		let gradientCands = state.colorsDb.filter(
 			(oth) => getHueDistance(oth.hsl.h, c.hsl.h) <= gradientSearchWindow && oth.hex !== c.hex,
 		);
-		if (gradientCands.length < 15) {
+		if (gradientCands.length < 25) {
 			gradientSearchWindow = 50;
 			gradientCands = state.colorsDb.filter(
 				(oth) => getHueDistance(oth.hsl.h, c.hsl.h) <= gradientSearchWindow && oth.hex !== c.hex,
@@ -198,26 +213,26 @@ export function calculatePaletteColors(paletteKey, c) {
 		];
 
 		let leftSelected = [];
-		if (leftPool.length >= 2) {
-			for (let i = 0; i < 2; i++) {
-				leftSelected.push(leftPool[Math.floor((i * (leftPool.length - 1)) / 1)]);
+		if (leftPool.length >= 4) {
+			for (let i = 0; i < 4; i++) {
+				leftSelected.push(leftPool[Math.floor((i * (leftPool.length - 1)) / 3)]);
 			}
 		} else {
 			leftSelected = [...leftPool];
-			while (leftSelected.length < 2) {
+			while (leftSelected.length < 4) {
 				leftSelected.unshift(TRAD_WHITES[leftSelected.length % TRAD_WHITES.length]);
 			}
 		}
 		leftSelected.sort((a, b) => a.hsl.l - b.hsl.l);
 
 		let rightSelected = [];
-		if (rightPool.length >= 3) {
-			for (let i = 0; i < 3; i++) {
-				rightSelected.push(rightPool[Math.floor((i * (rightPool.length - 1)) / 2)]);
+		if (rightPool.length >= 4) {
+			for (let i = 0; i < 4; i++) {
+				rightSelected.push(rightPool[Math.floor((i * (rightPool.length - 1)) / 3)]);
 			}
 		} else {
 			rightSelected = [...rightPool];
-			while (rightSelected.length < 3) {
+			while (rightSelected.length < 4) {
 				rightSelected.push(TRAD_BLACKS[rightSelected.length % TRAD_BLACKS.length]);
 			}
 		}
@@ -286,7 +301,7 @@ export function calculatePaletteColors(paletteKey, c) {
 			}
 		});
 
-		while (chosenMisty.length < 6) {
+		while (chosenMisty.length < 9) {
 			const fallback = state.colorsDb.find((o) => !usedMistyHexes.has(o.hex) && o.hue === "neutral");
 			if (fallback) {
 				chosenMisty.push(fallback);
@@ -295,11 +310,11 @@ export function calculatePaletteColors(paletteKey, c) {
 		}
 
 		chosenMisty.sort((a, b) => a.hsl.h - b.hsl.h);
-		list = chosenMisty.slice(0, 6);
+		list = chosenMisty.slice(0, 9);
 		const cMistyIdx = list.findIndex((x) => x.hex === c.hex);
-		if (cMistyIdx !== -1 && cMistyIdx !== 2) {
-			const temp = list[2];
-			list[2] = list[cMistyIdx];
+		if (cMistyIdx !== -1 && cMistyIdx !== 4) {
+			const temp = list[4];
+			list[4] = list[cMistyIdx];
 			list[cMistyIdx] = temp;
 		}
 	}
@@ -332,28 +347,38 @@ export function renderPalettes() {
 		const typeInfo = paletteTypes[key];
 		const paletteColors = calculatePaletteColors(key, baseColor);
 
-		// Create palette block
-		const block = document.createElement("div");
-		block.className = "palette-group-block";
+		// Ensure we have 9 colors and sort them strictly by Lightness (Descending)
+		// This makes the mapping predictable: [0]=A (Top Left), [1]=B (Top Right)... [8]=I (Bottom Right)
+		const sortedColors = [...paletteColors]
+			.filter(Boolean)
+			.sort((a, b) => b.hsl.l - a.hsl.l);
+
+		// Create palette block container
+		const blockContainer = document.createElement("div");
+		blockContainer.className = "palette-group-block";
 
 		// Title on top
 		const titleEl = document.createElement("div");
 		titleEl.className = "palette-group-title";
 		titleEl.innerHTML = `${typeInfo.title} <span>${typeInfo.sub}</span>`;
-		block.appendChild(titleEl);
+		blockContainer.appendChild(titleEl);
 
-		// ribbon group of 6 colors
-		const groupContainer = document.createElement("div");
-		groupContainer.className = "ribbon-group-6";
+		// Mondrian Bookmark Container
+		const bookmark = document.createElement("div");
+		bookmark.className = "mondrian-bookmark";
 
-		paletteColors.forEach((node) => {
-			if (!node) return;
+		const blockIds = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
+
+		sortedColors.forEach((node, idx) => {
+			if (!node || idx >= 9) return;
+			const blockId = blockIds[idx];
 			const card = document.createElement("div");
+			
 			const isActive = state.activeViewerColor && state.activeViewerColor.hex === node.hex;
 			const isDifferentFromBase = node.hex !== baseColor.hex;
 			
-			card.className = `ribbon-swatch-strip ${isActive ? "active" : ""}`;
-			card.id = `palette-swatch-${node.hex.replace("#", "")}`;
+			card.className = `mondrian-block ${blockId} ${isActive ? "active" : ""}`;
+			card.id = `palette-block-${key}-${node.hex.replace("#", "")}`;
 			
 			const txtColor = node.fontColor || "#FFFFFF";
 			card.style.backgroundColor = node.hex;
@@ -361,26 +386,41 @@ export function renderPalettes() {
 			
 			card.onclick = () => selectViewerColor(node, "palettes");
 
-			let inlineReconstruct = "";
-			if (isActive && isDifferentFromBase) {
-				inlineReconstruct = `<span class="inline-reconstruct-btn" onclick="reconstructInline('${node.hex}', event)" title="以此色重构配盘">↻</span>`;
+			// 1. Color Name
+			const nameEl = document.createElement("span");
+			nameEl.className = "mondrian-name";
+			nameEl.innerText = node.nameHans;
+			card.appendChild(nameEl);
+
+			// 2. Clickable Hex Code
+			const hexEl = document.createElement("span");
+			hexEl.className = "mondrian-hex";
+			hexEl.innerText = node.hex;
+			hexEl.onclick = (e) => {
+				e.stopPropagation();
+				copyHexToClipboard(node.hex, e);
+			};
+			card.appendChild(hexEl);
+
+			// 3. Refresh Indicator (for colors different from base)
+			if (isDifferentFromBase) {
+				const refreshEl = document.createElement("span");
+				refreshEl.className = "mondrian-refresh";
+				refreshEl.innerText = "↻";
+				refreshEl.title = "以此色重构配盘";
+				refreshEl.onclick = (e) => {
+					e.stopPropagation();
+					reconstructInline(node.hex, e);
+				};
+				card.appendChild(refreshEl);
 			}
 
-			card.innerHTML = `
-				<div class="ribbon-swatch-left-group">
-					<span class="ribbon-swatch-name">${node.nameHans}</span>
-					${inlineReconstruct}
-				</div>
-				<span class="ribbon-swatch-hex" onclick="copyHexToClipboard('${node.hex}', event)" title="点击复制">${node.hex}</span>
-			`;
-			groupContainer.appendChild(card);
+			bookmark.appendChild(card);
 		});
 
-		block.appendChild(groupContainer);
-		grid.appendChild(block);
+		blockContainer.appendChild(bookmark);
+		grid.appendChild(blockContainer);
 	});
-
-	initScrollShadows(grid);
 }
 
 // Global handler for inline reconstruct button

@@ -70,19 +70,37 @@
 .tab-split-layout > div {
 	flex: 1;
 	min-width: 0;
+	box-sizing: border-box;
+}
+
+/* Default to 50/50 for generic split layouts (like Search) */
+.tab-split-layout > div {
 	width: 50%;
 	max-width: 50%;
-	box-sizing: border-box;
+}
+
+/* Specific width redistribution for Swatches + Palettes pairing */
+.tab-split-layout > .ribbon-swatches-list:first-child,
+.tab-split-layout > #seasonSwatchesView {
+	flex: 0 0 28%;
+	width: 28%;
+	max-width: 28%;
+}
+.tab-split-layout > .tab-palettes-column {
+	flex: 0 0 72%;
+	width: 72%;
+	max-width: 72%;
 }
 
 /* Palettes column on the right side of the left page */
 .tab-palettes-column {
 	display: flex;
-	flex-direction: column;
-	gap: 0;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 24px 32px;
 	max-height: calc(100vh - 280px);
 	overflow-y: auto;
-	padding-right: 0;
+	padding-right: 12px;
 	box-sizing: border-box;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
@@ -95,10 +113,10 @@
 }
 
 .palette-group-block {
-	margin-bottom: 24px;
+	margin-bottom: 12px;
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	width: 154px;
 	flex-shrink: 0;
 }
 .palette-group-block:last-child {
@@ -123,7 +141,6 @@
 	opacity: 1;
 	transform: scale(1.15);
 }
-
 .palette-group-title {
 	font-family: "LXGW WenKai TC", serif;
 	font-size: 14px;
@@ -131,18 +148,198 @@
 	color: var(--ink);
 	margin-bottom: 10px;
 	display: flex;
-	align-items: baseline;
-	gap: 8px;
-	border-left: 3px solid var(--theme-primary);
-	padding-left: 8px;
+	align-items: center;
 }
 .palette-group-title span {
-	font-family: "Barlow", sans-serif;
-	font-size: 10px;
+	font-weight: 500;
+	opacity: 0.5;
+	font-size: 11px;
+	margin-left: 8px;
+}
+
+/* ── MONDRIAN BOOKMARK PALETTE (UPGRADE) ── */
+.mondrian-bookmark {
+	position: relative;
+	background-color: #000000; /* Grid line color */
+	padding: 1px; /* Outer border */
+	box-shadow: 0 15px 45px rgba(26, 20, 16, 0.15);
+	overflow: hidden;
+	width: 140px; /* Proportional to Stout Ratio 1:2.86 */
+	height: 400px; /* Reduced by 20% from previous 498px */
+	margin-bottom: 12px;
+	flex-shrink: 0;
+}
+
+.mondrian-block {
+	position: absolute;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 12px 6px;
+}
+
+.mondrian-block:hover {
+	filter: brightness(1.05);
+	z-index: 5;
+}
+
+.mondrian-block.active {
+	z-index: 10;
+	box-shadow: inset 4px 0 0 0 var(--active-accent, #a21c16);
+}
+
+/* Typographic Rules */
+.mondrian-name {
+	position: absolute;
+	font-family: "LXGW WenKai TC", serif;
+	font-weight: 700;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	pointer-events: none;
+	line-height: 1.2;
+}
+
+.mondrian-hex {
+	position: absolute;
+	font-family: "Outfit", sans-serif;
+	font-weight: 500;
+	font-size: 8px;
+	opacity: 0.5;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
-	color: var(--ink-soft);
-	font-weight: 500;
+	transition: all 0.2s ease;
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+}
+
+.mondrian-hex:hover {
+	opacity: 1;
+	color: var(--active-accent, #a21c16);
+}
+
+.mondrian-refresh {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	font-size: 14px;
+	opacity: 0;
+	transform: scale(0.5);
+	transition: all 0.2s ease;
+	pointer-events: none; /* Hidden state is non-interactive */
+	z-index: 15;
+}
+
+.mondrian-block.active .mondrian-refresh {
+	opacity: 1;
+	transform: scale(1);
+	pointer-events: auto; /* Active state is interactive */
+}
+
+/* BLOCK-SPECIFIC LAYOUTS */
+
+/* Top Left Block (A): Horizontal */
+.mondrian-block.a .mondrian-name {
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	writing-mode: horizontal-tb;
+	width: 100%;
+	text-align: center;
+}
+.mondrian-block.a .mondrian-hex {
+	bottom: 6px;
+	left: 50%;
+	transform: translateX(-50%);
+	writing-mode: horizontal-tb;
+	width: 100%;
+	text-align: center;
+}
+
+/* Other Blocks (B-I): Vertical */
+.mondrian-block:not(.a) .mondrian-name {
+	top: 8px;
+	left: 8px;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+.mondrian-block:not(.a) .mondrian-hex {
+	bottom: 4px;
+	right: 2px;
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+}
+
+/* Bottom Panels (H, G, I): Smaller Hex */
+.mondrian-block.h .mondrian-hex,
+.mondrian-block.g .mondrian-hex,
+.mondrian-block.i .mondrian-hex {
+	font-size: 7px;
+}
+
+/* Specific adjustment for Block G name positioning */
+.mondrian-block.g .mondrian-name {
+	left: 4px;
+}
+
+/* PRECISION PERCENTAGE COORDINATES */
+.mondrian-block.a {
+	left: 1px;
+	top: 1px;
+	width: calc(61.8% - 1px);
+	height: calc(14.8% - 1px);
+}
+.mondrian-block.b {
+	left: calc(61.8% + 1px);
+	top: 1px;
+	width: calc(38.2% - 2px);
+	height: calc(38.3% - 1px);
+}
+.mondrian-block.c {
+	left: 1px;
+	top: calc(14.8% + 1px);
+	width: calc(61.8% - 1px);
+	height: calc(46.9% - 1px);
+}
+.mondrian-block.d {
+	left: calc(61.8% + 1px);
+	top: calc(38.3% + 1px);
+	width: calc(38.2% - 2px);
+	height: calc(23.4% - 1px);
+}
+.mondrian-block.f {
+	left: 1px;
+	top: calc(61.7% + 1px);
+	width: calc(38.2% - 1px);
+	height: calc(23.5% - 1px);
+}
+.mondrian-block.e {
+	left: calc(38.2% + 1px);
+	top: calc(61.7% + 1px);
+	width: calc(61.8% - 2px);
+	height: calc(23.5% - 1px);
+}
+.mondrian-block.h {
+	left: 1px;
+	top: calc(85.2% + 1px);
+	width: calc(38.2% - 1px);
+	height: calc(14.8% - 2px);
+}
+.mondrian-block.g {
+	left: calc(38.2% + 1px);
+	top: calc(85.2% + 1px);
+	width: calc(23.6% - 1px);
+	height: calc(14.8% - 2px);
+}
+.mondrian-block.i {
+	left: calc(61.8% + 1px);
+	top: calc(85.2% + 1px);
+	width: calc(38.2% - 2px);
+	height: calc(14.8% - 2px);
 }
 
 /* Group of 9/6/4 ribbon card container */
@@ -222,6 +419,10 @@
 	font-size: 15px;
 	font-weight: 700;
 	letter-spacing: 0.06em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 120px;
 }
 
 .ribbon-swatch-py {
@@ -375,12 +576,12 @@
 	color: var(--ink);
 	line-height: 1.65;
 	margin-top: 12px;
-	max-width: 220px; /* Relaxed margin now that explicit breaks split the lines perfectly */
+	max-width: 450px; /* Relaxed margin to fit poems comfortably */
 }
 
 .season-unified-header {
 	display: grid;
-	grid-template-columns: 1.25fr 1fr;
+	grid-template-columns: 1.3fr 0.7fr;
 	gap: 16px;
 	width: 100%;
 	margin-bottom: 16px;
@@ -395,6 +596,7 @@
 	gap: 14px 20px;
 	width: auto;
 	justify-content: start;
+	justify-self: center; /* Centered in the right column for better balance */
 	box-sizing: border-box;
 	padding: 12px 0;
 }

@@ -29,7 +29,7 @@ header {
 	font-size: 13px;
 	color: var(--ink);
 	outline: none;
-	transition: 
+	transition:
 		border-bottom-color 1.5s cubic-bezier(0.45, 0, 0.55, 1),
 		width 0.3s ease;
 	backdrop-filter: blur(2px);
@@ -89,7 +89,7 @@ header {
 	font-size: 18px;
 	font-weight: 500;
 	color: var(--ink-soft);
-	transition: 
+	transition:
 		color 1.2s ease,
 		font-weight 0.4s ease;
 	position: relative;
@@ -113,7 +113,7 @@ header {
 	height: 3px;
 	background-color: var(--theme-primary);
 	transform: scaleX(0);
-	transition: 
+	transition:
 		transform 0.25s ease,
 		background-color 1.5s cubic-bezier(0.45, 0, 0.55, 1);
 	transform-origin: bottom center;
