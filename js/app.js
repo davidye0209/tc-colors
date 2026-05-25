@@ -1,7 +1,11 @@
 /* ES Module: Core Application Orchestrator & State Manager */
 
 import { renderHueGroups, switchHue } from "./groups.js";
-import { renderSeasonalTerms, switchSeasonTerm, switchSeason } from "./seasons.js";
+import {
+	renderSeasonalTerms,
+	switchSeasonTerm,
+	switchSeason,
+} from "./seasons.js";
 import { renderPalettes, reconstructInline } from "./palettes.js";
 import { selectViewerColor } from "./hero.js";
 
@@ -10,7 +14,9 @@ export function initScrollShadows(container) {
 	if (!container) return;
 
 	// Remove existing shadows if any (to prevent duplicates on re-render)
-	container.querySelectorAll(".scroll-shadow-top, .scroll-shadow-bottom").forEach((s) => s.remove());
+	container
+		.querySelectorAll(".scroll-shadow-top, .scroll-shadow-bottom")
+		.forEach((s) => s.remove());
 
 	const topShadow = document.createElement("div");
 	topShadow.className = "scroll-shadow-top";
@@ -69,7 +75,8 @@ export const hueFamilies = {
 		accentRgb: "217, 79, 94",
 		lightBg: "rgba(217, 79, 94, 0.05)",
 		border: "rgba(217, 79, 94, 0.2)",
-		summary: "【朱赤系】主要包含古代的朱砂、朱红、绯红等色泽，视觉张力充沛，是中国传统礼制审美的核心。",
+		summary:
+			"【朱赤系】主要包含古代的朱砂、朱红、绯红等色泽，视觉张力充沛，是中国传统礼制审美的核心。",
 	},
 	red_cool: {
 		nameZh: "深绛",
@@ -78,7 +85,8 @@ export const hueFamilies = {
 		accentRgb: "164, 58, 72",
 		lightBg: "rgba(164, 58, 72, 0.05)",
 		border: "rgba(164, 58, 72, 0.2)",
-		summary: "【深绛系】包含胭脂、绛红、深茜等冷调红色，呈现出高贵、内敛、冷艳的染色美学。",
+		summary:
+			"【深绛系】包含胭脂、绛红、深茜等冷调红色，呈现出高贵、内敛、冷艳的染色美学。",
 	},
 	orange: {
 		nameZh: "橙橘",
@@ -87,7 +95,8 @@ export const hueFamilies = {
 		accentRgb: "226, 126, 55",
 		lightBg: "rgba(226, 126, 55, 0.05)",
 		border: "rgba(226, 126, 55, 0.2)",
-		summary: "【橙橘系】光谱位于亮暖色调。包含经典的杏子、琥珀、橘黄等，色彩明朗亮丽，充满阳光温度。",
+		summary:
+			"【橙橘系】光谱位于亮暖色调。包含经典的杏子、琥珀、橘黄等，色彩明朗亮丽，充满阳光温度。",
 	},
 	brown: {
 		nameZh: "褐赭",
@@ -96,7 +105,8 @@ export const hueFamilies = {
 		accentRgb: "139, 90, 62",
 		lightBg: "rgba(139, 90, 62, 0.05)",
 		border: "rgba(139, 90, 62, 0.2)",
-		summary: "【褐赭系】低明度赭石。包含流黄、栗壳等，沉稳沉静，是古代矿物色与大自然的皮壳结晶。",
+		summary:
+			"【褐赭系】低明度赭石。包含流黄、栗壳等，沉稳沉静，是古代矿物色与大自然的皮壳结晶。",
 	},
 	yellow: {
 		nameZh: "黄",
@@ -105,7 +115,8 @@ export const hueFamilies = {
 		accentRgb: "208, 160, 16",
 		lightBg: "rgba(208, 160, 16, 0.05)",
 		border: "rgba(208, 160, 16, 0.2)",
-		summary: "【黄系】表征泥土与正中之位，也是古代尊贵的御用龙袍正色，尊贵稳定，光芒万丈。",
+		summary:
+			"【黄系】表征泥土与正中之位，也是古代尊贵的御用龙袍正色，尊贵稳定，光芒万丈。",
 	},
 	green: {
 		nameZh: "绿",
@@ -114,7 +125,8 @@ export const hueFamilies = {
 		accentRgb: "53, 140, 89",
 		lightBg: "rgba(53, 140, 89, 0.05)",
 		border: "rgba(53, 140, 89, 0.2)",
-		summary: "【绿系】代表繁茂的森林、春季草木的新生与翡翠绿玉。色彩清新、自然，饱和度饱满。",
+		summary:
+			"【绿系】代表繁茂的森林、春季草木的新生与翡翠绿玉。色彩清新、自然，饱和度饱满。",
 	},
 	cyan: {
 		nameZh: "青翠",
@@ -123,7 +135,8 @@ export const hueFamilies = {
 		accentRgb: "28, 122, 140",
 		lightBg: "rgba(28, 122, 140, 0.05)",
 		border: "rgba(28, 122, 140, 0.2)",
-		summary: "【青翠系】代表中国古典审美中最具写意感的「青」色，烟雨朦胧，苍筤缥缈。",
+		summary:
+			"【青翠系】代表中国古典审美中最具写意感的「青」色，烟雨朦胧，苍筤缥缈。",
 	},
 	blue: {
 		nameZh: "蓝黛",
@@ -132,7 +145,8 @@ export const hueFamilies = {
 		accentRgb: "35, 68, 142",
 		lightBg: "rgba(35, 68, 142, 0.05)",
 		border: "rgba(35, 68, 142, 0.2)",
-		summary: "【蓝黛系】包含天然石青、青黛、靛蓝等，表征夜空的广袤无垠与深海的幽邃。",
+		summary:
+			"【蓝黛系】包含天然石青、青黛、靛蓝等，表征夜空的广袤无垠与深海的幽邃。",
 	},
 	purple: {
 		nameZh: "紫",
@@ -141,7 +155,8 @@ export const hueFamilies = {
 		accentRgb: "131, 72, 149",
 		lightBg: "rgba(131, 72, 149, 0.05)",
 		border: "rgba(131, 72, 149, 0.2)",
-		summary: "【紫系】表征「紫气东来」的祥瑞，由于植物染料珍稀，极显高贵、稀有之质。",
+		summary:
+			"【紫系】表征「紫气东来」的祥瑞，由于植物染料珍稀，极显高贵、稀有之质。",
 	},
 	pink: {
 		nameZh: "粉绛",
@@ -150,7 +165,8 @@ export const hueFamilies = {
 		accentRgb: "220, 107, 130",
 		lightBg: "rgba(220, 107, 130, 0.05)",
 		border: "rgba(220, 107, 130, 0.2)",
-		summary: "【粉绛系】包含桃花、杨妃、长春等娇美色彩，散发出春天百花争艳的柔美与勃发生机。",
+		summary:
+			"【粉绛系】包含桃花、杨妃、长春等娇美色彩，散发出春天百花争艳的柔美与勃发生机。",
 	},
 	neutral: {
 		nameZh: "灰白",
@@ -159,49 +175,170 @@ export const hueFamilies = {
 		accentRgb: "109, 110, 112",
 		lightBg: "rgba(109, 110, 112, 0.05)",
 		border: "rgba(109, 110, 112, 0.2)",
-		summary: "【灰白系】低饱和度、极亮或极暗的白、素色与煤黑，是传统水墨留白的基准底色。",
+		summary:
+			"【灰白系】低饱和度、极亮或极暗的白、素色与煤黑，是传统水墨留白的基准底色。",
 	},
 };
 
 // 24 Solar Terms Meta Arrays
 export const CHRONO_TERMS = [
-	{ name: "立春", py: "Lichun", season: "春季", desc: "时令之首，阳气萌生，<br>林木始动，春风拂绿。" },
-	{ name: "雨水", py: "Yushui", season: "春季", desc: "冰雪消融，细雨随风，<br>草木萌动，万物复苏。" },
-	{ name: "惊蛰", py: "Jingzhe", season: "春季", desc: "春雷始鸣，蛰虫惊醒，<br>红花渐开，桃李竞芳。" },
-	{ name: "春分", py: "Chunfen", season: "春季", desc: "昼夜均等，微风徐徐，<br>草长莺飞，白鹭翻飞。" },
-	{ name: "清明", py: "Qingming", season: "春季", desc: "万物洁齐，天清地明，<br>采茶踏青，烟雨柳绿。" },
-	{ name: "谷雨", py: "Guyu", season: "春季", desc: "雨生百谷，暮春将尽，<br>牡丹吐蕊，绿荫渐浓。" },
+	{
+		name: "立春",
+		py: "Lichun",
+		season: "春季",
+		desc: "时令之首，阳气萌生，<br>林木始动，春风拂绿。",
+	},
+	{
+		name: "雨水",
+		py: "Yushui",
+		season: "春季",
+		desc: "冰雪消融，细雨随风，<br>草木萌动，万物复苏。",
+	},
+	{
+		name: "惊蛰",
+		py: "Jingzhe",
+		season: "春季",
+		desc: "春雷始鸣，蛰虫惊醒，<br>红花渐开，桃李竞芳。",
+	},
+	{
+		name: "春分",
+		py: "Chunfen",
+		season: "春季",
+		desc: "昼夜均等，微风徐徐，<br>草长莺飞，白鹭翻飞。",
+	},
+	{
+		name: "清明",
+		py: "Qingming",
+		season: "春季",
+		desc: "万物洁齐，天清地明，<br>采茶踏青，烟雨柳绿。",
+	},
+	{
+		name: "谷雨",
+		py: "Guyu",
+		season: "春季",
+		desc: "雨生百谷，暮春将尽，<br>牡丹吐蕊，绿荫渐浓。",
+	},
 
-	{ name: "立夏", py: "Lixia", season: "夏季", desc: "夏之伊始，白昼渐长，<br>万物繁茂，新蝉初鸣。" },
-	{ name: "小满", py: "Xiaoman", season: "夏季", desc: "江河渐满，麦粒始满，<br>绿树成荫，荷池初动。" },
-	{ name: "芒种", py: "Mangzhong", season: "夏季", desc: "麦浪翻滚，稻秧始播，<br>蝉鸣声声，夏花灿烂。" },
-	{ name: "夏至", py: "Xiazhi", season: "夏季", desc: "日影极短，夏夜极凉，<br>稻香蛙鸣，满池朱莲。" },
-	{ name: "小暑", py: "Xiaoshu", season: "夏季", desc: "温风始至，伏蝉喧嚣，<br>雷雨阵阵，幽荷溢香。" },
-	{ name: "大暑", py: "Dashu", season: "夏季", desc: "热浪极盛，萤火夜飞，<br>大雨时行，万物繁茂。" },
+	{
+		name: "立夏",
+		py: "Lixia",
+		season: "夏季",
+		desc: "夏之伊始，白昼渐长，<br>万物繁茂，新蝉初鸣。",
+	},
+	{
+		name: "小满",
+		py: "Xiaoman",
+		season: "夏季",
+		desc: "江河渐满，麦粒始满，<br>绿树成荫，荷池初动。",
+	},
+	{
+		name: "芒种",
+		py: "Mangzhong",
+		season: "夏季",
+		desc: "麦浪翻滚，稻秧始播，<br>蝉鸣声声，夏花灿烂。",
+	},
+	{
+		name: "夏至",
+		py: "Xiazhi",
+		season: "夏季",
+		desc: "日影极短，夏夜极凉，<br>稻香蛙鸣，满池朱莲。",
+	},
+	{
+		name: "小暑",
+		py: "Xiaoshu",
+		season: "夏季",
+		desc: "温风始至，伏蝉喧嚣，<br>雷雨阵阵，幽荷溢香。",
+	},
+	{
+		name: "大暑",
+		py: "Dashu",
+		season: "夏季",
+		desc: "热浪极盛，萤火夜飞，<br>大雨时行，万物繁茂。",
+	},
 
-	{ name: "立秋", py: "Liqiu", season: "秋季", desc: "凉风习习，金黄遍野，<br>梧桐落叶，晨露初凝。" },
-	{ name: "处暑", py: "Chushu", season: "秋季", desc: "秋意初来，暑气渐消，<br>天高云淡，稻谷飘香。" },
-	{ name: "白露", py: "Bailu", season: "秋季", desc: "阴气始重，凝而成露，<br>雁南飞去，金秋凝霜。" },
-	{ name: "秋分", py: "Qiufen", season: "秋季", desc: "昼夜均分，秋风萧瑟，<br>桂花飘香，韶粉铺地。" },
-	{ name: "寒露", py: "Hanlu", season: "秋季", desc: "露水渐寒，凝结将冰，<br>枫红遍野，菊蕊飘香。" },
-	{ name: "霜降", py: "Shuangjiang", season: "秋季", desc: "气肃而凝，露结为霜，<br>万物凋零，傲骨红柿。" },
+	{
+		name: "立秋",
+		py: "Liqiu",
+		season: "秋季",
+		desc: "凉风习习，金黄遍野，<br>梧桐落叶，晨露初凝。",
+	},
+	{
+		name: "处暑",
+		py: "Chushu",
+		season: "秋季",
+		desc: "秋意初来，暑气渐消，<br>天高云淡，稻谷飘香。",
+	},
+	{
+		name: "白露",
+		py: "Bailu",
+		season: "秋季",
+		desc: "阴气始重，凝而成露，<br>雁南飞去，金秋凝霜。",
+	},
+	{
+		name: "秋分",
+		py: "Qiufen",
+		season: "秋季",
+		desc: "昼夜均分，秋风萧瑟，<br>桂花飘香，韶粉铺地。",
+	},
+	{
+		name: "寒露",
+		py: "Hanlu",
+		season: "秋季",
+		desc: "露水渐寒，凝结将冰，<br>枫红遍野，菊蕊飘香。",
+	},
+	{
+		name: "霜降",
+		py: "Shuangjiang",
+		season: "秋季",
+		desc: "气肃而凝，露结为霜，<br>万物凋零，傲骨红柿。",
+	},
 
-	{ name: "立冬", py: "Lidong", season: "冬季", desc: "冬之伊始，朔风怒号，<br>水始成冰，万物归藏。" },
-	{ name: "小雪", py: "Xiaoxue", season: "冬季", desc: "天降初雪，寒气渐重，<br>松柏长青，腊梅含苞。" },
-	{ name: "大雪", py: "Daxue", season: "冬季", desc: "积雪铺地，寒风呼啸，<br>江河封冻，炉火焙茶。" },
-	{ name: "冬至", py: "Dongzhi", season: "冬季", desc: "日影极长，冬夜极深，<br>阴极阳生，腊鼓声声。" },
-	{ name: "小寒", py: "Xiaohan", season: "冬季", desc: "寒积至深, 冰冻三尺, 梅花绽蕊, 水仙初吐。" },
-	{ name: "大寒", py: "Dahan", season: "冬季", desc: "岁暮大寒, 积雪不融, 冰雕玉琢, 静候春归。" },
+	{
+		name: "立冬",
+		py: "Lidong",
+		season: "冬季",
+		desc: "冬之伊始，朔风怒号，<br>水始成冰，万物归藏。",
+	},
+	{
+		name: "小雪",
+		py: "Xiaoxue",
+		season: "冬季",
+		desc: "天降初雪，寒气渐重，<br>松柏长青，腊梅含苞。",
+	},
+	{
+		name: "大雪",
+		py: "Daxue",
+		season: "冬季",
+		desc: "积雪铺地，寒风呼啸，<br>江河封冻，炉火焙茶。",
+	},
+	{
+		name: "冬至",
+		py: "Dongzhi",
+		season: "冬季",
+		desc: "日影极长，冬夜极深，<br>阴极阳生，腊鼓声声。",
+	},
+	{
+		name: "小寒",
+		py: "Xiaohan",
+		season: "冬季",
+		desc: "寒积至深, 冰冻三尺, 梅花绽蕊, 水仙初吐。",
+	},
+	{
+		name: "大寒",
+		py: "Dahan",
+		season: "冬季",
+		desc: "岁暮大寒, 积雪不融, 冰雕玉琢, 静候春归。",
+	},
 ];
 
 // Intention Harmony types
 export const paletteTypes = {
-	classy: { title: "相依", sub: "Analogous" },
-	spot: { title: "留白", sub: "Accent" },
-	five: { title: "相生", sub: "Balance" },
-	complementary: { title: "交错", sub: "Contrast" },
-	dilution: { title: "淡墨", sub: "Gradient" },
-	misty: { title: "烟雨", sub: "Misty" },
+	classy: { title: "相依", sub: "邻色相谐, 柔明共度" },
+	spot: { title: "留白", sub: "莹白葭灰, 静谧生动" },
+	five: { title: "相生", sub: "春生夏长, 秋收冬藏" },
+	complementary: { title: "交错", sub: "相反相成, 高张夺目" },
+	dilution: { title: "淡墨", sub: "墨分五彩, 水痕淡淡" },
+	misty: { title: "烟雨", sub: "桐发旧枝, 当年烟月" },
 };
 
 // Swaps Main top-level Tab Displays
@@ -240,12 +377,20 @@ export function switchMainTab(tabId) {
 
 	// Silent Synchronization: Ensure the tab we are switching to is focused on the active color
 	if (state.activeViewerColor) {
-		if (tabId === "groups" && state.activeHueFilter !== state.activeViewerColor.hue) {
+		if (
+			tabId === "groups" &&
+			state.activeHueFilter !== state.activeViewerColor.hue
+		) {
 			state.activeHueFilter = state.activeViewerColor.hue;
 			renderHueGroups(); // Update the horizontal tags
-		} else if (tabId === "seasons" && state.activeTermFilter !== state.activeViewerColor.categoryHans) {
+		} else if (
+			tabId === "seasons" &&
+			state.activeTermFilter !== state.activeViewerColor.categoryHans
+		) {
 			// Find which season this term belongs to
-			const termMeta = CHRONO_TERMS.find(t => t.name === state.activeViewerColor.categoryHans);
+			const termMeta = CHRONO_TERMS.find(
+				(t) => t.name === state.activeViewerColor.categoryHans,
+			);
 			if (termMeta) {
 				state.activeSeason = termMeta.season;
 				state.activeTermFilter = termMeta.name;
@@ -262,7 +407,7 @@ export function switchMainTab(tabId) {
 	} else if (tabId === "seasons") {
 		renderSeasonalTerms();
 	}
-	
+
 	renderPalettes();
 }
 
@@ -331,17 +476,19 @@ export function handleSearch() {
 	chunks.forEach((chunk, chunkIndex) => {
 		const groupContainer = document.createElement("div");
 		groupContainer.className = "ribbon-group-6";
-		
+
 		chunk.forEach((c) => {
 			const card = document.createElement("div");
-			const isActive = state.activeViewerColor && state.activeViewerColor.hex === c.hex;
+			const isActive =
+				state.activeViewerColor &&
+				state.activeViewerColor.hex === c.hex;
 			card.className = `ribbon-swatch-strip ${isActive ? "active" : ""}`;
 			card.id = `search-swatch-${c.hex.replace("#", "")}`;
-			
+
 			const txtColor = c.fontColor || "#FFFFFF";
 			card.style.backgroundColor = c.hex;
 			card.style.color = txtColor;
-			
+
 			card.onclick = () => selectViewerColor(c, "search");
 
 			card.innerHTML = `

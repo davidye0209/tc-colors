@@ -114,4 +114,33 @@
 	align-self: flex-end; /* Align to bottom of the poem group */
 }
 
+/* Page Credits Footer (Bottom Right) */
+.page-footer {
+	position: absolute;
+	bottom: 32px;
+	right: 190px;
+	font-family: "Inter", sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	color: var(--ink);
+	opacity: 0.4;
+	pointer-events: auto; /* Re-enabled for hyperlinks */
+	z-index: 100;
+	letter-spacing: 0.05em;
+	writing-mode: horizontal-tb; /* Horizontal lines */
+	text-align: right; /* Aligned to the right */
+	direction: rtl; /* Writes from right to left */
+}
+
+.page-footer .footer-link {
+	cursor: pointer;
+	transition: all 0.2s ease;
+	display: block; /* Ensure each link is on its own line */
+}
+
+.page-footer .footer-link:hover {
+	opacity: 1;
+	color: var(--active-accent, #a21c16);
+}
+
 /* Footer Group (Bottom Left) - Removed */
