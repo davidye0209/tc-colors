@@ -1,0 +1,117 @@
+/* Vertical Scroll Calligraphy Panel (留白挂轴与诗词排版) Styling */
+
+.stage-right-hero {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	transition:
+		background-color 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+		color 0.4s ease;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start; /* Changed to prevent pushing to far left */
+	align-items: stretch;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	overflow: hidden;
+	box-sizing: border-box;
+	position: relative;
+
+	/* Hardware acceleration to prevent text jitter during full-page transitions */
+	transform: translateZ(0);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Strict 2:3 book layout aspect ratio */
+	height: 680px;
+	width: 453px;
+	max-width: 100%;
+	max-height: calc(100vh - 120px);
+	aspect-ratio: 2 / 3;
+	padding: 40px 0;
+}
+
+/* No decorative frame overlay */
+.stage-right-hero::before {
+	display: none;
+}
+
+/* Far Right Column: Color Name Group */
+.hero-name-group {
+	display: flex;
+	flex-direction: row; /* Arranges elements vertically (top-to-bottom) in vertical writing mode */
+	align-self: flex-start; /* Aligns to TOP */
+	align-items: center; /* Horizontally centers all items in the single vertical column */
+	gap: 16px;
+	flex-shrink: 0;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+
+.hero-name-zh {
+	font-family: var(--font-serif-jp);
+	font-size: 70px;
+	font-weight: 200;
+	letter-spacing: 0.18em;
+	line-height: 1.1;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+	text-orientation: upright;
+	writing-mode: vertical-rl;
+}
+
+.hero-meta-badge {
+	font-family: var(--font-calligraphy);
+	font-size: 14px;
+	color: var(
+		--seal-color,
+		#a21c16
+	) !important; /* Force traditional seal red */
+	border: 1.5px solid var(--seal-color, #a21c16);
+	padding: 6px 4px;
+	border-radius: 2px; /* Slight rounding to mimic a carved stone */
+	background: transparent;
+	text-orientation: upright;
+	writing-mode: vertical-rl;
+	margin-top: 32px; /* Space below the color name */
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05); /* Subtle inner texture */
+	opacity: 0.9;
+}
+
+/* Middle Column: Poetry Group starting from the middle down */
+.hero-poem-group {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start; /* Align to TOP */
+	align-items: flex-start; /* Align internal text to top */
+	gap: 16px;
+	margin-right: 32px; /* Space between name and poem */
+	margin-top: 120px; /* Consistently pulled up a bit */
+	padding-bottom: 8px;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+
+.hero-poem-text {
+	font-family: var(--font-serif-jp);
+	font-size: 28px; /* Reduced to fit more text */
+	line-height: 1.7; /* Tighter column spacing */
+	letter-spacing: 0.15em;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	text-orientation: upright;
+	writing-mode: vertical-rl;
+}
+
+.hero-poem-citation {
+	font-family: var(--font-calligraphy);
+	font-size: 20px; /* Smaller for hierarchy */
+	opacity: 0.85; /* Slightly faded */
+	letter-spacing: 0.08em;
+	text-orientation: mixed; /* Automatically rotates Latin square brackets 90 degrees horizontally */
+	writing-mode: vertical-rl;
+	margin-top: 32px; /* Space between poem and citation */
+	align-self: flex-end; /* Align to bottom of the poem group */
+}
+
+/* Footer Group (Bottom Left) - Removed */

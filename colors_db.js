@@ -663,7 +663,7 @@ window.colorsDatabase = [
     ]
   },
   {
-    "nameHans": "𫄸黄",
+    "nameHans": "纁黄",
     "nameHant": "纁黃",
     "namePy": "XUN HUANG",
     "categoryHans": "立春",
@@ -682,7 +682,7 @@ window.colorsDatabase = [
     },
     "hue": "red_warm",
     "fiveElements": "fire",
-    "sentenceHans": "一曲𫄸黄瓜蔓水，数峰苍翠华阴山。",
+    "sentenceHans": "一曲纁黄瓜蔓水，数峰苍翠华阴山。",
     "sentenceHant": "一曲纁黃瓜蔓水，數峯蒼翠華陰山。",
     "authorHans": "张问陶",
     "authorHant": "張問陶",
@@ -1583,7 +1583,7 @@ window.colorsDatabase = [
     ]
   },
   {
-    "nameHans": "𬘬茷",
+    "nameHans": "綪茷",
     "nameHant": "綪茷",
     "namePy": "QIAN FA",
     "categoryHans": "惊蛰",
@@ -1602,7 +1602,7 @@ window.colorsDatabase = [
     },
     "hue": "red_warm",
     "fiveElements": "fire",
-    "sentenceHans": "知𬘬茷是大赤，大赤即今之红旗，取染赤之草为名也。",
+    "sentenceHans": "知綪茷是大赤，大赤即今之红旗，取染赤之草为名也。",
     "sentenceHant": "知綪茷是大赤，大赤即今之紅旗，取染赤之草為名也。",
     "authorHans": "杜预",
     "authorHant": "杜預",
@@ -4362,7 +4362,7 @@ window.colorsDatabase = [
     },
     "hue": "brown",
     "fiveElements": "fire",
-    "sentenceHans": "三入为𫄸，五入为緅，七入为缁。",
+    "sentenceHans": "三入为纁，五入为緅，七入为缁。",
     "sentenceHant": "三入為纁，五入為緅，七入為緇。",
     "authorHans": "周公旦",
     "authorHant": "周公旦",

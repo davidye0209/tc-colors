@@ -1,0 +1,116 @@
+/* Core Design System Tokens & Global Xuan Paper Canvas */
+:root {
+	/* Active Theme Colors - Default Warm Red (朱赤) */
+	--theme-primary: #9e2a22;
+	--theme-primary-rgb: 158, 42, 34;
+	--theme-light-bg: rgba(158, 42, 34, 0.05);
+	--theme-border: rgba(158, 42, 34, 0.2);
+
+	/* Global Base */
+	--bg: #f4f0e6; /* Warmer, antique Xuan paper */
+	--bg2: #ece6d9;
+	--ink: #1a1410; /* Editorial off-black */
+	--ink-soft: #5c4a3a;
+	--ink-muted: #9c8878;
+	--grain-opacity: 0.04;
+	--card-radius: 14px;
+	--panel-radius: 20px;
+
+	--bg-app: var(--bg);
+	--text-main: var(--ink);
+	--text-muted: var(--ink-soft);
+	--border-color: #dfdbcf;
+	--white: #faf7f0;
+
+	/* Typography Tokens */
+	--font-serif-jp: "Noto Serif JP", "LXGW WenKai TC", serif;
+	--font-calligraphy: "LXGW WenKai TC", cursive;
+}
+
+html, body {
+	overflow: hidden; /* Lock the global viewport */
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Noto Sans JP", sans-serif;
+	background-color: var(--theme-primary);
+	color: var(--text-main);
+	height: 100vh; /* Fixed height */
+	padding: 24px 32px 0 32px; /* Bottom padding removed to allow lists to reach bottom */
+	position: relative;
+	transition: filter 1.2s ease;
+}
+
+/* Cream paper veil: strongest on left for card legibility, dissolves toward right */
+/* Static overlay so no transition needed — only background-color animates */
+body::after {
+	content: "";
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: -1;
+	background: linear-gradient(
+		to right,
+		rgba(244, 240, 230, 0.85) 0%,
+		rgba(244, 240, 230, 0.6) 35%,
+		rgba(244, 240, 230, 0.2) 65%,
+		rgba(244, 240, 230, 0) 100%
+	);
+}
+
+/* Global Xuan Paper Noise Overlay */
+.paper-texture {
+	position: fixed;
+	inset: 0;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+	pointer-events: none;
+	z-index: 9999;
+	mix-blend-mode: multiply;
+	opacity: 0.8;
+}
+
+/* Paper grain overlay */
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: 1000;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+	opacity: var(--grain-opacity);
+	transition: opacity 0.6s ease;
+}
+
+body.absorbing::before {
+	opacity: calc(var(--grain-opacity) * 2.5);
+}
+
+body.absorbing {
+	filter: brightness(0.96) contrast(1.02);
+}
+
+.ink-bleed-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: -2; /* Behind the veil (-1) and grain (1000) */
+	pointer-events: none;
+	background-color: transparent;
+	opacity: 0;
+	transform: scale(0.9);
+	transition: 
+		opacity 2.0s cubic-bezier(0.45, 0, 0.55, 1),
+		transform 2.0s cubic-bezier(0.45, 0, 0.55, 1);
+	filter: blur(50px);
+}
+
+.ink-bleed-overlay.animate {
+	opacity: 1;
+	transform: scale(1.15);
+}

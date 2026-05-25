@@ -1,0 +1,618 @@
+/* Swatch Cards Grid System and Sub-Tab Display Layouts */
+
+/* ── Tab 1 Horizontal Swatches Ribbon List (test drive) ── */
+.ribbon-swatches-list,
+.tab-palettes-column {
+	position: relative;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	transition:
+		opacity 1s cubic-bezier(0.25, 1, 0.5, 1),
+		transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.tab-palettes-column.fade-out {
+	opacity: 0;
+	transform: translateY(10px);
+}
+
+/* On-top Scroll Shadow Overlays */
+.scroll-shadow-top,
+.scroll-shadow-bottom {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	z-index: 100;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+	will-change: transform, opacity;
+}
+
+.scroll-shadow-bottom {
+	top: 0; /* Base position at top, JS will push it down */
+	background: linear-gradient(to top, var(--bg), rgba(26, 20, 16, 0.1));
+}
+
+.scroll-shadow-top.show,
+.scroll-shadow-bottom.show {
+	opacity: 1;
+}
+
+.ribbon-swatches-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	max-height: calc(100vh - 280px);
+	padding-right: 0;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+}
+
+/* Hide scrollbar entirely for the scrollable panels */
+.ribbon-swatches-list::-webkit-scrollbar,
+.tab-palettes-column::-webkit-scrollbar {
+	display: none;
+}
+
+/* Split columns layout */
+.tab-split-layout {
+	display: flex;
+	flex-direction: row;
+	gap: 28px;
+	width: 100%;
+	align-items: start;
+}
+.tab-split-layout > div {
+	flex: 1;
+	min-width: 0;
+	width: 50%;
+	max-width: 50%;
+	box-sizing: border-box;
+}
+
+/* Palettes column on the right side of the left page */
+.tab-palettes-column {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	max-height: calc(100vh - 280px);
+	overflow-y: auto;
+	padding-right: 0;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+/* Seasonal tab overrides to account for much taller header */
+#seasonGrid4x4,
+#seasonPalettesGrid {
+	max-height: calc(100vh - 380px);
+}
+
+.palette-group-block {
+	margin-bottom: 24px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	flex-shrink: 0;
+}
+.palette-group-block:last-child {
+	margin-bottom: 4px;
+}
+
+.inline-reconstruct-btn {
+	font-family:
+		"Barlow", sans-serif; /* Renders geometric symbols much thinner than calligraphy brushes */
+	font-weight: 100;
+	font-size: 22px;
+	margin-left: 0px; /* Pulled much closer to the text */
+	opacity: 0.4;
+	cursor: pointer;
+	transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+	display: inline-flex;
+	line-height: 1;
+	color: inherit;
+}
+
+.inline-reconstruct-btn:hover {
+	opacity: 1;
+	transform: scale(1.15);
+}
+
+.palette-group-title {
+	font-family: "LXGW WenKai TC", serif;
+	font-size: 14px;
+	font-weight: 700;
+	color: var(--ink);
+	margin-bottom: 10px;
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+	border-left: 3px solid var(--theme-primary);
+	padding-left: 8px;
+}
+.palette-group-title span {
+	font-family: "Barlow", sans-serif;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--ink-soft);
+	font-weight: 500;
+}
+
+/* Group of 9/6/4 ribbon card container */
+.ribbon-group-9,
+.ribbon-group-6,
+.ribbon-group-4 {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	border-radius: 0; /* Sharp square corners */
+	overflow: hidden;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	box-shadow: 0 4px 12px rgba(26, 20, 16, 0.04);
+	margin-bottom: 20px;
+	background: transparent;
+	width: 100%;
+	flex-shrink: 0; /* Protects from flex squishing */
+}
+.ribbon-group-9:last-child,
+.ribbon-group-6:last-child,
+.ribbon-group-4:last-child {
+	margin-bottom: 4px;
+}
+
+.ribbon-swatch-strip {
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 16px;
+	border-radius: 0; /* Clean flush square corners */
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+	box-sizing: border-box;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+	flex-shrink: 0;
+}
+.ribbon-swatch-strip:last-child {
+	border-bottom: none;
+}
+
+.ribbon-swatch-strip:hover {
+	filter: brightness(1.04) saturate(1.01);
+	z-index: 10;
+	box-shadow: 0 2px 10px rgba(26, 20, 16, 0.08);
+}
+
+.ribbon-swatch-strip.active {
+	z-index: 11;
+	font-weight: 700;
+	transform: scale(1.025);
+	box-shadow:
+		0 8px 20px rgba(90, 30, 20, 0.25),
+		inset 8px 0 0 0 var(--active-accent, #a21c16),
+		inset 0 0 10px rgba(0, 0, 0, 0.2);
+	border-bottom-color: transparent;
+}
+
+.ribbon-swatch-left-group {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.ribbon-swatch-brand {
+	font-family: "LXGW WenKai TC", serif;
+	font-size: 10px;
+	letter-spacing: 0.12em;
+	opacity: 0.35;
+	font-weight: 900;
+}
+
+.ribbon-swatch-name {
+	font-family: "LXGW WenKai TC", serif;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+}
+
+.ribbon-swatch-py {
+	font-family: "Outfit", sans-serif;
+	font-size: 11px;
+	opacity: 0.65;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	margin-top: 2px;
+}
+
+.ribbon-swatch-hex {
+	font-family: "DM Mono", monospace;
+	font-size: 12px;
+	font-weight: 500;
+	opacity: 0.8;
+	letter-spacing: 0.02em;
+	padding: 2px 6px;
+	margin-right: -6px;
+	border-radius: 4px;
+	transition: all 0.2s ease;
+}
+.ribbon-swatch-hex:hover {
+	background: rgba(255, 255, 255, 0.2);
+	opacity: 1;
+}
+
+/* ── TAB 2: SEASONAL STYLES (Borderless Calligraphic Column Layout) ── */
+.season-tabs-stack {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	height: 100%;
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	box-sizing: border-box;
+	min-width: 250px; /* Bulletproof protection: guarantees the left column is never squished by the terms grid */
+}
+
+.season-card-tabs-header {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	width: 44px;
+	min-width: 44px; /* Bulletproof horizontal protection */
+	justify-content: center;
+	align-items: center;
+	border-bottom: none;
+	border-right: 1.5px dashed var(--border-color);
+	padding-right: 18px;
+	background: transparent;
+	box-sizing: border-box;
+	flex-shrink: 0;
+}
+
+.season-card-tab-btn {
+	width: 36px;
+	height: 36px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.25s ease;
+	position: relative;
+	box-sizing: border-box;
+	flex-shrink: 0; /* prevent squishing by parent flexbox */
+	font-family: "LXGW WenKai TC", serif;
+	font-size: 20px;
+	font-weight: 500;
+	color: var(--ink-soft);
+	line-height: 1;
+}
+
+/* Inactive Season Character Pill */
+.season-card-tab-btn.inactive {
+	color: var(--ink-soft);
+}
+
+.season-card-tab-btn.inactive:hover {
+	color: var(--season-accent);
+	transform: scale(1.15);
+}
+
+/* Active Season Puddle Splotch Tab */
+.season-card-tab-btn.active {
+	color: var(
+		--ink
+	); /* Sharp calligraphy text on top (completely undistorted) */
+	font-weight: 700;
+}
+
+.season-card-tab-btn.active::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background:
+		/* Fibrous paper noise overlay */
+		url("data:image/svg+xml,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper-grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.065 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23paper-grain)'/%3E%3C/svg%3E"),
+		/* Whisper-soft diagonal light dilution bleed */
+		linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, transparent 60%),
+		/* Whisper-soft diagonal pigment settling wash */
+		linear-gradient(315deg, rgba(26, 20, 16, 0.03) 0%, transparent 55%),
+		/* Dynamic radial watercolor fringe gradient puddle */
+		radial-gradient(
+				circle at center,
+				color-mix(in srgb, var(--season-accent) 40%, transparent) 0%,
+				color-mix(in srgb, var(--season-accent) 85%, transparent) 80%,
+				var(--season-accent) 100%
+			),
+		/* Solid cream paper backing */ #f7f2ea;
+	/* Organic brush splotch geometry */
+	border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+	filter: url(#brush-filter);
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Body displaying 节气 & description */
+.season-card-tab-body {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 8px 12px;
+	background: transparent;
+	border-radius: 0;
+	box-sizing: border-box;
+	text-align: left;
+}
+
+.season-tab-active-title {
+	font-family: "LXGW WenKai TC", serif;
+	font-size: 60px; /* Boosted to spotlight the calligraphic term name */
+	font-weight: 550;
+	color: var(--ink);
+	margin-top: 10px;
+	display: flex;
+	align-items: baseline;
+	gap: 12px;
+	letter-spacing: 0.05em;
+}
+
+.season-tab-active-desc {
+	font-family: "LXGW WenKai TC", serif;
+	font-size: 20px;
+	color: var(--ink);
+	line-height: 1.65;
+	margin-top: 12px;
+	max-width: 220px; /* Relaxed margin now that explicit breaks split the lines perfectly */
+}
+
+.season-unified-header {
+	display: grid;
+	grid-template-columns: 1.25fr 1fr;
+	gap: 16px;
+	width: 100%;
+	margin-bottom: 16px;
+	align-items: stretch;
+}
+
+/* Symmetrical 3x2 Grid for 6 Solar Terms of the selected season */
+.solar-terms-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 48px);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 14px 20px;
+	width: auto;
+	justify-content: start;
+	box-sizing: border-box;
+	padding: 12px 0;
+}
+
+.solar-term-btn {
+	width: 48px;
+	height: 58px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+	background: transparent;
+	border: none;
+	margin: auto 0;
+	box-sizing: border-box;
+}
+
+.solar-term-btn::after {
+	content: "";
+	position: absolute;
+	inset: -3px;
+	z-index: -1;
+	background:
+		/* Fibrous paper noise overlay */
+		url("data:image/svg+xml,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper-grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.065 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23paper-grain)'/%3E%3C/svg%3E"),
+		/* Whisper-soft diagonal light dilution bleed */
+		linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, transparent 60%),
+		/* Whisper-soft diagonal pigment settling wash */
+		linear-gradient(315deg, rgba(26, 20, 16, 0.03) 0%, transparent 55%),
+		/* Dynamic radial watercolor fringe gradient puddle */
+		radial-gradient(
+				circle at center,
+				color-mix(in srgb, var(--term-accent) 40%, transparent) 0%,
+				color-mix(in srgb, var(--term-accent) 85%, transparent) 80%,
+				var(--term-accent) 100%
+			),
+		/* Solid classical cream paper backing */ #f7f2ea;
+	/* Organic, non-geometric hand-painted brush drop geometry */
+	border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+	transition:
+		inset 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+		filter 1.2s ease,
+		opacity 1.2s ease,
+		box-shadow 1.2s ease;
+	opacity: 0.9;
+
+	/* Default organic bleeding edge */
+	filter: url(#brush-filter);
+	box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Classical gold splatter overlay (金箔纸 / 泥金 flecks) */
+.solar-term-btn .splatter {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 1;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='gold'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3CfeColorMatrix values='0 0 0 0 0.8 0 0 0 0 0.6 0 0 0 0 0.2 0 0 0 1 0'/%3E%3C/filter%3E%3Ccircle cx='80' cy='30' r='1' filter='url(%23gold)' opacity='0.6'/%3E%3Ccircle cx='85' cy='35' r='1.5' filter='url(%23gold)' opacity='0.8'/%3E%3Ccircle cx='75' cy='40' r='0.5' filter='url(%23gold)' opacity='0.5'/%3E%3Ccircle cx='82' cy='45' r='1.2' filter='url(%23gold)' opacity='0.7'/%3E%3Ccircle cx='88' cy='50' r='0.8' filter='url(%23gold)' opacity='0.4'/%3E%3C/svg%3E");
+	background-size: cover;
+	mix-blend-mode: overlay;
+	opacity: 0.8;
+}
+
+.solar-term-btn:hover {
+	transform: none;
+}
+.solar-term-btn:hover::after {
+	inset: -8px; /* Dynamic Capillary Expansion bleed outward */
+	filter: url(#brush-filter-active);
+	opacity: 1;
+}
+
+.solar-term-btn.active {
+	transform: translateY(4px);
+}
+.solar-term-btn.active::after {
+	opacity: 1;
+	box-shadow:
+		0 6px 14px rgba(var(--term-accent-rgb), 0.15),
+		inset 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.solar-term-name {
+	font-family: "LXGW WenKai TC", serif;
+	font-size: 15px;
+	font-weight: 700;
+	color: var(--ink); /* Traditional ink off-black */
+	text-shadow: none;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	margin: 0;
+	z-index: 2;
+	letter-spacing: 0.08em;
+}
+
+.season-grid-4x4 {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	gap: 14px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/* ── TAB 3: PALETTES STYLES ── */
+.palette-base-bar {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.35);
+	padding: 8px 16px;
+	border-radius: 8px;
+	border: 1px solid var(--border-color);
+}
+.palette-base-label {
+	font-family: "LXGW WenKai TC", serif;
+	font-size: 14px;
+	color: var(--ink-soft);
+}
+.palette-base-chip {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: #fff;
+	padding: 4px 12px;
+	border-radius: 999px;
+	border: 1px solid var(--border-color);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+.palette-base-dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.palette-base-name {
+	font-family: "LXGW WenKai TC", serif;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--ink);
+}
+
+.palette-tabs-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+	margin-bottom: 20px;
+}
+.palette-tab-btn {
+	background: rgba(255, 255, 255, 0.45);
+	border: 1.5px solid var(--border-color);
+	border-radius: 8px;
+	padding: 8px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+}
+.palette-tab-btn:hover {
+	background: #fff;
+	border-color: var(--theme-primary);
+	transform: translateY(-1px);
+}
+.palette-tab-btn.active {
+	background: var(--theme-primary);
+	color: #fff !important;
+	border-color: transparent;
+	box-shadow: 0 4px 12px rgba(var(--theme-primary-rgb), 0.15);
+}
+.palette-tab-btn.active .pal-tab-title {
+	color: #fff !important;
+}
+.palette-tab-btn.active .pal-tab-sub {
+	color: rgba(255, 255, 255, 0.7) !important;
+}
+.pal-tab-title {
+	font-family: "LXGW WenKai TC", serif;
+	font-size: 15px;
+	font-weight: 700;
+	color: var(--ink);
+}
+.pal-tab-sub {
+	font-family: "Barlow", sans-serif;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--ink-soft);
+	margin-top: 2px;
+}
+
+.palette-grid-3x3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 16px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+@media (max-width: 650px) {
+	.tab-split-layout {
+		flex-direction: column;
+		gap: 20px;
+	}
+	.tab-split-layout > div {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+	.ribbon-swatches-list,
+	.tab-palettes-column {
+		width: 100% !important;
+		max-width: 100% !important;
+		max-height: none !important;
+		overflow-y: visible !important;
+	}
+}
